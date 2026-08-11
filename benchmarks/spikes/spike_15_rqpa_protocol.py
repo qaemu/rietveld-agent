@@ -498,9 +498,8 @@ def write_md(results: list, md5: str) -> None:
                   f"converged = {res['converged']}, bad = {res.get('bad')}, "
                   f"tier = {res['tier']}, shift(2th) = {res.get('shift_2th')}", ""]
         if res.get("phases_dropped"):
-            lines += [f"NOTE: {res.get('error', '')} -- phases below "
-                      f"reliable detection with this model on this sample "
-                      f"(renormalized away): "
+            lines += [f"NOTE: phases below reliable detection with this "
+                      f"model on this sample (renormalized away): "
                       f"{', '.join(res['phases_dropped'])}.", ""]
         lines += ["| phase | wt% (ours) | wt% (published) | |diff| |",
                   "|---|---|---|---|"]

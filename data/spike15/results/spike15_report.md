@@ -58,7 +58,7 @@ wR = 27.11%, rwp_norm = 0.27113, converged = True, bad = False, tier = wR-over, 
 
 wR = 14.87%, rwp_norm = 0.1487, converged = True, bad = False, tier = ok, shift(2th) = -0.022281
 
-NOTE:  -- phases below reliable detection with this model on this sample (renormalized away): aphthitalite.
+NOTE: phases below reliable detection with this model on this sample (renormalized away): aphthitalite.
 
 | phase | wt% (ours) | wt% (published) | |diff| |
 |---|---|---|---|
