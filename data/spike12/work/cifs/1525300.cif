@@ -1,0 +1,153 @@
+#------------------------------------------------------------------------------
+#$Date: 2015-07-11 23:27:58 +0300 (Sat, 11 Jul 2015) $
+#$Revision: 146229 $
+#$URL: file:///home/coder/svn-repositories/_RELOADED_COD/cod-reloaded/cif/1/52/53/1525300.cif $
+#------------------------------------------------------------------------------
+#
+# This file is available in the Crystallography Open Database (COD),
+# http://www.crystallography.net/
+#
+# All data on this site have been placed in the public domain by the
+# contributors.
+#
+data_1525300
+loop_
+_publ_author_name
+'Sirota, N.N.'
+'Shimanskii, B.P.'
+_publ_section_title
+;
+ Crystal structure and physical property of the Cr-Mo-V system
+;
+_journal_name_full               'Doklady Akademii Nauk Belorusskoj SSR'
+_journal_page_first              1068
+_journal_page_last               1071
+_journal_volume                  20
+_journal_year                    1976
+_chemical_formula_sum            'Cr0.333 Mo0.333 V0.334'
+_chemical_name_systematic        '(Cr0.333 Mo0.333 V0.334)'
+_space_group_IT_number           229
+_symmetry_space_group_name_Hall  '-I 4 2 3'
+_symmetry_space_group_name_H-M   'I m -3 m'
+_cell_angle_alpha                90
+_cell_angle_beta                 90
+_cell_angle_gamma                90
+_cell_formula_units_Z            2
+_cell_length_a                   3.021
+_cell_length_b                   3.021
+_cell_length_c                   3.021
+_cell_volume                     27.571
+_citation_journal_id_ASTM        DBLRAC
+_cod_data_source_file            Sirota_DBLRAC_1976_1317.cif
+_cod_data_source_block           Cr0.333Mo0.333V0.334
+_cod_original_cell_volume        27.57098
+_cod_database_code               1525300
+loop_
+_symmetry_equiv_pos_as_xyz
+x,y,z
+-y,x,z
+-x,-y,z
+y,-x,z
+x,-y,-z
+y,x,-z
+-x,y,-z
+-y,-x,-z
+z,x,y
+-x,z,y
+-z,-x,y
+x,-z,y
+z,-x,-y
+x,z,-y
+-z,x,-y
+-x,-z,-y
+y,z,x
+y,-z,-x
+z,y,-x
+-y,z,-x
+-z,-y,-x
+-y,-z,x
+z,-y,x
+-z,y,x
+-x,-y,-z
+y,-x,-z
+x,y,-z
+-y,x,-z
+-x,y,z
+-y,-x,z
+x,-y,z
+y,x,z
+-z,-x,-y
+x,-z,-y
+z,x,-y
+-x,z,-y
+-z,x,y
+-x,-z,y
+z,-x,y
+x,z,y
+-y,-z,-x
+-y,z,x
+-z,-y,x
+y,-z,x
+z,y,x
+y,z,-x
+-z,y,-x
+z,-y,-x
+x+1/2,y+1/2,z+1/2
+-y+1/2,x+1/2,z+1/2
+-x+1/2,-y+1/2,z+1/2
+y+1/2,-x+1/2,z+1/2
+x+1/2,-y+1/2,-z+1/2
+y+1/2,x+1/2,-z+1/2
+-x+1/2,y+1/2,-z+1/2
+-y+1/2,-x+1/2,-z+1/2
+z+1/2,x+1/2,y+1/2
+-x+1/2,z+1/2,y+1/2
+-z+1/2,-x+1/2,y+1/2
+x+1/2,-z+1/2,y+1/2
+z+1/2,-x+1/2,-y+1/2
+x+1/2,z+1/2,-y+1/2
+-z+1/2,x+1/2,-y+1/2
+-x+1/2,-z+1/2,-y+1/2
+y+1/2,z+1/2,x+1/2
+y+1/2,-z+1/2,-x+1/2
+z+1/2,y+1/2,-x+1/2
+-y+1/2,z+1/2,-x+1/2
+-z+1/2,-y+1/2,-x+1/2
+-y+1/2,-z+1/2,x+1/2
+z+1/2,-y+1/2,x+1/2
+-z+1/2,y+1/2,x+1/2
+-x+1/2,-y+1/2,-z+1/2
+y+1/2,-x+1/2,-z+1/2
+x+1/2,y+1/2,-z+1/2
+-y+1/2,x+1/2,-z+1/2
+-x+1/2,y+1/2,z+1/2
+-y+1/2,-x+1/2,z+1/2
+x+1/2,-y+1/2,z+1/2
+y+1/2,x+1/2,z+1/2
+-z+1/2,-x+1/2,-y+1/2
+x+1/2,-z+1/2,-y+1/2
+z+1/2,x+1/2,-y+1/2
+-x+1/2,z+1/2,-y+1/2
+-z+1/2,x+1/2,y+1/2
+-x+1/2,-z+1/2,y+1/2
+z+1/2,-x+1/2,y+1/2
+x+1/2,z+1/2,y+1/2
+-y+1/2,-z+1/2,-x+1/2
+-y+1/2,z+1/2,x+1/2
+-z+1/2,-y+1/2,x+1/2
+y+1/2,-z+1/2,x+1/2
+z+1/2,y+1/2,x+1/2
+y+1/2,z+1/2,-x+1/2
+-z+1/2,y+1/2,-x+1/2
+z+1/2,-y+1/2,-x+1/2
+loop_
+_atom_site_label
+_atom_site_type_symbol
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+_atom_site_occupancy
+_atom_site_U_iso_or_equiv
+Cr1 Cr 0 0 0 0.333 0.0
+V1 V 0 0 0 0.334 0.0
+Mo1 Mo 0 0 0 0.333 0.0

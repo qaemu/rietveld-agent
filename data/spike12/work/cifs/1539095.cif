@@ -1,0 +1,95 @@
+#------------------------------------------------------------------------------
+#$Date: 2015-10-14 01:30:53 +0300 (Wed, 14 Oct 2015) $
+#$Revision: 167848 $
+#$URL: file:///home/coder/svn-repositories/_RELOADED_COD/cod-reloaded/cif/1/53/90/1539095.cif $
+#------------------------------------------------------------------------------
+#
+# This file is available in the Crystallography Open Database (COD),
+# http://www.crystallography.net/
+#
+# All data on this site have been placed in the public domain by the
+# contributors.
+#
+data_1539095
+loop_
+_publ_author_name
+'Sillen, L.G.'
+'Gjoerling-Husberg, A.S.'
+_publ_section_title
+;
+ Roentgenuntersuchung von Calcium/Wismutoxychloriden und -oxybromiden
+;
+_journal_name_full
+'Zeitschrift fuer Anorganische und Allgemeine Chemie'
+_journal_page_first              121
+_journal_page_last               134
+_journal_volume                  248
+_journal_year                    1941
+_chemical_formula_sum            'Bi3.8 Ca0.8 Cl5 O4'
+_chemical_name_systematic        'Ca.80 Bi3.80 O4 Cl5'
+_space_group_IT_number           139
+_symmetry_space_group_name_Hall  '-I 4 2'
+_symmetry_space_group_name_H-M   'I 4/m m m'
+_cell_angle_alpha                90
+_cell_angle_beta                 90
+_cell_angle_gamma                90
+_cell_formula_units_Z            2
+_cell_length_a                   3.897
+_cell_length_b                   3.897
+_cell_length_c                   36.45
+_cell_volume                     553.552
+_citation_journal_id_ASTM        ZAACAB
+_cod_data_source_file            Sillen_ZAACAB_1941_1961.cif
+_cod_data_source_block           Bi3.8Ca0.8Cl5O4
+_cod_original_cell_volume        553.5519
+_cod_database_code               1539095
+loop_
+_symmetry_equiv_pos_as_xyz
+x,y,z
+-y,x,z
+-x,-y,z
+y,-x,z
+x,-y,-z
+y,x,-z
+-x,y,-z
+-y,-x,-z
+-x,-y,-z
+y,-x,-z
+x,y,-z
+-y,x,-z
+-x,y,z
+-y,-x,z
+x,-y,z
+y,x,z
+x+1/2,y+1/2,z+1/2
+-y+1/2,x+1/2,z+1/2
+-x+1/2,-y+1/2,z+1/2
+y+1/2,-x+1/2,z+1/2
+x+1/2,-y+1/2,-z+1/2
+y+1/2,x+1/2,-z+1/2
+-x+1/2,y+1/2,-z+1/2
+-y+1/2,-x+1/2,-z+1/2
+-x+1/2,-y+1/2,-z+1/2
+y+1/2,-x+1/2,-z+1/2
+x+1/2,y+1/2,-z+1/2
+-y+1/2,x+1/2,-z+1/2
+-x+1/2,y+1/2,z+1/2
+-y+1/2,-x+1/2,z+1/2
+x+1/2,-y+1/2,z+1/2
+y+1/2,x+1/2,z+1/2
+loop_
+_atom_site_label
+_atom_site_type_symbol
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+_atom_site_occupancy
+_atom_site_U_iso_or_equiv
+Cl3 Cl-1 0 0 0 1 0.0
+Bi2 Bi+3 0 0 0.316 0.9 0.0
+Bi1 Bi+3 0 0 0.116 1 0.0
+O1 O-2 0 0.5 0.15 1 0.0
+Ca2 Ca+2 0 0 0.5 0.6 0.0
+Ca1 Ca+2 0 0 0.316 0.1 0.0
+Cl2 Cl-1 0 0 0.424 1 0.0
+Cl1 Cl-1 0 0 0.22 1 0.0

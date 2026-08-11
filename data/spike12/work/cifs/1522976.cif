@@ -1,0 +1,153 @@
+#------------------------------------------------------------------------------
+#$Date: 2018-09-27 07:13:35 +0300 (Thu, 27 Sep 2018) $
+#$Revision: 211196 $
+#$URL: file:///home/coder/svn-repositories/_RELOADED_COD/cod-reloaded/cif/1/52/29/1522976.cif $
+#------------------------------------------------------------------------------
+#
+# This file is available in the Crystallography Open Database (COD),
+# http://www.crystallography.net/
+#
+# All data on this site have been placed in the public domain by the
+# contributors.
+#
+data_1522976
+loop_
+_publ_author_name
+'Sumiyama, K.'
+'Ezawa, H.'
+'Nakamura, Y.'
+_publ_section_title
+;
+ Metastable Fe1-x Tix alloys produced by vapor quenching
+;
+_journal_name_full
+'Physica Status Solidi, Sectio A: Applied Research'
+_journal_page_first              81
+_journal_page_last               86
+_journal_volume                  93
+_journal_year                    1986
+_chemical_formula_sum            'Fe0.8 Ti0.2'
+_space_group_IT_number           229
+_symmetry_space_group_name_Hall  '-I 4 2 3'
+_symmetry_space_group_name_H-M   'I m -3 m'
+_cell_angle_alpha                90
+_cell_angle_beta                 90
+_cell_angle_gamma                90
+_cell_formula_units_Z            2
+_cell_length_a                   2.94
+_cell_length_b                   2.94
+_cell_length_c                   2.94
+_cell_volume                     25.412
+_citation_journal_id_ASTM        PSSABA
+_cod_data_source_file            Sumiyama_PSSABA_1986_92.cif
+_cod_data_source_block           Fe0.8Ti0.2
+_cod_original_cell_volume        25.41219
+_cod_database_code               1522976
+loop_
+_symmetry_equiv_pos_as_xyz
+x,y,z
+-y,x,z
+-x,-y,z
+y,-x,z
+x,-y,-z
+y,x,-z
+-x,y,-z
+-y,-x,-z
+z,x,y
+-x,z,y
+-z,-x,y
+x,-z,y
+z,-x,-y
+x,z,-y
+-z,x,-y
+-x,-z,-y
+y,z,x
+y,-z,-x
+z,y,-x
+-y,z,-x
+-z,-y,-x
+-y,-z,x
+z,-y,x
+-z,y,x
+-x,-y,-z
+y,-x,-z
+x,y,-z
+-y,x,-z
+-x,y,z
+-y,-x,z
+x,-y,z
+y,x,z
+-z,-x,-y
+x,-z,-y
+z,x,-y
+-x,z,-y
+-z,x,y
+-x,-z,y
+z,-x,y
+x,z,y
+-y,-z,-x
+-y,z,x
+-z,-y,x
+y,-z,x
+z,y,x
+y,z,-x
+-z,y,-x
+z,-y,-x
+x+1/2,y+1/2,z+1/2
+-y+1/2,x+1/2,z+1/2
+-x+1/2,-y+1/2,z+1/2
+y+1/2,-x+1/2,z+1/2
+x+1/2,-y+1/2,-z+1/2
+y+1/2,x+1/2,-z+1/2
+-x+1/2,y+1/2,-z+1/2
+-y+1/2,-x+1/2,-z+1/2
+z+1/2,x+1/2,y+1/2
+-x+1/2,z+1/2,y+1/2
+-z+1/2,-x+1/2,y+1/2
+x+1/2,-z+1/2,y+1/2
+z+1/2,-x+1/2,-y+1/2
+x+1/2,z+1/2,-y+1/2
+-z+1/2,x+1/2,-y+1/2
+-x+1/2,-z+1/2,-y+1/2
+y+1/2,z+1/2,x+1/2
+y+1/2,-z+1/2,-x+1/2
+z+1/2,y+1/2,-x+1/2
+-y+1/2,z+1/2,-x+1/2
+-z+1/2,-y+1/2,-x+1/2
+-y+1/2,-z+1/2,x+1/2
+z+1/2,-y+1/2,x+1/2
+-z+1/2,y+1/2,x+1/2
+-x+1/2,-y+1/2,-z+1/2
+y+1/2,-x+1/2,-z+1/2
+x+1/2,y+1/2,-z+1/2
+-y+1/2,x+1/2,-z+1/2
+-x+1/2,y+1/2,z+1/2
+-y+1/2,-x+1/2,z+1/2
+x+1/2,-y+1/2,z+1/2
+y+1/2,x+1/2,z+1/2
+-z+1/2,-x+1/2,-y+1/2
+x+1/2,-z+1/2,-y+1/2
+z+1/2,x+1/2,-y+1/2
+-x+1/2,z+1/2,-y+1/2
+-z+1/2,x+1/2,y+1/2
+-x+1/2,-z+1/2,y+1/2
+z+1/2,-x+1/2,y+1/2
+x+1/2,z+1/2,y+1/2
+-y+1/2,-z+1/2,-x+1/2
+-y+1/2,z+1/2,x+1/2
+-z+1/2,-y+1/2,x+1/2
+y+1/2,-z+1/2,x+1/2
+z+1/2,y+1/2,x+1/2
+y+1/2,z+1/2,-x+1/2
+-z+1/2,y+1/2,-x+1/2
+z+1/2,-y+1/2,-x+1/2
+loop_
+_atom_site_label
+_atom_site_type_symbol
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+_atom_site_occupancy
+_atom_site_U_iso_or_equiv
+Ti1 Ti 0 0 0 0.2 0.0
+Fe1 Fe 0 0 0 0.8 0.0

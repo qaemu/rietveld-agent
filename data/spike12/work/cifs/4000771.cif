@@ -1,0 +1,360 @@
+#------------------------------------------------------------------------------
+#$Date: 2016-03-21 01:21:50 +0200 (Mon, 21 Mar 2016) $
+#$Revision: 178377 $
+#$URL: file:///home/coder/svn-repositories/_RELOADED_COD/cod-reloaded/cif/4/00/07/4000771.cif $
+#------------------------------------------------------------------------------
+#
+# This file is available in the Crystallography Open Database (COD),
+# http://www.crystallography.net/
+#
+# All data on this site have been placed in the public domain by the
+# contributors.
+#
+data_4000771
+loop_
+_publ_author_name
+'Menard, Melissa C.'
+'Ishii, Rieko'
+'Higo, Tomoya'
+'Nishibori, Eigi'
+'Sawa, Hiroshi'
+'Nakatsuji, Satoru'
+'Chan, Julia Y.'
+_publ_section_title
+;
+ High-Resolution Synchrotron Studies and Magnetic Properties of Frustrated
+ Antiferromagnets MAl2S4(M = Mn2+, Fe2+, Co2+)
+;
+_journal_issue                   12
+_journal_name_full               'Chemistry of Materials'
+_journal_page_first              3086
+_journal_paper_doi               10.1021/cm200561p
+_journal_volume                  23
+_journal_year                    2011
+_chemical_formula_moiety         'Al2 Mn S4'
+_chemical_formula_sum            'Al2 Mn S4'
+_chemical_formula_weight         237.18
+_chemical_name_systematic
+;
+ ?
+;
+_space_group_IT_number           160
+_symmetry_cell_setting           hexagonal
+_symmetry_space_group_name_Hall  'R 3 -2"'
+_symmetry_space_group_name_H-M   'R 3 m :H'
+_atom_sites_solution_primary     direct
+_atom_sites_solution_secondary   difmap
+_audit_creation_method           SHELXL-97
+_cell_angle_alpha                90.00
+_cell_angle_beta                 90.00
+_cell_angle_gamma                120.00
+_cell_formula_units_Z            3
+_cell_length_a                   3.7013(13)
+_cell_length_b                   3.7013(13)
+_cell_length_c                   36.4160(12)
+_cell_measurement_reflns_used    1071
+_cell_measurement_temperature    150(2)
+_cell_measurement_theta_max      29.0
+_cell_measurement_theta_min      3.7
+_cell_volume                     432.0(2)
+_computing_cell_refinement       'Bruker SAINT v7.60A'
+_computing_data_collection       'Bruker APEX2 v2010.3.0'
+_computing_data_reduction        'Bruker SAINT v7.60A'
+_computing_molecular_graphics    'Bruker SHELXTL v6.14'
+_computing_publication_material  'Bruker SHELXTL v6.14'
+_computing_structure_refinement  'Bruker SHELXTL v6.14'
+_computing_structure_solution    'Bruker SHELXTL v6.14'
+_diffrn_ambient_temperature      150(2)
+_diffrn_measured_fraction_theta_full 0.987
+_diffrn_measured_fraction_theta_max 0.987
+_diffrn_measurement_device_type  'Bruker APEXII CCD'
+_diffrn_measurement_method       'omega scans'
+_diffrn_radiation_monochromator  'Si-<111> channel cut crystal'
+_diffrn_radiation_source         synchrotron
+_diffrn_radiation_type           synchrotron
+_diffrn_radiation_wavelength     0.77490
+_diffrn_reflns_av_R_equivalents  0.0711
+_diffrn_reflns_av_sigmaI/netI    0.0420
+_diffrn_reflns_limit_h_max       4
+_diffrn_reflns_limit_h_min       -4
+_diffrn_reflns_limit_k_max       4
+_diffrn_reflns_limit_k_min       -4
+_diffrn_reflns_limit_l_max       45
+_diffrn_reflns_limit_l_min       -43
+_diffrn_reflns_number            1071
+_diffrn_reflns_theta_full        28.95
+_diffrn_reflns_theta_max         28.95
+_diffrn_reflns_theta_min         3.66
+_diffrn_standards_number         0
+_exptl_absorpt_coefficient_mu    4.927
+_exptl_absorpt_correction_T_max  0.9931
+_exptl_absorpt_correction_T_min  0.8741
+_exptl_absorpt_correction_type   multi-scan
+_exptl_absorpt_process_details   'HKL Scalepack (Otowinowski& Minor1997)'
+_exptl_crystal_colour            green
+_exptl_crystal_density_diffrn    2.735
+_exptl_crystal_density_method    'not measured'
+_exptl_crystal_description       plate
+_exptl_crystal_F_000             345.0
+_exptl_crystal_size_max          0.10
+_exptl_crystal_size_mid          0.04
+_exptl_crystal_size_min          0.01
+_refine_diff_density_max         0.241
+_refine_diff_density_min         -0.381
+_refine_diff_density_rms         0.081
+_refine_ls_abs_structure_details 'Flack H D (1983), Acta Cryst. A39, 876-881'
+_refine_ls_abs_structure_Flack   0.13(17)
+_refine_ls_extinction_method     none
+_refine_ls_goodness_of_fit_ref   1.021
+_refine_ls_matrix_type           full
+_refine_ls_number_parameters     23
+_refine_ls_number_reflns         283
+_refine_ls_number_restraints     1
+_refine_ls_restrained_S_all      1.019
+_refine_ls_R_factor_all          0.0230
+_refine_ls_R_factor_gt           0.0210
+_refine_ls_shift/su_max          0.000
+_refine_ls_shift/su_mean         0.000
+_refine_ls_structure_factor_coef Fsqd
+_refine_ls_weighting_details
+'calc w=1/[\s^2^(Fo^2^)+(0.0278P)^2^+0.0420P] where P=(Fo^2^+2Fc^2^)/3'
+_refine_ls_weighting_scheme      calc
+_refine_ls_wR_factor_gt          0.0513
+_refine_ls_wR_factor_ref         0.0523
+_reflns_number_gt                152
+_reflns_number_total             283
+_reflns_threshold_expression     I>2\s(I)
+_cod_data_source_file            cm200561p_si_002.cif
+_cod_data_source_block           lsu006
+_cod_depositor_comments
+;
+The following automatic conversions were performed:
+
+'_symmetry_cell_setting' value 'Hexagonal' changed to 'hexagonal'
+according to /home/saulius/struct/CIF-dictionaries/cif_core.dic
+dictionary named 'cif_core.dic' version 2.4.1 from 2010-06-29.
+
+Automatic conversion script
+Id: cif_fix_values 1715 2011-07-08 13:25:40Z adriana 
+;
+_cod_original_cell_volume        432.05(4)
+_cod_original_sg_symbol_H-M      'R 3 m'
+_cod_database_code               4000771
+loop_
+_symmetry_equiv_pos_as_xyz
+'x, y, z'
+'-y, x-y, z'
+'-y, -x, z'
+'-x+y, -x, z'
+'x, x-y, z'
+'-x+y, y, z'
+'x+2/3, y+1/3, z+1/3'
+'-y+2/3, x-y+1/3, z+1/3'
+'-y+2/3, -x+1/3, z+1/3'
+'-x+y+2/3, -x+1/3, z+1/3'
+'x+2/3, x-y+1/3, z+1/3'
+'-x+y+2/3, y+1/3, z+1/3'
+'x+1/3, y+2/3, z+2/3'
+'-y+1/3, x-y+2/3, z+2/3'
+'-y+1/3, -x+2/3, z+2/3'
+'-x+y+1/3, -x+2/3, z+2/3'
+'x+1/3, x-y+2/3, z+2/3'
+'-x+y+1/3, y+2/3, z+2/3'
+loop_
+_atom_site_label
+_atom_site_type_symbol
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+_atom_site_U_iso_or_equiv
+_atom_site_adp_type
+_atom_site_occupancy
+_atom_site_symmetry_multiplicity
+_atom_site_calc_flag
+_atom_site_refinement_flags
+Al1 Al 1.0000 1.0000 0.60227(11) 0.0129(12) Uani 0.78 6 d SP
+Mn1 Mn 1.0000 1.0000 0.60227(11) 0.0129(12) Uani 0.22 6 d SP
+Al2 Al 1.0000 1.0000 0.83723(15) 0.0133(3) Uani 0.55 6 d SP
+Mn2 Mn 1.0000 1.0000 0.83723(15) 0.0133(3) Uani 0.45 6 d SP
+Al3 Al 1.0000 1.0000 0.07142(9) 0.0131(12) Uani 0.67 6 d SP
+Mn3 Mn 1.0000 1.0000 0.07142(9) 0.0131(12) Uani 0.33 6 d SP
+S1 S 1.0000 1.0000 0.95996(12) 0.0207(14) Uani 1 6 d S
+S2 S 1.0000 1.0000 0.71510(11) 0.0174(14) Uani 1 6 d S
+S3 S 1.0000 1.0000 0.53910(9) 0.0175(14) Uani 1 6 d S
+S4 S 1.0000 1.0000 0.13459(11) 0.0162(12) Uani 1 6 d S
+loop_
+_atom_site_aniso_label
+_atom_site_aniso_U_11
+_atom_site_aniso_U_22
+_atom_site_aniso_U_33
+_atom_site_aniso_U_23
+_atom_site_aniso_U_13
+_atom_site_aniso_U_12
+Al1 0.0105(18) 0.0105(18) 0.018(2) 0.000 0.000 0.0053(9)
+Mn1 0.0105(18) 0.0105(18) 0.018(2) 0.000 0.000 0.0053(9)
+Al2 0.0104(4) 0.0104(4) 0.0192(5) 0.000 0.000 0.00522(19)
+Mn2 0.0104(4) 0.0104(4) 0.0192(5) 0.000 0.000 0.00522(19)
+Al3 0.0089(17) 0.0089(17) 0.022(2) 0.000 0.000 0.0045(8)
+Mn3 0.0089(17) 0.0089(17) 0.022(2) 0.000 0.000 0.0045(8)
+S1 0.023(2) 0.023(2) 0.0152(17) 0.000 0.000 0.0117(11)
+S2 0.012(2) 0.012(2) 0.029(2) 0.000 0.000 0.0059(10)
+S3 0.0206(19) 0.0206(19) 0.011(2) 0.000 0.000 0.0103(9)
+S4 0.0136(15) 0.0136(15) 0.021(3) 0.000 0.000 0.0068(7)
+loop_
+_atom_type_symbol
+_atom_type_description
+_atom_type_scat_dispersion_real
+_atom_type_scat_dispersion_imag
+_atom_type_scat_source
+Al Al 0.0660 0.0620 'International Tables Vol C Tables 4.2.6.8 and 6.1.1.4'
+S S 0.0830 0.0850 'International Tables Vol C Tables 4.2.6.8 and 6.1.1.4'
+Mn Mn 0.2240 0.8590 'International Tables Vol C Tables 4.2.6.8 and 6.1.1.4'
+loop_
+_geom_angle_atom_site_label_1
+_geom_angle_atom_site_label_2
+_geom_angle_atom_site_label_3
+_geom_angle
+_geom_angle_site_symmetry_1
+_geom_angle_site_symmetry_3
+S3 Al1 S1 112.54(16) . 13_554
+S3 Al1 S1 112.54(16) . 13_444
+S1 Al1 S1 106.23(18) 13_554 13_444
+S3 Al1 S1 112.54(16) . 13_544
+S1 Al1 S1 106.23(18) 13_554 13_544
+S1 Al1 S1 106.23(18) 13_444 13_544
+S3 Al2 S3 95.91(17) 7 7_445
+S3 Al2 S3 95.91(17) 7 7_455
+S3 Al2 S3 95.91(17) 7_445 7_455
+S3 Al2 S4 179.4(3) 7 13_445
+S3 Al2 S4 84.45(2) 7_445 13_445
+S3 Al2 S4 84.45(3) 7_455 13_445
+S3 Al2 S4 84.45(2) 7 13
+S3 Al2 S4 179.4(3) 7_445 13
+S3 Al2 S4 84.45(2) 7_455 13
+S4 Al2 S4 95.18(18) 13_445 13
+S3 Al2 S4 84.45(3) 7 13_545
+S3 Al2 S4 84.45(2) 7_445 13_545
+S3 Al2 S4 179.4(3) 7_455 13_545
+S4 Al2 S4 95.18(18) 13_445 13_545
+S4 Al2 S4 95.18(18) 13 13_545
+S2 Al3 S2 107.49(17) 7_444 7_554
+S2 Al3 S2 107.49(17) 7_444 7_454
+S2 Al3 S2 107.49(17) 7_554 7_454
+S2 Al3 S4 111.39(16) 7_444 .
+S2 Al3 S4 111.39(16) 7_554 .
+S2 Al3 S4 111.39(16) 7_454 .
+Mn1 S1 Al1 0.0 7_445 7_445
+Mn1 S1 Mn1 106.23(18) 7_445 7
+Al1 S1 Mn1 106.23(18) 7_445 7
+Mn1 S1 Al1 106.23(18) 7_445 7
+Al1 S1 Al1 106.23(18) 7_445 7
+Mn1 S1 Al1 0.00(18) 7 7
+Mn1 S1 Al1 106.23(18) 7_445 7_455
+Al1 S1 Al1 106.23(18) 7_445 7_455
+Mn1 S1 Al1 106.23(18) 7 7_455
+Al1 S1 Al1 106.23(18) 7 7_455
+Mn1 S1 Mn1 106.23(18) 7_445 7_455
+Al1 S1 Mn1 106.23(18) 7_445 7_455
+Mn1 S1 Mn1 106.23(18) 7 7_455
+Al1 S1 Mn1 106.23(18) 7 7_455
+Al1 S1 Mn1 0.00(18) 7_455 7_455
+Mn3 S2 Al3 0.00(16) 13 13
+Mn3 S2 Al3 107.49(17) 13 13_445
+Al3 S2 Al3 107.49(17) 13 13_445
+Mn3 S2 Mn3 107.49(17) 13 13_445
+Al3 S2 Mn3 107.49(17) 13 13_445
+Al3 S2 Mn3 0.0 13_445 13_445
+Mn3 S2 Al3 107.49(17) 13 13_545
+Al3 S2 Al3 107.49(17) 13 13_545
+Al3 S2 Al3 107.49(17) 13_445 13_545
+Mn3 S2 Al3 107.49(17) 13_445 13_545
+Mn3 S2 Mn3 107.49(17) 13 13_545
+Al3 S2 Mn3 107.49(17) 13 13_545
+Al3 S2 Mn3 107.49(17) 13_445 13_545
+Mn3 S2 Mn3 107.49(17) 13_445 13_545
+Al3 S2 Mn3 0.00(16) 13_545 13_545
+Al1 S3 Mn2 120.96(13) . 13_444
+Al1 S3 Al2 120.96(13) . 13_444
+Mn2 S3 Al2 0.0 13_444 13_444
+Al1 S3 Mn2 120.96(13) . 13_554
+Mn2 S3 Mn2 95.91(17) 13_444 13_554
+Al2 S3 Mn2 95.91(17) 13_444 13_554
+Al1 S3 Al2 120.96(13) . 13_554
+Mn2 S3 Al2 95.91(17) 13_444 13_554
+Al2 S3 Al2 95.91(17) 13_444 13_554
+Mn2 S3 Al2 0.0(2) 13_554 13_554
+Al1 S3 Al2 120.96(13) . 13_544
+Mn2 S3 Al2 95.91(17) 13_444 13_544
+Al2 S3 Al2 95.91(17) 13_444 13_544
+Mn2 S3 Al2 95.91(17) 13_554 13_544
+Al2 S3 Al2 95.91(17) 13_554 13_544
+Al1 S3 Mn2 120.96(13) . 13_544
+Mn2 S3 Mn2 95.91(17) 13_444 13_544
+Al2 S3 Mn2 95.91(17) 13_444 13_544
+Mn2 S3 Mn2 95.91(17) 13_554 13_544
+Al2 S3 Mn2 95.91(17) 13_554 13_544
+Al2 S3 Mn2 0.0(2) 13_544 13_544
+Al3 S4 Mn2 121.51(13) . 7_554
+Al3 S4 Al2 121.51(13) . 7_554
+Mn2 S4 Al2 0.0(2) 7_554 7_554
+Al3 S4 Al2 121.51(13) . 7_444
+Mn2 S4 Al2 95.18(18) 7_554 7_444
+Al2 S4 Al2 95.18(18) 7_554 7_444
+Al3 S4 Mn2 121.51(13) . 7_444
+Mn2 S4 Mn2 95.18(18) 7_554 7_444
+Al2 S4 Mn2 95.18(18) 7_554 7_444
+Al2 S4 Mn2 0.0(2) 7_444 7_444
+Al3 S4 Al2 121.51(13) . 7_454
+Mn2 S4 Al2 95.18(18) 7_554 7_454
+Al2 S4 Al2 95.18(18) 7_554 7_454
+Al2 S4 Al2 95.18(18) 7_444 7_454
+Mn2 S4 Al2 95.18(18) 7_444 7_454
+Al3 S4 Mn2 121.51(13) . 7_454
+Mn2 S4 Mn2 95.18(18) 7_554 7_454
+Al2 S4 Mn2 95.18(18) 7_554 7_454
+Al2 S4 Mn2 95.18(18) 7_444 7_454
+Mn2 S4 Mn2 95.18(18) 7_444 7_454
+Al2 S4 Mn2 0.0(2) 7_454 7_454
+loop_
+_geom_bond_atom_site_label_1
+_geom_bond_atom_site_label_2
+_geom_bond_distance
+_geom_bond_site_symmetry_2
+Al1 S3 2.300(6) .
+Al1 S1 2.314(3) 13_554
+Al1 S1 2.314(3) 13_444
+Al1 S1 2.314(3) 13_544
+Al2 S3 2.492(3) 7
+Al2 S3 2.492(3) 7_445
+Al2 S3 2.492(3) 7_455
+Al2 S4 2.507(4) 13_445
+Al2 S4 2.507(4) 13
+Al2 S4 2.507(4) 13_545
+Al3 S2 2.295(3) 7_444
+Al3 S2 2.295(3) 7_554
+Al3 S2 2.295(3) 7_454
+Al3 S4 2.301(6) .
+S1 Mn1 2.314(3) 7_445
+S1 Al1 2.314(3) 7_445
+S1 Mn1 2.314(3) 7
+S1 Al1 2.314(3) 7
+S1 Al1 2.314(3) 7_455
+S1 Mn1 2.314(3) 7_455
+S2 Mn3 2.295(3) 13
+S2 Al3 2.295(3) 13
+S2 Al3 2.295(3) 13_445
+S2 Mn3 2.295(3) 13_445
+S2 Al3 2.295(3) 13_545
+S2 Mn3 2.295(3) 13_545
+S3 Mn2 2.492(3) 13_444
+S3 Al2 2.492(3) 13_444
+S3 Mn2 2.492(3) 13_554
+S3 Al2 2.492(3) 13_554
+S3 Al2 2.492(3) 13_544
+S3 Mn2 2.492(3) 13_544
+S4 Mn2 2.507(4) 7_554
+S4 Al2 2.507(4) 7_554
+S4 Al2 2.507(3) 7_444
+S4 Mn2 2.507(3) 7_444
+S4 Al2 2.507(4) 7_454
+S4 Mn2 2.507(4) 7_454

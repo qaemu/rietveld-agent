@@ -1,0 +1,145 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rietveld-agent.local/governance/schemas/policy.schema.json",
+  "title": "AnalysisPolicyRelease",
+  "description": "Versioned scientific policy: refinement recipes, budgets, thresholds, and abstention rules (controlled scientific input, v0 draft).",
+  "type": "object",
+  "required": [
+    "schema", "version", "state", "approved_by", "approved_at", "created_at",
+    "domain", "recipes", "budgets", "thresholds", "name_context", "governance"
+  ],
+  "properties": {
+    "schema": { "const": "policy/v0" },
+    "version": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$" },
+    "state": { "enum": ["draft", "reviewed", "released", "deprecated"] },
+    "approved_by": { "type": "string" },
+    "approved_at": { "type": ["string", "null"], "format": "date-time" },
+    "created_at": { "type": "string", "format": "date-time" },
+    "deprecated_at": { "type": ["string", "null"], "format": "date-time" },
+    "domain": {
+      "type": "object",
+      "required": ["geometry", "radiation", "phase_cap", "patterns_per_analysis"],
+      "properties": {
+        "geometry": { "const": "Bragg-Brentano" },
+        "radiation": { "const": "constant-wavelength-laboratory-X-ray" },
+        "phase_cap": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "Maximum modeled crystalline phases. 2 for the Phase-0 spike; 3 is experimental and must be separately benchmarked."
+        },
+        "patterns_per_analysis": { "const": 1 }
+      }
+    },
+    "recipes": {
+      "type": "object",
+      "description": "Refinement recipes. Exactly one recipe matches a given hypothesis kind; each recipe is byte-identical-approvable.",
+      "required": ["single_phase", "two_phase", "profile_only"],
+      "properties": {
+        "single_phase": { "$ref": "#/$defs/recipe" },
+        "two_phase": { "$ref": "#/$defs/recipe" },
+        "profile_only": { "$ref": "#/$defs/recipe", "description": "Structure-free (Le Bail) profile stage used for reranking." }
+      }
+    },
+    "budgets": {
+      "type": "object",
+      "required": ["retrieval_top_k", "candidate_refinements_max", "combinations_max", "wall_clock_hours"],
+      "properties": {
+        "retrieval_top_k": { "type": "integer" },
+        "candidate_refinements_max": { "type": "integer" },
+        "combinations_max": { "type": "integer" },
+        "wall_clock_hours": { "type": "number", "exclusiveMinimum": 0 }
+      }
+    },
+    "thresholds": {
+      "type": "object",
+      "description": "Pre-registered, benchmark-derived decision constants only. No ad-hoc magic numbers at run time.",
+      "required": ["supported", "abstention", "alternative_model"],
+      "properties": {
+        "supported": {
+          "type": "object",
+          "description": "Constants for the 8 supported-criteria conjunction (see skills/contracts/decision-criteria.md).",
+          "properties": {
+            "min_delta_gof_improvement": { "type": "number" },
+            "max_unexplained_peak_budget": { "type": "number" },
+            "fraction_bounds": { "type": "array", "items": { "type": "number" }, "minItems": 2, "maxItems": 2 }
+          }
+        },
+        "abstention": {
+          "type": "object",
+          "properties": {
+            "max_amorphous_signal_fraction": { "type": "number" },
+            "max_unexplained_peak_fraction": { "type": "number" },
+            "max_nanocrystallite_size_nm": { "type": "number" }
+          }
+        },
+        "alternative_model": {
+          "type": "object",
+          "description": "Alternative-model test: a candidate stays supported only if alternatives within this statistical tolerance are also reported.",
+          "properties": {
+            "tolerance_chi2_ratio": { "type": "number", "exclusiveMinimum": 1 }
+          }
+        },
+        "m1_fingerprint": {
+          "type": "object",
+          "description": "M1 interim fingerprint-only decision constants (spike 05 eval-backed; superseded when refinement-backed evidence lands).",
+          "properties": {
+            "min_top_similarity": { "type": "number" },
+            "min_margin": { "type": "number" },
+            "margin_kind": { "const": "family_margin", "description": "Margin is top similarity minus the best different-phase-family candidate (statuses are per phase family)." },
+            "min_peak_counts": { "type": "number", "description": "Counting-statistics gate at the pattern peak maximum." }
+          }
+        }
+      }
+    },
+    "name_context": {
+      "type": "object",
+      "required": ["max_context_only_candidates", "geography_handling"],
+      "properties": {
+        "max_context_only_candidates": { "type": "integer" },
+        "geography_handling": {
+          "enum": ["require-validated-gazetteer", "ignore"],
+          "description": "Geographic tokens are non-compositional unless a validated geological reference source exists."
+        },
+        "vocabulary_release": { "type": "string", "description": "Version of the sample-name vocabulary (controlled input)." }
+      }
+    },
+    "governance": {
+      "type": "object",
+      "required": ["catalog_requirement", "calibration_requirement"],
+      "properties": {
+        "catalog_requirement": {
+          "enum": ["exact-release-required", "exact-or-newer"],
+          "description": "Results must reference an exact pinned catalog release."
+        },
+        "calibration_requirement": { "enum": ["released-only"] },
+        "gsasii_min_version": { "type": "string" },
+        "model_requirement": { "enum": ["none-required"] }
+      }
+    }
+  },
+  "$defs": {
+    "recipe": {
+      "type": "object",
+      "required": ["stages", "immutable_plan"],
+      "properties": {
+        "immutable_plan": { "const": true, "description": "The stage list is hashed into the plan; execution requires byte-identical policy approval." },
+        "stages": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "#/$defs/stage" }
+        }
+      }
+    },
+    "stage": {
+      "type": "object",
+      "required": ["name", "set", "clear"],
+      "properties": {
+        "name": { "type": "string" },
+        "set": { "type": "object", "description": "Exact GSASIIscriptable 'set' dict (allowlist-enforced, see skills/contracts/parameter-allowlist.json)." },
+        "clear": { "type": "object", "description": "Exact GSASIIscriptable 'clear' dict." },
+        "report": { "type": "boolean", "description": "Write a GPX checkpoint and diagnostics after this stage." }
+      }
+    }
+  },
+  "additionalProperties": false
+}

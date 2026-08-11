@@ -1,0 +1,106 @@
+#------------------------------------------------------------------------------
+#$Date: 2024-05-16 09:36:09 +0300 (Thu, 16 May 2024) $
+#$Revision: 291877 $
+#$URL: file:///home/coder/svn-repositories/_RELOADED_COD/cod-reloaded/cif/9/01/30/9013070.cif $
+#------------------------------------------------------------------------------
+#
+# This file is available in the Crystallography Open Database (COD),
+# http://www.crystallography.net/. The original data for this entry
+# were provided the American Mineralogist Crystal Structure Database,
+# http://rruff.geo.arizona.edu/AMS/amcsd.php
+#
+# The file may be used within the scientific community so long as
+# proper attribution is given to the journal article from which the
+# data were obtained.
+#
+data_9013070
+loop_
+_publ_author_name
+'Rieder, M.'
+'Crelling, J. C.'
+'Sustai, O.'
+'Drabek, M.'
+'Weiss, Z.'
+'Klementova, M.'
+_publ_section_title
+;
+ Arsenic in iron disulfides in a brown coal from the North Bohemian Basin,
+ Czech Republic
+ Sample: As-pyrite
+;
+_journal_name_full               'International Journal of Coal Geology'
+_journal_page_first              115
+_journal_page_last               121
+_journal_paper_doi               10.1016/j.coal.2006.07.003
+_journal_volume                  71
+_journal_year                    2007
+_chemical_compound_source        Synthetic
+_chemical_formula_sum            'As0.026 Fe S1.974'
+_chemical_name_mineral           Pyrite
+_space_group_IT_number           205
+_symmetry_space_group_name_Hall  '-P 2ac 2ab 3'
+_symmetry_space_group_name_H-M   'P a -3'
+_cell_angle_alpha                90
+_cell_angle_beta                 90
+_cell_angle_gamma                90
+_cell_length_a                   5.428
+_cell_length_b                   5.428
+_cell_length_c                   5.428
+_cell_formula_units_Z            4
+_cell_volume                     159.926
+_database_code_amcsd             0012729
+_exptl_crystal_density_diffrn    5.029
+_cod_original_sg_symbol_H-M      'P a 3'
+_cod_original_formula_sum        'Fe (S1.974 As.026)'
+_cod_database_code               9013070
+loop_
+_space_group_symop_operation_xyz
+x,y,z
+1/2+z,x,1/2-y
+z,1/2-x,1/2+y
+1/2-z,1/2+x,y
+-z,-x,-y
+1/2+y,1/2-z,-x
+1/2-y,-z,1/2+x
+-y,1/2+z,1/2-x
+y,z,x
+x,1/2-y,1/2+z
+1/2-x,1/2+y,z
+1/2+x,y,1/2-z
+-x,-y,-z
+1/2-z,-x,1/2+y
+-z,1/2+x,1/2-y
+1/2+z,1/2-x,-y
+z,x,y
+1/2-y,1/2+z,x
+1/2+y,z,1/2-x
+y,1/2-z,1/2+x
+-y,-z,-x
+-x,1/2+y,1/2-z
+1/2+x,1/2-y,-z
+1/2-x,-y,1/2+z
+loop_
+_atom_site_aniso_label
+_atom_site_aniso_U_11
+_atom_site_aniso_U_22
+_atom_site_aniso_U_33
+_atom_site_aniso_U_12
+_atom_site_aniso_U_13
+_atom_site_aniso_U_23
+Fe 1.14932 1.14932 1.14932 0.01493 0.00000 0.00000
+S 1.22395 1.22395 1.22395 -0.01493 0.00000 0.00000
+As 1.22395 1.22395 1.22395 -0.01493 0.00000 0.00000
+loop_
+_atom_site_label
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+_atom_site_occupancy
+Fe 0.00000 0.00000 0.00000 1.00000
+S 0.38480 0.38480 0.38480 0.98700
+As 0.38480 0.38480 0.38480 0.01300
+loop_
+_cod_related_entry_id
+_cod_related_entry_database
+_cod_related_entry_code
+1 AMCSD 0012729

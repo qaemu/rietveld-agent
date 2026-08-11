@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rietveld-agent"
+version = "0.0.0"
+description = "Deterministic, policy-governed GSAS-II-assisted powder X-ray diffraction phase identification"
+readme = "README.md"
+license = { text = "Apache-2.0" }
+requires-python = ">=3.12"
+dependencies = [
+    "pandas>=2.0",
+    "numpy>=1.25",
+    "gemmi>=0.6",
+]
+
+[project.optional-dependencies]
+gsasii = ["GSAS-II>=5.6"]
+dev = ["pytest>=8", "jsonschema>=4.20", "requests>=2.31"]
+
+[tool.setuptools.packages.find]
+include = ["core*", "cli*", "admin*", "mcp*", "benchmarks*"]
+
+[tool.pytest.ini_options]
+testpaths = ["core", "tests"]
+pythonpath = ["."]

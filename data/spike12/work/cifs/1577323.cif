@@ -1,0 +1,129 @@
+#------------------------------------------------------------------------------
+#$Date: 2026-05-30 08:38:49 +0300 (Sat, 30 May 2026) $
+#$Revision: 306143 $
+#$URL: file:///srv/svn/cod/cif/1/57/73/1577323.cif $
+#------------------------------------------------------------------------------
+#
+# This file is available in the Crystallography Open Database (COD),
+# http://www.crystallography.net/
+#
+# All data on this site have been placed in the public domain by the
+# contributors.
+#
+data_1577323
+loop_
+_publ_author_name
+'Namade, Lahu D.'
+'Band, Swati S.'
+'Pawar, Pratap K.'
+'Patil, Amitkumar R.'
+'Pedanekar, Rupesh S.'
+'Managave, Kirti G.'
+Ganbavle,
+Vinayak
+V.'
+'Rajpure, Keshav Y.'
+_publ_section_title
+;
+ Ultraviolet light-driven degradation of organic dyes using SrTiO3
+ photocatalytic nanoparticles
+;
+_journal_name_full
+'Colloids and Surfaces A: Physicochemical and Engineering Aspects'
+_journal_paper_doi               10.1016/j.colsurfa.2024.135976
+_journal_volume                  202
+_journal_year                    2026
+_chemical_formula_structural     SrTiO3
+_chemical_formula_sum            'O3 Sr Ti'
+_chemical_formula_weight         183.48
+_chemical_name_common            '   Cubic'
+_space_group_IT_number           221
+_space_group_name_Hall           '-P 4 2 3'
+_space_group_name_H-M_alt        'P m -3 m'
+_cell_angle_alpha                90.000000
+_cell_angle_beta                 90.000000
+_cell_angle_gamma                90.000000
+_cell_formula_units_Z            2
+_cell_length_a                   3.9119(2)
+_cell_length_b                   3.9119(2)
+_cell_length_c                   3.9119(2)
+_cell_volume                     59.864(5)
+_exptl_crystal_density_diffrn    5.109
+_journal_article_reference       135976
+_cod_data_source_file            ST30.cif
+_cod_depositor_comments
+;
+The following automatic conversions were performed:
+
+data item '_journal_paper_doi' value
+'https://doi.org/10.1016/j.colsurfa.2024.135976' was changed to
+'10.1016/j.colsurfa.2024.135976'.
+
+Automatic conversion script
+Id: cif_fix_values 8738 2021-04-28 16:35:53Z antanas 
+;
+_cod_original_cell_volume        59.566203
+_cod_original_formula_sum        'Sr O3 Ti'
+_cod_database_code               1577323
+loop_
+_symmetry_equiv_pos_as_xyz
+x,y,z
+x,-y,-z
+-x,y,-z
+-x,-y,z
+y,z,x
+-y,-z,x
+y,-z,-x
+-y,z,-x
+z,x,y
+-z,x,-y
+-z,-x,y
+z,-x,-y
+y,x,z
+-y,x,-z
+y,-x,-z
+-y,-x,z
+z,y,x
+-z,-y,x
+-z,y,-x
+z,-y,-x
+x,z,y
+x,-z,-y
+-x,-z,y
+-x,z,-y
+-x,-y,-z
+-x,y,z
+x,-y,z
+x,y,-z
+-y,-z,-x
+y,z,-x
+-y,z,x
+y,-z,x
+-z,-x,-y
+z,-x,y
+z,x,-y
+-z,x,y
+-y,-x,-z
+y,-x,z
+-y,x,z
+y,x,-z
+-z,-y,-x
+z,y,-x
+z,-y,x
+-z,y,x
+-x,-z,-y
+-x,z,y
+x,z,-y
+x,-z,y
+loop_
+_atom_site_label
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+_atom_site_U_iso_or_equiv
+_atom_site_occupancy
+_atom_site_adp_type
+_atom_site_type_symbol
+sr 0.50000 0.50000 0.50000 0.00544 1.00000 Uiso Sr
+ti 0.00000 0.00000 0.00000 0.00463 1.00725 Uiso Ti
+o 0.50000 0.00000 0.00000 0.00463 1.00741 Uiso O

@@ -1,0 +1,116 @@
+#------------------------------------------------------------------------------
+#$Date: 2026-05-13 10:25:21 +0300 (Wed, 13 May 2026) $
+#$Revision: 305954 $
+#$URL: file:///srv/svn/cod/cif/1/57/72/1577245.cif $
+#------------------------------------------------------------------------------
+#
+# This file is available in the Crystallography Open Database (COD),
+# http://www.crystallography.net/
+#
+# All data on this site have been placed in the public domain by the
+# contributors.
+#
+data_1577245
+loop_
+_publ_author_name
+'Namade, Lahu D.'
+'Patil, Amitkumar R.'
+'Bodake, Tejas R.'
+'Mohite, Santosh V.'
+'Dongale, Tukaram D.'
+'Sutar,Santosh S.'
+'Kim, Yeonho.'
+'Rajpure, Keshav Y.'
+_publ_section_title
+;
+ Electroforming&#x00E2;&#x0088;&#x0092;free resistive switching in
+ spray&#x00E2;&#x0088;&#x0092;deposited SrTiO3 thin films with time series
+ analysis for memory devices
+;
+_journal_name_full               'Materials Research Bulletin'
+_journal_paper_doi               10.1016/j.materresbull.2026.114197
+_journal_volume                  202
+_journal_year                    2026
+_chemical_formula_structural     SrTiO3
+_chemical_formula_sum            'O3 Sr Ti'
+_chemical_formula_weight         183.48
+_chemical_name_common            '   Cubic'
+_space_group_IT_number           221
+_space_group_name_Hall           '-P 4 2 3'
+_space_group_name_H-M_alt        'P m -3 m'
+_cell_angle_alpha                90.000000
+_cell_angle_beta                 90.000000
+_cell_angle_gamma                90.000000
+_cell_formula_units_Z            2
+_cell_length_a                   3.90541(2)
+_cell_length_b                   3.90541(2)
+_cell_length_c                   3.90541(2)
+_cell_volume                     59.5662(5)
+_exptl_crystal_density_diffrn    5.115
+_journal_article_reference       114197
+_cod_data_source_file            STO_350.txt
+_cod_original_cell_volume        59.566203
+_cod_original_formula_sum        'Sr O3 Ti'
+_cod_database_code               1577245
+loop_
+_space_group_symop_operation_xyz
+'x, y, z'
+'-x, -y, -z'
+'-x, -y, z'
+'x, y, -z'
+'-x, y, -z'
+'x, -y, z'
+'x, -y, -z'
+'-x, y, z'
+'z, x, y'
+'-z, -x, -y'
+'z, -x, -y'
+'-z, x, y'
+'-z, -x, y'
+'z, x, -y'
+'-z, x, -y'
+'z, -x, y'
+'y, z, x'
+'-y, -z, -x'
+'-y, z, -x'
+'y, -z, x'
+'y, -z, -x'
+'-y, z, x'
+'-y, -z, x'
+'y, z, -x'
+'y, x, -z'
+'-y, -x, z'
+'-y, -x, -z'
+'y, x, z'
+'y, -x, z'
+'-y, x, -z'
+'-y, x, z'
+'y, -x, -z'
+'x, z, -y'
+'-x, -z, y'
+'-x, z, y'
+'x, -z, -y'
+'-x, -z, -y'
+'x, z, y'
+'x, -z, y'
+'-x, z, -y'
+'z, y, -x'
+'-z, -y, x'
+'z, -y, x'
+'-z, y, -x'
+'-z, y, x'
+'z, -y, -x'
+'-z, -y, -x'
+'z, y, x'
+loop_
+_atom_site_label
+_atom_site_occupancy
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+_atom_site_adp_type
+_atom_site_U_iso_or_equiv
+_atom_site_type_symbol
+Sr1 1.0 0.000000 0.000000 0.000000 Uiso 0.056320 Sr
+Ti1 1.0 0.500000 0.500000 0.500000 Uiso 0.053670 Ti
+O1 1.000 0.000000 0.500000 0.500000 Uiso 0.052400 O

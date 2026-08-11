@@ -1,0 +1,75 @@
+#------------------------------------------------------------------------------
+#$Date: 2018-09-27 07:13:35 +0300 (Thu, 27 Sep 2018) $
+#$Revision: 211196 $
+#$URL: file:///home/coder/svn-repositories/_RELOADED_COD/cod-reloaded/cif/1/50/94/1509409.cif $
+#------------------------------------------------------------------------------
+#
+# This file is available in the Crystallography Open Database (COD),
+# http://www.crystallography.net/
+#
+# All data on this site have been placed in the public domain by the
+# contributors.
+#
+data_1509409
+loop_
+_publ_author_name
+'Lesueur, R.'
+'Djega-Mariadassou, C.'
+'Benoit, P.'
+'Charpin, P.'
+_publ_section_title
+;
+ Crystal structure of chalcopyrite Ag In Se2
+;
+_journal_name_full               'Japanese Journal of Applied Physics'
+_journal_page_first              85
+_journal_page_last               88
+_journal_volume                  19
+_journal_year                    1980
+_chemical_formula_sum            'Ag In Se2'
+_space_group_IT_number           122
+_symmetry_space_group_name_Hall  'I -4 2bw'
+_symmetry_space_group_name_H-M   'I -4 2 d'
+_cell_angle_alpha                90
+_cell_angle_beta                 90
+_cell_angle_gamma                90
+_cell_formula_units_Z            4
+_cell_length_a                   6.1038
+_cell_length_b                   6.1038
+_cell_length_c                   11.7118
+_cell_volume                     436.339
+_citation_journal_id_ASTM        JJAPA5
+_cod_data_source_file            silver1-2_352.cif
+_cod_data_source_block           Ag1In1Se2
+_cod_original_cell_volume        436.3392
+_cod_original_formula_sum        'Ag1 In1 Se2'
+_cod_database_code               1509409
+loop_
+_symmetry_equiv_pos_as_xyz
+x,y,z
+y,-x,-z
+-x,-y,z
+-y,x,-z
+x,-y+1/2,-z+1/4
+-y+1/2,-x,z+3/4
+-x,y+1/2,-z+1/4
+y+1/2,x,z+3/4
+x+1/2,y+1/2,z+1/2
+y+1/2,-x+1/2,-z+1/2
+-x+1/2,-y+1/2,z+1/2
+-y+1/2,x+1/2,-z+1/2
+x+1/2,-y+1,-z+3/4
+-y+1,-x+1/2,z+5/4
+-x+1/2,y+1,-z+3/4
+y+1,x+1/2,z+5/4
+loop_
+_atom_site_label
+_atom_site_type_symbol
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+_atom_site_occupancy
+_atom_site_U_iso_or_equiv
+Ag1 Ag+1 0 0 0 1 0.0
+Se1 Se-2 0.25845 0.25 0.125 1 0.0
+In1 In+3 0 0 0.5 1 0.0

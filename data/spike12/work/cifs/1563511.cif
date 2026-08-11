@@ -1,0 +1,766 @@
+#------------------------------------------------------------------------------
+#$Date: 2021-06-16 10:59:23 +0300 (Wed, 16 Jun 2021) $
+#$Revision: 266485 $
+#$URL: file:///home/coder/svn-repositories/_RELOADED_COD/cod-reloaded/cif/1/56/35/1563511.cif $
+#------------------------------------------------------------------------------
+#
+# This file is available in the Crystallography Open Database (COD),
+# http://www.crystallography.net/
+#
+# All data on this site have been placed in the public domain by the
+# contributors.
+#
+data_1563511
+loop_
+_publ_author_name
+'Menard, Melissa C.'
+'Xiong, Yimin'
+'Karki, Amar B.'
+'Drake, Brenton L.'
+'Adams, Philip W.'
+'Fronczek, Frank R.'
+'Young, David P.'
+'Chan, Julia Y.'
+_publ_section_title
+;
+ Crystal growth and properties of Ln2Ag1&#x2212;xGa10&#x2212;y (Ln=La,
+ Ce), a disordered variant of the Ce2NiGa10-structure type
+;
+_journal_issue                   9
+_journal_name_full               'Journal of Solid State Chemistry'
+_journal_page_first              1935
+_journal_page_last               1942
+_journal_paper_doi               10.1016/j.jssc.2010.06.011
+_journal_volume                  183
+_journal_year                    2010
+_chemical_formula_moiety         'Ag0.7 Ce2 Ga9.08'
+_chemical_formula_sum            'Ag0.7 Ce2 Ga9.08'
+_chemical_formula_weight         988.80
+_space_group_IT_number           139
+_space_group_name_Hall           '-I 4 2'
+_space_group_name_H-M_alt        'I 4/m m m'
+_symmetry_cell_setting           tetragonal
+_symmetry_space_group_name_H-M   'I 4/m m m'
+_atom_sites_solution_primary     direct
+_atom_sites_solution_secondary   difmap
+_audit_creation_method           SHELXL-97
+_cell_angle_alpha                90.00
+_cell_angle_beta                 90.00
+_cell_angle_gamma                90.00
+_cell_formula_units_Z            2
+_cell_length_a                   4.2928(6)
+_cell_length_b                   4.2928(6)
+_cell_length_c                   26.1240(15)
+_cell_measurement_reflns_used    6752
+_cell_measurement_temperature    298(2)
+_cell_measurement_theta_max      31.00
+_cell_measurement_theta_min      1.00
+_cell_volume                     481.42(10)
+_computing_cell_refinement
+'Denzo and Scalepack (Otowinowski& Minor1997)'
+_computing_data_collection       'COLLECT (Nonius 1999)'
+_computing_data_reduction
+'Denzo and Scalepack (Otowinowski& Minor1997)'
+_computing_molecular_graphics    'ORTEP-3 for Windows (Farrugia 1997)'
+_computing_publication_material  'SHELXL-97 (Sheldrick 1997)'
+_computing_structure_refinement  'SHELXL-97 (Sheldrick, 2008)'
+_computing_structure_solution    'SHELXS-97 (Sheldrick, 1997)'
+_diffrn_ambient_temperature      298(2)
+_diffrn_measured_fraction_theta_full 0.996
+_diffrn_measured_fraction_theta_max 0.996
+_diffrn_measurement_device_type  'Nonius KappaCCD (with Oxford Cryostream)'
+_diffrn_measurement_method       '\w and \f scans'
+_diffrn_radiation_monochromator  graphite
+_diffrn_radiation_source         'fine-focus sealed tube'
+_diffrn_radiation_type           MoK\a
+_diffrn_radiation_wavelength     0.71073
+_diffrn_reflns_av_R_equivalents  0.0252
+_diffrn_reflns_av_sigmaI/netI    0.0297
+_diffrn_reflns_limit_h_max       6
+_diffrn_reflns_limit_h_min       -4
+_diffrn_reflns_limit_k_max       6
+_diffrn_reflns_limit_k_min       -6
+_diffrn_reflns_limit_l_max       37
+_diffrn_reflns_limit_l_min       -37
+_diffrn_reflns_number            772
+_diffrn_reflns_theta_full        30.86
+_diffrn_reflns_theta_max         30.86
+_diffrn_reflns_theta_min         3.12
+_diffrn_standards_number         0
+_exptl_absorpt_coefficient_mu    35.503
+_exptl_absorpt_correction_T_max  0.4352
+_exptl_absorpt_correction_T_min  0.366
+_exptl_absorpt_correction_type   multi-scan
+_exptl_absorpt_process_details   'HKL Scalepack (Otowinowski& Minor1997)'
+_exptl_crystal_colour            silver
+_exptl_crystal_density_diffrn    6.821
+_exptl_crystal_density_method    'not measured'
+_exptl_crystal_description       plate
+_exptl_crystal_F_000             862
+_exptl_crystal_size_max          0.03
+_exptl_crystal_size_mid          0.03
+_exptl_crystal_size_min          0.03
+_refine_diff_density_max         1.358
+_refine_diff_density_min         -1.183
+_refine_diff_density_rms         0.241
+_refine_ls_extinction_coef       0.0026(2)
+_refine_ls_extinction_expression Fc^*^=kFc[1+0.001xFc^2^\l^3^/sin(2\q)]^-1/4^
+_refine_ls_extinction_method     SHELXL
+_refine_ls_goodness_of_fit_ref   1.110
+_refine_ls_matrix_type           full
+_refine_ls_number_parameters     25
+_refine_ls_number_reflns         280
+_refine_ls_number_restraints     0
+_refine_ls_restrained_S_all      1.110
+_refine_ls_R_factor_all          0.0231
+_refine_ls_R_factor_gt           0.0217
+_refine_ls_shift/su_max          0.001
+_refine_ls_shift/su_mean         0.000
+_refine_ls_structure_factor_coef Fsqd
+_refine_ls_weighting_details
+'calc w=1/[\s^2^(Fo^2^)+(0.0000P)^2^+9.8000P] where P=(Fo^2^+2Fc^2^)/3'
+_refine_ls_weighting_scheme      calc
+_refine_ls_wR_factor_gt          0.0487
+_refine_ls_wR_factor_ref         0.0497
+_reflns_number_gt                265
+_reflns_number_total             280
+_reflns_threshold_expression     I>2\s(I)
+_cod_data_source_file            JSSC-2010-183-1935.cif
+_cod_data_source_block           mm67
+_cod_depositor_comments
+;
+The following automatic conversions were performed:
+
+data item '_symmetry_cell_setting' value 'Tetragonal' was changed to
+'tetragonal' in accordance with the built-in table derived from the
+CIF Core dictionary named 'cif_core.dic' version 2.4.5 last updated
+on 2014-11-21.
+
+Automatic conversion script
+Id: cif_fix_values 8369 2020-08-20 11:38:08Z andrius 
+;
+_cod_database_code               1563511
+loop_
+_symmetry_equiv_pos_as_xyz
+'x, y, z'
+'x, -y, -z'
+'-x, -y, z'
+'-x, y, -z'
+'y, x, -z'
+'y, -x, z'
+'-y, x, z'
+'-y, -x, -z'
+'x+1/2, y+1/2, z+1/2'
+'x+1/2, -y+1/2, -z+1/2'
+'-x+1/2, -y+1/2, z+1/2'
+'-x+1/2, y+1/2, -z+1/2'
+'y+1/2, x+1/2, -z+1/2'
+'y+1/2, -x+1/2, z+1/2'
+'-y+1/2, x+1/2, z+1/2'
+'-y+1/2, -x+1/2, -z+1/2'
+'-x, -y, -z'
+'-x, y, z'
+'x, y, -z'
+'x, -y, z'
+'-y, -x, z'
+'-y, x, -z'
+'y, -x, -z'
+'y, x, z'
+'-x+1/2, -y+1/2, -z+1/2'
+'-x+1/2, y+1/2, z+1/2'
+'x+1/2, y+1/2, -z+1/2'
+'x+1/2, -y+1/2, z+1/2'
+'-y+1/2, -x+1/2, z+1/2'
+'-y+1/2, x+1/2, -z+1/2'
+'y+1/2, -x+1/2, -z+1/2'
+'y+1/2, x+1/2, z+1/2'
+loop_
+_atom_site_label
+_atom_site_type_symbol
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+_atom_site_U_iso_or_equiv
+_atom_site_adp_type
+_atom_site_occupancy
+_atom_site_symmetry_multiplicity
+_atom_site_calc_flag
+_atom_site_refinement_flags
+_atom_site_disorder_assembly
+_atom_site_disorder_group
+Ce1 Ce 0.0000 0.0000 0.35251(2) 0.00865(19) Uani 1 8 d S . .
+Ga3 Ga 0.0000 0.0000 0.09842(4) 0.0123(3) Uani 1 8 d S . .
+Ga4 Ga 0.0000 0.0000 0.19319(4) 0.0112(3) Uani 1 8 d S . .
+Ag1 Ag 0.0000 0.5000 0.2500 0.0118(2) Uani 0.35 8 d SP . .
+Ga1 Ga 0.0000 0.5000 0.2500 0.0118(2) Uani 0.65 8 d SP . .
+Ga6 Ga 0.0000 0.3769(9) 0.45631(13) 0.0185(9) Uani 0.37 2 d SP . .
+Ga5 Ga 0.0000 0.0000 0.5000 0.029(7) Uani 0.06 16 d SP . .
+Ga2 Ga 0.0000 0.5000 0.9525(5) 0.018(4) Uani 0.19 4 d SP . .
+loop_
+_atom_site_aniso_label
+_atom_site_aniso_U_11
+_atom_site_aniso_U_22
+_atom_site_aniso_U_33
+_atom_site_aniso_U_23
+_atom_site_aniso_U_13
+_atom_site_aniso_U_12
+Ce1 0.0078(2) 0.0078(2) 0.0104(3) 0.000 0.000 0.000
+Ga3 0.0136(4) 0.0136(4) 0.0097(5) 0.000 0.000 0.000
+Ga4 0.0115(4) 0.0115(4) 0.0106(5) 0.000 0.000 0.000
+Ag1 0.0128(3) 0.0128(3) 0.0099(4) 0.000 0.000 0.000
+Ga1 0.0128(3) 0.0128(3) 0.0099(4) 0.000 0.000 0.000
+Ga6 0.0115(10) 0.034(3) 0.0097(9) -0.0082(12) 0.000 0.000
+Ga5 0.026(10) 0.026(10) 0.035(17) 0.000 0.000 0.000
+Ga2 0.042(11) 0.006(3) 0.006(3) 0.000 0.000 0.000
+loop_
+_atom_type_symbol
+_atom_type_description
+_atom_type_scat_dispersion_real
+_atom_type_scat_dispersion_imag
+_atom_type_scat_source
+Ce Ce -0.2486 2.6331 'International Tables Vol C Tables 4.2.6.8 and 6.1.1.4'
+Ag Ag -0.8971 1.1015 'International Tables Vol C Tables 4.2.6.8 and 6.1.1.4'
+Ga Ga 0.2307 1.6083 'International Tables Vol C Tables 4.2.6.8 and 6.1.1.4'
+loop_
+_geom_angle_atom_site_label_1
+_geom_angle_atom_site_label_2
+_geom_angle_atom_site_label_3
+_geom_angle
+_geom_angle_site_symmetry_1
+_geom_angle_site_symmetry_3
+Ga6 Ce1 Ga6 42.49(8) . 6
+Ga6 Ce1 Ga6 42.49(8) . 21
+Ga6 Ce1 Ga6 61.65(12) 6 21
+Ga6 Ce1 Ga6 61.65(12) . 3
+Ga6 Ce1 Ga6 42.49(8) 6 3
+Ga6 Ce1 Ga6 42.49(8) 21 3
+Ga6 Ce1 Ga4 130.66(4) . 25_445
+Ga6 Ce1 Ga4 130.66(4) 6 25_445
+Ga6 Ce1 Ga4 88.69(5) 21 25_445
+Ga6 Ce1 Ga4 88.69(5) 3 25_445
+Ga6 Ce1 Ga4 88.69(5) . 25
+Ga6 Ce1 Ga4 88.69(5) 6 25
+Ga6 Ce1 Ga4 130.66(4) 21 25
+Ga6 Ce1 Ga4 130.66(4) 3 25
+Ga4 Ce1 Ga4 137.06(4) 25_445 25
+Ga6 Ce1 Ga4 88.69(5) . 25_455
+Ga6 Ce1 Ga4 130.66(3) 6 25_455
+Ga6 Ce1 Ga4 88.69(5) 21 25_455
+Ga6 Ce1 Ga4 130.66(3) 3 25_455
+Ga4 Ce1 Ga4 82.301(13) 25_445 25_455
+Ga4 Ce1 Ga4 82.301(13) 25 25_455
+Ga6 Ce1 Ga4 130.66(4) . 25_545
+Ga6 Ce1 Ga4 88.69(5) 6 25_545
+Ga6 Ce1 Ga4 130.66(3) 21 25_545
+Ga6 Ce1 Ga4 88.69(5) 3 25_545
+Ga4 Ce1 Ga4 82.301(13) 25_445 25_545
+Ga4 Ce1 Ga4 82.301(13) 25 25_545
+Ga4 Ce1 Ga4 137.06(4) 25_455 25_545
+Ga6 Ce1 Ga3 48.10(3) . 25
+Ga6 Ce1 Ga3 48.10(3) 6 25
+Ga6 Ce1 Ga3 89.98(5) 21 25
+Ga6 Ce1 Ga3 89.98(5) 3 25
+Ga4 Ce1 Ga3 178.58(3) 25_445 25
+Ga4 Ce1 Ga3 44.37(3) 25 25
+Ga4 Ce1 Ga3 98.187(9) 25_455 25
+Ga4 Ce1 Ga3 98.187(9) 25_545 25
+Ga6 Ce1 Ga3 89.98(5) . 25_445
+Ga6 Ce1 Ga3 89.98(5) 6 25_445
+Ga6 Ce1 Ga3 48.10(3) 21 25_445
+Ga6 Ce1 Ga3 48.10(3) 3 25_445
+Ga4 Ce1 Ga3 44.37(3) 25_445 25_445
+Ga4 Ce1 Ga3 178.58(3) 25 25_445
+Ga4 Ce1 Ga3 98.187(9) 25_455 25_445
+Ga4 Ce1 Ga3 98.187(9) 25_545 25_445
+Ga3 Ce1 Ga3 134.21(4) 25 25_445
+Ga6 Ce1 Ga3 89.98(5) . 25_545
+Ga6 Ce1 Ga3 48.10(3) 6 25_545
+Ga6 Ce1 Ga3 89.98(5) 21 25_545
+Ga6 Ce1 Ga3 48.10(3) 3 25_545
+Ga4 Ce1 Ga3 98.187(9) 25_445 25_545
+Ga4 Ce1 Ga3 98.187(9) 25 25_545
+Ga4 Ce1 Ga3 178.58(3) 25_455 25_545
+Ga4 Ce1 Ga3 44.37(3) 25_545 25_545
+Ga3 Ce1 Ga3 81.294(13) 25 25_545
+Ga3 Ce1 Ga3 81.294(13) 25_445 25_545
+Ga6 Ce1 Ga3 48.10(3) . 25_455
+Ga6 Ce1 Ga3 89.98(5) 6 25_455
+Ga6 Ce1 Ga3 48.10(3) 21 25_455
+Ga6 Ce1 Ga3 89.98(5) 3 25_455
+Ga4 Ce1 Ga3 98.187(9) 25_445 25_455
+Ga4 Ce1 Ga3 98.187(9) 25 25_455
+Ga4 Ce1 Ga3 44.37(3) 25_455 25_455
+Ga4 Ce1 Ga3 178.58(3) 25_545 25_455
+Ga3 Ce1 Ga3 81.294(13) 25 25_455
+Ga3 Ce1 Ga3 81.294(13) 25_445 25_455
+Ga3 Ce1 Ga3 134.21(4) 25_545 25_455
+Ga4 Ga3 Ga2 121.8(2) . 5_456
+Ga4 Ga3 Ga2 121.8(2) . 17_556
+Ga2 Ga3 Ga2 73.9(2) 5_456 17_556
+Ga4 Ga3 Ga2 121.8(2) . 5_556
+Ga2 Ga3 Ga2 116.4(5) 5_456 5_556
+Ga2 Ga3 Ga2 73.9(2) 17_556 5_556
+Ga4 Ga3 Ga2 121.8(2) . 17_566
+Ga2 Ga3 Ga2 73.9(2) 5_456 17_566
+Ga2 Ga3 Ga2 116.4(5) 17_556 17_566
+Ga2 Ga3 Ga2 73.9(2) 5_556 17_566
+Ga4 Ga3 Ga6 122.90(7) . 13_445
+Ga2 Ga3 Ga6 62.82(13) 5_456 13_445
+Ga2 Ga3 Ga6 11.72(8) 17_556 13_445
+Ga2 Ga3 Ga6 83.36(10) 5_556 13_445
+Ga2 Ga3 Ga6 114.00(18) 17_566 13_445
+Ga4 Ga3 Ga6 122.90(7) . 27_445
+Ga2 Ga3 Ga6 11.72(8) 5_456 27_445
+Ga2 Ga3 Ga6 62.82(13) 17_556 27_445
+Ga2 Ga3 Ga6 114.00(18) 5_556 27_445
+Ga2 Ga3 Ga6 83.36(10) 17_566 27_445
+Ga6 Ga3 Ga6 51.52(15) 13_445 27_445
+Ga4 Ga3 Ga6 122.90(7) . 30_545
+Ga2 Ga3 Ga6 83.36(10) 5_456 30_545
+Ga2 Ga3 Ga6 11.72(8) 17_556 30_545
+Ga2 Ga3 Ga6 62.82(13) 5_556 30_545
+Ga2 Ga3 Ga6 114.00(18) 17_566 30_545
+Ga6 Ga3 Ga6 23.15(18) 13_445 30_545
+Ga6 Ga3 Ga6 72.84(7) 27_445 30_545
+Ga4 Ga3 Ga6 122.90(7) . 25_455
+Ga2 Ga3 Ga6 11.72(8) 5_456 25_455
+Ga2 Ga3 Ga6 83.36(10) 17_556 25_455
+Ga2 Ga3 Ga6 114.00(18) 5_556 25_455
+Ga2 Ga3 Ga6 62.82(13) 17_566 25_455
+Ga6 Ga3 Ga6 72.84(7) 13_445 25_455
+Ga6 Ga3 Ga6 23.15(18) 27_445 25_455
+Ga6 Ga3 Ga6 91.84(19) 30_545 25_455
+Ga4 Ga3 Ga6 122.90(7) . 30
+Ga2 Ga3 Ga6 83.36(10) 5_456 30
+Ga2 Ga3 Ga6 114.00(18) 17_556 30
+Ga2 Ga3 Ga6 62.82(13) 5_556 30
+Ga2 Ga3 Ga6 11.72(8) 17_566 30
+Ga6 Ga3 Ga6 114.20(14) 13_445 30
+Ga6 Ga3 Ga6 91.84(19) 27_445 30
+Ga6 Ga3 Ga6 109.24(11) 30_545 30
+Ga6 Ga3 Ga6 72.84(7) 25_455 30
+Ga4 Ga3 Ga6 122.90(7) . 25
+Ga2 Ga3 Ga6 114.00(18) 5_456 25
+Ga2 Ga3 Ga6 83.36(10) 17_556 25
+Ga2 Ga3 Ga6 11.72(8) 5_556 25
+Ga2 Ga3 Ga6 62.82(13) 17_566 25
+Ga6 Ga3 Ga6 91.84(19) 13_445 25
+Ga6 Ga3 Ga6 114.20(14) 27_445 25
+Ga6 Ga3 Ga6 72.84(7) 30_545 25
+Ga6 Ga3 Ga6 109.24(11) 25_455 25
+Ga6 Ga3 Ga6 51.52(15) 30 25
+Ga4 Ga3 Ga6 122.90(7) . 27_545
+Ga2 Ga3 Ga6 114.00(18) 5_456 27_545
+Ga2 Ga3 Ga6 62.82(13) 17_556 27_545
+Ga2 Ga3 Ga6 11.72(8) 5_556 27_545
+Ga2 Ga3 Ga6 83.36(10) 17_566 27_545
+Ga6 Ga3 Ga6 72.84(7) 13_445 27_545
+Ga6 Ga3 Ga6 109.24(11) 27_445 27_545
+Ga6 Ga3 Ga6 51.52(15) 30_545 27_545
+Ga6 Ga3 Ga6 114.20(14) 25_455 27_545
+Ga6 Ga3 Ga6 72.84(7) 30 27_545
+Ga6 Ga3 Ga6 23.15(18) 25 27_545
+Ga3 Ga4 Ag1 124.66(2) . .
+Ga3 Ga4 Ga1 124.66(2) . 25
+Ag1 Ga4 Ga1 71.13(2) . 25
+Ga3 Ga4 Ag1 124.66(2) . 25
+Ag1 Ga4 Ag1 71.13(2) . 25
+Ga1 Ga4 Ag1 0.0 25 25
+Ga3 Ga4 Ga1 124.66(2) . 25_455
+Ag1 Ga4 Ga1 71.13(2) . 25_455
+Ga1 Ga4 Ga1 110.68(4) 25 25_455
+Ag1 Ga4 Ga1 110.68(4) 25 25_455
+Ga3 Ga4 Ga1 124.66(2) . 1_545
+Ag1 Ga4 Ga1 110.68(4) . 1_545
+Ga1 Ga4 Ga1 71.13(2) 25 1_545
+Ag1 Ga4 Ga1 71.13(2) 25 1_545
+Ga1 Ga4 Ga1 71.13(2) 25_455 1_545
+Ga3 Ga4 Ag1 124.66(2) . 25_455
+Ag1 Ga4 Ag1 71.13(2) . 25_455
+Ga1 Ga4 Ag1 110.68(4) 25 25_455
+Ag1 Ga4 Ag1 110.68(4) 25 25_455
+Ga1 Ga4 Ag1 0.0 25_455 25_455
+Ga1 Ga4 Ag1 71.13(2) 1_545 25_455
+Ga3 Ga4 Ag1 124.66(2) . 1_545
+Ag1 Ga4 Ag1 110.68(4) . 1_545
+Ga1 Ga4 Ag1 71.13(2) 25 1_545
+Ag1 Ga4 Ag1 71.13(2) 25 1_545
+Ga1 Ga4 Ag1 71.13(2) 25_455 1_545
+Ga1 Ga4 Ag1 0.0 1_545 1_545
+Ag1 Ga4 Ag1 71.13(2) 25_455 1_545
+Ga3 Ga4 Ce1 68.529(19) . 25_445
+Ag1 Ga4 Ce1 138.541(11) . 25_445
+Ga1 Ga4 Ce1 138.541(11) 25 25_445
+Ag1 Ga4 Ce1 138.541(11) 25 25_445
+Ga1 Ga4 Ce1 70.543(9) 25_455 25_445
+Ga1 Ga4 Ce1 70.543(9) 1_545 25_445
+Ag1 Ga4 Ce1 70.543(9) 25_455 25_445
+Ag1 Ga4 Ce1 70.543(9) 1_545 25_445
+Ga3 Ga4 Ce1 68.529(19) . 25
+Ag1 Ga4 Ce1 70.543(9) . 25
+Ga1 Ga4 Ce1 70.543(9) 25 25
+Ag1 Ga4 Ce1 70.543(9) 25 25
+Ga1 Ga4 Ce1 138.541(11) 25_455 25
+Ga1 Ga4 Ce1 138.541(11) 1_545 25
+Ag1 Ga4 Ce1 138.541(11) 25_455 25
+Ag1 Ga4 Ce1 138.541(11) 1_545 25
+Ce1 Ga4 Ce1 137.06(4) 25_445 25
+Ga3 Ga4 Ce1 68.529(19) . 25_545
+Ag1 Ga4 Ce1 138.541(11) . 25_545
+Ga1 Ga4 Ce1 70.543(9) 25 25_545
+Ag1 Ga4 Ce1 70.543(9) 25 25_545
+Ga1 Ga4 Ce1 138.540(11) 25_455 25_545
+Ga1 Ga4 Ce1 70.543(9) 1_545 25_545
+Ag1 Ga4 Ce1 138.540(11) 25_455 25_545
+Ag1 Ga4 Ce1 70.543(9) 1_545 25_545
+Ce1 Ga4 Ce1 82.301(13) 25_445 25_545
+Ce1 Ga4 Ce1 82.301(13) 25 25_545
+Ga4 Ag1 Ga4 110.68(4) 1_565 .
+Ga4 Ag1 Ga4 108.87(2) 1_565 25
+Ga4 Ag1 Ga4 108.87(2) . 25
+Ga4 Ag1 Ga4 108.87(2) 1_565 25_455
+Ga4 Ag1 Ga4 108.87(2) . 25_455
+Ga4 Ag1 Ga4 110.68(4) 25 25_455
+Ga4 Ag1 Ga1 54.435(10) 1_565 25_565
+Ga4 Ag1 Ga1 125.565(10) . 25_565
+Ga4 Ag1 Ga1 54.435(10) 25 25_565
+Ga4 Ag1 Ga1 125.565(10) 25_455 25_565
+Ga4 Ag1 Ga1 125.565(10) 1_565 25_455
+Ga4 Ag1 Ga1 54.435(10) . 25_455
+Ga4 Ag1 Ga1 125.565(10) 25 25_455
+Ga4 Ag1 Ga1 54.435(10) 25_455 25_455
+Ga1 Ag1 Ga1 180.0 25_565 25_455
+Ga4 Ag1 Ag1 54.435(10) 1_565 25_565
+Ga4 Ag1 Ag1 125.565(10) . 25_565
+Ga4 Ag1 Ag1 54.435(10) 25 25_565
+Ga4 Ag1 Ag1 125.565(10) 25_455 25_565
+Ga1 Ag1 Ag1 0.0 25_565 25_565
+Ga1 Ag1 Ag1 180.0 25_455 25_565
+Ga4 Ag1 Ag1 125.565(10) 1_565 25_455
+Ga4 Ag1 Ag1 54.435(10) . 25_455
+Ga4 Ag1 Ag1 125.565(10) 25 25_455
+Ga4 Ag1 Ag1 54.435(10) 25_455 25_455
+Ga1 Ag1 Ag1 180.0 25_565 25_455
+Ga1 Ag1 Ag1 0.0 25_455 25_455
+Ag1 Ag1 Ag1 180.0 25_565 25_455
+Ga4 Ag1 Ga1 54.435(10) 1_565 25_465
+Ga4 Ag1 Ga1 125.565(10) . 25_465
+Ga4 Ag1 Ga1 125.565(10) 25 25_465
+Ga4 Ag1 Ga1 54.435(10) 25_455 25_465
+Ga1 Ag1 Ga1 90.0 25_565 25_465
+Ga1 Ag1 Ga1 90.0 25_455 25_465
+Ag1 Ag1 Ga1 90.0 25_565 25_465
+Ag1 Ag1 Ga1 90.0 25_455 25_465
+Ga4 Ag1 Ga1 125.565(10) 1_565 25
+Ga4 Ag1 Ga1 54.435(10) . 25
+Ga4 Ag1 Ga1 54.435(10) 25 25
+Ga4 Ag1 Ga1 125.565(10) 25_455 25
+Ga1 Ag1 Ga1 90.0 25_565 25
+Ga1 Ag1 Ga1 90.0 25_455 25
+Ag1 Ag1 Ga1 90.0 25_565 25
+Ag1 Ag1 Ga1 90.0 25_455 25
+Ga1 Ag1 Ga1 180.0 25_465 25
+Ga4 Ag1 Ag1 125.565(10) 1_565 25
+Ga4 Ag1 Ag1 54.435(10) . 25
+Ga4 Ag1 Ag1 54.435(10) 25 25
+Ga4 Ag1 Ag1 125.565(10) 25_455 25
+Ga1 Ag1 Ag1 90.0 25_565 25
+Ga1 Ag1 Ag1 90.0 25_455 25
+Ag1 Ag1 Ag1 90.0 25_565 25
+Ag1 Ag1 Ag1 90.0 25_455 25
+Ga1 Ag1 Ag1 180.0 25_465 25
+Ga1 Ag1 Ag1 0.0 25 25
+Ga4 Ag1 Ag1 54.435(10) 1_565 25_465
+Ga4 Ag1 Ag1 125.565(10) . 25_465
+Ga4 Ag1 Ag1 125.565(10) 25 25_465
+Ga4 Ag1 Ag1 54.435(10) 25_455 25_465
+Ga1 Ag1 Ag1 90.0 25_565 25_465
+Ga1 Ag1 Ag1 90.0 25_455 25_465
+Ag1 Ag1 Ag1 90.0 25_565 25_465
+Ag1 Ag1 Ag1 90.0 25_455 25_465
+Ga1 Ag1 Ag1 0.0 25_465 25_465
+Ga1 Ag1 Ag1 180.0 25 25_465
+Ag1 Ag1 Ag1 180.0 25 25_465
+Ga2 Ga6 Ga6 10.6(16) 29_554 3_565
+Ga2 Ga6 Ga5 155.4(17) 29_554 .
+Ga6 Ga6 Ga5 144.81(12) 3_565 .
+Ga2 Ga6 Ga6 100.6(16) 29_554 19_556
+Ga6 Ga6 Ga6 90.000(1) 3_565 19_556
+Ga5 Ga6 Ga6 54.81(12) . 19_556
+Ga2 Ga6 Ga6 134.0(3) 29_554 21
+Ga6 Ga6 Ga6 135.000(6) 3_565 21
+Ga5 Ga6 Ga6 54.70(6) . 21
+Ga6 Ga6 Ga6 90.0 19_556 21
+Ga2 Ga6 Ga6 134.0(3) 29_554 6
+Ga6 Ga6 Ga6 135.000(4) 3_565 6
+Ga5 Ga6 Ga6 54.70(6) . 6
+Ga6 Ga6 Ga6 90.0 19_556 6
+Ga6 Ga6 Ga6 90.000(1) 21 6
+Ga2 Ga6 Ga2 88.1(17) 29_554 13_456
+Ga6 Ga6 Ga2 77.49(12) 3_565 13_456
+Ga5 Ga6 Ga2 67.31(5) . 13_456
+Ga6 Ga6 Ga2 12.51(12) 19_556 13_456
+Ga6 Ga6 Ga2 98.81(9) 21 13_456
+Ga6 Ga6 Ga2 98.81(9) 6 13_456
+Ga2 Ga6 Ga6 75.8(16) 29_554 17_566
+Ga6 Ga6 Ga6 65.16(16) 3_565 17_566
+Ga5 Ga6 Ga6 79.64(14) . 17_566
+Ga6 Ga6 Ga6 24.84(16) 19_556 17_566
+Ga6 Ga6 Ga6 107.28(11) 21 17_566
+Ga6 Ga6 Ga6 107.28(10) 6 17_566
+Ga2 Ga6 Ga6 12.33(10) 13_456 17_566
+Ga2 Ga6 Ga3 72.7(8) 29_554 25_455
+Ga6 Ga6 Ga3 78.42(9) 3_565 25_455
+Ga5 Ga6 Ga3 118.49(10) . 25_455
+Ga6 Ga6 Ga3 122.90(7) 19_556 25_455
+Ga6 Ga6 Ga3 64.24(7) 21 25_455
+Ga6 Ga6 Ga3 135.92(9) 6 25_455
+Ga2 Ga6 Ga3 119.13(12) 13_456 25_455
+Ga6 Ga6 Ga3 114.12(14) 17_566 25_455
+Ga2 Ga6 Ga3 72.7(8) 29_554 25
+Ga6 Ga6 Ga3 78.42(9) 3_565 25
+Ga5 Ga6 Ga3 118.49(10) . 25
+Ga6 Ga6 Ga3 122.90(7) 19_556 25
+Ga6 Ga6 Ga3 135.92(10) 21 25
+Ga6 Ga6 Ga3 64.24(7) 6 25
+Ga2 Ga6 Ga3 119.13(12) 13_456 25
+Ga6 Ga6 Ga3 114.12(14) 17_566 25
+Ga3 Ga6 Ga3 109.24(11) 25_455 25
+Ga2 Ga6 Ga2 125.8(3) 29_554 9_444
+Ga6 Ga6 Ga2 126.98(6) 3_565 9_444
+Ga5 Ga6 Ga2 61.94(16) . 9_444
+Ga6 Ga6 Ga2 92.1(3) 19_556 9_444
+Ga6 Ga6 Ga2 8.26(8) 21 9_444
+Ga6 Ga6 Ga2 97.98(7) 6 9_444
+Ga2 Ga6 Ga2 99.6(3) 13_456 9_444
+Ga6 Ga6 Ga2 106.6(3) 17_566 9_444
+Ga3 Ga6 Ga2 56.64(19) 25_455 9_444
+Ga3 Ga6 Ga2 138.7(4) 25 9_444
+Ga2 Ga6 Ga2 125.8(4) 29_554 9_544
+Ga6 Ga6 Ga2 126.98(6) 3_565 9_544
+Ga5 Ga6 Ga2 61.94(16) . 9_544
+Ga6 Ga6 Ga2 92.1(3) 19_556 9_544
+Ga6 Ga6 Ga2 97.98(7) 21 9_544
+Ga6 Ga6 Ga2 8.26(8) 6 9_544
+Ga2 Ga6 Ga2 99.6(3) 13_456 9_544
+Ga6 Ga6 Ga2 106.6(3) 17_566 9_544
+Ga3 Ga6 Ga2 138.7(4) 25_455 9_544
+Ga3 Ga6 Ga2 56.64(19) 25 9_544
+Ga2 Ga6 Ga2 105.87(15) 9_444 9_544
+Ga6 Ga5 Ga6 70.60(12) 21 3
+Ga6 Ga5 Ga6 109.6(2) 21 6
+Ga6 Ga5 Ga6 70.60(12) 3 6
+Ga6 Ga5 Ga6 180.00(16) 21 5_556
+Ga6 Ga5 Ga6 109.40(12) 3 5_556
+Ga6 Ga5 Ga6 70.4(2) 6 5_556
+Ga6 Ga5 Ga6 109.40(12) 21 19_556
+Ga6 Ga5 Ga6 180.00(16) 3 19_556
+Ga6 Ga5 Ga6 109.40(13) 6 19_556
+Ga6 Ga5 Ga6 70.60(12) 5_556 19_556
+Ga6 Ga5 Ga6 70.60(12) 21 .
+Ga6 Ga5 Ga6 109.6(2) 3 .
+Ga6 Ga5 Ga6 70.60(12) 6 .
+Ga6 Ga5 Ga6 109.40(13) 5_556 .
+Ga6 Ga5 Ga6 70.4(2) 19_556 .
+Ga6 Ga5 Ga6 70.4(2) 21 22_556
+Ga6 Ga5 Ga6 109.40(12) 3 22_556
+Ga6 Ga5 Ga6 180.000(1) 6 22_556
+Ga6 Ga5 Ga6 109.6(2) 5_556 22_556
+Ga6 Ga5 Ga6 70.60(12) 19_556 22_556
+Ga6 Ga5 Ga6 109.40(12) . 22_556
+Ga6 Ga5 Ga6 109.40(13) 21 17_556
+Ga6 Ga5 Ga6 70.4(2) 3 17_556
+Ga6 Ga5 Ga6 109.40(12) 6 17_556
+Ga6 Ga5 Ga6 70.60(12) 5_556 17_556
+Ga6 Ga5 Ga6 109.6(2) 19_556 17_556
+Ga6 Ga5 Ga6 180.000(1) . 17_556
+Ga6 Ga5 Ga6 70.60(12) 22_556 17_556
+Ga6 Ga5 Ga2 73.24(9) 21 29_544
+Ga6 Ga5 Ga2 5.2(3) 3 29_544
+Ga6 Ga5 Ga2 73.24(9) 6 29_544
+Ga6 Ga5 Ga2 106.76(9) 5_556 29_544
+Ga6 Ga5 Ga2 174.8(3) 19_556 29_544
+Ga6 Ga5 Ga2 114.78(15) . 29_544
+Ga6 Ga5 Ga2 106.76(9) 22_556 29_544
+Ga6 Ga5 Ga2 65.22(15) 17_556 29_544
+Ga6 Ga5 Ga2 5.2(3) 21 9_444
+Ga6 Ga5 Ga2 73.24(9) 3 9_444
+Ga6 Ga5 Ga2 114.78(15) 6 9_444
+Ga6 Ga5 Ga2 174.8(3) 5_556 9_444
+Ga6 Ga5 Ga2 106.76(9) 19_556 9_444
+Ga6 Ga5 Ga2 73.24(9) . 9_444
+Ga6 Ga5 Ga2 65.22(15) 22_556 9_444
+Ga6 Ga5 Ga2 106.76(9) 17_556 9_444
+Ga2 Ga5 Ga2 75.5(2) 29_544 9_444
+Ga6 Ga5 Ga2 73.24(9) 21 29_554
+Ga6 Ga5 Ga2 114.78(15) 3 29_554
+Ga6 Ga5 Ga2 73.24(9) 6 29_554
+Ga6 Ga5 Ga2 106.76(9) 5_556 29_554
+Ga6 Ga5 Ga2 65.22(15) 19_556 29_554
+Ga6 Ga5 Ga2 5.2(3) . 29_554
+Ga6 Ga5 Ga2 106.76(9) 22_556 29_554
+Ga6 Ga5 Ga2 174.8(3) 17_556 29_554
+Ga2 Ga5 Ga2 120.0(5) 29_544 29_554
+Ga2 Ga5 Ga2 75.5(2) 9_444 29_554
+Ga6 Ga5 Ga2 114.78(15) 21 9_544
+Ga6 Ga5 Ga2 73.24(9) 3 9_544
+Ga6 Ga5 Ga2 5.2(3) 6 9_544
+Ga6 Ga5 Ga2 65.22(15) 5_556 9_544
+Ga6 Ga5 Ga2 106.76(9) 19_556 9_544
+Ga6 Ga5 Ga2 73.24(9) . 9_544
+Ga6 Ga5 Ga2 174.8(3) 22_556 9_544
+Ga6 Ga5 Ga2 106.76(9) 17_556 9_544
+Ga2 Ga5 Ga2 75.5(2) 29_544 9_544
+Ga2 Ga5 Ga2 120.0(5) 9_444 9_544
+Ga2 Ga5 Ga2 75.5(2) 29_554 9_544
+Ga6 Ga2 Ga6 159(3) 29 14_455
+Ga6 Ga2 Ga6 66.9(15) 29 30_556
+Ga6 Ga2 Ga6 91.9(17) 14_455 30_556
+Ga6 Ga2 Ga6 91.9(17) 29 13_456
+Ga6 Ga2 Ga6 66.9(15) 14_455 13_456
+Ga6 Ga2 Ga6 25.0(2) 30_556 13_456
+Ga6 Ga2 Ga5 19.4(14) 29 9
+Ga6 Ga2 Ga5 139.3(18) 14_455 9
+Ga6 Ga2 Ga5 47.47(17) 30_556 9
+Ga6 Ga2 Ga5 72.5(3) 13_456 9
+Ga6 Ga2 Ga5 139.3(18) 29 9_455
+Ga6 Ga2 Ga5 19.4(14) 14_455 9_455
+Ga6 Ga2 Ga5 72.5(3) 30_556 9_455
+Ga6 Ga2 Ga5 47.47(17) 13_456 9_455
+Ga5 Ga2 Ga5 120.0(5) 9 9_455
+Ga6 Ga2 Ga2 79.4(16) 29 17_567
+Ga6 Ga2 Ga2 79.4(16) 14_455 17_567
+Ga6 Ga2 Ga2 12.51(12) 30_556 17_567
+Ga6 Ga2 Ga2 12.51(12) 13_456 17_567
+Ga5 Ga2 Ga2 60.0(2) 9 17_567
+Ga5 Ga2 Ga2 60.0(2) 9_455 17_567
+Ga6 Ga2 Ga3 95.6(8) 29 17_556
+Ga6 Ga2 Ga3 95.6(8) 14_455 17_556
+Ga6 Ga2 Ga3 121.0(2) 30_556 17_556
+Ga6 Ga2 Ga3 121.0(2) 13_456 17_556
+Ga5 Ga2 Ga3 105.287(16) 9 17_556
+Ga5 Ga2 Ga3 105.287(16) 9_455 17_556
+Ga2 Ga2 Ga3 121.8(2) 17_567 17_556
+Ga6 Ga2 Ga3 95.6(8) 29 17_566
+Ga6 Ga2 Ga3 95.6(8) 14_455 17_566
+Ga6 Ga2 Ga3 121.0(2) 30_556 17_566
+Ga6 Ga2 Ga3 121.0(2) 13_456 17_566
+Ga5 Ga2 Ga3 105.287(16) 9 17_566
+Ga5 Ga2 Ga3 105.287(16) 9_455 17_566
+Ga2 Ga2 Ga3 121.8(2) 17_567 17_566
+Ga3 Ga2 Ga3 116.4(5) 17_556 17_566
+Ga6 Ga2 Ga6 37.7(3) 29 9
+Ga6 Ga2 Ga6 141.0(6) 14_455 9
+Ga6 Ga2 Ga6 78.0(3) 30_556 9
+Ga6 Ga2 Ga6 97.9(4) 13_456 9
+Ga5 Ga2 Ga6 44.82(8) 9 9
+Ga5 Ga2 Ga6 132.3(4) 9_455 9
+Ga2 Ga2 Ga6 87.9(3) 17_567 9
+Ga3 Ga2 Ga6 122.1(3) 17_556 9
+Ga3 Ga2 Ga6 60.54(10) 17_566 9
+Ga6 Ga2 Ga6 141.0(6) 29 11_455
+Ga6 Ga2 Ga6 37.7(3) 14_455 11_455
+Ga6 Ga2 Ga6 97.9(4) 30_556 11_455
+Ga6 Ga2 Ga6 78.0(3) 13_456 11_455
+Ga5 Ga2 Ga6 132.3(4) 9 11_455
+Ga5 Ga2 Ga6 44.82(8) 9_455 11_455
+Ga2 Ga2 Ga6 87.9(3) 17_567 11_455
+Ga3 Ga2 Ga6 60.54(10) 17_556 11_455
+Ga3 Ga2 Ga6 122.1(3) 17_566 11_455
+Ga6 Ga2 Ga6 175.8(6) 9 11_455
+Ga6 Ga2 Ga6 141.0(6) 29 9_455
+Ga6 Ga2 Ga6 37.7(3) 14_455 9_455
+Ga6 Ga2 Ga6 97.9(4) 30_556 9_455
+Ga6 Ga2 Ga6 78.0(3) 13_456 9_455
+Ga5 Ga2 Ga6 132.3(4) 9 9_455
+Ga5 Ga2 Ga6 44.82(8) 9_455 9_455
+Ga2 Ga2 Ga6 87.9(3) 17_567 9_455
+Ga3 Ga2 Ga6 122.1(3) 17_556 9_455
+Ga3 Ga2 Ga6 60.54(10) 17_566 9_455
+Ga6 Ga2 Ga6 105.87(16) 9 9_455
+Ga6 Ga2 Ga6 73.97(13) 11_455 9_455
+loop_
+_geom_bond_atom_site_label_1
+_geom_bond_atom_site_label_2
+_geom_bond_distance
+_geom_bond_site_symmetry_2
+Ce1 Ga6 3.158(4) .
+Ce1 Ga6 3.158(4) 6
+Ce1 Ga6 3.158(4) 21
+Ce1 Ga6 3.158(4) 3
+Ce1 Ga4 3.2618(6) 25_445
+Ce1 Ga4 3.2618(6) 25
+Ce1 Ga4 3.2618(6) 25_455
+Ce1 Ga4 3.2618(6) 25_545
+Ce1 Ga3 3.2951(6) 25
+Ce1 Ga3 3.2951(6) 25_445
+Ce1 Ga3 3.2951(6) 25_545
+Ce1 Ga3 3.2951(6) 25_455
+Ga3 Ga4 2.4759(15) .
+Ga3 Ga2 2.525(6) 5_456
+Ga3 Ga2 2.525(6) 17_556
+Ga3 Ga2 2.525(6) 5_556
+Ga3 Ga2 2.525(6) 17_566
+Ga3 Ga6 2.6326(18) 13_445
+Ga3 Ga6 2.6326(18) 27_445
+Ga3 Ga6 2.6326(18) 30_545
+Ga3 Ga6 2.6326(18) 25_455
+Ga3 Ga6 2.6326(18) 30
+Ga3 Ga6 2.6326(18) 25
+Ga3 Ga6 2.6326(18) 27_545
+Ga4 Ag1 2.6095(7) .
+Ga4 Ga1 2.6095(7) 25
+Ga4 Ag1 2.6095(7) 25
+Ga4 Ga1 2.6095(7) 25_455
+Ga4 Ga1 2.6095(7) 1_545
+Ga4 Ag1 2.6095(7) 25_455
+Ga4 Ag1 2.6095(7) 1_545
+Ga4 Ce1 3.2618(6) 25_445
+Ga4 Ce1 3.2618(6) 25
+Ga4 Ce1 3.2618(6) 25_545
+Ag1 Ga4 2.6095(7) 1_565
+Ag1 Ga4 2.6095(7) 25
+Ag1 Ga4 2.6095(7) 25_455
+Ag1 Ga1 3.0355(4) 25_565
+Ag1 Ga1 3.0355(4) 25_455
+Ag1 Ag1 3.0355(4) 25_565
+Ag1 Ag1 3.0355(4) 25_455
+Ag1 Ga1 3.0355(4) 25_465
+Ag1 Ga1 3.0355(4) 25
+Ag1 Ag1 3.0355(4) 25
+Ag1 Ag1 3.0355(4) 25_465
+Ga6 Ga2 0.537(4) 29_554
+Ga6 Ga6 1.056(8) 3_565
+Ga6 Ga5 1.980(3) .
+Ga6 Ga6 2.283(7) 19_556
+Ga6 Ga6 2.288(6) 21
+Ga6 Ga6 2.288(6) 6
+Ga6 Ga2 2.440(8) 13_456
+Ga6 Ga6 2.515(8) 17_566
+Ga6 Ga3 2.6326(18) 25_455
+Ga6 Ga3 2.6326(18) 25
+Ga6 Ga2 2.690(3) 9_444
+Ga6 Ga2 2.690(3) 9_544
+Ga5 Ga6 1.980(3) 21
+Ga5 Ga6 1.980(3) 3
+Ga5 Ga6 1.980(3) 6
+Ga5 Ga6 1.980(3) 5_556
+Ga5 Ga6 1.980(3) 19_556
+Ga5 Ga6 1.980(3) 22_556
+Ga5 Ga6 1.980(3) 17_556
+Ga5 Ga2 2.479(6) 29_544
+Ga5 Ga2 2.479(6) 9_444
+Ga5 Ga2 2.479(6) 29_554
+Ga5 Ga2 2.479(6) 9_544
+Ga2 Ga6 0.537(4) 29
+Ga2 Ga6 0.537(4) 14_455
+Ga2 Ga6 2.440(8) 30_556
+Ga2 Ga6 2.440(8) 13_456
+Ga2 Ga5 2.479(6) 9
+Ga2 Ga5 2.479(6) 9_455
+Ga2 Ga2 2.48(2) 17_567
+Ga2 Ga3 2.525(6) 17_556
+Ga2 Ga3 2.525(6) 17_566
+Ga2 Ga6 2.690(3) 9
+Ga2 Ga6 2.690(3) 11_455
+Ga2 Ga6 2.690(3) 9_455

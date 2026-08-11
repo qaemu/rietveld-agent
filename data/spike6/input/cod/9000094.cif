@@ -1,0 +1,94 @@
+#------------------------------------------------------------------------------
+#$Date: 2025-11-01 14:29:51 +0200 (Sat, 01 Nov 2025) $
+#$Revision: 303136 $
+#$URL: file:///home/coder/svn-repositories/_RELOADED_COD/cod-reloaded/cif/9/00/00/9000094.cif $
+#------------------------------------------------------------------------------
+#
+# This file is available in the Crystallography Open Database (COD),
+# http://www.crystallography.net/. The original data for this entry
+# were provided the American Mineralogist Crystal Structure Database,
+# http://rruff.geo.arizona.edu/AMS/amcsd.php
+#
+# The file may be used within the scientific community so long as
+# proper attribution is given to the journal article from which the
+# data were obtained.
+#
+data_9000094
+loop_
+_publ_author_name
+'Prewitt, C. T.'
+'Buerger, M. J.'
+_publ_section_title
+;
+ The crystal structure of cahnite, Ca2BAsO4(OH)4
+;
+_journal_name_full               'American Mineralogist'
+_journal_page_first              1077
+_journal_page_last               1085
+_journal_volume                  46
+_journal_year                    1961
+_chemical_compound_source        'Franklin, New Jersey, USA'
+_chemical_formula_sum            'As B Ca2 H4 O8'
+_chemical_name_mineral           Cahnite
+_space_group_IT_number           82
+_symmetry_space_group_name_Hall  'I -4'
+_symmetry_space_group_name_H-M   'I -4'
+_cell_angle_alpha                90
+_cell_angle_beta                 90
+_cell_angle_gamma                90
+_cell_formula_units_Z            2
+_cell_length_a                   7.11
+_cell_length_b                   7.11
+_cell_length_c                   6.20
+_cell_volume                     313.423
+_database_code_amcsd             0000097
+_exptl_crystal_density_diffrn    3.157
+_cod_database_code               9000094
+loop_
+_space_group_symop_operation_xyz
+x,y,z
+1/2+x,1/2+y,1/2+z
+y,-x,-z
+1/2+y,1/2-x,1/2-z
+-x,-y,z
+1/2-x,1/2-y,1/2+z
+-y,x,-z
+1/2-y,1/2+x,1/2-z
+loop_
+_atom_site_label
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+_atom_site_attached_hydrogens
+_atom_site_type_symbol
+As 0.00000 0.00000 0.00000 0 As
+B 0.00000 0.50000 0.25000 0 B
+Ca1 0.00000 0.00000 0.50000 0 Ca
+Ca2 0.00000 0.50000 0.75000 0 Ca
+O1 0.17800 0.05400 0.16700 0 O
+O-H2 0.16000 0.44400 0.11400 1 O
+loop_
+_cod_changelog_entry_id
+_cod_changelog_entry_author
+_cod_changelog_entry_date
+_cod_changelog_entry_text
+1
+;cod-tools version 3.8.0
+Id: cif_guess_AMCSD_atom_types 9574 2023-05-10 09:00:05Z saulius
+;
+2023-05-10T18:45:43+03:00
+;Derived atom types
+from atom names that follow the AMCSD naming convention
+(Wat == water, O-H == hydroxyl).
+;
+loop_
+_cod_related_entry_id
+_cod_related_entry_database
+_cod_related_entry_code
+1 AMCSD 0000097
+2 Wikidata Q3649812
+3 Wikipedia Cahnite
+4 ROD 1000412
+5 ROD 1000512
+6 ROD 1000595
+7 ROD 1000600

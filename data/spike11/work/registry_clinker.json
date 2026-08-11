@@ -1,0 +1,190 @@
+{
+  "schema": "calibration-registry/v0",
+  "updated_at": "2026-08-10T01:30:06-0300",
+  "records": [
+    {
+      "schema": "calibration/v0",
+      "id": "cal-967c5da10ad2",
+      "name": "CNEA-Cu-PANalytical-XPert3",
+      "kind": "XML-FINGERPRINTED",
+      "geometry": "Bragg-Brentano",
+      "wavelength": {
+        "alpha1": 1.5405,
+        "alpha2": 1.5443,
+        "ratio_kalpha2_kalpha1": 1.0024667315806557
+      },
+      "state": "released",
+      "approval": {
+        "reviewed_by": "cnca-lab-admin",
+        "reviewed_at": "2026-08-09T22:55:23-0300",
+        "status": "approved",
+        "evidence_ref": "/Users/lucas/Documents/CNEA/rietveld-agent/data/spike/results/spike_report.md"
+      },
+      "created_at": "2026-08-09T22:55:23-0300",
+      "content": {
+        "gsasii_instprm": {
+          "path": "/Users/lucas/Documents/CNEA/rietveld-agent/data/spike/input/INST_XRY.PRM",
+          "sha256": "e59413059bc3b12a51f1c6eebc5d581470320d05a31f11a41dbb32e16d1d16b9",
+          "format": "GSAS-II instrument parameter file"
+        },
+        "notes": "Cu Kalpha Bragg-Brentano"
+      },
+      "fingerprint": {
+        "rules": [
+          {
+            "field": "tube_anode_material",
+            "expected": "CuKa"
+          },
+          {
+            "field": "scan_axis",
+            "expected": "2Theta/Theta"
+          }
+        ],
+        "accept_incomplete": false
+      }
+    },
+    {
+      "schema": "calibration/v0",
+      "id": "cal-9bba7cdaeb39",
+      "name": "CNEA-Fe-PANalytical-XPert3",
+      "kind": "XML-FINGERPRINTED",
+      "geometry": "Bragg-Brentano",
+      "wavelength": {
+        "alpha1": 1.936,
+        "alpha2": 1.9399,
+        "ratio_kalpha2_kalpha1": 1.0020144628099175
+      },
+      "state": "released",
+      "approval": {
+        "reviewed_by": "cnca-lab-admin",
+        "reviewed_at": "2026-08-09T22:55:23-0300",
+        "status": "approved",
+        "evidence_ref": "/Users/lucas/Documents/CNEA/rietveld-agent/data/spike/results/spike_report.md"
+      },
+      "created_at": "2026-08-09T22:55:23-0300",
+      "content": {
+        "gsasii_instprm": {
+          "path": "/Users/lucas/Documents/CNEA/rietveld-agent/data/spike2/input/INST_FE.PRM",
+          "sha256": "c64443a939bfc65ace92c2c5cdcdaf5b27bc3fc0a651175cd4f14d4cb19dce35",
+          "format": "GSAS-II instrument parameter file"
+        },
+        "notes": "Fe Kalpha Bragg-Brentano"
+      },
+      "fingerprint": {
+        "rules": [
+          {
+            "field": "tube_anode_material",
+            "expected": "FeKa"
+          },
+          {
+            "field": "scan_axis",
+            "expected": "2Theta/Theta"
+          }
+        ],
+        "accept_incomplete": false
+      }
+    },
+    {
+      "schema": "calibration/v0",
+      "id": "cal-c81bcb4bc874",
+      "name": "CNEA-Cu-XRD-default",
+      "kind": "XYE-DEFAULT",
+      "geometry": "Bragg-Brentano",
+      "wavelength": {
+        "alpha1": 1.5405,
+        "alpha2": 1.5443,
+        "ratio_kalpha2_kalpha1": 1.0024667315806557
+      },
+      "state": "released",
+      "approval": {
+        "reviewed_by": "cnca-lab-admin",
+        "reviewed_at": "2026-08-09T22:55:23-0300",
+        "status": "approved",
+        "evidence_ref": "/Users/lucas/Documents/CNEA/rietveld-agent/data/spike/results/spike_report.md"
+      },
+      "created_at": "2026-08-09T22:55:23-0300",
+      "content": {
+        "gsasii_instprm": {
+          "path": "/Users/lucas/Documents/CNEA/rietveld-agent/data/spike/input/INST_XRY.PRM",
+          "sha256": "e59413059bc3b12a51f1c6eebc5d581470320d05a31f11a41dbb32e16d1d16b9",
+          "format": "GSAS-II instrument parameter file"
+        },
+        "notes": "default for plain XYE input"
+      }
+    },
+    {
+      "schema": "calibration/v0",
+      "id": "cal-clinker-cu-c82f4d56",
+      "name": "PANalytical X'Pert PRO MPD Ge(111)-monochromated Cu Ka1 (validation-only, SRM 2686a study)",
+      "kind": "XML-FINGERPRINTED",
+      "geometry": "Bragg-Brentano",
+      "wavelength": {
+        "alpha1": 1.540598,
+        "alpha2": 1.544426,
+        "ratio_kalpha2_kalpha1": 0.0
+      },
+      "state": "released",
+      "approval": {
+        "reviewed_by": "spike-11-validation",
+        "reviewed_at": "2026-08-10T01:30:06-0300",
+        "status": "approved",
+        "evidence_ref": "10.5281/zenodo.1318501"
+      },
+      "created_at": "2026-08-10T01:30:06-0300",
+      "fingerprint": {
+        "rules": [
+          {
+            "field": "tube_anode_material",
+            "expected": "Cu"
+          }
+        ],
+        "accept_incomplete": false
+      },
+      "content": {
+        "gsasii_instprm": {
+          "path": "data/spike11/work/INST_XRY_CU_CLINKER.PRM",
+          "sha256": "e59413059bc3b12a51f1c6eebc5d581470320d05a31f11a41dbb32e16d1d16b9",
+          "format": "GSAS-II instrument parameter file"
+        },
+        "notes": "Validation-only registration (spike 11): strictly monochromatic Cu Ka1 (Ge(111) primary monochromator, 45 kV / 40 mA), X'Celerator detector. kAlpha2 declared by the instrument file but fully suppressed (ratio=0). Wavelengths as declared in the native XRDML."
+      }
+    },
+    {
+      "schema": "calibration/v0",
+      "id": "cal-clinker-sync-a7f4528a",
+      "name": "ALBA synchrotron XRPD station, rotating capillary, lambda=0.82543(5) A (validation-only, SRM 2686a study)",
+      "kind": "XML-FINGERPRINTED",
+      "geometry": "Bragg-Brentano",
+      "wavelength": {
+        "alpha1": 0.82543,
+        "alpha2": 0.82543,
+        "ratio_kalpha2_kalpha1": 1.0
+      },
+      "state": "released",
+      "approval": {
+        "reviewed_by": "spike-11-validation",
+        "reviewed_at": "2026-08-10T01:30:06-0300",
+        "status": "approved",
+        "evidence_ref": "10.5281/zenodo.1318501"
+      },
+      "created_at": "2026-08-10T01:30:06-0300",
+      "fingerprint": {
+        "rules": [
+          {
+            "field": "tube_anode_material",
+            "expected": "Synchrotron"
+          }
+        ],
+        "accept_incomplete": false
+      },
+      "content": {
+        "gsasii_instprm": {
+          "path": "data/spike11/work/INST_XRY_CU_CLINKER.PRM",
+          "sha256": "e59413059bc3b12a51f1c6eebc5d581470320d05a31f11a41dbb32e16d1d16b9",
+          "format": "GSAS-II instrument parameter file"
+        },
+        "notes": "Validation-only registration (spike 11): ALBA SXRPD, monochromatic beam selected with a double-crystal Si(111) monochromator, lambda=0.82543(5) A determined from Si640d NIST standard; MYTHEN detector; rotating capillary transmission. Wavelength from the study paper."
+      }
+    }
+  ]
+}

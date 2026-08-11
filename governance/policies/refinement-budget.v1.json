@@ -1,0 +1,33 @@
+{
+  "$schema": "https://rietveld-agent.local/governance/schemas/refinement_policy.schema.json",
+  "schema": "refinement_policy/v1",
+  "version": "1.0",
+  "recipe": "refinement-verify-v1",
+  "description": "Bounded Rietveld verification recipe (spike 07). Refines ONLY the allowlisted parameter budget against a deterministic GSAS-II observed pattern derived from the catalog CIF. Explicitly prohibited: anything that can absorb structural mismatch (unrestrained atoms, microstrain, size, hydrostatic strain, phase fractions, preferred orientation, LeBail).",
+  "protocol": {
+    "anode": "CuKa",
+    "wavelengths": [1.5405, 1.5443],
+    "tmin": 15.0,
+    "tmax": 140.0,
+    "step": 0.02,
+    "scale": 50000.0,
+    "background": {"type": "chebyschev-1", "no. coeffs": 3}
+  },
+  "bounded_keys": {
+    "histogram": ["Background", "Sample Parameters Shift"],
+    "phase": ["Cell"],
+    "hap": ["Scale"]
+  },
+  "max_cycles": 10,
+  "prohibited": ["Atoms", "Mustrain", "Size", "HStrain", "PhaseFraction",
+                 "Pref.Ori.", "LeBail"],
+  "confirm": {
+    "max_rwp": 0.35,
+    "require_separation": true,
+    "separation_min": 0.05
+  },
+  "observable": {
+    "truth_source": "catalog CIF -> deterministic GSAS-II simulation (same protocol as catalog fingerprints)",
+    "noise": "none (spike-07 noiseless protocol; instrument/noise robustness is spike 05's mandate)"
+  }
+}

@@ -1,0 +1,81 @@
+#------------------------------------------------------------------------------
+#$Date: 2015-07-11 16:14:25 +0300 (Sat, 11 Jul 2015) $
+#$Revision: 144838 $
+#$URL: file:///home/coder/svn-repositories/_RELOADED_COD/cod-reloaded/cif/1/52/41/1524155.cif $
+#------------------------------------------------------------------------------
+#
+# This file is available in the Crystallography Open Database (COD),
+# http://www.crystallography.net/
+#
+# All data on this site have been placed in the public domain by the
+# contributors.
+#
+data_1524155
+loop_
+_publ_author_name
+'Buschow, K.H.J.'
+'van Engen, P.G.'
+'Jongebreur, R.'
+_publ_section_title
+;
+ Magneto-optical properties of metallic ferromagnetic materials
+;
+_journal_name_full               'Journal of Magnetism and Magnetic Materials'
+_journal_page_first              1
+_journal_page_last               22
+_journal_volume                  38
+_journal_year                    1983
+_chemical_formula_sum            'Co1.5 Rh0.5'
+_chemical_name_systematic        '(Co1.5 Rh0.5)'
+_space_group_IT_number           194
+_symmetry_space_group_name_Hall  '-P 6c 2c'
+_symmetry_space_group_name_H-M   'P 63/m m c'
+_cell_angle_alpha                90
+_cell_angle_beta                 90
+_cell_angle_gamma                120
+_cell_formula_units_Z            1
+_cell_length_a                   2.581
+_cell_length_b                   2.581
+_cell_length_c                   4.158
+_cell_volume                     23.988
+_citation_journal_id_ASTM        JMMMDC
+_cod_data_source_file            Buschow_JMMMDC_1983_1202.cif
+_cod_data_source_block           Co1.5Rh0.5
+_cod_original_cell_volume        23.98784
+_cod_database_code               1524155
+loop_
+_symmetry_equiv_pos_as_xyz
+x,y,z
+x-y,x,z+1/2
+-y,x-y,z
+-x,-y,z+1/2
+-x+y,-x,z
+y,-x+y,z+1/2
+-y,-x,-z+1/2
+x-y,-y,-z
+x,x-y,-z+1/2
+y,x,-z
+-x+y,y,-z+1/2
+-x,-x+y,-z
+-x,-y,-z
+-x+y,-x,-z-1/2
+y,-x+y,-z
+x,y,-z-1/2
+x-y,x,-z
+-y,x-y,-z-1/2
+y,x,z-1/2
+-x+y,y,z
+-x,-x+y,z-1/2
+-y,-x,z
+x-y,-y,z-1/2
+x,x-y,z
+loop_
+_atom_site_label
+_atom_site_type_symbol
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+_atom_site_occupancy
+_atom_site_U_iso_or_equiv
+Rh1 Rh 0.3333 0.6667 0.25 0.25 0.0
+Co1 Co 0.3333 0.6667 0.25 0.75 0.0

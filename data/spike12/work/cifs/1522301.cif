@@ -1,0 +1,100 @@
+#------------------------------------------------------------------------------
+#$Date: 2016-02-13 21:28:24 +0200 (Sat, 13 Feb 2016) $
+#$Revision: 176429 $
+#$URL: file:///home/coder/svn-repositories/_RELOADED_COD/cod-reloaded/cif/1/52/23/1522301.cif $
+#------------------------------------------------------------------------------
+#
+# This file is available in the Crystallography Open Database (COD),
+# http://www.crystallography.net/
+#
+# All data on this site have been placed in the public domain by the
+# contributors.
+#
+data_1522301
+loop_
+_publ_author_name
+'Yu, W.J.'
+'Kim, Y.I.'
+'Seong, S.'
+'Ha, D.H.'
+'Lee, J.-H.'
+'Park, Y.K.'
+'Hur, N.H.'
+_publ_section_title
+;
+ A new manganese oxide with Aurivillius structure: Bi2 Sr2 Nb2 Mn O12-d
+;
+_journal_name_full               'Solid State Communications'
+_journal_page_first              705
+_journal_page_last               709
+_journal_volume                  111
+_journal_year                    1999
+_chemical_formula_sum            'Bi2 Mn Nb2 O11.57 Sr2'
+_chemical_name_systematic        'Bi2 Sr2 Nb2 Mn O11.57'
+_space_group_IT_number           69
+_symmetry_space_group_name_Hall  '-F 2 2'
+_symmetry_space_group_name_H-M   'F m m m'
+_cell_angle_alpha                90
+_cell_angle_beta                 90
+_cell_angle_gamma                90
+_cell_formula_units_Z            4
+_cell_length_a                   5.5243
+_cell_length_b                   5.5246
+_cell_length_c                   32.99959
+_cell_volume                     1007.133
+_citation_journal_id_ASTM        SSCOA4
+_cod_data_source_file            Yu_SSCOA4_1999_748.cif
+_cod_data_source_block           Bi2Mn1Nb2O11.57Sr2
+_cod_original_formula_sum        'Bi2 Mn1 Nb2 O11.57 Sr2'
+_cod_database_code               1522301
+loop_
+_symmetry_equiv_pos_as_xyz
+x,y,z
+-x,-y,z
+x,-y,-z
+-x,y,-z
+-x,-y,-z
+x,y,-z
+-x,y,z
+x,-y,z
+x,y+1/2,z+1/2
+-x,-y+1/2,z+1/2
+x,-y+1/2,-z+1/2
+-x,y+1/2,-z+1/2
+-x,-y+1/2,-z+1/2
+x,y+1/2,-z+1/2
+-x,y+1/2,z+1/2
+x,-y+1/2,z+1/2
+x+1/2,y,z+1/2
+-x+1/2,-y,z+1/2
+x+1/2,-y,-z+1/2
+-x+1/2,y,-z+1/2
+-x+1/2,-y,-z+1/2
+x+1/2,y,-z+1/2
+-x+1/2,y,z+1/2
+x+1/2,-y,z+1/2
+x+1/2,y+1/2,z
+-x+1/2,-y+1/2,z
+x+1/2,-y+1/2,-z
+-x+1/2,y+1/2,-z
+-x+1/2,-y+1/2,-z
+x+1/2,y+1/2,-z
+-x+1/2,y+1/2,z
+x+1/2,-y+1/2,z
+loop_
+_atom_site_label
+_atom_site_type_symbol
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+_atom_site_occupancy
+_atom_site_U_iso_or_equiv
+O2 O-2 0.25 0.25 0.25 1 0.0
+Bi1 Bi+3 0 0 0.214 1 0.0
+Mn1 Mn+3 0 0 0.5 1 0.0
+O4 O-2 0 0 0.3122 1 0.0
+O5 O-2 0.25 0.25 0.1196 1 0.0
+O3 O-2 0 0 0.4521 1 0.0
+O1 O-2 0.25 0.25 0 0.7842 0.0
+Sr1 Sr+2 0 0 0.0596 1 0.0
+Nb1 Nb+5 0 0 0.3714 1 0.0

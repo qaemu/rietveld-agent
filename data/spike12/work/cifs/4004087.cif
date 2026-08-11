@@ -1,0 +1,150 @@
+#------------------------------------------------------------------------------
+#$Date: 2023-02-27 13:01:50 +0200 (Mon, 27 Feb 2023) $
+#$Revision: 281157 $
+#$URL: file:///home/coder/svn-repositories/_RELOADED_COD/cod-reloaded/cif/4/00/40/4004087.cif $
+#------------------------------------------------------------------------------
+#
+# This file is available in the Crystallography Open Database (COD),
+# http://www.crystallography.net/
+#
+# All data on this site have been placed in the public domain by the
+# contributors.
+#
+data_4004087
+loop_
+_publ_author_name
+'Delacotte, C.'
+'Pomelova, T.A.'
+'Stephant, T.'
+'Guizouarn, T.'
+'Cordier, S.'
+'Naumov, N.G.'
+'Lemoine, P.'
+_publ_section_title
+;
+ 'NaGdS2: a promising sulfide for cryogenic magnetic cooling'
+;
+_journal_issue                   4
+_journal_name_full               'Chemistry of Materials'
+_journal_page_first              1829
+_journal_page_last               1837
+_journal_paper_doi               10.1021/acs.chemmater.1c04105
+_journal_volume                  34
+_journal_year                    2022
+_chemical_formula_moiety         'Gd K S2'
+_chemical_formula_structural     KGdS2
+_chemical_formula_sum            'Gd K S2'
+_chemical_formula_weight         260.480
+_space_group_IT_number           166
+_space_group_name_Hall           '-R 3 2"'
+_space_group_name_H-M_alt        'R -3 m :H'
+_symmetry_cell_setting           trigonal
+_symmetry_space_group_name_Hall  '-R 3 2"'
+_symmetry_space_group_name_H-M   'R -3 m :H'
+_cell_angle_alpha                90.0000
+_cell_angle_beta                 90.0000
+_cell_angle_gamma                120.000
+_cell_formula_units_Z            3
+_cell_length_a                   4.07711(13)
+_cell_length_b                   4.07711(13)
+_cell_length_c                   21.9170(8)
+_cell_measurement_temperature    293(2)
+_cell_volume                     315.513(18)
+_computing_structure_refinement  FULLPROF
+_diffrn_ambient_temperature      293(3)
+_diffrn_detector                 'see experimental section'
+_diffrn_detector_area_resol_mean 'see experimental section'
+_diffrn_detector_type            'see experimental section'
+_diffrn_measurement_device_type  'see experimental section'
+_diffrn_measurement_method       'see experimental section'
+_diffrn_radiation_monochromator  'see experimental section'
+_diffrn_radiation_type           X-ray
+_diffrn_source                   'Laboratory diffractometer'
+_diffrn_source_target            Cu
+_pd_meas_2theta_range_inc        0.019654
+_pd_meas_2theta_range_max        79.94070
+_pd_meas_2theta_range_min        5.00000
+_pd_meas_number_of_points        3814
+_pd_proc_2theta_range_inc        0.019654
+_pd_proc_2theta_range_max        79.9372
+_pd_proc_2theta_range_min        4.9965
+_pd_proc_ls_prof_R_factor        6.5886
+_pd_proc_ls_prof_wR_expected     3.8969
+_pd_proc_ls_prof_wR_factor       10.2131
+_pd_proc_wavelength              1.540560
+_refine_ls_number_parameters     13
+_refine_ls_number_reflns         44
+_refine_ls_number_restraints     0
+_refine_ls_R_I_factor            21.5299
+_cod_data_source_file            KGdS2.cif
+_cod_data_source_block           KGdS2
+_cod_depositor_comments
+;
+The following automatic conversions were performed:
+
+data item '_symmetry_cell_setting' value 'Trigonal' was changed to
+'trigonal' in accordance with the built-in table derived from the CIF
+Core dictionary named 'cif_core.dic' version 2.4.5 last updated on
+2014-11-21.
+
+Automatic conversion script
+Id: cif_fix_values 8738 2021-04-28 16:35:53Z antanas 
+;
+_cod_original_cell_volume        315.512(18)
+_cod_original_sg_symbol_H-M      'R -3 m'
+_cod_database_code               4004087
+_pd_proc_ls_prof_cr_factor       42.1507
+_pd_proc_ls_prof_cwr_factor      33.4415
+_pd_proc_ls_prof_cwr_expected    12.7598
+_pd_proc_ls_prof_chi2            6.8689
+_pd_proc_ls_prof_echi2           8.0746
+loop_
+_symmetry_equiv_pos_as_xyz
+x,y,z
+-y,x-y,z
+-x+y,-x,z
+-y,-x,z
+-x+y,y,z
+x,x-y,z
+-x,-y,-z
+y,-x+y,-z
+x-y,x,-z
+y,x,-z
+x-y,-y,-z
+-x,-x+y,-z
+x+2/3,y+1/3,z+1/3
+-y+2/3,x-y+1/3,z+1/3
+-x+y+2/3,-x+1/3,z+1/3
+-y+2/3,-x+1/3,z+1/3
+-x+y+2/3,y+1/3,z+1/3
+x+2/3,x-y+1/3,z+1/3
+-x+2/3,-y+1/3,-z+1/3
+y+2/3,-x+y+1/3,-z+1/3
+x-y+2/3,x+1/3,-z+1/3
+y+2/3,x+1/3,-z+1/3
+x-y+2/3,-y+1/3,-z+1/3
+-x+2/3,-x+y+1/3,-z+1/3
+x+1/3,y+2/3,z+2/3
+-y+1/3,x-y+2/3,z+2/3
+-x+y+1/3,-x+2/3,z+2/3
+-y+1/3,-x+2/3,z+2/3
+-x+y+1/3,y+2/3,z+2/3
+x+1/3,x-y+2/3,z+2/3
+-x+1/3,-y+2/3,-z+2/3
+y+1/3,-x+y+2/3,-z+2/3
+x-y+1/3,x+2/3,-z+2/3
+y+1/3,x+2/3,-z+2/3
+x-y+1/3,-y+2/3,-z+2/3
+-x+1/3,-x+y+2/3,-z+2/3
+loop_
+_atom_site_label
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+_atom_site_U_iso_or_equiv
+_atom_site_occupancy
+_atom_site_adp_type
+_atom_site_type_symbol
+K 0.00000 0.00000 0.00000 0.00000 1.00000 Uiso K
+Gd 0.00000 0.00000 0.50000 0.00000 1.00000 Uiso Gd
+S 0.00000 0.00000 0.2416(4) 0.00000 1.00006 Uiso S

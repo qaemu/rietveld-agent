@@ -1,0 +1,152 @@
+#------------------------------------------------------------------------------
+#$Date: 2015-07-13 05:11:14 +0300 (Mon, 13 Jul 2015) $
+#$Revision: 149343 $
+#$URL: file:///home/coder/svn-repositories/_RELOADED_COD/cod-reloaded/cif/1/52/76/1527661.cif $
+#------------------------------------------------------------------------------
+#
+# This file is available in the Crystallography Open Database (COD),
+# http://www.crystallography.net/
+#
+# All data on this site have been placed in the public domain by the
+# contributors.
+#
+data_1527661
+loop_
+_publ_author_name
+'Koch, C.C.'
+'Love, G.R.'
+_publ_section_title
+;
+ An investigation of the V-Tc alloy system
+;
+_journal_name_full               'Journal of the Less-Common Metals'
+_journal_page_first              43
+_journal_page_last               58
+_journal_volume                  15
+_journal_year                    1968
+_chemical_formula_sum            'Tc0.3 V0.7'
+_chemical_name_systematic        '(Tc0.3 V0.7)'
+_space_group_IT_number           229
+_symmetry_space_group_name_Hall  '-I 4 2 3'
+_symmetry_space_group_name_H-M   'I m -3 m'
+_cell_angle_alpha                90
+_cell_angle_beta                 90
+_cell_angle_gamma                90
+_cell_formula_units_Z            2
+_cell_length_a                   3.015
+_cell_length_b                   3.015
+_cell_length_c                   3.015
+_cell_volume                     27.407
+_citation_journal_id_ASTM        JCOMAH
+_cod_data_source_file            Koch_JCOMAH_1968_109.cif
+_cod_data_source_block           Tc0.3V0.7
+_cod_original_cell_volume        27.40703
+_cod_database_code               1527661
+loop_
+_symmetry_equiv_pos_as_xyz
+x,y,z
+-y,x,z
+-x,-y,z
+y,-x,z
+x,-y,-z
+y,x,-z
+-x,y,-z
+-y,-x,-z
+z,x,y
+-x,z,y
+-z,-x,y
+x,-z,y
+z,-x,-y
+x,z,-y
+-z,x,-y
+-x,-z,-y
+y,z,x
+y,-z,-x
+z,y,-x
+-y,z,-x
+-z,-y,-x
+-y,-z,x
+z,-y,x
+-z,y,x
+-x,-y,-z
+y,-x,-z
+x,y,-z
+-y,x,-z
+-x,y,z
+-y,-x,z
+x,-y,z
+y,x,z
+-z,-x,-y
+x,-z,-y
+z,x,-y
+-x,z,-y
+-z,x,y
+-x,-z,y
+z,-x,y
+x,z,y
+-y,-z,-x
+-y,z,x
+-z,-y,x
+y,-z,x
+z,y,x
+y,z,-x
+-z,y,-x
+z,-y,-x
+x+1/2,y+1/2,z+1/2
+-y+1/2,x+1/2,z+1/2
+-x+1/2,-y+1/2,z+1/2
+y+1/2,-x+1/2,z+1/2
+x+1/2,-y+1/2,-z+1/2
+y+1/2,x+1/2,-z+1/2
+-x+1/2,y+1/2,-z+1/2
+-y+1/2,-x+1/2,-z+1/2
+z+1/2,x+1/2,y+1/2
+-x+1/2,z+1/2,y+1/2
+-z+1/2,-x+1/2,y+1/2
+x+1/2,-z+1/2,y+1/2
+z+1/2,-x+1/2,-y+1/2
+x+1/2,z+1/2,-y+1/2
+-z+1/2,x+1/2,-y+1/2
+-x+1/2,-z+1/2,-y+1/2
+y+1/2,z+1/2,x+1/2
+y+1/2,-z+1/2,-x+1/2
+z+1/2,y+1/2,-x+1/2
+-y+1/2,z+1/2,-x+1/2
+-z+1/2,-y+1/2,-x+1/2
+-y+1/2,-z+1/2,x+1/2
+z+1/2,-y+1/2,x+1/2
+-z+1/2,y+1/2,x+1/2
+-x+1/2,-y+1/2,-z+1/2
+y+1/2,-x+1/2,-z+1/2
+x+1/2,y+1/2,-z+1/2
+-y+1/2,x+1/2,-z+1/2
+-x+1/2,y+1/2,z+1/2
+-y+1/2,-x+1/2,z+1/2
+x+1/2,-y+1/2,z+1/2
+y+1/2,x+1/2,z+1/2
+-z+1/2,-x+1/2,-y+1/2
+x+1/2,-z+1/2,-y+1/2
+z+1/2,x+1/2,-y+1/2
+-x+1/2,z+1/2,-y+1/2
+-z+1/2,x+1/2,y+1/2
+-x+1/2,-z+1/2,y+1/2
+z+1/2,-x+1/2,y+1/2
+x+1/2,z+1/2,y+1/2
+-y+1/2,-z+1/2,-x+1/2
+-y+1/2,z+1/2,x+1/2
+-z+1/2,-y+1/2,x+1/2
+y+1/2,-z+1/2,x+1/2
+z+1/2,y+1/2,x+1/2
+y+1/2,z+1/2,-x+1/2
+-z+1/2,y+1/2,-x+1/2
+z+1/2,-y+1/2,-x+1/2
+loop_
+_atom_site_label
+_atom_site_type_symbol
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+_atom_site_occupancy
+_atom_site_U_iso_or_equiv
+Tc1 Tc 0 0 0 0.3 0.0
+V1 V 0 0 0 0.7 0.0

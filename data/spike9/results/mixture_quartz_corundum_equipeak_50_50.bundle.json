@@ -1,0 +1,88 @@
+{
+  "schema": "run_bundle/v0",
+  "run_id": "run-472af3be5f4bf6",
+  "status": "held",
+  "inputs": {
+    "raw_data": {
+      "path": "/Users/lucas/Documents/CNEA/rietveld-agent/data/spike9/input/mixture_quartz_corundum_equipeak_50_50.xrdml",
+      "original_sha256": "c2f30f74353ca7b1c552375e53b6dcded7a810f8a3240f7da8f27509bbf9f249",
+      "format": "XRDML"
+    },
+    "sample_name": "GaAsO4 quartz-homeotype + Al2O3 corundum (50/50 equipeak)",
+    "sample_name_sha256": "bcbf5046a6a02f6f512e41081f6fa200c7f2b0f1dabf32b9e8fba88603e3483b"
+  },
+  "controlled_versions": {
+    "calibration_id": "cal-967c5da10ad2",
+    "calibration_sha256": null,
+    "catalog_version": "340127a8343e",
+    "policy_version": "policy/0.1.0",
+    "gsasii_version": "5.6.3",
+    "vocabulary_version": null
+  },
+  "environment": {
+    "python": "3.13.7",
+    "platform": "macOS-15.6.1-x86_64-i386-64bit-Mach-O",
+    "package_versions": {
+      "numpy": "2.5.2"
+    }
+  },
+  "plan": {
+    "plan_sha256": "809758f29e403ab77b4b86766da107fe68ebc5413d009ba63f12fac137434c0e",
+    "recipe_key": "fingerprint-only-m1",
+    "approval": {
+      "mode": "policy-delegated",
+      "policy_version": "policy/0.1.0",
+      "expert": null,
+      "approved_at": null
+    }
+  },
+  "checkpoints": [
+    {
+      "stage": "ingest",
+      "gpx_path": "",
+      "metrics": {
+        "parsed": true
+      }
+    },
+    {
+      "stage": "calibration",
+      "gpx_path": "",
+      "metrics": {
+        "resolution": "resolved",
+        "calibration_id": "cal-967c5da10ad2"
+      }
+    },
+    {
+      "stage": "hypothesis",
+      "gpx_path": "",
+      "metrics": {
+        "n_candidates": 14,
+        "top_similarity": 0.747653,
+        "margin": 0.054184,
+        "raw_margin": 0.054184
+      }
+    },
+    {
+      "stage": "verdict",
+      "gpx_path": "",
+      "metrics": {
+        "verdict": "abstain",
+        "reasons": [
+          "family margin 0.054 < 0.1 (top vs best other-phase-family candidate cod-1009000)"
+        ]
+      }
+    }
+  ],
+  "verdicts": [],
+  "evidence_separation": {
+    "measured": "",
+    "deterministic_checks": "",
+    "ai_interpretation": ""
+  },
+  "artifacts": [
+    {
+      "kind": "report-json",
+      "path": ""
+    }
+  ]
+}

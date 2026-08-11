@@ -1,0 +1,111 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rietveld-agent.local/governance/schemas/calibration.schema.json",
+  "title": "CalibrationRecord",
+  "description": "Trusted instrument calibration for one laboratory profile (controlled scientific input, v0 draft).",
+  "type": "object",
+  "required": [
+    "schema", "id", "name", "kind", "geometry", "wavelength", "state",
+    "approval", "created_at", "content"
+  ],
+  "properties": {
+    "schema": { "const": "calibration/v0" },
+    "id": { "type": "string", "minLength": 8 },
+    "name": { "type": "string", "description": "Human identifier, e.g. 'CNEA-Cu-PANalytical-XPert3-default'" },
+    "kind": {
+      "enum": ["XYE-DEFAULT", "XML-FINGERPRINTED"],
+      "description": "XYE-DEFAULT: the single administrator-approved default for plain XYE input. XML-FINGERPRINTED: matched from metadata-rich formats (e.g. XRDML)."
+    },
+    "geometry": { "enum": ["Bragg-Brentano"] },
+    "sample_geometry": { "enum": ["flat-plate", "generic"] },
+    "wavelength": {
+      "type": "object",
+      "required": ["alpha1", "alpha2", "ratio_kalpha2_kalpha1"],
+      "properties": {
+        "alpha1": { "type": "number" },
+        "alpha2": { "type": "number" },
+        "ratio_kalpha2_kalpha1": { "type": "number" }
+      }
+    },
+    "state": { "enum": ["draft", "reviewed", "released", "deprecated"] },
+    "approval": {
+      "type": "object",
+      "required": ["reviewed_by", "reviewed_at", "status", "evidence_ref"],
+      "properties": {
+        "reviewed_by": { "type": "string" },
+        "reviewed_at": { "type": "string", "format": "date-time" },
+        "status": { "enum": ["approved", "rejected", "needs_review"] },
+        "evidence_ref": { "type": "string", "description": "Path/ref to the calibration verification run (e.g. NIST SRM 640e analysis)" }
+      }
+    },
+    "created_at": { "type": "string", "format": "date-time" },
+    "deprecated_at": { "type": ["string", "null"], "format": "date-time" },
+    "content": {
+      "type": "object",
+      "required": ["gsasii_instprm"],
+      "properties": {
+        "gsasii_instprm": {
+          "type": "object",
+          "required": ["path", "sha256", "format"],
+          "properties": {
+            "path": { "type": "string" },
+            "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+            "format": { "enum": ["GSAS-II instrument parameter file"] }
+          }
+        },
+        "notes": { "type": "string" }
+      }
+    },
+    "fingerprint": {
+      "type": "object",
+      "description": "Unique-match rules for metadata-rich formats. A metadata block matches iff every rule matches and no other released calibration matches.",
+      "required": ["rules"],
+      "properties": {
+        "rules": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["field", "expected"],
+            "properties": {
+              "field": {
+                "enum": [
+                  "tube_anode_material", "generator_voltage", "generator_current",
+                  "sample_changer_name", "goniometer_radius_mm", "divergence_slit_type",
+                  "divergence_slit_size_deg", "soller_primary_deg", "soller_secondary_deg",
+                  "detector_type", "detector_active_length_deg", "monochromator_type",
+                  "scan_axis"
+                ]
+              },
+              "expected": { "type": ["string", "number"] }
+            }
+          }
+        },
+        "accept_incomplete": {
+          "const": false,
+          "description": "Incomplete metadata is treated as ambiguous: analysis must stop. The administrator registers the instrument instead."
+        }
+      }
+    },
+    "royalty_constraints": {
+      "type": "object",
+      "description": "Bounded refinement constraints inherited from this calibration (governed per policy).",
+      "required": ["refinable_uvwx", "uvwx_bounds"],
+      "properties": {
+        "refinable_uvwx": { "type": "boolean" },
+        "uvwx_bounds": {
+          "type": "object",
+          "properties": {
+            "U": { "type": "array", "items": { "type": "number" }, "minItems": 2, "maxItems": 2 },
+            "V": { "type": "array", "items": { "type": "number" }, "minItems": 2, "maxItems": 2 },
+            "W": { "type": "array", "items": { "type": "number" }, "minItems": 2, "maxItems": 2 },
+            "X": { "type": "array", "items": { "type": "number" }, "minItems": 2, "maxItems": 2 },
+            "Y": { "type": "array", "items": { "type": "number" }, "minItems": 2, "maxItems": 2 }
+          },
+          "additionalProperties": false
+        }
+      }
+    },
+    "policy_version": { "type": "string" }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,166 @@
+{
+  "schema": "run_bundle/v0",
+  "run_id": "run-1a123fff5cd3bd",
+  "status": "completed",
+  "inputs": {
+    "raw_data": {
+      "path": "/Users/lucas/Documents/CNEA/rietveld-agent/data/spike9/input/mixture_quartz_corundum_60_40.xrdml",
+      "original_sha256": "be39ab0754f6dc4436601bafa5613998cd69cbd806c4f334039c992818b16c3d",
+      "format": "XRDML"
+    },
+    "sample_name": "GaAsO4 quartz-homeotype + Al2O3 corundum (60/40)",
+    "sample_name_sha256": "07ceab56e1b8bba00ffa22b779e63dca54d195b662a8cb9e34839e1847c7eacb"
+  },
+  "controlled_versions": {
+    "calibration_id": "cal-967c5da10ad2",
+    "calibration_sha256": null,
+    "catalog_version": "340127a8343e",
+    "policy_version": "policy/0.1.0",
+    "gsasii_version": "5.6.3",
+    "vocabulary_version": null
+  },
+  "environment": {
+    "python": "3.13.7",
+    "platform": "macOS-15.6.1-x86_64-i386-64bit-Mach-O",
+    "package_versions": {
+      "numpy": "2.5.2"
+    }
+  },
+  "plan": {
+    "plan_sha256": "809758f29e403ab77b4b86766da107fe68ebc5413d009ba63f12fac137434c0e",
+    "recipe_key": "fingerprint-only-m1",
+    "approval": {
+      "mode": "policy-delegated",
+      "policy_version": "policy/0.1.0",
+      "expert": null,
+      "approved_at": null
+    }
+  },
+  "checkpoints": [
+    {
+      "stage": "ingest",
+      "gpx_path": "",
+      "metrics": {
+        "parsed": true
+      }
+    },
+    {
+      "stage": "calibration",
+      "gpx_path": "",
+      "metrics": {
+        "resolution": "resolved",
+        "calibration_id": "cal-967c5da10ad2"
+      }
+    },
+    {
+      "stage": "hypothesis",
+      "gpx_path": "",
+      "metrics": {
+        "n_candidates": 14,
+        "top_similarity": 0.999684,
+        "margin": 0.92257,
+        "raw_margin": 0.92257
+      }
+    },
+    {
+      "stage": "verdict",
+      "gpx_path": "",
+      "metrics": {
+        "verdict": "supported",
+        "reasons": [
+          "calibration resolved (cal-967c5da10ad2); top candidate separated from the best other phase family by margin 0.923"
+        ]
+      }
+    }
+  ],
+  "verdicts": [
+    {
+      "phase_family": "GaAsO4 (quartz homeotype)",
+      "cod_ids": [],
+      "status": "supported",
+      "context_only": false,
+      "evidence": {
+        "evidence_level": "fingerprint-only",
+        "top_similarity": 0.999684,
+        "margin": 0.92257,
+        "raw_margin": 0.92257,
+        "matched_peaks": 29,
+        "top_peaks": [
+          {
+            "tth": 25.8489,
+            "d": 3.4437,
+            "height": 150397788.94521874,
+            "fwhm": 0.14
+          },
+          {
+            "tth": 37.801,
+            "d": 2.3779,
+            "height": 37510771.13851402,
+            "fwhm": 0.08
+          },
+          {
+            "tth": 20.5231,
+            "d": 4.3238,
+            "height": 30915249.596392885,
+            "fwhm": 0.1
+          },
+          {
+            "tth": 41.7339,
+            "d": 2.1624,
+            "height": 26844245.882822756,
+            "fwhm": 0.1
+          },
+          {
+            "tth": 39.3678,
+            "d": 2.2868,
+            "height": 23934399.370103173,
+            "fwhm": 0.1
+          }
+        ]
+      }
+    }
+  ],
+  "evidence_separation": {
+    "measured": "",
+    "deterministic_checks": "",
+    "ai_interpretation": ""
+  },
+  "artifacts": [
+    {
+      "kind": "report-json",
+      "path": ""
+    }
+  ],
+  "verification": {
+    "recipe": "refinement-verify-v1",
+    "policy_version": "1.0",
+    "evidence_level": "fingerprint + refinement",
+    "confirmed_family": "GaAsO4 (quartz homeotype)",
+    "separation": 0.808182,
+    "candidates": [
+      {
+        "family": "GaAsO4 (quartz homeotype)",
+        "cod_id": 1009000,
+        "rwp": 0.166556,
+        "rexp": 0.001607,
+        "gof": 103.676123,
+        "n_points": 6155,
+        "n_params": 5,
+        "converged": true,
+        "cell": null
+      },
+      {
+        "family": "TiO2 (rutile)",
+        "cod_id": 1010942,
+        "rwp": 0.974739,
+        "rexp": 0.001607,
+        "gof": 606.744036,
+        "n_points": 6155,
+        "n_params": 5,
+        "converged": true,
+        "cell": null
+      }
+    ],
+    "consistent_with_fingerprint": true
+  }
+}

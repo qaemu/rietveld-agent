@@ -1,0 +1,183 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rietveld-agent.local/governance/schemas/run_bundle.schema.json",
+  "title": "RunBundle",
+  "description": "Complete record of one analysis: provenance, plan, checkpoints, verdicts, evidence separation. v0 draft.",
+  "type": "object",
+  "required": [
+    "schema", "run_id", "status",
+    "inputs", "controlled_versions", "environment",
+    "plan", "checkpoints", "verdicts", "evidence_separation", "artifacts"
+  ],
+  "properties": {
+    "schema": { "const": "run_bundle/v0" },
+    "run_id": { "type": "string" },
+    "status": { "enum": ["planned", "running", "completed", "held", "failed", "aborted"] },
+    "verification": {
+      "description": "Optional bounded-Rietveld verification evidence (spike 07). Absent for fingerprint-only runs.",
+      "type": "object",
+      "required": ["recipe", "policy_version", "evidence_level",
+                   "confirmed_family", "candidates"],
+      "properties": {
+        "recipe": { "type": "string" },
+        "policy_version": { "type": "string" },
+        "evidence_level": { "const": "fingerprint + refinement" },
+        "observed_from": {
+          "type": "object",
+          "required": ["cod_id", "family"],
+          "properties": {
+            "cod_id": { "type": "integer" },
+            "family": { "type": "string" },
+            "cif": { "type": "string" }
+          }
+        },
+        "confirmed_family": { "type": ["string", "null"] },
+        "separation": { "type": ["number", "null"] },
+        "candidates": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["family", "cod_id", "rwp", "rexp", "gof",
+                         "n_points", "n_params", "converged"],
+            "properties": {
+              "family": { "type": "string" },
+              "cod_id": { "type": "integer" },
+              "rwp": { "type": "number" },
+              "rexp": { "type": "number" },
+              "gof": { "type": "number" },
+              "n_points": { "type": "integer" },
+              "n_params": { "type": "integer" },
+              "converged": { "type": "boolean" },
+              "cell": { "type": ["array", "null"], "items": { "type": "number" } }
+            }
+          }
+        }
+      }
+    },
+    "inputs": {
+      "type": "object",
+      "required": ["raw_data"],
+      "properties": {
+        "raw_data": {
+          "type": "object",
+          "required": ["path", "original_sha256", "format"],
+          "properties": {
+            "path": { "type": "string" },
+            "original_sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+            "format": { "enum": ["XYE", "XRDML", "unsupported"] },
+            "normalized": { "type": "object", "description": "Canonical 2theta/intensity arrays; stays local." }
+          }
+        },
+        "sample_name": { "type": ["string", "null"] },
+        "sample_name_sha256": { "type": ["string", "null"] },
+        "name_context_candidates": { "type": "array", "items": { "type": "integer" }, "description": "COD ids added by name context only; must remain inconclusive." }
+      }
+    },
+    "controlled_versions": {
+      "type": "object",
+      "required": ["calibration_id", "catalog_version", "policy_version", "gsasii_version", "vocabulary_version"],
+      "properties": {
+        "calibration_id": { "type": ["string", "null"], "description": "Null when the instrument is not uniquely resolved (abstain/held runs)." },
+        "calibration_sha256": { "type": ["string", "null"] },
+        "catalog_version": { "type": "string" },
+        "policy_version": { "type": "string" },
+        "gsasii_version": { "type": "string" },
+        "vocabulary_version": { "type": ["string", "null"] },
+        "model_version": { "type": ["string", "null"] }
+      }
+    },
+    "environment": {
+      "type": "object",
+      "required": ["python", "platform"],
+      "properties": {
+        "python": { "type": "string" },
+        "platform": { "type": "string" },
+        "package_versions": { "type": "object" }
+      }
+    },
+    "plan": {
+      "type": "object",
+      "required": ["plan_sha256", "recipe_key", "approval"],
+      "properties": {
+        "plan_sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+        "recipe_key": { "type": "string" },
+        "approval": {
+          "type": "object",
+          "required": ["mode", "policy_version"],
+          "properties": {
+            "mode": { "enum": ["policy-delegated", "expert-approved", "none"] },
+            "policy_version": { "type": "string" },
+            "expert": { "type": ["string", "null"] },
+            "approved_at": { "type": ["string", "null"], "format": "date-time" }
+          }
+        },
+        "stages": { "type": "array", "description": "Byte-identical policy stage dicts." }
+      }
+    },
+    "checkpoints": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["stage", "gpx_path", "metrics"],
+        "properties": {
+          "stage": { "type": "string" },
+          "gpx_path": { "type": "string" },
+          "metrics": {
+            "type": "object",
+            "properties": {
+              "Rwp": { "type": "number" }, "Rp": { "type": "number" },
+              "GOF": { "type": "number" }, "shift_esd_max": { "type": "number" },
+              "correlation_warnings": { "type": "array", "items": { "type": "string" } },
+              "physical_warnings": { "type": "array", "items": { "type": "string" } }
+            }
+          }
+        }
+      }
+    },
+    "verdicts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["phase_family", "cod_ids", "status", "evidence"],
+        "properties": {
+          "phase_family": { "type": "string" },
+          "cod_ids": { "type": "array", "items": { "type": "integer" } },
+          "status": { "enum": ["supported", "inconclusive", "not_selected", "out_of_domain", "held", "failed"] },
+          "context_only": { "type": "boolean" },
+          "evidence": { "type": "object", "description": "Peak attribution, alternative models, residual diagnostics." }
+        }
+      }
+    },
+    "evidence_separation": {
+      "type": "object",
+      "required": ["measured", "deterministic_checks", "ai_interpretation"],
+      "properties": {
+        "measured": { "type": "string", "description": "Path to measured/GSAS-II observation records." },
+        "deterministic_checks": { "type": "string", "description": "Path to deterministic validation findings." },
+        "ai_interpretation": { "type": "string", "description": "Path to AI-generated interpretation (may be absent)." }
+      }
+    },
+    "artifacts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["kind", "path"],
+        "properties": {
+          "kind": { "enum": ["report-html", "report-json", "profile-plot", "gpx", "exported-raw"] },
+          "path": { "type": "string" }
+        }
+      }
+    },
+    "review": {
+      "type": "object",
+      "description": "Expert review record. Never mutates the historical bundle; stored separately.",
+      "properties": {
+        "reviewed_by": { "type": "string" },
+        "reviewed_at": { "type": ["string", "null"], "format": "date-time" },
+        "decision": { "enum": ["approved", "rejected", "alternative-documented"] },
+        "notes": { "type": "string" }
+      }
+    }
+  },
+  "additionalProperties": false
+}

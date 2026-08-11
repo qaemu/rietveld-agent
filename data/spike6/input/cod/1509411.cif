@@ -1,0 +1,156 @@
+#------------------------------------------------------------------------------
+#$Date: 2018-09-27 07:13:35 +0300 (Thu, 27 Sep 2018) $
+#$Revision: 211196 $
+#$URL: file:///home/coder/svn-repositories/_RELOADED_COD/cod-reloaded/cif/1/50/94/1509411.cif $
+#------------------------------------------------------------------------------
+#
+# This file is available in the Crystallography Open Database (COD),
+# http://www.crystallography.net/
+#
+# All data on this site have been placed in the public domain by the
+# contributors.
+#
+data_1509411
+loop_
+_publ_author_name
+'Weiss, A.'
+'Range, K.J.'
+'Engert, G.'
+_publ_section_title
+;
+ High pressure transformations of ternary chalcogenides with
+ cholcopyrite-structure. I. Indiem containing compounds
+;
+_journal_name_full               'Solid State Communications'
+_journal_page_first              1749
+_journal_page_last               1752
+_journal_paper_doi               10.1016/0038-1098(69)90277-4
+_journal_volume                  7
+_journal_year                    1969
+_chemical_formula_sum            'Ag In Te2'
+_space_group_IT_number           216
+_symmetry_space_group_name_Hall  'F -4 2 3'
+_symmetry_space_group_name_H-M   'F -4 3 m'
+_cell_angle_alpha                90
+_cell_angle_beta                 90
+_cell_angle_gamma                90
+_cell_formula_units_Z            2
+_cell_length_a                   6.23
+_cell_length_b                   6.23
+_cell_length_c                   6.23
+_cell_volume                     241.804
+_citation_journal_id_ASTM        SSCOA4
+_cod_data_source_file            silver1-2_354.cif
+_cod_data_source_block           Ag1In1Te2
+_cod_original_cell_volume        241.8044
+_cod_original_formula_sum        'Ag1 In1 Te2'
+_cod_database_code               1509411
+loop_
+_symmetry_equiv_pos_as_xyz
+x,y,z
+y,-x,-z
+-x,-y,z
+-y,x,-z
+x,-y,-z
+-y,-x,z
+-x,y,-z
+y,x,z
+z,x,y
+x,-z,-y
+-z,-x,y
+-x,z,-y
+z,-x,-y
+-x,-z,y
+-z,x,-y
+x,z,y
+y,z,x
+y,-z,-x
+-z,-y,x
+-y,z,-x
+z,y,x
+-y,-z,x
+-z,y,-x
+z,-y,-x
+x,y+1/2,z+1/2
+y,-x+1/2,-z+1/2
+-x,-y+1/2,z+1/2
+-y,x+1/2,-z+1/2
+x,-y+1/2,-z+1/2
+-y,-x+1/2,z+1/2
+-x,y+1/2,-z+1/2
+y,x+1/2,z+1/2
+z,x+1/2,y+1/2
+x,-z+1/2,-y+1/2
+-z,-x+1/2,y+1/2
+-x,z+1/2,-y+1/2
+z,-x+1/2,-y+1/2
+-x,-z+1/2,y+1/2
+-z,x+1/2,-y+1/2
+x,z+1/2,y+1/2
+y,z+1/2,x+1/2
+y,-z+1/2,-x+1/2
+-z,-y+1/2,x+1/2
+-y,z+1/2,-x+1/2
+z,y+1/2,x+1/2
+-y,-z+1/2,x+1/2
+-z,y+1/2,-x+1/2
+z,-y+1/2,-x+1/2
+x+1/2,y,z+1/2
+y+1/2,-x,-z+1/2
+-x+1/2,-y,z+1/2
+-y+1/2,x,-z+1/2
+x+1/2,-y,-z+1/2
+-y+1/2,-x,z+1/2
+-x+1/2,y,-z+1/2
+y+1/2,x,z+1/2
+z+1/2,x,y+1/2
+x+1/2,-z,-y+1/2
+-z+1/2,-x,y+1/2
+-x+1/2,z,-y+1/2
+z+1/2,-x,-y+1/2
+-x+1/2,-z,y+1/2
+-z+1/2,x,-y+1/2
+x+1/2,z,y+1/2
+y+1/2,z,x+1/2
+y+1/2,-z,-x+1/2
+-z+1/2,-y,x+1/2
+-y+1/2,z,-x+1/2
+z+1/2,y,x+1/2
+-y+1/2,-z,x+1/2
+-z+1/2,y,-x+1/2
+z+1/2,-y,-x+1/2
+x+1/2,y+1/2,z
+y+1/2,-x+1/2,-z
+-x+1/2,-y+1/2,z
+-y+1/2,x+1/2,-z
+x+1/2,-y+1/2,-z
+-y+1/2,-x+1/2,z
+-x+1/2,y+1/2,-z
+y+1/2,x+1/2,z
+z+1/2,x+1/2,y
+x+1/2,-z+1/2,-y
+-z+1/2,-x+1/2,y
+-x+1/2,z+1/2,-y
+z+1/2,-x+1/2,-y
+-x+1/2,-z+1/2,y
+-z+1/2,x+1/2,-y
+x+1/2,z+1/2,y
+y+1/2,z+1/2,x
+y+1/2,-z+1/2,-x
+-z+1/2,-y+1/2,x
+-y+1/2,z+1/2,-x
+z+1/2,y+1/2,x
+-y+1/2,-z+1/2,x
+-z+1/2,y+1/2,-x
+z+1/2,-y+1/2,-x
+loop_
+_atom_site_label
+_atom_site_type_symbol
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+_atom_site_occupancy
+_atom_site_U_iso_or_equiv
+Te1 Te-2 0.25 0.25 0.25 1 0.0
+In1 In+3 0 0 0 0.5 0.0
+Ag1 Ag+1 0 0 0 0.5 0.0

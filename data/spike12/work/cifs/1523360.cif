@@ -1,0 +1,83 @@
+#------------------------------------------------------------------------------
+#$Date: 2015-07-11 03:11:46 +0300 (Sat, 11 Jul 2015) $
+#$Revision: 143975 $
+#$URL: file:///home/coder/svn-repositories/_RELOADED_COD/cod-reloaded/cif/1/52/33/1523360.cif $
+#------------------------------------------------------------------------------
+#
+# This file is available in the Crystallography Open Database (COD),
+# http://www.crystallography.net/
+#
+# All data on this site have been placed in the public domain by the
+# contributors.
+#
+data_1523360
+loop_
+_publ_author_name
+'Busk, R.S.'
+_publ_section_title
+;
+ Lattice parameters of magnesium alloys
+;
+_journal_name_full
+;
+Transactions of the American Institute of Mining, Metallurgical and Petroleum 
+Engineers
+;
+_journal_page_first              1460
+_journal_page_last               1464
+_journal_volume                  188
+_journal_year                    1950
+_chemical_formula_sum            'Mg0.971 Zn0.029'
+_chemical_name_systematic        '(Mg0.971 Zn0.029)'
+_space_group_IT_number           194
+_symmetry_space_group_name_Hall  '-P 6c 2c'
+_symmetry_space_group_name_H-M   'P 63/m m c'
+_cell_angle_alpha                90
+_cell_angle_beta                 90
+_cell_angle_gamma                120
+_cell_formula_units_Z            2
+_cell_length_a                   3.1953
+_cell_length_b                   3.1953
+_cell_length_c                   5.1871
+_cell_volume                     45.865
+_citation_journal_id_ASTM        TAIMAF
+_cod_data_source_file            Busk_TAIMAF_1950_1114.cif
+_cod_data_source_block           Mg0.971Zn0.029
+_cod_original_cell_volume        45.8647
+_cod_database_code               1523360
+loop_
+_symmetry_equiv_pos_as_xyz
+x,y,z
+x-y,x,z+1/2
+-y,x-y,z
+-x,-y,z+1/2
+-x+y,-x,z
+y,-x+y,z+1/2
+-y,-x,-z+1/2
+x-y,-y,-z
+x,x-y,-z+1/2
+y,x,-z
+-x+y,y,-z+1/2
+-x,-x+y,-z
+-x,-y,-z
+-x+y,-x,-z-1/2
+y,-x+y,-z
+x,y,-z-1/2
+x-y,x,-z
+-y,x-y,-z-1/2
+y,x,z-1/2
+-x+y,y,z
+-x,-x+y,z-1/2
+-y,-x,z
+x-y,-y,z-1/2
+x,x-y,z
+loop_
+_atom_site_label
+_atom_site_type_symbol
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+_atom_site_occupancy
+_atom_site_U_iso_or_equiv
+Zn1 Zn 0.3333 0.6667 0.25 0.029 0.0
+Mg1 Mg 0.3333 0.6667 0.25 0.971 0.0

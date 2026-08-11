@@ -1,0 +1,21 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+*.gpx
+build/
+dist/
+*.egg-info/
+.pytest_cache/
+data/raw/
+data/catalog/
+*.dmg
+.DS_Store
+.env.vendor/
+# heavy derived/downloaded artifacts (reproducible via the spike scripts)
+data/cod_index/
+data/spike12/work/*
+!data/spike12/work/cifs/
+*.lst
+*.xye
+.vendor/

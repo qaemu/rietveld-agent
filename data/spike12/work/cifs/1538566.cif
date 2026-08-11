@@ -1,0 +1,89 @@
+#------------------------------------------------------------------------------
+#$Date: 2018-09-27 07:13:35 +0300 (Thu, 27 Sep 2018) $
+#$Revision: 211196 $
+#$URL: file:///home/coder/svn-repositories/_RELOADED_COD/cod-reloaded/cif/1/53/85/1538566.cif $
+#------------------------------------------------------------------------------
+#
+# This file is available in the Crystallography Open Database (COD),
+# http://www.crystallography.net/
+#
+# All data on this site have been placed in the public domain by the
+# contributors.
+#
+data_1538566
+loop_
+_publ_author_name
+'Jamieson, J.C.'
+_publ_section_title
+;
+ Crystal structures at high pressures of metallic modifications of
+ compounds of indium, gallium, and aluminium
+;
+_journal_name_full               Science
+_journal_page_first              845
+_journal_page_last               847
+_journal_volume                  139
+_journal_year                    1963
+_chemical_formula_sum            'In Sb'
+_space_group_IT_number           141
+_symmetry_space_group_name_Hall  'I 4bw 2bw -1bw'
+_symmetry_space_group_name_H-M   'I 41/a m d :1'
+_cell_angle_alpha                90
+_cell_angle_beta                 90
+_cell_angle_gamma                90
+_cell_formula_units_Z            2
+_cell_length_a                   5.537
+_cell_length_b                   5.537
+_cell_length_c                   2.97
+_cell_volume                     91.055
+_citation_journal_id_ASTM        SCIEAS
+_cod_data_source_file            Jamieson_SCIEAS_1963_276.cif
+_cod_data_source_block           In1Sb1
+_cod_original_cell_volume        91.05537
+_cod_original_sg_symbol_Hall     '-I 4bd 2 (x+1/2,y+1/4,z+1/8)'
+_cod_original_formula_sum        'In1 Sb1'
+_cod_database_code               1538566
+loop_
+_symmetry_equiv_pos_as_xyz
+x,y,z
+-y,x+1/2,z+1/4
+-x+1/2,-y+1/2,z+1/2
+y+1/2,-x,z+3/4
+x,-y+1/2,-z+1/4
+y+1/2,x+1/2,-z+1/2
+-x+1/2,y,-z+3/4
+-y,-x,-z
+-x,-y+1/2,-z+1/4
+y,-x,-z
+x-1/2,y,-z-1/4
+-y-1/2,x+1/2,-z-1/2
+-x,y,z
+-y-1/2,-x,z-1/4
+x-1/2,-y+1/2,z-1/2
+y,x+1/2,z+1/4
+x+1/2,y+1/2,z+1/2
+-y+1/2,x+1,z+3/4
+-x+1,-y+1,z+1
+y+1,-x+1/2,z+5/4
+x+1/2,-y+1,-z+3/4
+y+1,x+1,-z+1
+-x+1,y+1/2,-z+5/4
+-y+1/2,-x+1/2,-z+1/2
+-x+1/2,-y+1,-z+3/4
+y+1/2,-x+1/2,-z+1/2
+x,y+1/2,-z+1/4
+-y,x+1,-z
+-x+1/2,y+1/2,z+1/2
+-y,-x+1/2,z+1/4
+x,-y+1,z
+y+1/2,x+1,z+3/4
+loop_
+_atom_site_label
+_atom_site_type_symbol
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+_atom_site_occupancy
+_atom_site_U_iso_or_equiv
+Sb1 Sb-3 0 0 0 0.5 0.0
+In1 In+3 0 0 0 0.5 0.0

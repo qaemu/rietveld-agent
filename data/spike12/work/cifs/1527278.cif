@@ -1,0 +1,154 @@
+#------------------------------------------------------------------------------
+#$Date: 2015-07-13 02:56:41 +0300 (Mon, 13 Jul 2015) $
+#$Revision: 148757 $
+#$URL: file:///home/coder/svn-repositories/_RELOADED_COD/cod-reloaded/cif/1/52/72/1527278.cif $
+#------------------------------------------------------------------------------
+#
+# This file is available in the Crystallography Open Database (COD),
+# http://www.crystallography.net/
+#
+# All data on this site have been placed in the public domain by the
+# contributors.
+#
+data_1527278
+loop_
+_publ_author_name
+'Darby, J.B.jr.'
+'Downey, J.W.'
+'Norton, L.J.'
+_publ_section_title
+;
+ Intermediate phases in the technetium-aluminium and technetium-silicon
+ systems
+;
+_journal_name_full               'Journal of the Less-Common Metals'
+_journal_page_first              15
+_journal_page_last               19
+_journal_volume                  8
+_journal_year                    1965
+_chemical_formula_sum            'Si0.2 Tc0.8'
+_chemical_name_systematic        '(Tc0.8 Si0.2)'
+_space_group_IT_number           229
+_symmetry_space_group_name_Hall  '-I 4 2 3'
+_symmetry_space_group_name_H-M   'I m -3 m'
+_cell_angle_alpha                90
+_cell_angle_beta                 90
+_cell_angle_gamma                90
+_cell_formula_units_Z            2
+_cell_length_a                   3.009
+_cell_length_b                   3.009
+_cell_length_c                   3.009
+_cell_volume                     27.244
+_citation_journal_id_ASTM        JCOMAH
+_cod_data_source_file            Darby_JCOMAH_1965_40.cif
+_cod_data_source_block           Si0.2Tc0.8
+_cod_original_cell_volume        27.24373
+_cod_database_code               1527278
+loop_
+_symmetry_equiv_pos_as_xyz
+x,y,z
+-y,x,z
+-x,-y,z
+y,-x,z
+x,-y,-z
+y,x,-z
+-x,y,-z
+-y,-x,-z
+z,x,y
+-x,z,y
+-z,-x,y
+x,-z,y
+z,-x,-y
+x,z,-y
+-z,x,-y
+-x,-z,-y
+y,z,x
+y,-z,-x
+z,y,-x
+-y,z,-x
+-z,-y,-x
+-y,-z,x
+z,-y,x
+-z,y,x
+-x,-y,-z
+y,-x,-z
+x,y,-z
+-y,x,-z
+-x,y,z
+-y,-x,z
+x,-y,z
+y,x,z
+-z,-x,-y
+x,-z,-y
+z,x,-y
+-x,z,-y
+-z,x,y
+-x,-z,y
+z,-x,y
+x,z,y
+-y,-z,-x
+-y,z,x
+-z,-y,x
+y,-z,x
+z,y,x
+y,z,-x
+-z,y,-x
+z,-y,-x
+x+1/2,y+1/2,z+1/2
+-y+1/2,x+1/2,z+1/2
+-x+1/2,-y+1/2,z+1/2
+y+1/2,-x+1/2,z+1/2
+x+1/2,-y+1/2,-z+1/2
+y+1/2,x+1/2,-z+1/2
+-x+1/2,y+1/2,-z+1/2
+-y+1/2,-x+1/2,-z+1/2
+z+1/2,x+1/2,y+1/2
+-x+1/2,z+1/2,y+1/2
+-z+1/2,-x+1/2,y+1/2
+x+1/2,-z+1/2,y+1/2
+z+1/2,-x+1/2,-y+1/2
+x+1/2,z+1/2,-y+1/2
+-z+1/2,x+1/2,-y+1/2
+-x+1/2,-z+1/2,-y+1/2
+y+1/2,z+1/2,x+1/2
+y+1/2,-z+1/2,-x+1/2
+z+1/2,y+1/2,-x+1/2
+-y+1/2,z+1/2,-x+1/2
+-z+1/2,-y+1/2,-x+1/2
+-y+1/2,-z+1/2,x+1/2
+z+1/2,-y+1/2,x+1/2
+-z+1/2,y+1/2,x+1/2
+-x+1/2,-y+1/2,-z+1/2
+y+1/2,-x+1/2,-z+1/2
+x+1/2,y+1/2,-z+1/2
+-y+1/2,x+1/2,-z+1/2
+-x+1/2,y+1/2,z+1/2
+-y+1/2,-x+1/2,z+1/2
+x+1/2,-y+1/2,z+1/2
+y+1/2,x+1/2,z+1/2
+-z+1/2,-x+1/2,-y+1/2
+x+1/2,-z+1/2,-y+1/2
+z+1/2,x+1/2,-y+1/2
+-x+1/2,z+1/2,-y+1/2
+-z+1/2,x+1/2,y+1/2
+-x+1/2,-z+1/2,y+1/2
+z+1/2,-x+1/2,y+1/2
+x+1/2,z+1/2,y+1/2
+-y+1/2,-z+1/2,-x+1/2
+-y+1/2,z+1/2,x+1/2
+-z+1/2,-y+1/2,x+1/2
+y+1/2,-z+1/2,x+1/2
+z+1/2,y+1/2,x+1/2
+y+1/2,z+1/2,-x+1/2
+-z+1/2,y+1/2,-x+1/2
+z+1/2,-y+1/2,-x+1/2
+loop_
+_atom_site_label
+_atom_site_type_symbol
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+_atom_site_occupancy
+_atom_site_U_iso_or_equiv
+Si1 Si 0 0 0 0.2 0.0
+Tc1 Tc 0 0 0 0.8 0.0

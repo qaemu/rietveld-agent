@@ -1,0 +1,166 @@
+{
+  "schema": "run_bundle/v0",
+  "run_id": "run-a0e057d3a03d56",
+  "status": "completed",
+  "inputs": {
+    "raw_data": {
+      "path": "/Users/lucas/Documents/CNEA/rietveld-agent/tests/fixtures/xrdml/fe_PbSO4.xrdml",
+      "original_sha256": "ba81b8e1dcd96efb1d7c906a567bfb12fafa6f50952b009f6e963e3935cb7396",
+      "format": "XRDML"
+    },
+    "sample_name": "PbSO4",
+    "sample_name_sha256": "3cd4cdaa138c76a31a3c4524e41e480c19429f720590edc1d32b19b2f940d63a"
+  },
+  "controlled_versions": {
+    "calibration_id": "cal-9bba7cdaeb39",
+    "calibration_sha256": null,
+    "catalog_version": "340127a8343e",
+    "policy_version": "policy/0.1.0",
+    "gsasii_version": "5.6.3",
+    "vocabulary_version": null
+  },
+  "environment": {
+    "python": "3.13.7",
+    "platform": "macOS-15.6.1-x86_64-i386-64bit-Mach-O",
+    "package_versions": {
+      "numpy": "2.5.2"
+    }
+  },
+  "plan": {
+    "plan_sha256": "809758f29e403ab77b4b86766da107fe68ebc5413d009ba63f12fac137434c0e",
+    "recipe_key": "fingerprint-only-m1",
+    "approval": {
+      "mode": "policy-delegated",
+      "policy_version": "policy/0.1.0",
+      "expert": null,
+      "approved_at": null
+    }
+  },
+  "checkpoints": [
+    {
+      "stage": "ingest",
+      "gpx_path": "",
+      "metrics": {
+        "parsed": true
+      }
+    },
+    {
+      "stage": "calibration",
+      "gpx_path": "",
+      "metrics": {
+        "resolution": "resolved",
+        "calibration_id": "cal-9bba7cdaeb39"
+      }
+    },
+    {
+      "stage": "hypothesis",
+      "gpx_path": "",
+      "metrics": {
+        "n_candidates": 14,
+        "top_similarity": 1.0,
+        "margin": 0.920097,
+        "raw_margin": 0.108273
+      }
+    },
+    {
+      "stage": "verdict",
+      "gpx_path": "",
+      "metrics": {
+        "verdict": "supported",
+        "reasons": [
+          "calibration resolved (cal-9bba7cdaeb39); top candidate separated from the best other phase family by margin 0.920"
+        ]
+      }
+    }
+  ],
+  "verdicts": [
+    {
+      "phase_family": "PbSO4 (anglesite)",
+      "cod_ids": [],
+      "status": "supported",
+      "context_only": false,
+      "evidence": {
+        "evidence_level": "fingerprint-only",
+        "top_similarity": 1.0,
+        "margin": 0.920097,
+        "raw_margin": 0.108273,
+        "matched_peaks": 30,
+        "top_peaks": [
+          {
+            "tth": 37.5587,
+            "d": 3.0069,
+            "height": 18096776.53,
+            "fwhm": 0.08
+          },
+          {
+            "tth": 26.2372,
+            "d": 4.2649,
+            "height": 17059415.09,
+            "fwhm": 0.08
+          },
+          {
+            "tth": 33.7536,
+            "d": 3.3343,
+            "height": 15953725.94,
+            "fwhm": 0.1
+          },
+          {
+            "tth": 35.0041,
+            "d": 3.2187,
+            "height": 12481741.44,
+            "fwhm": 0.08
+          },
+          {
+            "tth": 29.4355,
+            "d": 3.8102,
+            "height": 11276827.15,
+            "fwhm": 0.08
+          }
+        ]
+      }
+    }
+  ],
+  "evidence_separation": {
+    "measured": "",
+    "deterministic_checks": "",
+    "ai_interpretation": ""
+  },
+  "artifacts": [
+    {
+      "kind": "report-json",
+      "path": "/Users/lucas/Documents/CNEA/rietveld-agent/data/spike4/results/bundles/fe_PbSO4.xrdml.bundle.json"
+    }
+  ],
+  "verification": {
+    "recipe": "refinement-verify-v1",
+    "policy_version": "1.0",
+    "evidence_level": "fingerprint + refinement",
+    "confirmed_family": "PbSO4 (anglesite)",
+    "separation": 0.000141,
+    "candidates": [
+      {
+        "family": "PbSO4 (anglesite)",
+        "cod_id": 1010950,
+        "rwp": 0.994612,
+        "rexp": 0.002773,
+        "gof": 358.653445,
+        "n_points": 6150,
+        "n_params": 5,
+        "converged": true,
+        "cell": null
+      },
+      {
+        "family": "Al2O3 (corundum)",
+        "cod_id": 1000017,
+        "rwp": 0.994753,
+        "rexp": 0.002773,
+        "gof": 358.704358,
+        "n_points": 6150,
+        "n_params": 5,
+        "converged": true,
+        "cell": null
+      }
+    ],
+    "consistent_with_fingerprint": true
+  }
+}

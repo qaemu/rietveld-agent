@@ -1,0 +1,261 @@
+{
+  "cases": [
+    {
+      "fixture": {
+        "fixture": "data/spike9/input/mixture_quartz_corundum_60_40.xrdml",
+        "sha256": "be39ab0754f6dc4436601bafa5613998cd69cbd806c4f334039c992818b16c3d",
+        "grid_points": 6251,
+        "peak_max": 93295186.5725978,
+        "recipe": {
+          "protocol": {
+            "anode": "CuKa",
+            "wavelengths": [
+              1.5405,
+              1.5443
+            ],
+            "tmin": 15.0,
+            "tmax": 140.0,
+            "step": 0.02,
+            "scale": 50000.0,
+            "background": {
+              "type": "chebyschev-1",
+              "no. coeffs": 3
+            }
+          },
+          "registry_record": "cal-967c5da10ad2"
+        },
+        "components": [
+          {
+            "cod_id": 1009000,
+            "family": "GaAsO4 (quartz homeotype)",
+            "cif": "1009000.cif",
+            "weight": 0.6
+          },
+          {
+            "cod_id": 1000017,
+            "family": "Al2O3 (corundum)",
+            "cif": "1000017.cif",
+            "weight": 0.4
+          }
+        ],
+        "peak_normalize": false,
+        "note": "raw relative protocol-scale mix: sim peak intensities differ ~28x, so the second phase is a small perturbation (weak-2nd-phase case)",
+        "notes": [
+          "1009000 (GaAsO4 (quartz homeotype)): w=0.6, peak=1.55e+08",
+          "1000017 (Al2O3 (corundum)): w=0.4, peak=5.41e+06",
+          "ranking: top_similarity=0.9997, family_margin=0.9226"
+        ]
+      },
+      "run_id": "run-1a123fff5cd3bd",
+      "status": "completed",
+      "verdict": {
+        "phase_family": "GaAsO4 (quartz homeotype)",
+        "cod_ids": [],
+        "status": "supported",
+        "context_only": false,
+        "evidence": {
+          "evidence_level": "fingerprint-only",
+          "top_similarity": 0.999684,
+          "margin": 0.92257,
+          "raw_margin": 0.92257,
+          "matched_peaks": 29,
+          "top_peaks": [
+            {
+              "tth": 25.8489,
+              "d": 3.4437,
+              "height": 150397788.94521874,
+              "fwhm": 0.14
+            },
+            {
+              "tth": 37.801,
+              "d": 2.3779,
+              "height": 37510771.13851402,
+              "fwhm": 0.08
+            },
+            {
+              "tth": 20.5231,
+              "d": 4.3238,
+              "height": 30915249.596392885,
+              "fwhm": 0.1
+            },
+            {
+              "tth": 41.7339,
+              "d": 2.1624,
+              "height": 26844245.882822756,
+              "fwhm": 0.1
+            },
+            {
+              "tth": 39.3678,
+              "d": 2.2868,
+              "height": 23934399.370103173,
+              "fwhm": 0.1
+            }
+          ]
+        }
+      },
+      "verification": {
+        "recipe": "refinement-verify-v1",
+        "policy_version": "1.0",
+        "evidence_level": "fingerprint + refinement",
+        "confirmed_family": "GaAsO4 (quartz homeotype)",
+        "separation": 0.808182,
+        "candidates": [
+          {
+            "family": "GaAsO4 (quartz homeotype)",
+            "cod_id": 1009000,
+            "rwp": 0.166556,
+            "rexp": 0.001607,
+            "gof": 103.676123,
+            "n_points": 6155,
+            "n_params": 5,
+            "converged": true,
+            "cell": null
+          },
+          {
+            "family": "TiO2 (rutile)",
+            "cod_id": 1010942,
+            "rwp": 0.974739,
+            "rexp": 0.001607,
+            "gof": 606.744036,
+            "n_points": 6155,
+            "n_params": 5,
+            "converged": true,
+            "cell": null
+          }
+        ],
+        "consistent_with_fingerprint": true
+      },
+      "checkpoints": [
+        {
+          "stage": "ingest",
+          "gpx_path": "",
+          "metrics": {
+            "parsed": true
+          }
+        },
+        {
+          "stage": "calibration",
+          "gpx_path": "",
+          "metrics": {
+            "resolution": "resolved",
+            "calibration_id": "cal-967c5da10ad2"
+          }
+        },
+        {
+          "stage": "hypothesis",
+          "gpx_path": "",
+          "metrics": {
+            "n_candidates": 14,
+            "top_similarity": 0.999684,
+            "margin": 0.92257,
+            "raw_margin": 0.92257
+          }
+        },
+        {
+          "stage": "verdict",
+          "gpx_path": "",
+          "metrics": {
+            "verdict": "supported",
+            "reasons": [
+              "calibration resolved (cal-967c5da10ad2); top candidate separated from the best other phase family by margin 0.923"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "fixture": {
+        "fixture": "data/spike9/input/mixture_quartz_corundum_equipeak_50_50.xrdml",
+        "sha256": "c2f30f74353ca7b1c552375e53b6dcded7a810f8a3240f7da8f27509bbf9f249",
+        "grid_points": 6251,
+        "peak_max": 100000.0,
+        "recipe": {
+          "protocol": {
+            "anode": "CuKa",
+            "wavelengths": [
+              1.5405,
+              1.5443
+            ],
+            "tmin": 15.0,
+            "tmax": 140.0,
+            "step": 0.02,
+            "scale": 50000.0,
+            "background": {
+              "type": "chebyschev-1",
+              "no. coeffs": 3
+            }
+          },
+          "registry_record": "cal-967c5da10ad2"
+        },
+        "components": [
+          {
+            "cod_id": 1009000,
+            "family": "GaAsO4 (quartz homeotype)",
+            "cif": "1009000.cif",
+            "weight": 0.5
+          },
+          {
+            "cod_id": 1000017,
+            "family": "Al2O3 (corundum)",
+            "cif": "1000017.cif",
+            "weight": 0.5
+          }
+        ],
+        "peak_normalize": true,
+        "note": "peak-normalized (each component scaled to the same max intensity before weighting): true visible 50/50 two-phase pattern (strong-2nd-phase case)",
+        "notes": [
+          "1009000 (GaAsO4 (quartz homeotype)): w=0.5, peak=1",
+          "1000017 (Al2O3 (corundum)): w=0.5, peak=1",
+          "rescaled x1.991e+05 to pass the 100k peak-counts gate (documented deviation from a raw acquisition)",
+          "ranking: top_similarity=0.7477, family_margin=0.0542"
+        ]
+      },
+      "run_id": "run-472af3be5f4bf6",
+      "status": "held",
+      "verdict": null,
+      "verification": null,
+      "checkpoints": [
+        {
+          "stage": "ingest",
+          "gpx_path": "",
+          "metrics": {
+            "parsed": true
+          }
+        },
+        {
+          "stage": "calibration",
+          "gpx_path": "",
+          "metrics": {
+            "resolution": "resolved",
+            "calibration_id": "cal-967c5da10ad2"
+          }
+        },
+        {
+          "stage": "hypothesis",
+          "gpx_path": "",
+          "metrics": {
+            "n_candidates": 14,
+            "top_similarity": 0.747653,
+            "margin": 0.054184,
+            "raw_margin": 0.054184
+          }
+        },
+        {
+          "stage": "verdict",
+          "gpx_path": "",
+          "metrics": {
+            "verdict": "abstain",
+            "reasons": [
+              "family margin 0.054 < 0.1 (top vs best other-phase-family candidate cod-1009000)"
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "sensitivity_notes": [
+    "60/40 raw relative scale (corundum ~2.3% peak intensity): Rwp=0.1666 <= 0.35 -> single-phase confirmation ABSORBED the weak second phase (sensitivity limit, not a false-positive claim: the second phase is below the bounded model's discrimination power)",
+    "50/50 equipeak (second phase fully present) -> expectation: the single-phase engine either honestly abstains (fingerprint margin collapse) or confirms out-of-policy-bounds (unmodelable second phase)"
+  ],
+  "observation": "2-phase mixture: the single-phase engine can only confirm one family. A weak second phase (~2% peak intensity) is absorbed by the bounded fit; a strong second phase (equipeak 50/50) should surface as an honest out-of-policy-bounds or fingerprint abstain. The 2-phase policy cap is declared but unexercised in the code -- this spike documents the empirical gap."
+}

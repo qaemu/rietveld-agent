@@ -1,0 +1,102 @@
+#------------------------------------------------------------------------------
+#$Date: 2025-10-31 18:24:25 +0200 (Fri, 31 Oct 2025) $
+#$Revision: 303120 $
+#$URL: file:///home/coder/svn-repositories/_RELOADED_COD/cod-reloaded/cif/1/00/17/1001741.cif $
+#------------------------------------------------------------------------------
+#
+# This file is available in the Crystallography Open Database (COD),
+# http://www.crystallography.net/
+#
+# All data on this site have been placed in the public domain by the
+# contributors.
+#
+data_1001741
+loop_
+_publ_author_name
+'Leclaire, A.'
+'Monier, J. C.'
+_publ_section_title
+;
+ Liaisons hydrogene dans les cristaux de Ca(NO3)2*4H2Oalpha
+ Locality: synthetic
+;
+_journal_name_full               'Acta Crystallographica, Section B'
+_journal_page_first              1861
+_journal_page_last               1866
+_journal_paper_doi               10.1107/S0567740877007213
+_journal_volume                  33
+_journal_year                    1977
+_chemical_compound_source        synthetic
+_chemical_formula_structural     'Ca (N O3)2 (H2 O)4'
+_chemical_formula_sum            'Ca H8 N2 O10'
+_chemical_name_mineral           Nitrocalcite
+_chemical_name_systematic        'Calcium nitrate tetrahydrate - $-alpha'
+_space_group_IT_number           14
+_symmetry_cell_setting           monoclinic
+_symmetry_Int_Tables_number      14
+_symmetry_space_group_name_Hall  '-P 2ybc'
+_symmetry_space_group_name_H-M   'P 1 21/c 1'
+_cell_angle_alpha                90
+_cell_angle_beta                 106.22(1)
+_cell_angle_gamma                90
+_cell_formula_units_Z            4
+_cell_length_a                   6.2786(7)
+_cell_length_b                   9.1551(5)
+_cell_length_c                   14.8999(12)
+_cell_volume                     822.4
+_exptl_crystal_density_meas      1.9
+_refine_ls_R_factor_all          0.028
+_cod_original_formula_sum        'H8 Ca N2 O10'
+_cod_database_code               1001741
+loop_
+_symmetry_equiv_pos_as_xyz
+x,y,z
+-x,1/2+y,1/2-z
+-x,-y,-z
+x,1/2-y,1/2+z
+loop_
+_atom_site_label
+_atom_site_type_symbol
+_atom_site_symmetry_multiplicity
+_atom_site_Wyckoff_symbol
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+_atom_site_occupancy
+_atom_site_attached_hydrogens
+_atom_site_calc_flag
+Ca1 Ca2+ 4 e 0.32775(4) 0.41024(3) 0.36704(2) 1. 0 d
+N1 N5+ 4 e 0.07615(18) 0.37196(13) 0.16956(8) 1. 0 d
+N2 N5+ 4 e 0.48048(17) 0.73285(12) 0.40676(7) 1. 0 d
+O1 O2- 4 e 0.05757(19) 0.48374(12) 0.21718(7) 1. 0 d
+O2 O2- 4 e 0.18733(19) 0.26869(11) 0.21202(8) 1. 0 d
+O3 O2- 4 e -0.02525(20) 0.36516(15) 0.08576(7) 1. 0 d
+O4 O2- 4 e 0.54009(18) 0.62111(10) 0.45857(7) 1. 0 d
+O5 O2- 4 e 0.5490(2) 0.85477(11) 0.43477(8) 1. 0 d
+O6 O2- 4 e 0.35068(17) 0.71221(12) 0.32758(6) 1. 0 d
+O7 O2- 4 e 0.59973(18) 0.46279(12) 0.28249(8) 1. 0 d
+O8 O2- 4 e 0.03795(18) 0.53620(11) 0.41525(7) 1. 0 d
+O9 O2- 4 e 0.08003(21) 0.22224(12) 0.39698(8) 1. 0 d
+O10 O2- 4 e 0.57447(24) 0.19691(15) 0.38527(10) 1. 0 d
+H1 H1+ 4 e 0.6203(41) 0.3934(30) 0.2512(17) 1. 0 d
+H2 H1+ 4 e 0.5884(41) 0.5413(30) 0.2489(18) 1. 0 d
+H3 H1+ 4 e 0.0252(42) 0.6130(29) 0.4109(18) 1. 0 d
+H4 H1+ 4 e 0.0745(83) 0.5148(62) 0.4697(36) 0.5 0 d
+H5 H1+ 4 e -0.1226(82) 0.5006(59) 0.3575(35) 0.5 0 d
+H6 H1+ 4 e 0.0765(41) 0.1437(29) 0.3661(18) 1. 0 d
+H7 H1+ 4 e 0.1411(41) 0.1855(29) 0.4506(18) 1. 0 d
+H8 H1+ 4 e 0.5789(42) 0.1456(29) 0.4220(17) 1. 0 d
+H9 H1+ 4 e 0.7103(41) 0.2093(30) 0.3861(17) 1. 0 d
+loop_
+_atom_type_symbol
+_atom_type_oxidation_number
+Ca2+ 2.000
+N5+ 5.000
+O2- -2.000
+H1+ 1.000
+loop_
+_cod_related_entry_id
+_cod_related_entry_database
+_cod_related_entry_code
+1 ROD 3500162
+2 ROD 3500225

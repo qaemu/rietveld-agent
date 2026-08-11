@@ -1,0 +1,93 @@
+#------------------------------------------------------------------------------
+#$Date: 2016-02-13 21:28:24 +0200 (Sat, 13 Feb 2016) $
+#$Revision: 176429 $
+#$URL: file:///home/coder/svn-repositories/_RELOADED_COD/cod-reloaded/cif/1/53/46/1534689.cif $
+#------------------------------------------------------------------------------
+#
+# This file is available in the Crystallography Open Database (COD),
+# http://www.crystallography.net/
+#
+# All data on this site have been placed in the public domain by the
+# contributors.
+#
+data_1534689
+loop_
+_publ_author_name
+'Aurivillius, B.'
+_publ_section_title
+;
+ On the Crystal Structure of a Number of Non-Stoichiometric Mixed Lead
+ Oxide Halides Composed of PbO Like Blocks and Single Halogen Layers
+;
+_journal_name_full               'Chemica Scripta'
+_journal_page_first              97
+_journal_page_last               107
+_journal_volume                  19
+_journal_year                    1982
+_chemical_formula_sum            'Br1.8 Mo O8 Pb6.3'
+_chemical_name_systematic        'Pb6.3 Mo O8 Br1.8'
+_space_group_IT_number           139
+_symmetry_space_group_name_Hall  '-I 4 2'
+_symmetry_space_group_name_H-M   'I 4/m m m'
+_cell_angle_alpha                90
+_cell_angle_beta                 90
+_cell_angle_gamma                90
+_cell_formula_units_Z            1
+_cell_length_a                   4.0149
+_cell_length_b                   4.0149
+_cell_length_c                   22.922
+_cell_volume                     369.489
+_citation_journal_id_ASTM        CSRPB9
+_cod_data_source_file            Aurivillius_CSRPB9_1982_325.cif
+_cod_data_source_block           Br1.8Mo1O8Pb6.3
+_cod_original_cell_volume        369.4894
+_cod_original_formula_sum        'Br1.8 Mo1 O8 Pb6.3'
+_cod_database_code               1534689
+loop_
+_symmetry_equiv_pos_as_xyz
+x,y,z
+-y,x,z
+-x,-y,z
+y,-x,z
+x,-y,-z
+y,x,-z
+-x,y,-z
+-y,-x,-z
+-x,-y,-z
+y,-x,-z
+x,y,-z
+-y,x,-z
+-x,y,z
+-y,-x,z
+x,-y,z
+y,x,z
+x+1/2,y+1/2,z+1/2
+-y+1/2,x+1/2,z+1/2
+-x+1/2,-y+1/2,z+1/2
+y+1/2,-x+1/2,z+1/2
+x+1/2,-y+1/2,-z+1/2
+y+1/2,x+1/2,-z+1/2
+-x+1/2,y+1/2,-z+1/2
+-y+1/2,-x+1/2,-z+1/2
+-x+1/2,-y+1/2,-z+1/2
+y+1/2,-x+1/2,-z+1/2
+x+1/2,y+1/2,-z+1/2
+-y+1/2,x+1/2,-z+1/2
+-x+1/2,y+1/2,z+1/2
+-y+1/2,-x+1/2,z+1/2
+x+1/2,-y+1/2,z+1/2
+y+1/2,x+1/2,z+1/2
+loop_
+_atom_site_label
+_atom_site_type_symbol
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+_atom_site_occupancy
+_atom_site_U_iso_or_equiv
+Mo2 Mo+6 0 0 0.30664 0.1125 0.0
+Pb1 Pb+2 0 0 0.08537 0.7875 0.0
+Mo1 Mo+6 0 0 0.08537 0.1125 0.0
+Pb2 Pb+2 0 0 0.30664 0.7875 0.0
+O1 O-2 0.5 0 0.1441 1 0.0
+Br1 Br-1 0 0 0.5 0.9 0.0

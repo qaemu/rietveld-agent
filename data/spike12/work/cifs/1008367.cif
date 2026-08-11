@@ -1,0 +1,118 @@
+#------------------------------------------------------------------------------
+#$Date: 2016-02-14 16:26:36 +0200 (Sun, 14 Feb 2016) $
+#$Revision: 176435 $
+#$URL: file:///home/coder/svn-repositories/_RELOADED_COD/cod-reloaded/cif/1/00/83/1008367.cif $
+#------------------------------------------------------------------------------
+#
+# This file is available in the Crystallography Open Database (COD),
+# http://www.crystallography.net/
+#
+# All data on this site have been placed in the public domain by the
+# contributors.
+#
+data_1008367
+loop_
+_publ_author_name
+'Tran Qui, D'
+'Hamdoune, S'
+'Soubeyroux, J L'
+'Prince, E'
+_publ_section_title
+;
+Neutron Powder Diffraction Study of Solid Solution Li~1+x~ Ti~2-x~
+In~x~ P~3~ O~12~
+;
+_journal_coden_ASTM              JSSCBI
+_journal_name_full               'Journal of Solid State Chemistry'
+_journal_page_first              309
+_journal_page_last               315
+_journal_paper_doi               10.1016/0022-4596(88)90034-5
+_journal_volume                  72
+_journal_year                    1988
+_chemical_formula_structural     'Li1.15 Ti1.85 In.15 (P O4)3'
+_chemical_formula_sum            'In0.15 Li1.15 O12 P3 Ti1.85'
+_chemical_name_systematic
+;
+Lithium titanium indium phosphate (1.15/1.85/.15/3)
+;
+_space_group_IT_number           167
+_symmetry_cell_setting           trigonal
+_symmetry_space_group_name_Hall  '-R 3 2"c'
+_symmetry_space_group_name_H-M   'R -3 c :H'
+_cell_angle_alpha                90
+_cell_angle_beta                 90
+_cell_angle_gamma                120
+_cell_formula_units_Z            6
+_cell_length_a                   8.5604(2)
+_cell_length_b                   8.5604(2)
+_cell_length_c                   21.0219(10)
+_cell_volume                     1334.1
+_refine_ls_R_factor_all          0.0515
+_cod_original_sg_symbol_H-M      'R -3 c H'
+_cod_original_formula_sum        'In.15 Li1.15 O12 P3 Ti1.85'
+_cod_database_code               1008367
+loop_
+_symmetry_equiv_pos_as_xyz
+x,y,z
+-y,x-y,z
+y-x,-x,z
+-y,-x,1/2+z
+x,x-y,1/2+z
+y-x,y,1/2+z
+-x,-y,-z
+y,y-x,-z
+x-y,x,-z
+y,x,1/2-z
+-x,y-x,1/2-z
+x-y,-y,1/2-z
+1/3+x,2/3+y,2/3+z
+2/3+x,1/3+y,1/3+z
+1/3-y,2/3+x-y,2/3+z
+2/3-y,1/3+x-y,1/3+z
+1/3-x+y,2/3-x,2/3+z
+2/3-x+y,1/3-x,1/3+z
+1/3-y,2/3-x,1/6+z
+2/3-y,1/3-x,5/6+z
+1/3+x,2/3+x-y,1/6+z
+2/3+x,1/3+x-y,5/6+z
+1/3-x+y,2/3+y,1/6+z
+2/3-x+y,1/3+y,5/6+z
+1/3-x,2/3-y,2/3-z
+2/3-x,1/3-y,1/3-z
+1/3+y,2/3-x+y,2/3-z
+2/3+y,1/3-x+y,1/3-z
+1/3+x-y,2/3+x,2/3-z
+2/3+x-y,1/3+x,1/3-z
+1/3+y,2/3+x,1/6-z
+2/3+y,1/3+x,5/6-z
+1/3-x,2/3-x+y,1/6-z
+2/3-x,1/3-x+y,5/6-z
+1/3+x-y,2/3-y,1/6-z
+2/3+x-y,1/3-y,5/6-z
+loop_
+_atom_site_label
+_atom_site_type_symbol
+_atom_site_symmetry_multiplicity
+_atom_site_Wyckoff_symbol
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+_atom_site_occupancy
+_atom_site_attached_hydrogens
+_atom_site_calc_flag
+O1 O2- 36 f 0.1862(4) 0.9941(4) 0.1908(1) 1. 0 d
+O2 O2- 36 f 0.1893(4) 0.1657(3) 0.0816(1) 1. 0 d
+P1 P5+ 18 e 0.2917(5) 0. 0.25 1. 0 d
+Ti1 Ti4+ 12 c 0. 0. 0.1441(4) 0.925(5) 0 d
+In1 In3+ 12 c 0. 0. 0.1441(4) 0.075(5) 0 d
+Li1 Li1+ 6 b 0. 0. 0. 0.969(6) 0 d
+Li2 Li1+ 18 e -0.3036(7) 0. 0.25 0.031(7) 0 d
+Li3 Li1+ 18 e -0.3704(9) 0. 0.25 0.030(7) 0 d
+loop_
+_atom_type_symbol
+_atom_type_oxidation_number
+O2- -2.000
+P5+ 5.000
+Ti4+ 4.000
+In3+ 3.000
+Li1+ 1.000

@@ -1,0 +1,49 @@
+{
+  "mode": "simulate",
+  "fixtures": {
+    "cu_PbSO4": {
+      "file": "/Users/lucas/Documents/CNEA/rietveld-agent/tests/fixtures/xrdml/cu_PbSO4.xrdml",
+      "sha256": "9cb9084c7b76dcc64a5e49d1448cf4233cf35a11475ce2b1fb9f231a0e3552c7",
+      "anode": "Cu",
+      "material": "PbSO4",
+      "top_peak_tth": 29.68
+    },
+    "fe_PbSO4": {
+      "file": "/Users/lucas/Documents/CNEA/rietveld-agent/tests/fixtures/xrdml/fe_PbSO4.xrdml",
+      "sha256": "ba81b8e1dcd96efb1d7c906a567bfb12fafa6f50952b009f6e963e3935cb7396",
+      "anode": "Fe",
+      "material": "PbSO4",
+      "top_peak_tth": 37.56
+    },
+    "cu_quartz": {
+      "file": "/Users/lucas/Documents/CNEA/rietveld-agent/tests/fixtures/xrdml/cu_quartz.xrdml",
+      "sha256": "d3906c9ede9309512adaffada7067b3b97fbb4f35144caaf330d8dee2b6285eb",
+      "anode": "Cu",
+      "material": "SiO2",
+      "top_peak_tth": 25.84
+    },
+    "base64_PbSO4": {
+      "file": "/Users/lucas/Documents/CNEA/rietveld-agent/tests/fixtures/xrdml/base64_PbSO4.xrdml",
+      "sha256": "f6da72cde811f2d344905518da9a408bb13ca35e90dabbe5e47736c8893f0595"
+    },
+    "nonamespace_quartz": {
+      "file": "/Users/lucas/Documents/CNEA/rietveld-agent/tests/fixtures/xrdml/nonamespace_quartz.xrdml",
+      "sha256": "bd5b312168d0e2378e83dc141307014a38c94a984fc9599497f99e24968142a8"
+    }
+  },
+  "generated_at": "2026-08-09T19:15:49-0300",
+  "dependencies": {
+    "python": "3.13.7",
+    "vendor": "GSAS-II v5.6.3"
+  },
+  "verify": {
+    "ok": [
+      "cu_PbSO4",
+      "fe_PbSO4",
+      "cu_quartz",
+      "base64_PbSO4",
+      "nonamespace_quartz"
+    ],
+    "mismatch": []
+  }
+}

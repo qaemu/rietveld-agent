@@ -1,0 +1,90 @@
+#------------------------------------------------------------------------------
+#$Date: 2018-07-07 04:59:37 +0300 (Sat, 07 Jul 2018) $
+#$Revision: 208902 $
+#$URL: file:///home/coder/svn-repositories/_RELOADED_COD/cod-reloaded/cif/1/01/09/1010917.cif $
+#------------------------------------------------------------------------------
+#
+# This file is available in the Crystallography Open Database (COD),
+# http://www.crystallography.net/
+#
+# All data on this site have been placed in the public domain by the
+# contributors.
+#
+data_1010917
+loop_
+_publ_author_name
+'Gossner, B'
+'Mussgnug, F'
+_publ_section_title
+;
+Beitrag zur Kenntnis des Barytocalcits und seiner strukturellen
+Beziehungen zu anderen Stoffen
+;
+_journal_coden_ASTM              ZMGPAS
+_journal_name_full
+;
+Zentralblatt fuer Mineralogie und Geologie, A
+;
+_journal_page_first              321
+_journal_page_last               328
+_journal_volume                  1930
+_journal_year                    1930
+_chemical_formula_structural     'Ca Ba (C O3)2'
+_chemical_formula_sum            'C2 Ba Ca O6'
+_chemical_name_mineral           Barytocalcite
+_chemical_name_systematic        'Calcium barium carbonate'
+_space_group_IT_number           4
+_symmetry_cell_setting           monoclinic
+_symmetry_Int_Tables_number      4
+_symmetry_space_group_name_Hall  'P 2yb'
+_symmetry_space_group_name_H-M   'P 1 21 1'
+_cell_angle_alpha                90
+_cell_angle_beta                 106.3
+_cell_angle_gamma                90
+_cell_formula_units_Z            2
+_cell_length_a                   8.15
+_cell_length_b                   5.22
+_cell_length_c                   6.58
+_cell_volume                     268.7
+_exptl_crystal_density_meas      3.69
+_cod_depositor_comments
+;
+ Correcting the summary chemical formula by changing it from 'Ba Ca O6'
+ to 'C2 Ba Ca O6'.
+
+ Antanas Vaitkus,
+ 2018-07-07
+;
+_cod_database_code               1010917
+loop_
+_symmetry_equiv_pos_as_xyz
+x,y,z
+-x,1/2+y,-z
+loop_
+_atom_site_label
+_atom_site_type_symbol
+_atom_site_symmetry_multiplicity
+_atom_site_Wyckoff_symbol
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+_atom_site_occupancy
+_atom_site_attached_hydrogens
+_atom_site_calc_flag
+Ca1 Ca2+ 2 a 0.125 0. 0.25 1. 0 d
+Ba1 Ba2+ 2 a 0.625 0. 0.25 1. 0 d
+C1 C4+ 2 a 0.125 0. 0.75 1. 0 d
+C2 C4+ 2 a 0.625 0. 0.75 1. 0 d
+O1 O2- 2 a 0.125 0.3 0.75 1. 0 d
+O2 O2- 2 a 0.2 0.85 0.6 1. 0 d
+O3 O2- 2 a 0.05 0.85 0.9 1. 0 d
+O4 O2- 2 a 0.625 0.7 0.75 1. 0 d
+O5 O2- 2 a 0.7 0.15 0.6 1. 0 d
+O6 O2- 2 a 0.55 0.15 0.9 1. 0 d
+loop_
+_atom_type_symbol
+_atom_type_oxidation_number
+Ca2+ 2.000
+Ba2+ 2.000
+C4+ 4.000
+O2- -2.000

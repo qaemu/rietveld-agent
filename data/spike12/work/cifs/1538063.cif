@@ -1,0 +1,110 @@
+#------------------------------------------------------------------------------
+#$Date: 2018-09-27 07:13:35 +0300 (Thu, 27 Sep 2018) $
+#$Revision: 211196 $
+#$URL: file:///home/coder/svn-repositories/_RELOADED_COD/cod-reloaded/cif/1/53/80/1538063.cif $
+#------------------------------------------------------------------------------
+#
+# This file is available in the Crystallography Open Database (COD),
+# http://www.crystallography.net/
+#
+# All data on this site have been placed in the public domain by the
+# contributors.
+#
+data_1538063
+loop_
+_publ_author_name
+'Geballe, T.H.'
+'Matthias, B.T.'
+'Compton, V.B.'
+'Corenzwit, E.'
+'Longinotti, L.D.'
+'Hull, G.W.jr.'
+_publ_section_title
+;
+ Superconductivity in binary alloy systems of the rare earths and of
+ thorium with Pt-group metals
+;
+_journal_name_full
+'Physical Review (1,1893-132,1963/141,1966-188,1969)'
+_journal_page_first              A119
+_journal_page_last               A127
+_journal_volume                  137
+_journal_year                    1965
+_chemical_formula_sum            'Rh3 Sc'
+_space_group_IT_number           221
+_symmetry_space_group_name_Hall  '-P 4 2 3'
+_symmetry_space_group_name_H-M   'P m -3 m'
+_cell_angle_alpha                90
+_cell_angle_beta                 90
+_cell_angle_gamma                90
+_cell_formula_units_Z            1
+_cell_length_a                   3.898
+_cell_length_b                   3.898
+_cell_length_c                   3.898
+_cell_volume                     59.228
+_citation_journal_id_ASTM        PHRVAO
+_cod_data_source_file            Geballe_PHRVAO_1965_1622.cif
+_cod_data_source_block           Rh3Sc1
+_cod_original_cell_volume        59.22779
+_cod_original_formula_sum        'Rh3 Sc1'
+_cod_database_code               1538063
+loop_
+_symmetry_equiv_pos_as_xyz
+x,y,z
+-y,x,z
+-x,-y,z
+y,-x,z
+x,-y,-z
+y,x,-z
+-x,y,-z
+-y,-x,-z
+z,x,y
+-x,z,y
+-z,-x,y
+x,-z,y
+z,-x,-y
+x,z,-y
+-z,x,-y
+-x,-z,-y
+y,z,x
+y,-z,-x
+z,y,-x
+-y,z,-x
+-z,-y,-x
+-y,-z,x
+z,-y,x
+-z,y,x
+-x,-y,-z
+y,-x,-z
+x,y,-z
+-y,x,-z
+-x,y,z
+-y,-x,z
+x,-y,z
+y,x,z
+-z,-x,-y
+x,-z,-y
+z,x,-y
+-x,z,-y
+-z,x,y
+-x,-z,y
+z,-x,y
+x,z,y
+-y,-z,-x
+-y,z,x
+-z,-y,x
+y,-z,x
+z,y,x
+y,z,-x
+-z,y,-x
+z,-y,-x
+loop_
+_atom_site_label
+_atom_site_type_symbol
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+_atom_site_occupancy
+_atom_site_U_iso_or_equiv
+Rh1 Rh 0 0.5 0.5 1 0.0
+Sc1 Sc 0 0 0 1 0.0

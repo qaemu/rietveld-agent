@@ -1,0 +1,50 @@
+#------------------------------------------------------------------------------
+#$Date: 2013-03-28 18:17:04 +0200 (Thu, 28 Mar 2013) $
+#$Revision: 77586 $
+#$URL: file:///home/coder/svn-repositories/_RELOADED_COD/cod-reloaded/cif/1/01/07/1010760.cif $
+#------------------------------------------------------------------------------
+#
+# This file is available in the Crystallography Open Database (COD),
+# http://www.crystallography.net/
+#
+# All data on this site have been placed in the public domain by the
+# contributors.
+#
+data_1010760
+loop_
+_publ_author_name
+'Peacock, M A'
+'Berry, L G'
+_publ_section_title
+;
+Roentgenographic observations on ore minerals
+;
+_journal_coden_ASTM              UTSGAL
+_journal_name_full
+;
+University of Toronto Studies, Geological Series
+;
+_journal_page_first              47
+_journal_page_last               69
+_journal_volume                  44
+_journal_year                    1940
+_chemical_compound_source        'from Brosso, Piedmont, Italy'
+_chemical_formula_structural     'Fe S2'
+_chemical_formula_sum            'Fe S2'
+_chemical_name_mineral           Pyrite
+_chemical_name_systematic        'Iron sulfide (1/2)'
+_cell_angle_alpha                90
+_cell_angle_beta                 90
+_cell_angle_gamma                90
+_cell_formula_units_Z            0
+_cell_length_a                   5.410(5)
+_cell_length_b                   5.41
+_cell_length_c                   5.41
+_cell_volume                     158.3
+_cod_database_code               1010760
+loop_
+_atom_site_label
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+? ? ? ?

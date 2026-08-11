@@ -1,0 +1,284 @@
+#------------------------------------------------------------------------------
+#$Date: 2016-02-20 02:53:41 +0200 (Sat, 20 Feb 2016) $
+#$Revision: 176768 $
+#$URL: file:///home/coder/svn-repositories/_RELOADED_COD/cod-reloaded/cif/2/10/43/2104391.cif $
+#------------------------------------------------------------------------------
+#
+# This file is available in the Crystallography Open Database (COD),
+# http://www.crystallography.net/. The original data for this entry
+# were provided by IUCr Journals, http://journals.iucr.org/.
+#
+# The file may be used within the scientific community so long as
+# proper attribution is given to the journal article from which the
+# data were obtained.
+#
+data_2104391
+loop_
+_publ_author_name
+'McMillen, Colin D.'
+'Hu, Jia'
+'VanDerveer, Donald'
+'Kolis, Joseph W.'
+_publ_section_title
+;
+ Trigonal structures of <i>A</i>Be~2~BO~3~F~2~ (<i>A</i> = Rb, Cs, Tl)
+ crystals
+;
+_journal_coeditor_code           BP5022
+_journal_issue                   4
+_journal_name_full               'Acta Crystallographica Section B'
+_journal_page_first              445
+_journal_page_last               449
+_journal_paper_doi               10.1107/S0108768109024161
+_journal_volume                  65
+_journal_year                    2009
+_chemical_formula_sum            'B Be2 F2 O3 Tl'
+_chemical_formula_weight         319.20
+_chemical_name_systematic
+;
+ ?
+;
+_space_group_IT_number           155
+_symmetry_cell_setting           trigonal
+_symmetry_space_group_name_Hall  'R 3 2"'
+_symmetry_space_group_name_H-M   'R 3 2 :H'
+_atom_sites_solution_hydrogens   none
+_atom_sites_solution_primary     direct
+_atom_sites_solution_secondary   difmap
+_audit_creation_method           SHELXL-97
+_cell_angle_alpha                90.00
+_cell_angle_beta                 90.00
+_cell_angle_gamma                120.00
+_cell_formula_units_Z            3
+_cell_length_a                   4.4387(6)
+_cell_length_b                   4.4387(6)
+_cell_length_c                   19.942(4)
+_cell_measurement_reflns_used    808
+_cell_measurement_temperature    293(2)
+_cell_measurement_theta_max      26.0212
+_cell_measurement_theta_min      3.0631
+_cell_volume                     340.26(9)
+_computing_cell_refinement       'CrystalClear (Rigaku/MSC, 1999)'
+_computing_data_collection       'CrystalClear (Rigaku/MSC, 1999)'
+_computing_data_reduction        'CrystalClear (Rigaku/MSC, 1999)'
+_computing_molecular_graphics    'DIAMOND (Brandenburg, 1999)'
+_computing_publication_material  'SHELXL-97 (Sheldrick, 1997)'
+_computing_structure_refinement  'SHELXL-97 (Sheldrick, 1997)'
+_computing_structure_solution    'SHELXS-97 (Sheldrick, 1990)'
+_diffrn_ambient_temperature      293(2)
+_diffrn_detector_area_resol_mean 14.6199
+_diffrn_measured_fraction_theta_full 1.000
+_diffrn_measured_fraction_theta_max 1.000
+_diffrn_measurement_device_type  'Rigaku AFC8S'
+_diffrn_measurement_method       '\w scans'
+_diffrn_radiation_monochromator  graphite
+_diffrn_radiation_source         'fine-focus sealed tube'
+_diffrn_radiation_type           MoK\a
+_diffrn_radiation_wavelength     0.71073
+_diffrn_reflns_av_R_equivalents  0.0742
+_diffrn_reflns_av_sigmaI/netI    0.0406
+_diffrn_reflns_limit_h_max       5
+_diffrn_reflns_limit_h_min       -5
+_diffrn_reflns_limit_k_max       5
+_diffrn_reflns_limit_k_min       -4
+_diffrn_reflns_limit_l_max       23
+_diffrn_reflns_limit_l_min       -24
+_diffrn_reflns_number            990
+_diffrn_reflns_theta_full        26.14
+_diffrn_reflns_theta_max         26.14
+_diffrn_reflns_theta_min         3.06
+_diffrn_standards_decay_%        0
+_diffrn_standards_interval_count 0
+_diffrn_standards_interval_time  0
+_diffrn_standards_number         0
+_exptl_absorpt_coefficient_mu    35.544
+_exptl_absorpt_correction_T_max  0.2413
+_exptl_absorpt_correction_T_min  0.0201
+_exptl_absorpt_correction_type   multi-scan
+_exptl_absorpt_process_details   'REQAB, CrystalClear'
+_exptl_crystal_colour            colorless
+_exptl_crystal_density_diffrn    4.673
+_exptl_crystal_density_method    'not measured'
+_exptl_crystal_description       'hexagonal plate fragment'
+_exptl_crystal_F_000             408
+_exptl_crystal_size_max          0.36
+_exptl_crystal_size_mid          0.08
+_exptl_crystal_size_min          0.04
+_refine_diff_density_max         2.649
+_refine_diff_density_min         -1.719
+_refine_ls_abs_structure_details 'Flack H D (1983), Acta Cryst. A39, 876-881'
+_refine_ls_abs_structure_Flack   0.00(9)
+_refine_ls_extinction_coef       0.013(3)
+_refine_ls_extinction_expression Fc^*^=kFc[1+0.001xFc^2^\l^3^/sin(2\q)]^-1/4^
+_refine_ls_extinction_method     SHELXL
+_refine_ls_goodness_of_fit_ref   1.195
+_refine_ls_hydrogen_treatment    none
+_refine_ls_matrix_type           full
+_refine_ls_number_parameters     17
+_refine_ls_number_reflns         163
+_refine_ls_number_restraints     0
+_refine_ls_restrained_S_all      1.195
+_refine_ls_R_factor_all          0.0378
+_refine_ls_R_factor_gt           0.0349
+_refine_ls_shift/su_max          0.000
+_refine_ls_shift/su_mean         0.000
+_refine_ls_structure_factor_coef Fsqd
+_refine_ls_weighting_details
+'calc w=1/[\s^2^(Fo^2^)+(0.0626P)^2^+0.0000P] where P=(Fo^2^+2Fc^2^)/3'
+_refine_ls_weighting_scheme      calc
+_refine_ls_wR_factor_gt          0.0832
+_refine_ls_wR_factor_ref         0.0844
+_reflns_number_gt                162
+_reflns_number_total             163
+_reflns_threshold_expression     >2sigma(I)
+_cod_data_source_file            bp5022.cif
+_cod_data_source_block           cdm1031r32
+_cod_depositor_comments
+;
+The following automatic conversions were performed:
+'_symmetry_cell_setting' value 'Trigonal' changed to 'trigonal' according
+to '/home/saulius/struct/CIF-dictionaries/cif_core.dic' dictionary named
+'cif_core.dic' version 2.4.1 from 2010-06-29.
+
+Automatic conversion script
+Id: cif_fix_enum 1527 2010-12-29 10:47:43Z saulius 
+
+The following automatic conversions were performed:
+
+'_symmetry_cell_setting' value 'Trigonal' changed to 'trigonal'
+according to /home/saulius/struct/CIF-dictionaries/cif_core.dic
+dictionary named 'cif_core.dic' version 2.4.1 from 2010-06-29.
+
+Automatic conversion script
+Id: cif_fix_values 1715 2011-07-08 13:25:40Z adriana 
+;
+_cod_original_cell_volume        340.27(9)
+_cod_original_sg_symbol_H-M      R32
+_cod_database_code               2104391
+_cod_database_fobs_code          2104391
+loop_
+_symmetry_equiv_pos_as_xyz
+'x, y, z'
+'-y, x-y, z'
+'-x+y, -x, z'
+'y, x, -z'
+'x-y, -y, -z'
+'-x, -x+y, -z'
+'x+2/3, y+1/3, z+1/3'
+'-y+2/3, x-y+1/3, z+1/3'
+'-x+y+2/3, -x+1/3, z+1/3'
+'y+2/3, x+1/3, -z+1/3'
+'x-y+2/3, -y+1/3, -z+1/3'
+'-x+2/3, -x+y+1/3, -z+1/3'
+'x+1/3, y+2/3, z+2/3'
+'-y+1/3, x-y+2/3, z+2/3'
+'-x+y+1/3, -x+2/3, z+2/3'
+'y+1/3, x+2/3, -z+2/3'
+'x-y+1/3, -y+2/3, -z+2/3'
+'-x+1/3, -x+y+2/3, -z+2/3'
+loop_
+_atom_site_type_symbol
+_atom_site_label
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+_atom_site_U_iso_or_equiv
+_atom_site_adp_type
+_atom_site_calc_flag
+_atom_site_refinement_flags
+_atom_site_occupancy
+_atom_site_disorder_assembly
+_atom_site_disorder_group
+Tl Tl1 0.0000 0.0000 0.0000 0.0294(8) Uani d S 1 . .
+F F1 0.3333 -0.3333 -0.0626(6) 0.028(2) Uani d S 1 . .
+B B1 -0.3333 0.3333 -0.1667 0.014(5) Uani d S 1 . .
+O O1 0.358(2) 0.025(2) -0.1667 0.015(2) Uani d S 1 . .
+Be Be1 0.3333 -0.3333 -0.1401(11) 0.013(3) Uani d S 1 . .
+loop_
+_atom_site_aniso_label
+_atom_site_aniso_U_11
+_atom_site_aniso_U_22
+_atom_site_aniso_U_33
+_atom_site_aniso_U_12
+_atom_site_aniso_U_13
+_atom_site_aniso_U_23
+Tl1 0.0263(8) 0.0263(8) 0.0357(9) 0.0131(4) 0.000 0.000
+F1 0.030(3) 0.030(3) 0.024(5) 0.0152(16) 0.000 0.000
+B1 0.002(6) 0.002(6) 0.038(15) 0.001(3) 0.000 0.000
+O1 0.003(4) 0.003(4) 0.035(7) -0.001(5) -0.002(2) 0.002(2)
+Be1 0.006(4) 0.006(4) 0.027(11) 0.003(2) 0.000 0.000
+loop_
+_atom_type_symbol
+_atom_type_description
+_atom_type_scat_dispersion_real
+_atom_type_scat_dispersion_imag
+_atom_type_scat_source
+Be Be 0.0005 0.0002 'International Tables Vol C Tables 4.2.6.8 and 6.1.1.4'
+B B 0.0013 0.0007 'International Tables Vol C Tables 4.2.6.8 and 6.1.1.4'
+O O 0.0106 0.0060 'International Tables Vol C Tables 4.2.6.8 and 6.1.1.4'
+F F 0.0171 0.0103 'International Tables Vol C Tables 4.2.6.8 and 6.1.1.4'
+Tl Tl -2.8358 9.6688 'International Tables Vol C Tables 4.2.6.8 and 6.1.1.4'
+loop_
+_geom_angle_atom_site_label_1
+_geom_angle_atom_site_label_2
+_geom_angle_atom_site_label_3
+_geom_angle_site_symmetry_1
+_geom_angle_site_symmetry_3
+_geom_angle
+_geom_angle_publ_flag
+F1 Tl1 F1 . 4 180.0(5) ?
+F1 Tl1 F1 . 1_455 102.2(3) ?
+F1 Tl1 F1 4 1_455 77.8(3) ?
+F1 Tl1 F1 . 4_655 77.8(3) ?
+F1 Tl1 F1 4 4_655 102.2(3) ?
+F1 Tl1 F1 1_455 4_655 180.0(5) ?
+F1 Tl1 F1 . 1_565 102.2(3) ?
+F1 Tl1 F1 4 1_565 77.8(3) ?
+F1 Tl1 F1 1_455 1_565 102.2(3) ?
+F1 Tl1 F1 4_655 1_565 77.8(3) ?
+F1 Tl1 F1 . 4_545 77.8(3) ?
+F1 Tl1 F1 4 4_545 102.2(3) ?
+F1 Tl1 F1 1_455 4_545 77.8(3) ?
+F1 Tl1 F1 4_655 4_545 102.2(3) ?
+F1 Tl1 F1 1_565 4_545 180.0(5) ?
+Be1 F1 Tl1 . . 116.0(2) ?
+Be1 F1 Tl1 . 1_655 116.0(2) ?
+Tl1 F1 Tl1 . 1_655 102.2(3) ?
+Be1 F1 Tl1 . 1_545 116.0(2) ?
+Tl1 F1 Tl1 . 1_545 102.2(3) ?
+Tl1 F1 Tl1 1_655 1_545 102.2(3) ?
+O1 B1 O1 2 1_455 120.000(2) ?
+O1 B1 O1 2 3_565 120.000(6) ?
+O1 B1 O1 1_455 3_565 120.0000(10) ?
+B1 O1 Be1 1_655 16_544 121.5(4) ?
+B1 O1 Be1 1_655 . 121.5(4) ?
+Be1 O1 Be1 16_544 . 117.0(7) ?
+F1 Be1 O1 . 2_545 109.0(7) ?
+F1 Be1 O1 . . 109.0(7) ?
+O1 Be1 O1 2_545 . 109.9(7) ?
+F1 Be1 O1 . 3_655 109.0(7) ?
+O1 Be1 O1 2_545 3_655 109.9(7) ?
+O1 Be1 O1 . 3_655 109.9(7) ?
+loop_
+_geom_bond_atom_site_label_1
+_geom_bond_atom_site_label_2
+_geom_bond_site_symmetry_2
+_geom_bond_distance
+_geom_bond_publ_flag
+Tl1 F1 . 2.851(6) ?
+Tl1 F1 4 2.851(6) ?
+Tl1 F1 1_455 2.851(6) ?
+Tl1 F1 4_655 2.851(6) ?
+Tl1 F1 1_565 2.851(6) ?
+Tl1 F1 4_545 2.851(6) ?
+F1 Be1 . 1.55(2) ?
+F1 Tl1 1_655 2.851(6) ?
+F1 Tl1 1_545 2.851(6) ?
+B1 O1 2 1.369(11) ?
+B1 O1 1_455 1.369(11) ?
+B1 O1 3_565 1.369(11) ?
+O1 B1 1_655 1.369(11) ?
+O1 Be1 16_544 1.626(9) ?
+O1 Be1 . 1.626(9) ?
+Be1 O1 2_545 1.626(9) ?
+Be1 O1 3_655 1.626(9) ?

@@ -1,0 +1,101 @@
+#------------------------------------------------------------------------------
+#$Date: 2016-02-18 17:37:37 +0200 (Thu, 18 Feb 2016) $
+#$Revision: 176729 $
+#$URL: file:///home/coder/svn-repositories/_RELOADED_COD/cod-reloaded/cif/1/51/15/1511580.cif $
+#------------------------------------------------------------------------------
+#
+# This file is available in the Crystallography Open Database (COD),
+# http://www.crystallography.net/
+#
+# All data on this site have been placed in the public domain by the
+# contributors.
+#
+data_1511580
+loop_
+_publ_author_name
+'Aksel'rud, L.G.'
+'Bruskov, V.A.'
+'Chaban, N.F.'
+'Kuz'ma, Yu.B.'
+_publ_section_title
+;
+ The crystal structure of boride Pr5 Co2 B6
+;
+_journal_name_full
+;
+Dopovidi Akademii Nauk Ukrains'koi RSR, Seriya B: Geologichni, Khimichni ta
+ Biologichni Nauki
+;
+_journal_page_first              49
+_journal_page_last               52
+_journal_volume                  1983
+_journal_year                    1983
+_chemical_formula_sum            'B6 Co2 Pr5'
+_chemical_name_systematic        'Pr5 Co2 B6'
+_space_group_IT_number           166
+_symmetry_space_group_name_Hall  '-R 3 2"'
+_symmetry_space_group_name_H-M   'R -3 m :H'
+_cell_angle_alpha                90
+_cell_angle_beta                 90
+_cell_angle_gamma                120
+_cell_formula_units_Z            3
+_cell_length_a                   5.457
+_cell_length_b                   5.457
+_cell_length_c                   24.718
+_cell_volume                     637.458
+_citation_journal_id_ASTM        DANND6
+_cod_data_source_file            boron4-x_230.cif
+_cod_data_source_block           B6Co2Pr5
+_cod_original_cell_volume        637.4584
+_cod_database_code               1511580
+loop_
+_symmetry_equiv_pos_as_xyz
+x,y,z
+-y,x-y,z
+-x+y,-x,z
+y,x,-z
+-x,-x+y,-z
+x-y,-y,-z
+-x,-y,-z
+y,-x+y,-z
+x-y,x,-z
+-y,-x,z
+x,x-y,z
+-x+y,y,z
+x+2/3,y+1/3,z+1/3
+-y+2/3,x-y+1/3,z+1/3
+-x+y+2/3,-x+1/3,z+1/3
+y+2/3,x+1/3,-z+1/3
+-x+2/3,-x+y+1/3,-z+1/3
+x-y+2/3,-y+1/3,-z+1/3
+-x+2/3,-y+1/3,-z+1/3
+y+2/3,-x+y+1/3,-z+1/3
+x-y+2/3,x+1/3,-z+1/3
+-y+2/3,-x+1/3,z+1/3
+x+2/3,x-y+1/3,z+1/3
+-x+y+2/3,y+1/3,z+1/3
+x+1/3,y+2/3,z+2/3
+-y+1/3,x-y+2/3,z+2/3
+-x+y+1/3,-x+2/3,z+2/3
+y+1/3,x+2/3,-z+2/3
+-x+1/3,-x+y+2/3,-z+2/3
+x-y+1/3,-y+2/3,-z+2/3
+-x+1/3,-y+2/3,-z+2/3
+y+1/3,-x+y+2/3,-z+2/3
+x-y+1/3,x+2/3,-z+2/3
+-y+1/3,-x+2/3,z+2/3
+x+1/3,x-y+2/3,z+2/3
+-x+y+1/3,y+2/3,z+2/3
+loop_
+_atom_site_label
+_atom_site_type_symbol
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+_atom_site_occupancy
+_atom_site_U_iso_or_equiv
+Pr3 Pr 0 0 0.4161 1 0.0
+Pr1 Pr 0 0 0 1 0.0
+Pr2 Pr 0 0 0.2511 1 0.0
+Co1 Co 0 0 0.1207 1 0.0
+B1 B 0.333 0 0.5 1 0.0

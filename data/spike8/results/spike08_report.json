@@ -1,0 +1,258 @@
+{
+  "spike": "spike_08",
+  "created_at": "2026-08-09T22:31:56-0300",
+  "policy": {
+    "path": "governance/policies/refinement-budget.v1.json",
+    "version": "1.0",
+    "confirm_max_rwp": 0.35,
+    "updated_by_study": false
+  },
+  "envelope_study": {
+    "true_family": "PbSO4 (anglesite)",
+    "cod_id": 1010950,
+    "competing_family": "CaCO3 (calcite)",
+    "rows": [
+      {
+        "level": "L1",
+        "seed": 1000,
+        "true_rwp": 0.0268,
+        "comp_rwp": 0.8094,
+        "separation": 0.7826,
+        "lowest_is_true": true,
+        "true_converged": true
+      },
+      {
+        "level": "L1",
+        "seed": 1001,
+        "true_rwp": 0.0355,
+        "comp_rwp": 0.8472,
+        "separation": 0.8117,
+        "lowest_is_true": true,
+        "true_converged": true
+      },
+      {
+        "level": "L1",
+        "seed": 1002,
+        "true_rwp": 0.0477,
+        "comp_rwp": 0.9088,
+        "separation": 0.8611,
+        "lowest_is_true": true,
+        "true_converged": true
+      },
+      {
+        "level": "L2",
+        "seed": 1000,
+        "true_rwp": 0.0483,
+        "comp_rwp": 0.7447,
+        "separation": 0.6964,
+        "lowest_is_true": true,
+        "true_converged": false
+      },
+      {
+        "level": "L2",
+        "seed": 1001,
+        "true_rwp": 0.0633,
+        "comp_rwp": 0.7891,
+        "separation": 0.7258,
+        "lowest_is_true": true,
+        "true_converged": false
+      },
+      {
+        "level": "L2",
+        "seed": 1002,
+        "true_rwp": 0.0864,
+        "comp_rwp": 0.8615,
+        "separation": 0.7751,
+        "lowest_is_true": true,
+        "true_converged": false
+      },
+      {
+        "level": "L3",
+        "seed": 1000,
+        "true_rwp": 0.0729,
+        "comp_rwp": 0.6188,
+        "separation": 0.5459,
+        "lowest_is_true": true,
+        "true_converged": false
+      },
+      {
+        "level": "L3",
+        "seed": 1001,
+        "true_rwp": 0.1013,
+        "comp_rwp": 0.705,
+        "separation": 0.6037,
+        "lowest_is_true": true,
+        "true_converged": false
+      },
+      {
+        "level": "L3",
+        "seed": 1002,
+        "true_rwp": 0.1284,
+        "comp_rwp": 0.7852,
+        "separation": 0.6568,
+        "lowest_is_true": true,
+        "true_converged": true
+      },
+      {
+        "level": "L4",
+        "seed": 1000,
+        "true_rwp": 0.087,
+        "comp_rwp": 0.454,
+        "separation": 0.367,
+        "lowest_is_true": true,
+        "true_converged": false
+      },
+      {
+        "level": "L4",
+        "seed": 1001,
+        "true_rwp": 0.1484,
+        "comp_rwp": 0.5602,
+        "separation": 0.4118,
+        "lowest_is_true": true,
+        "true_converged": false
+      },
+      {
+        "level": "L4",
+        "seed": 1002,
+        "true_rwp": 0.2745,
+        "comp_rwp": 0.6484,
+        "separation": 0.3739,
+        "lowest_is_true": true,
+        "true_converged": true
+      },
+      {
+        "level": "L5",
+        "seed": 1000,
+        "true_rwp": 0.3256,
+        "comp_rwp": 0.3354,
+        "separation": 0.0098,
+        "lowest_is_true": true,
+        "true_converged": true
+      },
+      {
+        "level": "L5",
+        "seed": 1001,
+        "true_rwp": 0.1722,
+        "comp_rwp": 0.4369,
+        "separation": 0.2648,
+        "lowest_is_true": true,
+        "true_converged": false
+      },
+      {
+        "level": "L5",
+        "seed": 1002,
+        "true_rwp": 0.4956,
+        "comp_rwp": 0.5016,
+        "separation": 0.006,
+        "lowest_is_true": true,
+        "true_converged": true
+      }
+    ],
+    "true_rwp_max": 0.4956,
+    "true_rwp_mean": 0.1409,
+    "comp_rwp_min": 0.3354,
+    "separation_min": 0.006,
+    "all_lowest_is_true": true,
+    "calibrated_bound": 0.516
+  },
+  "measured_e2e": [
+    {
+      "fixture": "cu_PbSO4.xrdml",
+      "run_id": "run-23f1f6a20267bb",
+      "status": "completed",
+      "verdict": "supported",
+      "fingerprint_top_family": "PbSO4 (anglesite)",
+      "verification": {
+        "recipe": "refinement-verify-v1",
+        "policy_version": "1.0",
+        "evidence_level": "fingerprint + refinement",
+        "confirmed_family": "PbSO4 (anglesite)",
+        "separation": 0.039193,
+        "candidates": [
+          {
+            "family": "PbSO4 (anglesite)",
+            "cod_id": 1010950,
+            "rwp": 0.891697,
+            "rexp": 0.001176,
+            "gof": 758.524969,
+            "n_points": 6251,
+            "n_params": 5,
+            "converged": true,
+            "cell": null
+          },
+          {
+            "family": "Al2O3 (corundum)",
+            "cod_id": 1000017,
+            "rwp": 0.93089,
+            "rexp": 0.001176,
+            "gof": 791.864775,
+            "n_points": 6251,
+            "n_params": 5,
+            "converged": true,
+            "cell": null
+          }
+        ],
+        "consistent_with_fingerprint": true
+      },
+      "rwp_top": 0.891697,
+      "separation": 0.039193,
+      "in_policy_bounds": false,
+      "schema_valid": true
+    },
+    {
+      "fixture": "cu_quartz.xrdml",
+      "run_id": "run-7e9acd684b132b",
+      "status": "completed",
+      "verdict": "supported",
+      "fingerprint_top_family": "GaAsO4 (quartz homeotype)",
+      "verification": {
+        "recipe": "refinement-verify-v1",
+        "policy_version": "1.0",
+        "evidence_level": "fingerprint + refinement",
+        "confirmed_family": "GaAsO4 (quartz homeotype)",
+        "separation": 0.98008,
+        "candidates": [
+          {
+            "family": "GaAsO4 (quartz homeotype)",
+            "cod_id": 1009000,
+            "rwp": 0.0,
+            "rexp": 0.001272,
+            "gof": 3e-05,
+            "n_points": 6155,
+            "n_params": 5,
+            "converged": true,
+            "cell": null
+          },
+          {
+            "family": "TiO2 (rutile)",
+            "cod_id": 1010942,
+            "rwp": 0.98008,
+            "rexp": 0.001272,
+            "gof": 770.254093,
+            "n_points": 6155,
+            "n_params": 5,
+            "converged": true,
+            "cell": null
+          }
+        ],
+        "consistent_with_fingerprint": true
+      },
+      "rwp_top": 0.0,
+      "separation": 0.98008,
+      "in_policy_bounds": true,
+      "schema_valid": true
+    }
+  ],
+  "summary": {
+    "n_cases": 2,
+    "n_with_verification": 2,
+    "all_schema_valid": true,
+    "all_lowest_rwp_matches_fingerprint": true
+  },
+  "honesty_notes": [
+    "Verification confirms identity only UP TO the accuracy of the catalog structure model. The cu_PbSO4 fixture is the APS-tutorial Wyckoff structure, NOT exactly COD 1010950: same chemistry/SG but atomic-detail differences push the true-phase bounded Rwp to ~0.88 (vs ~0.93 for calcite) - fingerprint-consistent and lowest-Rwp, yet out of the calibrated policy bound. Rwp is strength-of-model evidence, not identity proof; the fingerprint stage + family margin remain the decision carriers at M1.",
+    "cu_quartz is a positive control: the fixture IS the catalog CIF (COD 1009000), so the true-phase Rwp ~0 and the bound holds - verification works end-to-end when measurement == catalog model.",
+    "Envelope bound assumes the measurement is well-modeled by the catalog structure; structure-model mismatch (unknown atomic detail, disorder, non-stoichiometry) invalidates absolute-Rwp comparisons - reported, never hidden."
+  ],
+  "wall_clock_s": 22.1
+}

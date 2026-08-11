@@ -1,0 +1,101 @@
+#------------------------------------------------------------------------------
+#$Date: 2025-08-18 18:14:33 +0300 (Mon, 18 Aug 2025) $
+#$Revision: 301778 $
+#$URL: file:///home/coder/svn-repositories/_RELOADED_COD/cod-reloaded/cif/1/53/95/1539523.cif $
+#------------------------------------------------------------------------------
+#
+# This file is available in the Crystallography Open Database (COD),
+# http://www.crystallography.net/
+#
+# All data on this site have been placed in the public domain by the
+# contributors.
+#
+data_1539523
+loop_
+_publ_author_name
+'Al-Aql, A.A.'
+'Dughaish, Z.H.'
+'Al-Jufali, A.'
+'Flimban, A.'
+'Hameida, E.M.A.'
+'Al-Sheibani, K.M.'
+_publ_section_title
+;
+ The crystal structure of the compound Cs3 Mg2 Cl7
+;
+_journal_name_full               'Arab Gulf J. Scientific Research'
+_journal_page_first              249
+_journal_page_last               260
+_journal_volume                  14
+_journal_year                    1996
+_chemical_formula_sum            'Cl7 Cs3 Mg2'
+_chemical_name_systematic        'Cs3 Mg2 Cl7'
+_space_group_IT_number           139
+_symmetry_space_group_name_Hall  '-I 4 2'
+_symmetry_space_group_name_H-M   'I 4/m m m'
+_cell_angle_alpha                90
+_cell_angle_beta                 90
+_cell_angle_gamma                90
+_cell_formula_units_Z            2
+_cell_length_a                   5.05
+_cell_length_b                   5.05
+_cell_length_c                   26.3
+_cell_volume                     670.716
+_citation_journal_id_ASTM        AGSREJ
+_cod_data_source_file            Al-Aql_AGSREJ_1996_1759.cif
+_cod_data_source_block           Cl7Cs3Mg2
+_cod_original_cell_volume        670.7158
+_cod_database_code               1539523
+loop_
+_symmetry_equiv_pos_as_xyz
+x,y,z
+-y,x,z
+-x,-y,z
+y,-x,z
+x,-y,-z
+y,x,-z
+-x,y,-z
+-y,-x,-z
+-x,-y,-z
+y,-x,-z
+x,y,-z
+-y,x,-z
+-x,y,z
+-y,-x,z
+x,-y,z
+y,x,z
+x+1/2,y+1/2,z+1/2
+-y+1/2,x+1/2,z+1/2
+-x+1/2,-y+1/2,z+1/2
+y+1/2,-x+1/2,z+1/2
+x+1/2,-y+1/2,-z+1/2
+y+1/2,x+1/2,-z+1/2
+-x+1/2,y+1/2,-z+1/2
+-y+1/2,-x+1/2,-z+1/2
+-x+1/2,-y+1/2,-z+1/2
+y+1/2,-x+1/2,-z+1/2
+x+1/2,y+1/2,-z+1/2
+-y+1/2,x+1/2,-z+1/2
+-x+1/2,y+1/2,z+1/2
+-y+1/2,-x+1/2,z+1/2
+x+1/2,-y+1/2,z+1/2
+y+1/2,x+1/2,z+1/2
+loop_
+_atom_site_label
+_atom_site_type_symbol
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+_atom_site_occupancy
+_atom_site_U_iso_or_equiv
+Cl1 Cl-1 0 0 0.5 1 0.0
+Cl3 Cl-1 0 0.5 0.1002 1 0.0
+Mg1 Mg+2 0 0 0.4021 1 0.0
+Cs1 Cs+1 0 0 0.1899 1 0.0
+Cl2 Cl-1 0 0 0.3091 1 0.0
+Cs2 Cs+1 0 0 0 1 0.0
+loop_
+_cod_related_entry_id
+_cod_related_entry_database
+_cod_related_entry_code
+1 PubChem 139047448

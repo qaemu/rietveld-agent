@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rietveld-agent.local/governance/schemas/refinement_policy.schema.json",
+  "title": "RefinementBudgetPolicy",
+  "description": "Versioned, bounded Rietveld-verification recipe (controlled scientific input, v1).",
+  "type": "object",
+  "required": ["schema", "version", "recipe", "protocol", "bounded_keys",
+               "max_cycles", "prohibited", "confirm", "observable"],
+  "properties": {
+    "$schema": { "type": "string" },
+    "schema": { "const": "refinement_policy/v1" },
+    "version": { "type": "string" },
+    "recipe": { "type": "string" },
+    "description": { "type": "string" },
+    "protocol": {
+      "type": "object",
+      "required": ["anode", "tmin", "tmax", "step", "scale"],
+      "properties": {
+        "anode": { "type": "string" },
+        "wavelengths": { "type": "array", "items": { "type": "number" } },
+        "tmin": { "type": "number" },
+        "tmax": { "type": "number" },
+        "step": { "type": "number" },
+        "scale": { "type": "number" },
+        "background": { "type": "object" }
+      }
+    },
+    "bounded_keys": {
+      "type": "object",
+      "required": ["histogram", "phase", "hap"],
+      "properties": {
+        "histogram": { "type": "array", "items": { "type": "string" } },
+        "phase": { "type": "array", "items": { "type": "string" } },
+        "hap": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "max_cycles": { "type": "integer" },
+    "prohibited": { "type": "array", "items": { "type": "string" } },
+    "confirm": {
+      "type": "object",
+      "required": ["max_rwp", "require_separation"],
+      "properties": {
+        "max_rwp": { "type": "number", "minimum": 0, "maximum": 1 },
+        "require_separation": { "type": "boolean" },
+        "separation_min": { "type": "number", "minimum": 0 }
+      }
+    },
+    "observable": { "type": "object" }
+  },
+  "additionalProperties": false
+}

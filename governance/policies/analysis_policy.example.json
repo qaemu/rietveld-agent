@@ -1,0 +1,118 @@
+{
+  "schema": "policy/v0",
+  "version": "0.1.0",
+  "state": "draft",
+  "approved_by": "",
+  "approved_at": null,
+  "created_at": "2026-08-09T00:00:00Z",
+  "deprecated_at": null,
+  "domain": {
+    "geometry": "Bragg-Brentano",
+    "radiation": "constant-wavelength-laboratory-X-ray",
+    "phase_cap": 2,
+    "patterns_per_analysis": 1
+  },
+  "recipes": {
+    "single_phase": {
+      "immutable_plan": true,
+      "stages": [
+        {
+          "name": "s0-background-scale",
+          "set": { "Background": { "type": "chebyschev-1", "no. coeffs": 3, "refine": true } },
+          "clear": {},
+          "report": true
+        },
+        {
+          "name": "s1-sample-displacement",
+          "set": { "Sample Parameters": ["Shift"] },
+          "clear": {},
+          "report": true
+        },
+        {
+          "name": "s2-cell",
+          "set": { "Cell": true },
+          "clear": {},
+          "report": true
+        },
+        {
+          "name": "s3-profile-uvwx",
+          "set": { "Instrument Parameters": ["U", "V", "W", "X"] },
+          "clear": { "Instrument Parameters": ["Y"] },
+          "report": true
+        }
+      ]
+    },
+    "two_phase": {
+      "immutable_plan": true,
+      "stages": [
+        {
+          "name": "s0-background-scale-fractions",
+          "set": { "Background": { "type": "chebyschev-1", "no. coeffs": 4, "refine": true }, "PhaseFraction": true },
+          "clear": {},
+          "report": true
+        },
+        {
+          "name": "s1-sample-displacement",
+          "set": { "Sample Parameters": ["Shift"] },
+          "clear": {},
+          "report": true
+        },
+        {
+          "name": "s2-cell-both-phases",
+          "set": { "Cell": true },
+          "clear": {},
+          "report": true
+        },
+        {
+          "name": "s3-profile-uvwx",
+          "set": { "Instrument Parameters": ["U", "V", "W", "X"] },
+          "clear": { "Instrument Parameters": ["Y"] },
+          "report": true
+        }
+      ]
+    },
+    "profile_only": {
+      "immutable_plan": true,
+      "stages": [
+        {
+          "name": "lb0-lebail",
+          "set": { "LeBail": true, "Background": { "type": "chebyschev-1", "no. coeffs": 4, "refine": true }, "Cell": true },
+          "clear": {},
+          "report": true
+        }
+      ]
+    }
+  },
+  "budgets": {
+    "retrieval_top_k": 80,
+    "candidate_refinements_max": 120,
+    "combinations_max": 160,
+    "wall_clock_hours": 8.0
+  },
+  "thresholds": {
+    "supported": {
+      "min_delta_gof_improvement": 0.02,
+      "max_unexplained_peak_budget": 0.15,
+      "fraction_bounds": [0.01, 0.99]
+    },
+    "abstention": {
+      "max_amorphous_signal_fraction": 0.25,
+      "max_unexplained_peak_fraction": 0.2,
+      "max_nanocrystallite_size_nm": 15.0
+    },
+    "alternative_model": {
+      "tolerance_chi2_ratio": 1.05
+    }
+  },
+  "name_context": {
+    "max_context_only_candidates": 20,
+    "geography_handling": "require-validated-gazetteer",
+    "vocabulary_release": "vocab/0.0.1"
+  },
+  "governance": {
+    "catalog_requirement": "exact-release-required",
+    "calibration_requirement": "released-only",
+    "gsasii_min_version": "5.6.0",
+    "model_requirement": "none-required"
+  }
+}

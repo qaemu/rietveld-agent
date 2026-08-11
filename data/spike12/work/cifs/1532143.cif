@@ -1,0 +1,98 @@
+#------------------------------------------------------------------------------
+#$Date: 2016-02-13 21:28:24 +0200 (Sat, 13 Feb 2016) $
+#$Revision: 176429 $
+#$URL: file:///home/coder/svn-repositories/_RELOADED_COD/cod-reloaded/cif/1/53/21/1532143.cif $
+#------------------------------------------------------------------------------
+#
+# This file is available in the Crystallography Open Database (COD),
+# http://www.crystallography.net/
+#
+# All data on this site have been placed in the public domain by the
+# contributors.
+#
+data_1532143
+loop_
+_publ_author_name
+'Sakamaki, K.'
+'Nozaki, H.'
+'Wada, H.'
+'Onuki, Y.'
+'Kawai, M.'
+_publ_section_title
+;
+ Topochemical formation of van der Waals type niobium carbosulfide 1T-(Nb2
+ S2 C)
+;
+_journal_name_full               'Journal of Alloys Compd.'
+_journal_page_first              283
+_journal_page_last               292
+_journal_volume                  339
+_journal_year                    2002
+_chemical_formula_sum            'C Nb2 S2'
+_chemical_name_systematic        'Nb2 S2 C'
+_space_group_IT_number           166
+_symmetry_space_group_name_Hall  '-R 3 2"'
+_symmetry_space_group_name_H-M   'R -3 m :H'
+_cell_angle_alpha                90
+_cell_angle_beta                 90
+_cell_angle_gamma                120
+_cell_formula_units_Z            3
+_cell_length_a                   3.274
+_cell_length_b                   3.274
+_cell_length_c                   25.465
+_cell_volume                     236.391
+_citation_journal_id_ASTM        JALCEU
+_cod_data_source_file            Sakamaki_JALCEU_2002_499.cif
+_cod_data_source_block           C1Nb2S2
+_cod_original_cell_volume        236.3914
+_cod_original_formula_sum        'C1 Nb2 S2'
+_cod_database_code               1532143
+loop_
+_symmetry_equiv_pos_as_xyz
+x,y,z
+-y,x-y,z
+-x+y,-x,z
+y,x,-z
+-x,-x+y,-z
+x-y,-y,-z
+-x,-y,-z
+y,-x+y,-z
+x-y,x,-z
+-y,-x,z
+x,x-y,z
+-x+y,y,z
+x+2/3,y+1/3,z+1/3
+-y+2/3,x-y+1/3,z+1/3
+-x+y+2/3,-x+1/3,z+1/3
+y+2/3,x+1/3,-z+1/3
+-x+2/3,-x+y+1/3,-z+1/3
+x-y+2/3,-y+1/3,-z+1/3
+-x+2/3,-y+1/3,-z+1/3
+y+2/3,-x+y+1/3,-z+1/3
+x-y+2/3,x+1/3,-z+1/3
+-y+2/3,-x+1/3,z+1/3
+x+2/3,x-y+1/3,z+1/3
+-x+y+2/3,y+1/3,z+1/3
+x+1/3,y+2/3,z+2/3
+-y+1/3,x-y+2/3,z+2/3
+-x+y+1/3,-x+2/3,z+2/3
+y+1/3,x+2/3,-z+2/3
+-x+1/3,-x+y+2/3,-z+2/3
+x-y+1/3,-y+2/3,-z+2/3
+-x+1/3,-y+2/3,-z+2/3
+y+1/3,-x+y+2/3,-z+2/3
+x-y+1/3,x+2/3,-z+2/3
+-y+1/3,-x+2/3,z+2/3
+x+1/3,x-y+2/3,z+2/3
+-x+y+1/3,y+2/3,z+2/3
+loop_
+_atom_site_label
+_atom_site_type_symbol
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+_atom_site_occupancy
+_atom_site_U_iso_or_equiv
+Nb1 Nb 0 0 0.374 1 0.0
+S1 S 0 0 0.23 1 0.0
+C1 C 0 0 0 1 0.0

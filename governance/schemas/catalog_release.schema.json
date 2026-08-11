@@ -1,0 +1,101 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rietveld-agent.local/governance/schemas/catalog_release.schema.json",
+  "title": "CatalogRelease",
+  "description": "Pinned, revisioned reference catalog release built from a COD snapshot (CC0). Controlled scientific input, v0 draft.",
+  "type": "object",
+  "required": [
+    "schema", "version", "state", "built_by", "built_at",
+    "source", "licensing", "entries", "clustering", "validation", "manifest_sha256"
+  ],
+  "properties": {
+    "schema": { "const": "catalog_release/v0" },
+    "version": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$" },
+    "state": { "enum": ["draft", "reviewed", "released", "deprecated"] },
+    "built_by": { "type": "string" },
+    "built_at": { "type": "string", "format": "date-time" },
+    "source": {
+      "type": "object",
+      "required": ["database", "snapshot_ref", "subset_rule"],
+      "properties": {
+        "database": { "const": "COD" },
+        "snapshot_ref": { "type": "string", "description": "COD snapshot/revision reference (e.g. SVN revision or archive date)." },
+        "accessed_at": { "type": "string", "format": "date-time" },
+        "subset_rule": { "type": "string", "description": "e.g. mineral + common inorganic, curated list, Phase-0 spike subset." }
+      }
+    },
+    "licensing": {
+      "type": "object",
+      "required": ["notice"],
+      "properties": {
+        "notice": { "type": "string", "description": "CC0 statement + attribution requirement for originating authors." }
+      }
+    },
+    "entries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["cod_id", "cif_sha256", "formula", "mineral_name", "space_group", "validation", "source"],
+        "properties": {
+          "cod_id": { "type": "integer" },
+          "cod_revision": { "type": ["integer", "null"], "description": "COD record revision used." },
+          "cif_sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+          "formula": { "type": "string", "description": "Reduced chemical formula." },
+          "mineral_name": { "type": ["string", "null"] },
+          "family": { "type": "string" },
+          "space_group": { "type": "string" },
+          "cell": {
+            "type": "object",
+            "required": ["a", "b", "c", "alpha", "beta", "gamma"],
+            "properties": {
+              "a": { "type": "number" }, "b": { "type": "number" }, "c": { "type": "number" },
+              "alpha": { "type": "number" }, "beta": { "type": "number" }, "gamma": { "type": "number" }
+            }
+          },
+          "validation": {
+            "type": "object",
+            "required": ["status", "issues"],
+            "properties": {
+              "status": { "enum": ["pass", "fail"] },
+              "issues": { "type": "array", "items": { "type": "string" } }
+            }
+          },
+          "source": {
+            "type": "object",
+            "required": ["url", "citation"],
+            "properties": {
+              "url": { "type": "string" },
+              "citation": { "type": "string" }
+            }
+          },
+          "flags": { "type": "array", "items": { "type": "string" }, "description": "e.g. ['low-confidence', 'disordered', 'clay-family', 'polytype']" }
+        }
+      }
+    },
+    "clustering": {
+      "type": "object",
+      "required": ["method", "version"],
+      "properties": {
+        "method": { "type": "string", "description": "Phase-0: composition + reduced-cell similarity. Later: pattern-similarity duplicate detection (FPSM-style)." },
+        "version": { "type": "string" },
+        "families": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "array",
+            "items": { "type": "integer", "description": "cod_id members" }
+          }
+        }
+      }
+    },
+    "validation": {
+      "type": "object",
+      "required": ["cif_validation_rate", "rejected"],
+      "properties": {
+        "cif_validation_rate": { "type": "number", "description": "Fraction of curated CIFs that validated. Gate G0 target: >= 0.98." },
+        "rejected": { "type": "array", "items": { "type": "object", "properties": { "cod_id": { "type": "integer" }, "reason": { "type": "string" } } } }
+      }
+    },
+    "manifest_sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" }
+  },
+  "additionalProperties": false
+}

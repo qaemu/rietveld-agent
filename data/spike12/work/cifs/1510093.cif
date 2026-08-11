@@ -1,0 +1,109 @@
+#------------------------------------------------------------------------------
+#$Date: 2016-02-18 17:37:37 +0200 (Thu, 18 Feb 2016) $
+#$Revision: 176729 $
+#$URL: file:///home/coder/svn-repositories/_RELOADED_COD/cod-reloaded/cif/1/51/00/1510093.cif $
+#------------------------------------------------------------------------------
+#
+# This file is available in the Crystallography Open Database (COD),
+# http://www.crystallography.net/
+#
+# All data on this site have been placed in the public domain by the
+# contributors.
+#
+data_1510093
+loop_
+_publ_author_name
+'Newkirk, L.R.'
+'Tsuei, C.C.'
+_publ_section_title
+;
+ Superconducting transition temperatures and lattice parameters of
+ simple-cubic metastable Te-Au solutions containing Fe and Mn
+;
+_journal_name_full
+;
+Physical Review, Serie 3. B - Solid State (1,1970-17,1977)
+;
+_journal_page_first              755
+_journal_page_last               761
+_journal_volume                  3
+_journal_year                    1971
+_chemical_formula_sum            'Au0.281 Fe0.06 Te0.659'
+_chemical_name_systematic        '(Au5 Fe Te11)0.06'
+_space_group_IT_number           221
+_symmetry_space_group_name_Hall  '-P 4 2 3'
+_symmetry_space_group_name_H-M   'P m -3 m'
+_cell_angle_alpha                90
+_cell_angle_beta                 90
+_cell_angle_gamma                90
+_cell_formula_units_Z            1
+_cell_length_a                   2.955
+_cell_length_b                   2.955
+_cell_length_c                   2.955
+_cell_volume                     25.803
+_citation_journal_id_ASTM        PLRBAQ
+_cod_data_source_file            gold_14.cif
+_cod_data_source_block           Au0.281Fe0.06Te0.659
+_cod_original_cell_volume        25.80313
+_cod_database_code               1510093
+loop_
+_symmetry_equiv_pos_as_xyz
+x,y,z
+-y,x,z
+-x,-y,z
+y,-x,z
+x,-y,-z
+y,x,-z
+-x,y,-z
+-y,-x,-z
+z,x,y
+-x,z,y
+-z,-x,y
+x,-z,y
+z,-x,-y
+x,z,-y
+-z,x,-y
+-x,-z,-y
+y,z,x
+y,-z,-x
+z,y,-x
+-y,z,-x
+-z,-y,-x
+-y,-z,x
+z,-y,x
+-z,y,x
+-x,-y,-z
+y,-x,-z
+x,y,-z
+-y,x,-z
+-x,y,z
+-y,-x,z
+x,-y,z
+y,x,z
+-z,-x,-y
+x,-z,-y
+z,x,-y
+-x,z,-y
+-z,x,y
+-x,-z,y
+z,-x,y
+x,z,y
+-y,-z,-x
+-y,z,x
+-z,-y,x
+y,-z,x
+z,y,x
+y,z,-x
+-z,y,-x
+z,-y,-x
+loop_
+_atom_site_label
+_atom_site_type_symbol
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+_atom_site_occupancy
+_atom_site_U_iso_or_equiv
+Fe1 Fe 0 0 0 0.06 0.0
+Te1 Te 0 0 0 0.659 0.0
+Au1 Au 0 0 0 0.281 0.0

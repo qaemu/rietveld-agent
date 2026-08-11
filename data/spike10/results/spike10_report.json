@@ -1,0 +1,425 @@
+{
+  "schema": "spike10/v0",
+  "purpose": "out-of-sample validation: real published RRUFF powder XRD vs the M1 pipeline (fingerprint + governed verdict)",
+  "honest_limitations": [
+    "RRUFF peak counts (1e2-6e3) are far below the calibrated counting-statistics floor for a refinement claim (spike-05 envelope L3: 1e5): verification evidence is honestly reported as statistics-below-gate. The fingerprint identification is position-based and counts-independent, so the verdict stays supported.",
+    "RRUFF XY files were re-packaged into XRDML (format conversion only; intensities unchanged; sha256 recorded for both).",
+    "The RRUFF grid (8501 pt @ 0.01 deg, 5..90) differs from the simulated-protocol grid (6251 pt @ 0.02 deg, 15..140): the measured profile is resampled onto the protocol grid for verification (linear interpolation in 2theta, zero-extended; the resampling is recorded in the bundle evidence).",
+    "A released 'RRUFF Cu Ka' calibration was registered in a SIDE registry (data/spike10/work/registry_rruff.json); the shipped registry under data/spike3/ is untouched.",
+    "RRUFF processed profiles carry machine 2theta corrections (e.g. -0.035 deg for R040031) and model/background artifacts; the fingerprint alignment tolerates the residual shifts."
+  ],
+  "cases": [
+    {
+      "rruff_id": "R040031",
+      "published_identity": "Quartz",
+      "published_cell": "a=4.9134 c=5.4042 (hex, ref REFINE v3.0)",
+      "source_url": "https://rruff.info/R040031",
+      "source_file_sha256": "12b562f07340aba04b8bb49cb7479bb36743e9aa526d8025c926f4774985c087",
+      "wrapper_xrdml_sha256": "d8dddd28487baf2771f47a56f1b61e551f855f00273b482915cdb3a815aac70e",
+      "grid": {
+        "n_points": 8501,
+        "tmin": 5.0,
+        "tmax": 90.0,
+        "step": 0.009999999999999787
+      },
+      "peak_max": 6321.396,
+      "hypothesis_top3": [
+        [
+          "cod-9009666",
+          "SiO2 (quartz)",
+          0.6896
+        ],
+        [
+          "mat-pbso4",
+          "PbSO4 (anglesite)",
+          0.3708
+        ],
+        [
+          "mat-pbso4-fe",
+          "PbSO4 (anglesite)",
+          0.3377
+        ]
+      ],
+      "bundle_status": "completed",
+      "verdict": {
+        "verdict": "supported",
+        "reasons": [
+          "calibration resolved (cal-rruff-c2504fcb); top candidate separated from the best other phase family by margin 0.319"
+        ]
+      },
+      "primary": {
+        "family": "SiO2 (quartz)",
+        "sim": 0.689581,
+        "margin": 0.318792
+      },
+      "verification": {
+        "recipe": "refinement-verify-v1",
+        "policy_version": "1.0",
+        "evidence_level": "fingerprint + refinement",
+        "status": "statistics-below-gate",
+        "confirmed_family": "SiO2 (quartz)",
+        "separation": 0.3876,
+        "candidates": [
+          {
+            "family": "SiO2 (quartz)",
+            "cod_id": 9009666,
+            "rwp": 0.508975,
+            "rexp": 0.201219,
+            "gof": 2.529461,
+            "n_points": 3521,
+            "n_params": 5,
+            "converged": true,
+            "cell": null
+          },
+          {
+            "family": "PbSO4 (anglesite)",
+            "cod_id": 1010950,
+            "rwp": 0.896575,
+            "rexp": 0.201219,
+            "gof": 4.455722,
+            "n_points": 3521,
+            "n_params": 5,
+            "converged": true,
+            "cell": null
+          }
+        ],
+        "statistics": {
+          "peak_max": 6321.318,
+          "min_peak_counts": 100000.0,
+          "satisfied": false
+        },
+        "reasons": [
+          "counting statistics below verification gate (peak_max=6321.3 < 1e+05): the refinement cannot claim verification of the phase family"
+        ],
+        "consistent_with_fingerprint": true,
+        "grid": {
+          "resampled": true,
+          "method": "linear interpolation in 2theta onto the simulated-protocol grid (zero outside measured range)",
+          "measured_grid": {
+            "n_points": 8501,
+            "tmin": 5.0,
+            "tmax": 90.0
+          },
+          "protocol_grid": {
+            "n_points": 6251,
+            "tmin": 15.0,
+            "tmax": 140.0,
+            "step": 0.02
+          }
+        }
+      },
+      "same_result": true
+    },
+    {
+      "rruff_id": "R040070",
+      "published_identity": "Calcite",
+      "published_cell": "hexagonal (rhombohedral) cell, ref REFINE v3.0",
+      "source_url": "https://rruff.info/R040070",
+      "source_file_sha256": "0743825e850ae271e7b9037876f9f43148a64624f75b3f7a0c10bfade11145c7",
+      "wrapper_xrdml_sha256": "7a16bc30874c3827336c9a18184b3e44d13caebdfac5455133da7dc9fdd65c31",
+      "grid": {
+        "n_points": 8501,
+        "tmin": 5.0,
+        "tmax": 90.0,
+        "step": 0.009999999999999787
+      },
+      "peak_max": 2832.212,
+      "hypothesis_top3": [
+        [
+          "cod-1010928",
+          "CaCO3 (calcite)",
+          0.9198
+        ],
+        [
+          "mat-pbso4",
+          "PbSO4 (anglesite)",
+          0.0583
+        ],
+        [
+          "mat-pbso4-fe",
+          "PbSO4 (anglesite)",
+          0.0451
+        ]
+      ],
+      "bundle_status": "completed",
+      "verdict": {
+        "verdict": "supported",
+        "reasons": [
+          "calibration resolved (cal-rruff-c2504fcb); top candidate separated from the best other phase family by margin 0.862"
+        ]
+      },
+      "primary": {
+        "family": "CaCO3 (calcite)",
+        "sim": 0.919831,
+        "margin": 0.861524
+      },
+      "verification": {
+        "recipe": "refinement-verify-v1",
+        "policy_version": "1.0",
+        "evidence_level": "fingerprint + refinement",
+        "status": "statistics-below-gate",
+        "confirmed_family": "CaCO3 (calcite)",
+        "separation": 0.015389,
+        "candidates": [
+          {
+            "family": "CaCO3 (calcite)",
+            "cod_id": 1010928,
+            "rwp": 0.844642,
+            "rexp": 0.247191,
+            "gof": 3.416969,
+            "n_points": 3376,
+            "n_params": 5,
+            "converged": true,
+            "cell": null
+          },
+          {
+            "family": "PbSO4 (anglesite)",
+            "cod_id": 1010950,
+            "rwp": 0.860031,
+            "rexp": 0.247191,
+            "gof": 3.479222,
+            "n_points": 3376,
+            "n_params": 5,
+            "converged": true,
+            "cell": null
+          }
+        ],
+        "statistics": {
+          "peak_max": 2832.212,
+          "min_peak_counts": 100000.0,
+          "satisfied": false
+        },
+        "reasons": [
+          "counting statistics below verification gate (peak_max=2832.2 < 1e+05): the refinement cannot claim verification of the phase family"
+        ],
+        "consistent_with_fingerprint": true,
+        "grid": {
+          "resampled": true,
+          "method": "linear interpolation in 2theta onto the simulated-protocol grid (zero outside measured range)",
+          "measured_grid": {
+            "n_points": 8501,
+            "tmin": 5.0,
+            "tmax": 90.0
+          },
+          "protocol_grid": {
+            "n_points": 6251,
+            "tmin": 15.0,
+            "tmax": 140.0,
+            "step": 0.02
+          }
+        }
+      },
+      "same_result": true
+    },
+    {
+      "rruff_id": "R040096",
+      "published_identity": "Corundum",
+      "published_cell": "hexagonal cell, ref REFINE v3.0",
+      "source_url": "https://rruff.info/R040096",
+      "source_file_sha256": "0e2ce0adc525a10744f299de8f9c85ed33a9f9ed04e927c2e25dcb7e4e5666f9",
+      "wrapper_xrdml_sha256": "8665fba18f03f3c4ec3e50d89c73c5869324c3f6dc90e8863ec6b348c580a223",
+      "grid": {
+        "n_points": 8501,
+        "tmin": 5.0,
+        "tmax": 90.0,
+        "step": 0.009999999999999787
+      },
+      "peak_max": 1151.854,
+      "hypothesis_top3": [
+        [
+          "cod-1000017",
+          "Al2O3 (corundum)",
+          0.6356
+        ],
+        [
+          "cod-9000927",
+          "magnetite-family",
+          0.2783
+        ],
+        [
+          "mat-pbso4",
+          "PbSO4 (anglesite)",
+          0.0926
+        ]
+      ],
+      "bundle_status": "completed",
+      "verdict": {
+        "verdict": "supported",
+        "reasons": [
+          "calibration resolved (cal-rruff-c2504fcb); top candidate separated from the best other phase family by margin 0.357"
+        ]
+      },
+      "primary": {
+        "family": "Al2O3 (corundum)",
+        "sim": 0.635636,
+        "margin": 0.35732
+      },
+      "verification": {
+        "recipe": "refinement-verify-v1",
+        "policy_version": "1.0",
+        "evidence_level": "fingerprint + refinement",
+        "status": "statistics-below-gate",
+        "confirmed_family": "Al2O3 (corundum)",
+        "separation": 0.49813,
+        "candidates": [
+          {
+            "family": "Al2O3 (corundum)",
+            "cod_id": 1000017,
+            "rwp": 0.38437,
+            "rexp": 0.23121,
+            "gof": 1.662431,
+            "n_points": 3372,
+            "n_params": 5,
+            "converged": true,
+            "cell": null
+          },
+          {
+            "family": "magnetite-family",
+            "cod_id": 9000927,
+            "rwp": 0.8825,
+            "rexp": 0.23121,
+            "gof": 3.816882,
+            "n_points": 3372,
+            "n_params": 5,
+            "converged": true,
+            "cell": null
+          }
+        ],
+        "statistics": {
+          "peak_max": 1125.393,
+          "min_peak_counts": 100000.0,
+          "satisfied": false
+        },
+        "reasons": [
+          "counting statistics below verification gate (peak_max=1125.4 < 1e+05): the refinement cannot claim verification of the phase family"
+        ],
+        "consistent_with_fingerprint": true,
+        "grid": {
+          "resampled": true,
+          "method": "linear interpolation in 2theta onto the simulated-protocol grid (zero outside measured range)",
+          "measured_grid": {
+            "n_points": 8501,
+            "tmin": 5.0,
+            "tmax": 90.0
+          },
+          "protocol_grid": {
+            "n_points": 6251,
+            "tmin": 15.0,
+            "tmax": 140.0,
+            "step": 0.02
+          }
+        }
+      },
+      "same_result": true
+    },
+    {
+      "rruff_id": "R040049",
+      "published_identity": "Rutile",
+      "published_cell": "tetragonal cell, ref REFINE v3.0",
+      "source_url": "https://rruff.info/R040049",
+      "source_file_sha256": "34b3b089fe6e18c1f7729a5baaed7ea94b50f2b8b9756e22f099f717069c93be",
+      "wrapper_xrdml_sha256": "a1ea4040996d4a814c8224391cbf0e2604ffcbe0d780b3a3b112adf3304497cb",
+      "grid": {
+        "n_points": 8501,
+        "tmin": 5.0,
+        "tmax": 90.0,
+        "step": 0.009999999999999787
+      },
+      "peak_max": 436.639,
+      "hypothesis_top3": [
+        [
+          "cod-1530150",
+          "TiO2 (rutile)",
+          0.778
+        ],
+        [
+          "cod-9011025",
+          "AgBiS2 (schapbachite)",
+          0.0965
+        ],
+        [
+          "cod-1000041",
+          "NaCl (halite)",
+          0.0874
+        ]
+      ],
+      "bundle_status": "completed",
+      "verdict": {
+        "verdict": "supported",
+        "reasons": [
+          "calibration resolved (cal-rruff-c2504fcb); top candidate separated from the best other phase family by margin 0.682"
+        ]
+      },
+      "primary": {
+        "family": "TiO2 (rutile)",
+        "sim": 0.777973,
+        "margin": 0.681506
+      },
+      "verification": {
+        "recipe": "refinement-verify-v1",
+        "policy_version": "1.0",
+        "evidence_level": "fingerprint + refinement",
+        "status": "statistics-below-gate",
+        "confirmed_family": "TiO2 (rutile)",
+        "separation": 0.213517,
+        "candidates": [
+          {
+            "family": "TiO2 (rutile)",
+            "cod_id": 1530150,
+            "rwp": 0.502454,
+            "rexp": 0.368191,
+            "gof": 1.364658,
+            "n_points": 3324,
+            "n_params": 5,
+            "converged": true,
+            "cell": null
+          },
+          {
+            "family": "AgBiS2 (schapbachite)",
+            "cod_id": 9011025,
+            "rwp": 0.715971,
+            "rexp": 0.368191,
+            "gof": 1.944565,
+            "n_points": 3324,
+            "n_params": 5,
+            "converged": true,
+            "cell": null
+          }
+        ],
+        "statistics": {
+          "peak_max": 436.639,
+          "min_peak_counts": 100000.0,
+          "satisfied": false
+        },
+        "reasons": [
+          "counting statistics below verification gate (peak_max=436.64 < 1e+05): the refinement cannot claim verification of the phase family"
+        ],
+        "consistent_with_fingerprint": true,
+        "grid": {
+          "resampled": true,
+          "method": "linear interpolation in 2theta onto the simulated-protocol grid (zero outside measured range)",
+          "measured_grid": {
+            "n_points": 8501,
+            "tmin": 5.0,
+            "tmax": 90.0
+          },
+          "protocol_grid": {
+            "n_points": 6251,
+            "tmin": 15.0,
+            "tmax": 140.0,
+            "step": 0.02
+          }
+        }
+      },
+      "same_result": true
+    }
+  ],
+  "sources": [
+    "https://rruff.info/R040031",
+    "https://rruff.info/R040070",
+    "https://rruff.info/R040096",
+    "https://rruff.info/R040049",
+    "https://rruff.info/zipped_data_files/powder/XY_Processed.zip",
+    "https://rruff.info/zipped_data_files/powder/Refinement_Output_Data.zip"
+  ]
+}

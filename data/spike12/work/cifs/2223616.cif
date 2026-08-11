@@ -1,0 +1,224 @@
+#------------------------------------------------------------------------------
+#$Date: 2016-02-20 22:30:07 +0200 (Sat, 20 Feb 2016) $
+#$Revision: 176789 $
+#$URL: file:///home/coder/svn-repositories/_RELOADED_COD/cod-reloaded/cif/2/22/36/2223616.cif $
+#------------------------------------------------------------------------------
+#
+# This file is available in the Crystallography Open Database (COD),
+# http://www.crystallography.net/. The original data for this entry
+# were provided by IUCr Journals, http://journals.iucr.org/.
+#
+# The file may be used within the scientific community so long as
+# proper attribution is given to the journal article from which the
+# data were obtained.
+#
+data_2223616
+loop_
+_publ_author_name
+'Ulloa-God\'inez, Sandra'
+'Rosales, Ivonne'
+'Bucio, Lauro'
+'Far\'ias, Mario H.'
+'Campa-Molina, Jorge'
+_publ_section_title
+;
+ Rietveld refinement of the mixed boracite Fe~1.59~Zn~1.41~B~7~O~13~Br
+;
+_journal_coeditor_code           BR2119
+_journal_issue                   11
+_journal_name_full               'Acta Crystallographica Section E'
+_journal_page_first              i83
+_journal_page_last               i84
+_journal_paper_doi               10.1107/S1600536809044407
+_journal_volume                  65
+_journal_year                    2009
+_chemical_formula_iupac          'Fe1.59 Zn1.41 B7 O13 Br'
+_chemical_formula_structural     'Fe1.59 Zn1.41 (B7 O13) Br'
+_chemical_formula_sum            'B7 Br Fe1.59 O13 Zn1.41'
+_chemical_formula_weight         544.65
+_chemical_name_common            boracite
+_chemical_name_systematic
+;
+iron zinc borate bromide
+;
+_space_group_IT_number           161
+_symmetry_cell_setting           trigonal
+_symmetry_space_group_name_Hall  'R 3 -2"c'
+_symmetry_space_group_name_H-M   'R 3 c :H'
+_cell_angle_alpha                90
+_cell_angle_beta                 90
+_cell_angle_gamma                120
+_cell_formula_units_Z            6
+_cell_length_a                   8.60810(10)
+_cell_length_b                   8.60810(10)
+_cell_length_c                   21.0703(3)
+_cell_measurement_temperature    300
+_cell_volume                     1352.12(3)
+_computing_cell_refinement       'please supply'
+_computing_data_collection       'please supply'
+_computing_data_reduction        'please supply'
+_computing_molecular_graphics    'DIAMOND (Brandenburg, 2009)'
+_computing_publication_material  'DIAMOND (Brandenburg, 2009)'
+_computing_structure_refinement
+;
+FULLPROF (Rodr\'iguez-Carvajal, 2006;
+Rodriguez & Rodriguez-Carvajal, 1997, a strongly
+modified version of that described by Wiles & Young (1981)
+;
+_computing_structure_solution    'please supply'
+_diffrn_ambient_temperature      300
+_diffrn_measurement_device_type  'Bruker D8 Advance'
+_diffrn_radiation_monochromator  graphite
+_diffrn_radiation_type           'Cu K\a'
+_diffrn_radiation_wavelength     1.54175
+_exptl_absorpt_coefficient_mu    30.810
+_exptl_absorpt_correction_T_max  none
+_exptl_absorpt_correction_T_min  none
+_exptl_absorpt_correction_type   none
+_exptl_absorpt_process_details   none
+_exptl_crystal_density_diffrn    4.013
+_exptl_crystal_F_000             1546.0
+_pd_block_diffractogram_id       ZnFeBr_prof
+_pd_char_colour                  'pale pink'
+_pd_char_particle_morphology     irregular
+_pd_instr_location
+;
+?
+;
+_pd_meas_2theta_range_inc        0.019453
+_pd_meas_2theta_range_max        110.01110
+_pd_meas_2theta_range_min        8.11670
+_pd_meas_number_of_points        5240
+_pd_meas_scan_method             step
+_pd_prep_temperature             1173
+_pd_proc_ls_background_function
+;
+linear interpolation between a set of 72 background points with refinable
+heights
+;
+_pd_proc_ls_profile_function
+;
+pseudo-Voigt modified by Thompson <i>et al.</i> (1987)
+;
+_pd_proc_ls_prof_R_factor        0.018
+_pd_proc_ls_prof_wR_expected     0.014
+_pd_proc_ls_prof_wR_factor       0.025
+_pd_spec_mounting                ' packed powder sample container'
+_pd_spec_mount_mode              reflection
+_pd_spec_shape                   irregular
+_pd_spec_size_axial              20
+_pd_spec_size_equat              20
+_pd_spec_size_thick              0.2
+_refine_ls_goodness_of_fit_all   1.89
+_refine_ls_matrix_type           fullcycle
+_refine_ls_number_parameters     18
+_refine_ls_shift/su_max          0.02
+_refine_ls_weighting_scheme      sigma
+_cod_data_source_file            br2119.cif
+_cod_data_source_block           I
+_cod_depositor_comments
+;
+The following automatic conversions were performed:
+'_symmetry_cell_setting' value 'Trigonal' changed to 'trigonal' according
+to '/home/saulius/struct/CIF-dictionaries/cif_core.dic' dictionary named
+'cif_core.dic' version 2.4.1 from 2010-06-29.
+
+Automatic conversion script
+Id: cif_fix_enum 1527 2010-12-29 10:47:43Z saulius 
+
+The following automatic conversions were performed:
+
+'_symmetry_cell_setting' value 'Trigonal' changed to 'trigonal'
+according to /home/saulius/struct/CIF-dictionaries/cif_core.dic
+dictionary named 'cif_core.dic' version 2.4.1 from 2010-06-29.
+
+Automatic conversion script
+Id: cif_fix_values 1715 2011-07-08 13:25:40Z adriana 
+;
+_cod_original_sg_symbol_H-M      'R 3 c'
+_cod_database_code               2223616
+loop_
+_symmetry_equiv_pos_as_xyz
+x,y,z
+-y,x-y,z
+-x+y,-x,z
+-y,-x,z+1/2
+-x+y,y,z+1/2
+x,x-y,z+1/2
+x+2/3,y+1/3,z+1/3
+-y+2/3,x-y+1/3,z+1/3
+-x+y+2/3,-x+1/3,z+1/3
+-y+2/3,-x+1/3,z+5/6
+-x+y+2/3,y+1/3,z+5/6
+x+2/3,x-y+1/3,z+5/6
+x+1/3,y+2/3,z+2/3
+-y+1/3,x-y+2/3,z+2/3
+-x+y+1/3,-x+2/3,z+2/3
+-y+1/3,-x+2/3,z+1/6
+-x+y+1/3,y+2/3,z+1/6
+x+1/3,x-y+2/3,z+1/6
+loop_
+_atom_site_label
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+_atom_site_U_iso_or_equiv
+_atom_site_occupancy
+Br 0.00000 0.00000 0.26670 0.0084(9) 1.00000
+Zn 0.1488(8) 0.3037(3) 0.3347(2) 0.0113(8) 0.47000
+Fe 0.1488(8) 0.3037(3) 0.3347(2) 0.0113(8) 0.53000
+B1 -0.1840(10) 0.15190(10) -0.0800(10) 0.00304 1.00000
+B2 0.1130(2) -0.09020(10) -0.02590(10) 0.00304 1.00000
+B3 0.00000 0.00000 0.1050(10) 0.00304 1.00000
+O1 0.00000 0.00000 -0.0080(10) 0.0025(9) 1.00000
+O2 0.0100(10) -0.157(2) 0.1070(10) 0.0025(9) 1.00000
+O3 0.2820(10) 0.2740(10) -0.0320(10) 0.0025(9) 1.00000
+O4 0.2060(10) -0.0060(10) -0.0850(10) 0.0025(9) 1.00000
+O5 0.2420(10) -0.0590(10) 0.0240(10) 0.0025(9) 1.00000
+loop_
+_atom_type_symbol
+_atom_type_scat_dispersion_real
+_atom_type_scat_dispersion_imag
+_atom_type_scat_source
+br -0.76700 1.28300
+International_Tables_for_Crystallography_Vol.C(1991)_Tables_6.1.1.4_and_6.1.1.5
+zn -1.61200 0.67800
+International_Tables_for_Crystallography_Vol.C(1991)_Tables_6.1.1.4_and_6.1.1.5
+fe -1.17900 3.20400
+International_Tables_for_Crystallography_Vol.C(1991)_Tables_6.1.1.4_and_6.1.1.5
+o-2 0.04700 0.03200
+International_Tables_for_Crystallography_Vol.C(1991)_Tables_6.1.1.4_and_6.1.1.5
+b 0.00800 0.00400
+International_Tables_for_Crystallography_Vol.C(1991)_Tables_6.1.1.4_and_6.1.1.5
+loop_
+_geom_angle_atom_site_label_1
+_geom_angle_atom_site_label_2
+_geom_angle_atom_site_label_3
+_geom_angle_site_symmetry_1
+_geom_angle_site_symmetry_3
+_geom_angle
+_geom_angle_publ_flag
+Zn Br Zn . 2_555 94.1(2) no
+O2 B3 O2 1_555 2_555 119.9(9) yes
+loop_
+_geom_bond_atom_site_label_1
+_geom_bond_atom_site_label_2
+_geom_bond_site_symmetry_2
+_geom_bond_distance
+_geom_bond_publ_flag
+Zn Br 1_555 2.680(3) yes
+Zn Br 16_555 3.4120(10) yes
+Zn O2 17_555 2.130(4) yes
+Zn O3 8_555 2.081(7) yes
+Zn O4 6_555 2.035(4) yes
+Zn O5 7_455 2.012(7) yes
+B1 O2 10_454 1.506(14) yes
+B1 O3 2_555 1.48(2) yes
+B1 O4 2_555 1.451(13) yes
+B1 O5 10_454 1.49(3) yes
+B2 O1 1_555 1.566(3) yes
+B2 O3 3_555 1.452(8) yes
+B2 O4 1_555 1.463(18) yes
+B2 O5 1_555 1.453(17) yes
+B3 O2 1_555 1.397(14) yes
+B3 O1 1_555 2.38(3) yes
