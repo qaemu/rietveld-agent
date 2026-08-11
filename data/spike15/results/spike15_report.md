@@ -58,6 +58,8 @@ wR = 27.11%, rwp_norm = 0.27113, converged = True, bad = False, tier = wR-over, 
 
 wR = 14.87%, rwp_norm = 0.1487, converged = True, bad = False, tier = ok, shift(2th) = -0.022281
 
+NOTE:  -- phases below reliable detection with this model on this sample (renormalized away): aphthitalite.
+
 | phase | wt% (ours) | wt% (published) | |diff| |
 |---|---|---|---|
 | aluminate-cub | 35.09 | 5.3 | 29.790000000000003 |

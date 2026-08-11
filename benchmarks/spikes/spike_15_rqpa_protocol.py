@@ -481,16 +481,28 @@ def main() -> int:
                          json.dumps(results, sort_keys=True).encode()).hexdigest(),
                      "samples": results}, indent=2)
     (RES / "spike15_report.json").write_text(js)
+    write_md(results, json.loads(js)["md5"])
+    print(f"\nwrote {RES / 'spike15_report.json'} and .md")
+    return 0
 
+
+def write_md(results: list, md5: str) -> None:
+    """Render the human-readable report; callable standalone from the
+    saved JSON so the .md can be regenerated without re-running GSAS-II."""
     lines = ["# Spike 15: SRM 2686a RQPA protocol run (dual alite model)", "",
              f"structures: spike-14 set + T1 variant | protocol: "
-             f"docs/rqpa_protocol.md | result md5: {json.loads(js)['md5']}", ""]
+             f"docs/rqpa_protocol.md | result md5: {md5}", ""]
     for res in results:
         lines += [f"## {res['sample']} [{res.get('model', '-')}]", "",
                   f"wR = {res.get('wR')}%, rwp_norm = {res.get('rwp_norm')}, "
                   f"converged = {res['converged']}, bad = {res.get('bad')}, "
-                  f"tier = {res['tier']}, shift(2th) = {res.get('shift_2th')}",
-                  "", "| phase | wt% (ours) | wt% (published) | |diff| |",
+                  f"tier = {res['tier']}, shift(2th) = {res.get('shift_2th')}", ""]
+        if res.get("phases_dropped"):
+            lines += [f"NOTE: {res.get('error', '')} -- phases below "
+                      f"reliable detection with this model on this sample "
+                      f"(renormalized away): "
+                      f"{', '.join(res['phases_dropped'])}.", ""]
+        lines += ["| phase | wt% (ours) | wt% (published) | |diff| |",
                   "|---|---|---|---|"]
         ours = {p["phase"]: p["wt_frac"] for p in res["phases"]}
         if res["sample"] in MERGE_ALUMINATE:
