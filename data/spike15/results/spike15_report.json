@@ -1,0 +1,1097 @@
+{
+  "protocol": "docs/rqpa_protocol.md",
+  "structures": "data/structures (spike 14, incl. T1 variant)",
+  "md5": "8ec7eaa4cba1681cb824a798a7257297",
+  "samples": [
+    {
+      "sample": "Clinker_Nist_CuKalpha1_R1.xrdml",
+      "model": "M3",
+      "phases": [
+        {
+          "phase": "alite-M3",
+          "cod": 9008366,
+          "scale": 6.162805164685187,
+          "mass": 8219.555999999973,
+          "vol": 4294.6102,
+          "cell": [
+            33.071822,
+            7.031982,
+            18.514864,
+            90.0,
+            94.136246,
+            90.0
+          ],
+          "wt_frac": 95.27
+        },
+        {
+          "phase": "aluminate-ort",
+          "cod": 8103596,
+          "scale": 0.6138375795505586,
+          "mass": 3277.4205360000014,
+          "vol": 1776.8426,
+          "cell": [
+            10.888963,
+            10.831323,
+            15.065409,
+            90.0,
+            90.0,
+            90.0
+          ],
+          "wt_frac": 1.57
+        },
+        {
+          "phase": "belite-beta",
+          "cod": 9012794,
+          "scale": 13.71998629920382,
+          "mass": 688.968,
+          "vol": 344.8081,
+          "cell": [
+            5.506215,
+            6.749599,
+            9.30344,
+            90.0,
+            94.25223,
+            90.0
+          ],
+          "wt_frac": 1.43
+        },
+        {
+          "phase": "aluminate-cub",
+          "cod": 1000039,
+          "scale": 0.10843736702750853,
+          "mass": 6484.751999999998,
+          "vol": 3556.7843,
+          "cell": [
+            15.264615,
+            15.264615,
+            15.264615,
+            90.0,
+            90.0,
+            90.0
+          ],
+          "wt_frac": 1.1
+        },
+        {
+          "phase": "ferrite-C4AF",
+          "cod": 1200009,
+          "scale": 1.1941374950595343,
+          "mass": 1171.5704,
+          "vol": 436.0472,
+          "cell": [
+            5.583461,
+            14.585972,
+            5.3542,
+            90.0,
+            90.0,
+            90.0
+          ],
+          "wt_frac": 0.27
+        },
+        {
+          "phase": "belite-alphaH",
+          "cod": 1546027,
+          "scale": 2.0902262219063967,
+          "mass": 688.9680000000001,
+          "vol": 368.3452,
+          "cell": [
+            6.857472,
+            5.602942,
+            9.586825,
+            90.0,
+            90.0,
+            90.0
+          ],
+          "wt_frac": 0.23
+        },
+        {
+          "phase": "periclase",
+          "cod": 1000053,
+          "scale": 17.450856839184752,
+          "mass": 161.216,
+          "vol": 74.7711,
+          "cell": [
+            4.212869,
+            4.212869,
+            4.212869,
+            90.0,
+            90.0,
+            90.0
+          ],
+          "wt_frac": 0.09
+        },
+        {
+          "phase": "aphthitalite",
+          "cod": 9007639,
+          "scale": 1.5248589881668762,
+          "mass": 332.39599999999996,
+          "vol": 204.4098,
+          "cell": [
+            5.671525,
+            5.671525,
+            7.337893,
+            90.0,
+            90.0,
+            120.0
+          ],
+          "wt_frac": 0.05
+        }
+      ],
+      "wR": 15.07,
+      "rwp_norm": 0.15071,
+      "converged": true,
+      "bad": false,
+      "n_points": 3950,
+      "elapsed_s": 147.8,
+      "tier": "ok",
+      "stages": [
+        {
+          "stage": "scales",
+          "converged": true,
+          "bad": false,
+          "wR": 100.0,
+          "dropped": []
+        },
+        {
+          "stage": "+alite cell",
+          "converged": true,
+          "bad": false,
+          "wR": 15.62,
+          "dropped": []
+        },
+        {
+          "stage": "+belite cells",
+          "converged": true,
+          "bad": false,
+          "wR": 15.31,
+          "dropped": []
+        },
+        {
+          "stage": "+minor cells",
+          "converged": true,
+          "bad": false,
+          "wR": 15.07,
+          "dropped": []
+        }
+      ],
+      "fit_range_2th": [
+        4.0,
+        70.0
+      ],
+      "shift_2th": 0.14638,
+      "instrument": "Cu K\u03b11 mono",
+      "structures_src": "data/structures (spike 14 + T1 variant)",
+      "compared": {
+        "rows": [
+          {
+            "phase": "alite-M3",
+            "published": 66.0,
+            "ours": 95.27,
+            "abs_diff": 29.269999999999996
+          },
+          {
+            "phase": "aluminate-cub",
+            "published": 0.7,
+            "ours": 1.1,
+            "abs_diff": 0.40000000000000013
+          },
+          {
+            "phase": "aluminate-ort",
+            "published": 1.2,
+            "ours": 1.57,
+            "abs_diff": 0.3700000000000001
+          },
+          {
+            "phase": "aphthitalite",
+            "published": 0.8,
+            "ours": 0.05,
+            "abs_diff": 0.75
+          },
+          {
+            "phase": "belite-alphaH",
+            "published": 2.7,
+            "ours": 0.23,
+            "abs_diff": 2.47
+          },
+          {
+            "phase": "belite-beta",
+            "published": 13.5,
+            "ours": 1.43,
+            "abs_diff": 12.07
+          },
+          {
+            "phase": "ferrite-C4AF",
+            "published": 11.1,
+            "ours": 0.27,
+            "abs_diff": 10.83
+          },
+          {
+            "phase": "periclase",
+            "published": 4.0,
+            "ours": 0.09,
+            "abs_diff": 3.91
+          }
+        ],
+        "worst_abs_diff": 29.27
+      }
+    },
+    {
+      "sample": "Clinker_Nist_CuKalpha1_R1.xrdml",
+      "model": "T1",
+      "phases": [
+        {
+          "phase": "alite-T1",
+          "cod": 1538413,
+          "scale": 14.503972584683524,
+          "mass": 2054.40903,
+          "vol": 1084.1335,
+          "cell": [
+            7.074305,
+            7.074305,
+            25.014085,
+            90.0,
+            90.0,
+            120.0
+          ],
+          "wt_frac": 63.45
+        },
+        {
+          "phase": "belite-beta",
+          "cod": 9012794,
+          "scale": 26.401339306811614,
+          "mass": 688.968,
+          "vol": 344.6162,
+          "cell": [
+            5.508093,
+            6.74751,
+            9.299768,
+            90.0,
+            94.398927,
+            90.0
+          ],
+          "wt_frac": 12.31
+        },
+        {
+          "phase": "aluminate-cub",
+          "cod": 1000039,
+          "scale": 0.24732235082051787,
+          "mass": 6484.751999999998,
+          "vol": 3557.9584,
+          "cell": [
+            15.266294,
+            15.266294,
+            15.266294,
+            90.0,
+            90.0,
+            90.0
+          ],
+          "wt_frac": 11.21
+        },
+        {
+          "phase": "aluminate-ort",
+          "cod": 8103596,
+          "scale": 0.4772863661161636,
+          "mass": 3277.4205360000014,
+          "vol": 1781.8614,
+          "cell": [
+            10.889432,
+            10.831187,
+            15.107502,
+            90.0,
+            90.0,
+            90.0
+          ],
+          "wt_frac": 5.47
+        },
+        {
+          "phase": "belite-alphaH",
+          "cod": 1546027,
+          "scale": 8.540134845880205,
+          "mass": 688.9680000000001,
+          "vol": 366.1447,
+          "cell": [
+            6.857704,
+            5.606951,
+            9.52242,
+            90.0,
+            90.0,
+            90.0
+          ],
+          "wt_frac": 4.23
+        },
+        {
+          "phase": "ferrite-C4AF",
+          "cod": 1200009,
+          "scale": 2.3093009864687737,
+          "mass": 1171.5704,
+          "vol": 436.5235,
+          "cell": [
+            5.563702,
+            14.625186,
+            5.364663,
+            90.0,
+            90.0,
+            90.0
+          ],
+          "wt_frac": 2.32
+        },
+        {
+          "phase": "periclase",
+          "cod": 1000053,
+          "scale": 24.12568374228284,
+          "mass": 161.216,
+          "vol": 75.0806,
+          "cell": [
+            4.218673,
+            4.218673,
+            4.218673,
+            90.0,
+            90.0,
+            90.0
+          ],
+          "wt_frac": 0.57
+        },
+        {
+          "phase": "aphthitalite",
+          "cod": 9007639,
+          "scale": 3.314857965948711,
+          "mass": 332.39599999999996,
+          "vol": 198.5352,
+          "cell": [
+            5.491063,
+            5.491063,
+            7.603156,
+            90.0,
+            90.0,
+            120.0
+          ],
+          "wt_frac": 0.43
+        }
+      ],
+      "wR": 20.91,
+      "rwp_norm": 0.20909,
+      "converged": true,
+      "bad": false,
+      "n_points": 3950,
+      "elapsed_s": 72.5,
+      "tier": "ok",
+      "stages": [
+        {
+          "stage": "scales",
+          "converged": true,
+          "bad": false,
+          "wR": 22.87,
+          "dropped": []
+        },
+        {
+          "stage": "+alite cell",
+          "converged": true,
+          "bad": false,
+          "wR": 21.39,
+          "dropped": []
+        },
+        {
+          "stage": "+belite cells",
+          "converged": true,
+          "bad": false,
+          "wR": 20.98,
+          "dropped": []
+        },
+        {
+          "stage": "+minor cells",
+          "converged": true,
+          "bad": false,
+          "wR": 20.91,
+          "dropped": []
+        }
+      ],
+      "fit_range_2th": [
+        4.0,
+        70.0
+      ],
+      "shift_2th": -0.058871,
+      "instrument": "Cu K\u03b11 mono",
+      "structures_src": "data/structures (spike 14 + T1 variant)",
+      "compared": {
+        "rows": [
+          {
+            "phase": "alite-M3",
+            "published": 66.0,
+            "ours": 63.45,
+            "abs_diff": 2.549999999999997
+          },
+          {
+            "phase": "aluminate-cub",
+            "published": 0.7,
+            "ours": 11.21,
+            "abs_diff": 10.510000000000002
+          },
+          {
+            "phase": "aluminate-ort",
+            "published": 1.2,
+            "ours": 5.47,
+            "abs_diff": 4.27
+          },
+          {
+            "phase": "aphthitalite",
+            "published": 0.8,
+            "ours": 0.43,
+            "abs_diff": 0.37000000000000005
+          },
+          {
+            "phase": "belite-alphaH",
+            "published": 2.7,
+            "ours": 4.23,
+            "abs_diff": 1.5300000000000002
+          },
+          {
+            "phase": "belite-beta",
+            "published": 13.5,
+            "ours": 12.31,
+            "abs_diff": 1.1899999999999995
+          },
+          {
+            "phase": "ferrite-C4AF",
+            "published": 11.1,
+            "ours": 2.32,
+            "abs_diff": 8.78
+          },
+          {
+            "phase": "periclase",
+            "published": 4.0,
+            "ours": 0.57,
+            "abs_diff": 3.43
+          }
+        ],
+        "worst_abs_diff": 10.51
+      }
+    },
+    {
+      "sample": "Silicate_enriched_residue_Nist_CuKalpha1_R1.xrdml",
+      "model": "M3",
+      "phases": [
+        {
+          "phase": "alite-M3",
+          "cod": 9008366,
+          "scale": 4.775748382797114,
+          "mass": 8219.555999999973,
+          "vol": 4294.796,
+          "cell": [
+            33.060658,
+            7.034265,
+            18.51672,
+            90.0,
+            94.170936,
+            90.0
+          ],
+          "wt_frac": 98.54
+        },
+        {
+          "phase": "belite-beta",
+          "cod": 9012794,
+          "scale": 8.650372294927566,
+          "mass": 688.968,
+          "vol": 345.4549,
+          "cell": [
+            5.503177,
+            6.760314,
+            9.312492,
+            90.0,
+            94.353516,
+            90.0
+          ],
+          "wt_frac": 1.2
+        },
+        {
+          "phase": "belite-alphaH",
+          "cod": 1546027,
+          "scale": 0.9314666925157921,
+          "mass": 688.9680000000001,
+          "vol": 367.3057,
+          "cell": [
+            6.870466,
+            5.606078,
+            9.536354,
+            90.0,
+            90.0,
+            90.0
+          ],
+          "wt_frac": 0.14
+        },
+        {
+          "phase": "periclase",
+          "cod": 1000053,
+          "scale": 16.48563029383841,
+          "mass": 161.216,
+          "vol": 74.7301,
+          "cell": [
+            4.212099,
+            4.212099,
+            4.212099,
+            90.0,
+            90.0,
+            90.0
+          ],
+          "wt_frac": 0.12
+        }
+      ],
+      "wR": 20.18,
+      "rwp_norm": 0.20175,
+      "converged": true,
+      "bad": false,
+      "n_points": 3950,
+      "elapsed_s": 102.7,
+      "tier": "ok",
+      "stages": [
+        {
+          "stage": "scales",
+          "converged": true,
+          "bad": false,
+          "wR": 100.0,
+          "dropped": []
+        },
+        {
+          "stage": "+alite cell",
+          "converged": true,
+          "bad": false,
+          "wR": 20.75,
+          "dropped": []
+        },
+        {
+          "stage": "+belite cells",
+          "converged": true,
+          "bad": false,
+          "wR": 20.53,
+          "dropped": []
+        },
+        {
+          "stage": "+periclase cell",
+          "converged": true,
+          "bad": false,
+          "wR": 20.18,
+          "dropped": []
+        }
+      ],
+      "fit_range_2th": [
+        4.0,
+        70.0
+      ],
+      "shift_2th": 0.162582,
+      "instrument": "Cu K\u03b11 mono",
+      "structures_src": "data/structures (spike 14 + T1 variant)",
+      "compared": {
+        "rows": [
+          {
+            "phase": "alite-M3",
+            "published": 78.7,
+            "ours": 98.54,
+            "abs_diff": 19.840000000000003
+          },
+          {
+            "phase": "belite-alphaH",
+            "published": 2.9,
+            "ours": 0.14,
+            "abs_diff": 2.76
+          },
+          {
+            "phase": "belite-beta",
+            "published": 13.4,
+            "ours": 1.2,
+            "abs_diff": 12.200000000000001
+          },
+          {
+            "phase": "periclase",
+            "published": 5.0,
+            "ours": 0.12,
+            "abs_diff": 4.88
+          }
+        ],
+        "worst_abs_diff": 19.84
+      }
+    },
+    {
+      "sample": "Silicate_enriched_residue_Nist_CuKalpha1_R1.xrdml",
+      "model": "T1",
+      "phases": [
+        {
+          "phase": "alite-T1",
+          "cod": 1538413,
+          "scale": 4.496821698558448,
+          "mass": 2054.40903,
+          "vol": 1081.2805,
+          "cell": [
+            7.068193,
+            7.068193,
+            24.991424,
+            90.0,
+            90.0,
+            120.0
+          ],
+          "wt_frac": 84.33
+        },
+        {
+          "phase": "belite-beta",
+          "cod": 9012794,
+          "scale": 5.668014698852247,
+          "mass": 688.968,
+          "vol": 345.69,
+          "cell": [
+            5.504272,
+            6.764921,
+            9.309773,
+            90.0,
+            94.283576,
+            90.0
+          ],
+          "wt_frac": 11.4
+        },
+        {
+          "phase": "belite-alphaH",
+          "cod": 1546027,
+          "scale": 1.622216464656452,
+          "mass": 688.9680000000001,
+          "vol": 365.9555,
+          "cell": [
+            6.86198,
+            5.606532,
+            9.512278,
+            90.0,
+            90.0,
+            90.0
+          ],
+          "wt_frac": 3.45
+        },
+        {
+          "phase": "periclase",
+          "cod": 1000053,
+          "scale": 8.014909923512478,
+          "mass": 161.216,
+          "vol": 75.0377,
+          "cell": [
+            4.217869,
+            4.217869,
+            4.217869,
+            90.0,
+            90.0,
+            90.0
+          ],
+          "wt_frac": 0.82
+        }
+      ],
+      "wR": 27.11,
+      "rwp_norm": 0.27113,
+      "converged": true,
+      "bad": false,
+      "n_points": 3950,
+      "elapsed_s": 31.8,
+      "tier": "wR-over",
+      "stages": [
+        {
+          "stage": "scales",
+          "converged": true,
+          "bad": false,
+          "wR": 32.12,
+          "dropped": []
+        },
+        {
+          "stage": "+alite cell",
+          "converged": true,
+          "bad": false,
+          "wR": 27.96,
+          "dropped": []
+        },
+        {
+          "stage": "+belite cells",
+          "converged": true,
+          "bad": false,
+          "wR": 27.09,
+          "dropped": []
+        },
+        {
+          "stage": "+periclase cell",
+          "converged": true,
+          "bad": false,
+          "wR": 27.11,
+          "dropped": []
+        }
+      ],
+      "fit_range_2th": [
+        4.0,
+        70.0
+      ],
+      "shift_2th": 0.002748,
+      "instrument": "Cu K\u03b11 mono",
+      "structures_src": "data/structures (spike 14 + T1 variant)",
+      "compared": {
+        "rows": [
+          {
+            "phase": "alite-M3",
+            "published": 78.7,
+            "ours": 84.33,
+            "abs_diff": 5.6299999999999955
+          },
+          {
+            "phase": "belite-alphaH",
+            "published": 2.9,
+            "ours": 3.45,
+            "abs_diff": 0.5500000000000003
+          },
+          {
+            "phase": "belite-beta",
+            "published": 13.4,
+            "ours": 11.4,
+            "abs_diff": 2.0
+          },
+          {
+            "phase": "periclase",
+            "published": 5.0,
+            "ours": 0.82,
+            "abs_diff": 4.18
+          }
+        ],
+        "worst_abs_diff": 5.63
+      }
+    },
+    {
+      "sample": "aluminate_enriched_residue_clinkerNIST_180718_R1.xrdml",
+      "model": "M3",
+      "phases": [
+        {
+          "phase": "aluminate-ort",
+          "cod": 8103596,
+          "scale": 3.3791295412141995,
+          "mass": 3277.4205360000014,
+          "vol": 1782.2475,
+          "cell": [
+            10.879,
+            10.845,
+            15.106,
+            90.0,
+            90.0,
+            90.0
+          ],
+          "wt_frac": 53.86
+        },
+        {
+          "phase": "aluminate-cub",
+          "cod": 1000039,
+          "scale": 0.557730941364326,
+          "mass": 6484.751999999998,
+          "vol": 3555.6558,
+          "cell": [
+            15.263,
+            15.263,
+            15.263,
+            90.0,
+            90.0,
+            90.0
+          ],
+          "wt_frac": 35.09
+        },
+        {
+          "phase": "ferrite-C4AF",
+          "cod": 1200009,
+          "scale": 5.972064574995171,
+          "mass": 1171.5704,
+          "vol": 438.1229,
+          "cell": [
+            5.584,
+            14.6,
+            5.374,
+            90.0,
+            90.0,
+            90.0
+          ],
+          "wt_frac": 8.36
+        },
+        {
+          "phase": "periclase",
+          "cod": 1000053,
+          "scale": 81.47396044979641,
+          "mass": 161.216,
+          "vol": 74.9913,
+          "cell": [
+            4.217,
+            4.217,
+            4.217,
+            90.0,
+            90.0,
+            90.0
+          ],
+          "wt_frac": 2.69
+        }
+      ],
+      "wR": 14.87,
+      "rwp_norm": 0.1487,
+      "converged": true,
+      "bad": false,
+      "n_points": 3950,
+      "elapsed_s": 21.9,
+      "tier": "ok",
+      "stages": [
+        {
+          "stage": "scales",
+          "converged": true,
+          "bad": false,
+          "wR": 14.87,
+          "dropped": []
+        }
+      ],
+      "fit_range_2th": [
+        4.0,
+        70.0
+      ],
+      "shift_2th": -0.022281,
+      "instrument": "Cu K\u03b11 mono",
+      "structures_src": "data/structures (spike 14 + T1 variant)",
+      "phases_dropped": [
+        "aphthitalite"
+      ],
+      "compared": {
+        "rows": [
+          {
+            "phase": "aluminate-cub",
+            "published": 5.3,
+            "ours": 35.09,
+            "abs_diff": 29.790000000000003
+          },
+          {
+            "phase": "aluminate-ort",
+            "published": 7.8,
+            "ours": 53.86,
+            "abs_diff": 46.06
+          },
+          {
+            "phase": "aphthitalite",
+            "published": 2.5,
+            "ours": null,
+            "abs_diff": null
+          },
+          {
+            "phase": "ferrite-C4AF",
+            "published": 69.8,
+            "ours": 8.36,
+            "abs_diff": 61.44
+          },
+          {
+            "phase": "periclase",
+            "published": 17.2,
+            "ours": 2.69,
+            "abs_diff": 14.51
+          }
+        ],
+        "worst_abs_diff": 61.44
+      }
+    },
+    {
+      "sample": "Clinker_Synchrotron.dat",
+      "model": "M3",
+      "phases": [
+        {
+          "phase": "alite-M3",
+          "cod": 9008366,
+          "scale": 20.349231004693472,
+          "mass": 8219.555999999973,
+          "vol": 4299.6942,
+          "cell": [
+            33.082807,
+            7.036325,
+            18.519823,
+            90.0,
+            94.163295,
+            90.0
+          ],
+          "wt_frac": 97.52
+        },
+        {
+          "phase": "aluminate-ort",
+          "cod": 8103596,
+          "scale": 1.4627549397982202,
+          "mass": 3277.4205360000014,
+          "vol": 1782.2475,
+          "cell": [
+            10.879,
+            10.845,
+            15.106,
+            90.0,
+            90.0,
+            90.0
+          ],
+          "wt_frac": 1.16
+        },
+        {
+          "phase": "aluminate-cub",
+          "cod": 1000039,
+          "scale": 0.20384456878820295,
+          "mass": 6484.751999999998,
+          "vol": 3555.6558,
+          "cell": [
+            15.263,
+            15.263,
+            15.263,
+            90.0,
+            90.0,
+            90.0
+          ],
+          "wt_frac": 0.64
+        },
+        {
+          "phase": "belite-beta",
+          "cod": 9012794,
+          "scale": 16.09201205854621,
+          "mass": 688.968,
+          "vol": 344.8655,
+          "cell": [
+            5.5075,
+            6.7508,
+            9.3054,
+            90.0,
+            94.59,
+            90.0
+          ],
+          "wt_frac": 0.52
+        },
+        {
+          "phase": "ferrite-C4AF",
+          "cod": 1200009,
+          "scale": 1.4555572424848913,
+          "mass": 1171.5704,
+          "vol": 438.1229,
+          "cell": [
+            5.584,
+            14.6,
+            5.374,
+            90.0,
+            90.0,
+            90.0
+          ],
+          "wt_frac": 0.1
+        },
+        {
+          "phase": "periclase",
+          "cod": 1000053,
+          "scale": 37.73256001039889,
+          "mass": 161.216,
+          "vol": 74.9913,
+          "cell": [
+            4.217,
+            4.217,
+            4.217,
+            90.0,
+            90.0,
+            90.0
+          ],
+          "wt_frac": 0.06
+        },
+        {
+          "phase": "belite-alphaH",
+          "cod": 1546027,
+          "scale": 1e-12,
+          "mass": 688.9680000000001,
+          "vol": 367.7638,
+          "cell": [
+            6.8709,
+            5.601,
+            9.5563,
+            90.0,
+            90.0,
+            90.0
+          ],
+          "wt_frac": 0.0
+        },
+        {
+          "phase": "aphthitalite",
+          "cod": 9007639,
+          "scale": 1e-12,
+          "mass": 332.39599999999996,
+          "vol": 204.2211,
+          "cell": [
+            5.6801,
+            5.6801,
+            7.309,
+            90.0,
+            90.0,
+            120.0
+          ],
+          "wt_frac": 0.0
+        }
+      ],
+      "wR": 9.76,
+      "rwp_norm": 0.26437,
+      "converged": true,
+      "bad": false,
+      "n_points": 10413,
+      "elapsed_s": 402.1,
+      "tier": "ok",
+      "stages": [
+        {
+          "stage": "scales",
+          "converged": true,
+          "bad": false,
+          "wR": 21.44,
+          "dropped": []
+        },
+        {
+          "stage": "+alite cell",
+          "converged": true,
+          "bad": false,
+          "wR": 9.76,
+          "dropped": []
+        }
+      ],
+      "fit_range_2th": [
+        2.5,
+        62.85
+      ],
+      "shift_2th": 0.035916,
+      "instrument": "sync 0.82543 A",
+      "structures_src": "data/structures (spike 14 + T1 variant)",
+      "compared": {
+        "rows": [
+          {
+            "phase": "alite-M3",
+            "published": 65.4,
+            "ours": 97.52,
+            "abs_diff": 32.11999999999999
+          },
+          {
+            "phase": "aluminate",
+            "published": 1.99,
+            "ours": 1.8,
+            "abs_diff": 0.18999999999999995
+          },
+          {
+            "phase": "aphthitalite",
+            "published": 0.57,
+            "ours": 0.0,
+            "abs_diff": 0.57
+          },
+          {
+            "phase": "belite-alphaH",
+            "published": 3.0,
+            "ours": 0.0,
+            "abs_diff": 3.0
+          },
+          {
+            "phase": "belite-beta",
+            "published": 13.8,
+            "ours": 0.52,
+            "abs_diff": 13.280000000000001
+          },
+          {
+            "phase": "ferrite-C4AF",
+            "published": 11.6,
+            "ours": 0.1,
+            "abs_diff": 11.5
+          },
+          {
+            "phase": "periclase",
+            "published": 3.65,
+            "ours": 0.06,
+            "abs_diff": 3.59
+          }
+        ],
+        "worst_abs_diff": 32.12
+      }
+    }
+  ]
+}
