@@ -1,0 +1,704 @@
+{
+  "harness": "benchmarks/spikes/spike_16_validate.py",
+  "protocol": "docs/rqpa_protocol.md",
+  "reproducibility": {
+    "rerun": "done",
+    "ok": true,
+    "recorded_md5": "f43d8be2c932420676d612242dd049a5",
+    "self_consistent": true,
+    "prior_legacy_consistent": false,
+    "rerun_log": "/tmp/spike16_suite_rerun_1786511901.log",
+    "rerun_rc": 0,
+    "rerun_elapsed_s": 900.5,
+    "prior_canonical_md5": "f43d8be2c932420676d612242dd049a5",
+    "fresh_md5": "f43d8be2c932420676d612242dd049a5",
+    "fresh_self_consistent": true,
+    "cross_run_identical": true
+  },
+  "synthetic_kat": [
+    {
+      "sample": "Clinker_Nist_CuKalpha1_R1.xrdml",
+      "ground_truth": {
+        "alite-M3": 66.0,
+        "belite-beta": 13.5,
+        "belite-alphaH": 2.7,
+        "ferrite-C4AF": 11.1,
+        "periclase": 4.0,
+        "aluminate-cub": 0.7,
+        "aluminate-ort": 1.2,
+        "aphthitalite": 0.8
+      },
+      "recovered": {
+        "alite-M3": 66.03,
+        "belite-beta": 13.56,
+        "ferrite-C4AF": 11.1,
+        "periclase": 4.0,
+        "belite-alphaH": 2.7,
+        "aluminate-ort": 1.19,
+        "aphthitalite": 0.79,
+        "aluminate-cub": 0.63
+      },
+      "rows": [
+        {
+          "phase": "alite-M3",
+          "published": 66.0,
+          "recovered": 66.03,
+          "abs_diff": 0.030000000000001137,
+          "band": 1.5,
+          "pass": true,
+          "dropped": false,
+          "constrained": false
+        },
+        {
+          "phase": "aluminate-cub",
+          "published": 0.7,
+          "recovered": 0.63,
+          "abs_diff": 0.06999999999999995,
+          "band": 1.0,
+          "pass": true,
+          "dropped": false,
+          "constrained": false
+        },
+        {
+          "phase": "aluminate-ort",
+          "published": 1.2,
+          "recovered": 1.19,
+          "abs_diff": 0.010000000000000009,
+          "band": 1.0,
+          "pass": true,
+          "dropped": false,
+          "constrained": false
+        },
+        {
+          "phase": "aphthitalite",
+          "published": 0.8,
+          "recovered": 0.79,
+          "abs_diff": 0.010000000000000009,
+          "band": 1.0,
+          "pass": true,
+          "dropped": false,
+          "constrained": false
+        },
+        {
+          "phase": "belite-alphaH",
+          "published": 2.7,
+          "recovered": 2.7,
+          "abs_diff": 0.0,
+          "band": 1.0,
+          "pass": true,
+          "dropped": false,
+          "constrained": false
+        },
+        {
+          "phase": "belite-beta",
+          "published": 13.5,
+          "recovered": 13.56,
+          "abs_diff": 0.0600000000000005,
+          "band": 1.5,
+          "pass": true,
+          "dropped": false,
+          "constrained": false
+        },
+        {
+          "phase": "ferrite-C4AF",
+          "published": 11.1,
+          "recovered": 11.1,
+          "abs_diff": 0.0,
+          "band": 1.5,
+          "pass": true,
+          "dropped": false,
+          "constrained": false
+        },
+        {
+          "phase": "periclase",
+          "published": 4.0,
+          "recovered": 4.0,
+          "abs_diff": 0.0,
+          "band": 1.0,
+          "pass": true,
+          "dropped": false,
+          "constrained": false
+        }
+      ],
+      "n_pass": 8,
+      "n_total": 8,
+      "verdict": "pass",
+      "materialize_background_ok": true,
+      "wR": 0.45,
+      "rwp_norm": 0.0045,
+      "converged": true,
+      "bad": false,
+      "phases_dropped": null,
+      "elapsed_s": 87.4,
+      "xye": "/Users/lucas/Documents/CNEA/rietveld-agent/data/spike16/work/Clinker_Nist_CuKalpha1_R1_synth.xye",
+      "seed": 16,
+      "counts": 200000
+    },
+    {
+      "sample": "Silicate_enriched_residue_Nist_CuKalpha1_R1.xrdml",
+      "ground_truth": {
+        "alite-M3": 78.7,
+        "belite-beta": 13.4,
+        "belite-alphaH": 2.9,
+        "periclase": 5.0
+      },
+      "recovered": {
+        "alite-M3": 78.8,
+        "belite-beta": 13.34,
+        "periclase": 4.97,
+        "belite-alphaH": 2.88
+      },
+      "rows": [
+        {
+          "phase": "alite-M3",
+          "published": 78.7,
+          "recovered": 78.8,
+          "abs_diff": 0.09999999999999432,
+          "band": 1.5,
+          "pass": true,
+          "dropped": false,
+          "constrained": false
+        },
+        {
+          "phase": "belite-alphaH",
+          "published": 2.9,
+          "recovered": 2.88,
+          "abs_diff": 0.020000000000000018,
+          "band": 1.0,
+          "pass": true,
+          "dropped": false,
+          "constrained": false
+        },
+        {
+          "phase": "belite-beta",
+          "published": 13.4,
+          "recovered": 13.34,
+          "abs_diff": 0.0600000000000005,
+          "band": 1.5,
+          "pass": true,
+          "dropped": false,
+          "constrained": false
+        },
+        {
+          "phase": "periclase",
+          "published": 5.0,
+          "recovered": 4.97,
+          "abs_diff": 0.03000000000000025,
+          "band": 1.5,
+          "pass": true,
+          "dropped": false,
+          "constrained": false
+        }
+      ],
+      "n_pass": 4,
+      "n_total": 4,
+      "verdict": "pass",
+      "materialize_background_ok": true,
+      "wR": 0.56,
+      "rwp_norm": 0.0056,
+      "converged": true,
+      "bad": false,
+      "phases_dropped": null,
+      "elapsed_s": 55.5,
+      "xye": "/Users/lucas/Documents/CNEA/rietveld-agent/data/spike16/work/Silicate_enriched_residue_Nist_CuKalpha1_R1_synth.xye",
+      "seed": 16,
+      "counts": 200000
+    },
+    {
+      "sample": "aluminate_enriched_residue_clinkerNIST_180718_R1.xrdml",
+      "ground_truth": {
+        "ferrite-C4AF": 68.0312,
+        "periclase": 16.7641,
+        "aluminate-ort": 7.6023,
+        "aluminate-cub": 5.1657,
+        "aphthitalite": 2.4366
+      },
+      "recovered": {
+        "ferrite-C4AF": 67.8,
+        "periclase": 16.78,
+        "aluminate-ort": 7.87,
+        "aluminate-cub": 5.22,
+        "aphthitalite": 2.33
+      },
+      "rows": [
+        {
+          "phase": "aluminate-cub",
+          "published": 5.1657,
+          "recovered": 5.22,
+          "abs_diff": 0.05429999999999957,
+          "band": 1.5,
+          "pass": true,
+          "dropped": false,
+          "constrained": false
+        },
+        {
+          "phase": "aluminate-ort",
+          "published": 7.6023,
+          "recovered": 7.87,
+          "abs_diff": 0.2677000000000005,
+          "band": 1.5,
+          "pass": true,
+          "dropped": false,
+          "constrained": false
+        },
+        {
+          "phase": "aphthitalite",
+          "published": 2.4366,
+          "recovered": 2.33,
+          "abs_diff": 0.1065999999999998,
+          "band": 1.0,
+          "pass": true,
+          "dropped": false,
+          "constrained": false
+        },
+        {
+          "phase": "ferrite-C4AF",
+          "published": 68.0312,
+          "recovered": 67.8,
+          "abs_diff": 0.23120000000000118,
+          "band": 1.5,
+          "pass": true,
+          "dropped": false,
+          "constrained": false
+        },
+        {
+          "phase": "periclase",
+          "published": 16.7641,
+          "recovered": 16.78,
+          "abs_diff": 0.015900000000002024,
+          "band": 1.5,
+          "pass": true,
+          "dropped": false,
+          "constrained": false
+        }
+      ],
+      "n_pass": 5,
+      "n_total": 5,
+      "verdict": "pass",
+      "materialize_background_ok": true,
+      "wR": 0.38,
+      "rwp_norm": 0.00377,
+      "converged": true,
+      "bad": false,
+      "phases_dropped": null,
+      "elapsed_s": 40.8,
+      "xye": "/Users/lucas/Documents/CNEA/rietveld-agent/data/spike16/work/aluminate_enriched_residue_clinkerNIST_180718_R1_synth.xye",
+      "seed": 16,
+      "counts": 200000
+    },
+    {
+      "sample": "Clinker_Synchrotron.dat",
+      "ground_truth": {
+        "alite-M3": 65.3935,
+        "belite-beta": 13.7986,
+        "belite-alphaH": 2.9997,
+        "ferrite-C4AF": 11.5988,
+        "periclase": 3.6496,
+        "aphthitalite": 0.5699,
+        "aluminate-cub": 0.7075,
+        "aluminate-ort": 1.2823
+      },
+      "recovered": {
+        "alite-M3": 65.65,
+        "belite-beta": 13.76,
+        "ferrite-C4AF": 11.58,
+        "periclase": 3.64,
+        "belite-alphaH": 3.01,
+        "aluminate-ort": 1.23,
+        "aluminate-cub": 0.57,
+        "aphthitalite": 0.56
+      },
+      "rows": [
+        {
+          "phase": "alite-M3",
+          "published": 65.3935,
+          "recovered": 65.65,
+          "abs_diff": 0.2565000000000026,
+          "band": 1.5,
+          "pass": true,
+          "dropped": false,
+          "constrained": false
+        },
+        {
+          "phase": "aluminate",
+          "published": 1.9898,
+          "recovered": 1.8,
+          "abs_diff": 0.18979999999999997,
+          "band": 1.0,
+          "pass": true,
+          "dropped": false,
+          "constrained": false
+        },
+        {
+          "phase": "aphthitalite",
+          "published": 0.5699,
+          "recovered": 0.56,
+          "abs_diff": 0.009899999999999909,
+          "band": 1.0,
+          "pass": true,
+          "dropped": false,
+          "constrained": false
+        },
+        {
+          "phase": "belite-alphaH",
+          "published": 2.9997,
+          "recovered": 3.01,
+          "abs_diff": 0.010299999999999976,
+          "band": 1.0,
+          "pass": true,
+          "dropped": false,
+          "constrained": false
+        },
+        {
+          "phase": "belite-beta",
+          "published": 13.7986,
+          "recovered": 13.76,
+          "abs_diff": 0.038600000000000634,
+          "band": 1.5,
+          "pass": true,
+          "dropped": false,
+          "constrained": false
+        },
+        {
+          "phase": "ferrite-C4AF",
+          "published": 11.5988,
+          "recovered": 11.58,
+          "abs_diff": 0.018800000000000594,
+          "band": 1.5,
+          "pass": true,
+          "dropped": false,
+          "constrained": false
+        },
+        {
+          "phase": "periclase",
+          "published": 3.6496,
+          "recovered": 3.64,
+          "abs_diff": 0.009599999999999831,
+          "band": 1.0,
+          "pass": true,
+          "dropped": false,
+          "constrained": false
+        }
+      ],
+      "n_pass": 7,
+      "n_total": 7,
+      "verdict": "pass",
+      "materialize_background_ok": true,
+      "wR": 0.46,
+      "rwp_norm": 0.00461,
+      "converged": true,
+      "bad": false,
+      "phases_dropped": null,
+      "elapsed_s": 322.0,
+      "xye": "/Users/lucas/Documents/CNEA/rietveld-agent/data/spike16/work/Clinker_Synchrotron_synth.xye",
+      "seed": 16,
+      "counts": 200000
+    }
+  ],
+  "gates": {
+    "samples": [
+      {
+        "sample": "Clinker_Nist_CuKalpha1_R1.xrdml",
+        "model": "M3",
+        "wR": 15.07,
+        "wR_gate": 6.5,
+        "wR_pass": false,
+        "rwp_norm": 0.15071,
+        "rwp_gate": 1.0,
+        "rwp_pass": true,
+        "wt_pass": false,
+        "band_fails": [
+          "alite-M3",
+          "belite-alphaH",
+          "belite-beta",
+          "ferrite-C4AF",
+          "periclase"
+        ],
+        "dropped": [],
+        "constrained_phases": [],
+        "n_phases": 8,
+        "rank": {
+          "tau": 0.3571,
+          "mismatch": [
+            "belite-beta",
+            "ferrite-C4AF",
+            "periclase",
+            "belite-alphaH",
+            "aluminate-ort",
+            "aphthitalite",
+            "aluminate-cub"
+          ],
+          "published_order": [
+            "alite-M3",
+            "belite-beta",
+            "ferrite-C4AF",
+            "periclase",
+            "belite-alphaH",
+            "aluminate-ort",
+            "aphthitalite",
+            "aluminate-cub"
+          ],
+          "ours_order": [
+            "alite-M3",
+            "aluminate-ort",
+            "belite-beta",
+            "aluminate-cub",
+            "ferrite-C4AF",
+            "belite-alphaH",
+            "periclase",
+            "aphthitalite"
+          ]
+        },
+        "operational": true,
+        "publication": false
+      },
+      {
+        "sample": "Clinker_Nist_CuKalpha1_R1.xrdml",
+        "model": "T1",
+        "wR": 20.91,
+        "wR_gate": 6.5,
+        "wR_pass": false,
+        "rwp_norm": 0.20909,
+        "rwp_gate": 1.0,
+        "rwp_pass": true,
+        "wt_pass": false,
+        "band_fails": [
+          "alite-M3",
+          "aluminate-cub",
+          "aluminate-ort",
+          "belite-alphaH",
+          "ferrite-C4AF",
+          "periclase"
+        ],
+        "dropped": [],
+        "constrained_phases": [],
+        "n_phases": 8,
+        "rank": {
+          "tau": 0.2857,
+          "mismatch": [
+            "ferrite-C4AF",
+            "periclase",
+            "aluminate-ort",
+            "aphthitalite",
+            "aluminate-cub"
+          ],
+          "published_order": [
+            "alite-M3",
+            "belite-beta",
+            "ferrite-C4AF",
+            "periclase",
+            "belite-alphaH",
+            "aluminate-ort",
+            "aphthitalite",
+            "aluminate-cub"
+          ],
+          "ours_order": [
+            "alite-M3",
+            "belite-beta",
+            "aluminate-cub",
+            "aluminate-ort",
+            "belite-alphaH",
+            "ferrite-C4AF",
+            "periclase",
+            "aphthitalite"
+          ]
+        },
+        "operational": true,
+        "publication": false
+      },
+      {
+        "sample": "Silicate_enriched_residue_Nist_CuKalpha1_R1.xrdml",
+        "model": "M3",
+        "wR": 20.18,
+        "wR_gate": 6.5,
+        "wR_pass": false,
+        "rwp_norm": 0.20175,
+        "rwp_gate": 1.0,
+        "rwp_pass": true,
+        "wt_pass": false,
+        "band_fails": [
+          "alite-M3",
+          "belite-alphaH",
+          "belite-beta",
+          "periclase"
+        ],
+        "dropped": [],
+        "constrained_phases": [],
+        "n_phases": 4,
+        "rank": {
+          "tau": 0.6667,
+          "mismatch": [
+            "periclase",
+            "belite-alphaH"
+          ],
+          "published_order": [
+            "alite-M3",
+            "belite-beta",
+            "periclase",
+            "belite-alphaH"
+          ],
+          "ours_order": [
+            "alite-M3",
+            "belite-beta",
+            "belite-alphaH",
+            "periclase"
+          ]
+        },
+        "operational": true,
+        "publication": false
+      },
+      {
+        "sample": "Silicate_enriched_residue_Nist_CuKalpha1_R1.xrdml",
+        "model": "T1",
+        "wR": 27.11,
+        "wR_gate": 6.5,
+        "wR_pass": false,
+        "rwp_norm": 0.27113,
+        "rwp_gate": 1.0,
+        "rwp_pass": true,
+        "wt_pass": false,
+        "band_fails": [
+          "alite-M3",
+          "belite-beta",
+          "periclase"
+        ],
+        "dropped": [],
+        "constrained_phases": [],
+        "n_phases": 4,
+        "rank": {
+          "tau": 0.6667,
+          "mismatch": [
+            "periclase",
+            "belite-alphaH"
+          ],
+          "published_order": [
+            "alite-M3",
+            "belite-beta",
+            "periclase",
+            "belite-alphaH"
+          ],
+          "ours_order": [
+            "alite-M3",
+            "belite-beta",
+            "belite-alphaH",
+            "periclase"
+          ]
+        },
+        "operational": false,
+        "publication": false
+      },
+      {
+        "sample": "aluminate_enriched_residue_clinkerNIST_180718_R1.xrdml",
+        "model": "M3",
+        "wR": 13.56,
+        "wR_gate": 6.5,
+        "wR_pass": false,
+        "rwp_norm": 0.13564,
+        "rwp_gate": 1.0,
+        "rwp_pass": true,
+        "wt_pass": false,
+        "band_fails": [
+          "aluminate-cub",
+          "aluminate-ort",
+          "ferrite-C4AF",
+          "periclase"
+        ],
+        "dropped": [],
+        "constrained_phases": [
+          "aphthitalite"
+        ],
+        "n_phases": 5,
+        "rank": {
+          "tau": -0.2,
+          "mismatch": [
+            "ferrite-C4AF",
+            "periclase",
+            "aluminate-ort",
+            "aluminate-cub",
+            "aphthitalite"
+          ],
+          "published_order": [
+            "ferrite-C4AF",
+            "periclase",
+            "aluminate-ort",
+            "aluminate-cub",
+            "aphthitalite"
+          ],
+          "ours_order": [
+            "aluminate-cub",
+            "aluminate-ort",
+            "ferrite-C4AF",
+            "aphthitalite",
+            "periclase"
+          ]
+        },
+        "operational": true,
+        "publication": false
+      },
+      {
+        "sample": "Clinker_Synchrotron.dat",
+        "model": "M3",
+        "wR": 9.76,
+        "wR_gate": 5.0,
+        "wR_pass": false,
+        "rwp_norm": 0.26437,
+        "rwp_gate": 0.5,
+        "rwp_pass": true,
+        "wt_pass": false,
+        "band_fails": [
+          "alite-M3",
+          "belite-alphaH",
+          "belite-beta",
+          "ferrite-C4AF",
+          "periclase"
+        ],
+        "dropped": [],
+        "constrained_phases": [],
+        "n_phases": 7,
+        "rank": {
+          "tau": 0.619,
+          "mismatch": [
+            "belite-beta",
+            "ferrite-C4AF",
+            "periclase",
+            "belite-alphaH",
+            "aluminate"
+          ],
+          "published_order": [
+            "alite-M3",
+            "belite-beta",
+            "ferrite-C4AF",
+            "periclase",
+            "belite-alphaH",
+            "aluminate",
+            "aphthitalite"
+          ],
+          "ours_order": [
+            "alite-M3",
+            "aluminate",
+            "belite-beta",
+            "ferrite-C4AF",
+            "periclase",
+            "belite-alphaH",
+            "aphthitalite"
+          ]
+        },
+        "operational": true,
+        "publication": false
+      }
+    ],
+    "operational": 5,
+    "publication": 0,
+    "n": 6
+  },
+  "kat_params": {
+    "cycles": 3,
+    "counts": 200000,
+    "seed": 16,
+    "bands": {
+      "major": 1.5,
+      "minor": 1.0
+    }
+  },
+  "skip_synth": false
+}

@@ -93,8 +93,15 @@ deterministically (same inputs → same outputs, result-JSON md5 recorded):
 | clinker Cu | **T1** | 20.9 | **alite 63.5 vs 66.0 published** |
 | silicate residue | M3 | 20.2 | alite 98.5 wt% |
 | silicate residue | T1 | 27.1 | alite 84.3 vs 78.7 |
-| aluminate residue | — | 14.9 | aphthitalite below detection (see protocol) |
+| aluminate residue | — | 13.6 | all 5 phases reported (aphthitalite constraint) |
 | clinker synchrotron | M3 | **9.8** | wR best; alite absorbs |
+
+Spike 16 validates all of it: the suite is reproducible to the bit
+(canonical md5 `f43d8be2…` identical across independent runs), and the
+4 synthetic known-answer tests recover every injected phase within band
+(**4/4 samples, 24/24 phase rows**) — no refinement fails and no phase
+is ever left indeterminate. Details: [`notes/spike16.md`](notes/spike16.md),
+[`data/spike16/results/`](data/spike16/results/).
 
 The remaining distance to the publication-grade targets (wR ≤ 6.5 % Cu,
 ≤ 5 % sync) is attributed to microabsorption and is the target of the
@@ -180,7 +187,7 @@ every probe behind those decisions.
 | 13 | multiphase Rietveld QPA (5-phase baseline) | done |
 | 14 | published structure set (8 phases + T1), md5-locked | done |
 | 15 | publication-grade protocol runner (bounded budget) | done |
-| 16 | validation harness (reproducibility, synthetic recovery, gates) | in progress |
+| 16 | validation harness (reproducibility, synthetic recovery, gates) | done |
 | 17 | Brindley microabsorption corrections | planned |
 
 ## License

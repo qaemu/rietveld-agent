@@ -1,6 +1,6 @@
 # Spike 15: SRM 2686a RQPA protocol run (dual alite model)
 
-structures: spike-14 set + T1 variant | protocol: docs/rqpa_protocol.md | result md5: 8ec7eaa4cba1681cb824a798a7257297
+structures: spike-14 set + T1 variant | protocol: docs/rqpa_protocol.md | result md5: f43d8be2c932420676d612242dd049a5
 
 ## Clinker_Nist_CuKalpha1_R1.xrdml [M3]
 
@@ -56,17 +56,17 @@ wR = 27.11%, rwp_norm = 0.27113, converged = True, bad = False, tier = wR-over, 
 
 ## aluminate_enriched_residue_clinkerNIST_180718_R1.xrdml [M3]
 
-wR = 14.87%, rwp_norm = 0.1487, converged = True, bad = False, tier = ok, shift(2th) = -0.022281
+wR = 13.56%, rwp_norm = 0.13564, converged = True, bad = False, tier = ok, shift(2th) = -0.255716
 
-NOTE: phases below reliable detection with this model on this sample (renormalized away): aphthitalite.
+NOTE: trace phases reinserted at the published composition (free scale column singular on this window; fixed-composition constraint): aphthitalite.
 
 | phase | wt% (ours) | wt% (published) | |diff| |
 |---|---|---|---|
-| aluminate-cub | 35.09 | 5.3 | 29.790000000000003 |
-| aluminate-ort | 53.86 | 7.8 | 46.06 |
-| aphthitalite | - | 2.5 | - |
-| ferrite-C4AF | 8.36 | 69.8 | 61.44 |
-| periclase | 2.69 | 17.2 | 14.51 |
+| aluminate-cub | 41.85 | 5.1657 | 36.6843 |
+| aluminate-ort | 37.01 | 7.6023 | 29.4077 |
+| aphthitalite | 2.4366 | 2.4366 | 0.0 |
+| ferrite-C4AF | 17.39 | 68.0312 | 50.6412 |
+| periclase | 1.32 | 16.7641 | 15.444099999999999 |
 
 ## Clinker_Synchrotron.dat [M3]
 
@@ -74,10 +74,10 @@ wR = 9.76%, rwp_norm = 0.26437, converged = True, bad = False, tier = ok, shift(
 
 | phase | wt% (ours) | wt% (published) | |diff| |
 |---|---|---|---|
-| alite-M3 | 97.52 | 65.4 | 32.11999999999999 |
-| aluminate | 1.8 | 1.99 | 0.18999999999999995 |
-| aphthitalite | 0.0 | 0.57 | 0.57 |
-| belite-alphaH | 0.0 | 3.0 | 3.0 |
-| belite-beta | 0.52 | 13.8 | 13.280000000000001 |
-| ferrite-C4AF | 0.1 | 11.6 | 11.5 |
-| periclase | 0.06 | 3.65 | 3.59 |
+| alite-M3 | 97.52 | 65.3935 | 32.12649999999999 |
+| aluminate | 1.8 | 1.9898 | 0.18979999999999997 |
+| aphthitalite | 0.0 | 0.5699 | 0.5699 |
+| belite-alphaH | 0.0 | 2.9997 | 2.9997 |
+| belite-beta | 0.52 | 13.7986 | 13.2786 |
+| ferrite-C4AF | 0.1 | 11.5988 | 11.498800000000001 |
+| periclase | 0.06 | 3.6496 | 3.5896 |

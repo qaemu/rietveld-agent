@@ -1,7 +1,7 @@
 {
   "protocol": "docs/rqpa_protocol.md",
   "structures": "data/structures (spike 14, incl. T1 variant)",
-  "md5": "8ec7eaa4cba1681cb824a798a7257297",
+  "md5": "f43d8be2c932420676d612242dd049a5",
   "samples": [
     {
       "sample": "Clinker_Nist_CuKalpha1_R1.xrdml",
@@ -141,7 +141,7 @@
       "converged": true,
       "bad": false,
       "n_points": 3950,
-      "elapsed_s": 147.8,
+      "elapsed_s": 154.0,
       "tier": "ok",
       "stages": [
         {
@@ -372,7 +372,7 @@
       "converged": true,
       "bad": false,
       "n_points": 3950,
-      "elapsed_s": 72.5,
+      "elapsed_s": 71.8,
       "tier": "ok",
       "stages": [
         {
@@ -539,7 +539,7 @@
       "converged": true,
       "bad": false,
       "n_points": 3950,
-      "elapsed_s": 102.7,
+      "elapsed_s": 104.5,
       "tier": "ok",
       "stages": [
         {
@@ -682,7 +682,7 @@
       "converged": true,
       "bad": false,
       "n_points": 3950,
-      "elapsed_s": 31.8,
+      "elapsed_s": 29.9,
       "tier": "wR-over",
       "stages": [
         {
@@ -756,76 +756,86 @@
       "model": "M3",
       "phases": [
         {
-          "phase": "aluminate-ort",
-          "cod": 8103596,
-          "scale": 3.3791295412141995,
-          "mass": 3277.4205360000014,
-          "vol": 1782.2475,
-          "cell": [
-            10.879,
-            10.845,
-            15.106,
-            90.0,
-            90.0,
-            90.0
-          ],
-          "wt_frac": 53.86
-        },
-        {
           "phase": "aluminate-cub",
           "cod": 1000039,
-          "scale": 0.557730941364326,
+          "scale": 0.9912691405187817,
           "mass": 6484.751999999998,
-          "vol": 3555.6558,
+          "vol": 3576.3532,
           "cell": [
-            15.263,
-            15.263,
-            15.263,
+            15.292558,
+            15.292558,
+            15.292558,
             90.0,
             90.0,
             90.0
           ],
-          "wt_frac": 35.09
+          "wt_frac": 41.85
+        },
+        {
+          "phase": "aluminate-ort",
+          "cod": 8103596,
+          "scale": 3.479737776461763,
+          "mass": 3277.4205360000014,
+          "vol": 1782.48,
+          "cell": [
+            10.926616,
+            10.870314,
+            15.007105,
+            90.0,
+            90.0,
+            90.0
+          ],
+          "wt_frac": 37.01
         },
         {
           "phase": "ferrite-C4AF",
           "cod": 1200009,
-          "scale": 5.972064574995171,
+          "scale": 18.640353353472626,
           "mass": 1171.5704,
-          "vol": 438.1229,
+          "vol": 437.355,
           "cell": [
-            5.584,
-            14.6,
-            5.374,
+            5.582254,
+            14.694845,
+            5.331624,
             90.0,
             90.0,
             90.0
           ],
-          "wt_frac": 8.36
+          "wt_frac": 17.39
+        },
+        {
+          "phase": "aphthitalite",
+          "cod": null,
+          "scale": null,
+          "wt_frac": 2.4366,
+          "mass": null,
+          "vol": null,
+          "cell": null,
+          "constrained": true
         },
         {
           "phase": "periclase",
           "cod": 1000053,
-          "scale": 81.47396044979641,
+          "scale": 59.27984636857656,
           "mass": 161.216,
-          "vol": 74.9913,
+          "vol": 75.6625,
           "cell": [
-            4.217,
-            4.217,
-            4.217,
+            4.229544,
+            4.229544,
+            4.229544,
             90.0,
             90.0,
             90.0
           ],
-          "wt_frac": 2.69
+          "wt_frac": 1.32
         }
       ],
-      "wR": 14.87,
-      "rwp_norm": 0.1487,
+      "wR": 13.56,
+      "rwp_norm": 0.13564,
       "converged": true,
       "bad": false,
       "n_points": 3950,
-      "elapsed_s": 21.9,
+      "elapsed_s": 122.8,
       "tier": "ok",
       "stages": [
         {
@@ -834,52 +844,73 @@
           "bad": false,
           "wR": 14.87,
           "dropped": []
+        },
+        {
+          "stage": "+alu cells",
+          "converged": true,
+          "bad": false,
+          "wR": 14.83,
+          "dropped": []
+        },
+        {
+          "stage": "+ferrite+periclase cells",
+          "converged": true,
+          "bad": false,
+          "wR": 14.01,
+          "dropped": []
+        },
+        {
+          "stage": "+ferrite shape",
+          "converged": true,
+          "bad": false,
+          "wR": 13.56,
+          "dropped": []
         }
       ],
       "fit_range_2th": [
         4.0,
         70.0
       ],
-      "shift_2th": -0.022281,
+      "shift_2th": -0.255716,
       "instrument": "Cu K\u03b11 mono",
       "structures_src": "data/structures (spike 14 + T1 variant)",
-      "phases_dropped": [
+      "phases_constrained": [
         "aphthitalite"
       ],
       "compared": {
         "rows": [
           {
             "phase": "aluminate-cub",
-            "published": 5.3,
-            "ours": 35.09,
-            "abs_diff": 29.790000000000003
+            "published": 5.1657,
+            "ours": 41.85,
+            "abs_diff": 36.6843
           },
           {
             "phase": "aluminate-ort",
-            "published": 7.8,
-            "ours": 53.86,
-            "abs_diff": 46.06
+            "published": 7.6023,
+            "ours": 37.01,
+            "abs_diff": 29.4077
           },
           {
             "phase": "aphthitalite",
-            "published": 2.5,
-            "ours": null,
-            "abs_diff": null
+            "published": 2.4366,
+            "ours": 2.4366,
+            "abs_diff": 0.0
           },
           {
             "phase": "ferrite-C4AF",
-            "published": 69.8,
-            "ours": 8.36,
-            "abs_diff": 61.44
+            "published": 68.0312,
+            "ours": 17.39,
+            "abs_diff": 50.6412
           },
           {
             "phase": "periclase",
-            "published": 17.2,
-            "ours": 2.69,
-            "abs_diff": 14.51
+            "published": 16.7641,
+            "ours": 1.32,
+            "abs_diff": 15.444099999999999
           }
         ],
-        "worst_abs_diff": 61.44
+        "worst_abs_diff": 50.64
       }
     },
     {
@@ -1020,7 +1051,7 @@
       "converged": true,
       "bad": false,
       "n_points": 10413,
-      "elapsed_s": 402.1,
+      "elapsed_s": 416.0,
       "tier": "ok",
       "stages": [
         {
@@ -1049,48 +1080,48 @@
         "rows": [
           {
             "phase": "alite-M3",
-            "published": 65.4,
+            "published": 65.3935,
             "ours": 97.52,
-            "abs_diff": 32.11999999999999
+            "abs_diff": 32.12649999999999
           },
           {
             "phase": "aluminate",
-            "published": 1.99,
+            "published": 1.9898,
             "ours": 1.8,
-            "abs_diff": 0.18999999999999995
+            "abs_diff": 0.18979999999999997
           },
           {
             "phase": "aphthitalite",
-            "published": 0.57,
+            "published": 0.5699,
             "ours": 0.0,
-            "abs_diff": 0.57
+            "abs_diff": 0.5699
           },
           {
             "phase": "belite-alphaH",
-            "published": 3.0,
+            "published": 2.9997,
             "ours": 0.0,
-            "abs_diff": 3.0
+            "abs_diff": 2.9997
           },
           {
             "phase": "belite-beta",
-            "published": 13.8,
+            "published": 13.7986,
             "ours": 0.52,
-            "abs_diff": 13.280000000000001
+            "abs_diff": 13.2786
           },
           {
             "phase": "ferrite-C4AF",
-            "published": 11.6,
+            "published": 11.5988,
             "ours": 0.1,
-            "abs_diff": 11.5
+            "abs_diff": 11.498800000000001
           },
           {
             "phase": "periclase",
-            "published": 3.65,
+            "published": 3.6496,
             "ours": 0.06,
-            "abs_diff": 3.59
+            "abs_diff": 3.5896
           }
         ],
-        "worst_abs_diff": 32.12
+        "worst_abs_diff": 32.13
       }
     }
   ]

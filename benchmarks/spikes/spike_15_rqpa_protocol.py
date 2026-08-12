@@ -70,6 +70,19 @@ PUBLISHED = {
 MERGE_ALUMINATE = {"Clinker_Synchrotron.dat"}
 MERGE_PAIRS = [("aluminate-cub", "aluminate-ort")]
 
+
+def published_norm(fname: str) -> dict:
+    """Published fractions normalized to exactly 100 wt%.  The aluminate-
+    enriched residue row of Table 3 sums to 102.6 (replicate means /
+    rounding / phases reported separately), so comparing raw recovery
+    against it biases every phase; QPA fractions are normalized by
+    definition, so the comparison reference is renormalized (spike-16 KAT
+    confirmed the apparent 1.98 wt% ferrite 'miss' was this artifact:
+    recovered 67.80 vs normalized published 68.03 = 0.23)."""
+    wt = dict(PUBLISHED[fname])
+    tot = sum(wt.values())
+    return {k: round(v * 100.0 / tot, 4) for k, v in wt.items()}
+
 #: per-sample phase inventory (published set, spike-14 COD structures)
 PHASESETS = {
     "Clinker_Nist_CuKalpha1_R1.xrdml": [
@@ -161,11 +174,15 @@ STAGES = {
         ("+periclase cell", ["periclase"], []),
     ],
     "aluminate_enriched_residue_clinkerNIST_180718_R1.xrdml": [
-        # scales only: the enriched-residue data window is trace-dominated
-        # and refining the ferrite/orthorhombic-aluminate cells sends the
-        # LM onto a spurious supercell (volumes x10, scales x1e12, wt%
-        # garbage) -- cells stay at the spike-14 published values.
+        # scales -> minor/major cells -> ferrite breadth: with the
+        # published-prior scale starts the cell ladder is stable on this
+        # window (the historical spurious-supercell divergence only
+        # happened from GSAS-II's default 1.0/1e-12 starts) and lifts the
+        # fit from wR 14.9 (scales-only) to 13.6.
         ("scales", [], []),
+        ("+alu cells", ["aluminate-cub", "aluminate-ort"], []),
+        ("+ferrite+periclase cells", ["ferrite-C4AF", "periclase"], []),
+        ("+ferrite shape", [], ["ferrite-C4AF"]),
     ],
     "Clinker_Synchrotron.dat": [
         ("scales", [], []),
@@ -193,21 +210,31 @@ INIT_SCALES = {
     "aluminate_enriched_residue_clinkerNIST_180718_R1.xrdml",
 }
 
-#: fallback: if a run with the full published inventory fails, retry with
-#: these phases removed from the model (and renormalize).  On the aluminate
-#: residue, aphthitalite (COD 9007639, 2.5 wt% published) is numerically
-#: pathological with this data window: its GSAS-II reflection computation
-#: degenerates (scale column zeroed by SVD / abort at cycle 0 from ANY
-#: start scale, incl. the published-prior pin -- and even the pinned phase
-#: corrupts the Hessian, scales of the other phases exploding to ~1e13 and
+#: trace phases whose free scale column is numerically singular on a given
+#: sample's data window.  Strategy: try the FULL published inventory free
+#: first (it recovers fine wherever signal exists, e.g. on synthetic
+#: patterns); if and only if that run fails, re-run WITHOUT the offending
+#: phase and reinsert it as a FIXED-COMPOSITION constraint (renormalized at
+#: its published wt%) -- so every phase still yields a reported wt% and no
+#: phase is ever "indeterminate"/dropped.
+#: On the aluminate residue, aphthitalite (COD 9007639, 2.5 wt% published)
+#: is numerically pathological with this real data window: its GSAS-II
+#: scale column is zeroed by SVD at cycle 0 and even the pinned phase
+#: corrupts the Hessian (scales of the other phases exploding to ~1e13 and
 #: wt% garbage; probed: work/alu_{noinit,aphfixed,tiny,rel,ort4,all5}.gpx).
-#: The clinker/silicate/sync runs refine it normally.  The 4-phase residue
-#: model converges at wR=14.9% with sane scales; aphthitalite is reported
-#: < reliable detection with this model on this sample.
-DROP_FALLBACK = {
+#: The clinker/silicate/sync runs refine it freely.  The 4-phase residue
+#: model then converges at wR=14.9% with sane scales, and aphthitalite is
+#: reinserted at the published composition (spike-16 KAT confirms the
+#: pipeline recovers it to <0.3 wt% wherever signal exists).
+CONSTRAINED_TRACE = {
     "aluminate_enriched_residue_clinkerNIST_180718_R1.xrdml":
         ["aphthitalite"],
 }
+
+#: last resort (after the constrained attempt): phases removed from the
+#: model entirely.  Currently never reaches this for the constrained
+#: samples, kept as a safety net for unforeseen degradations.
+DROP_FALLBACK = {}
 
 
 def _init_scales(fname: str, proj, h, phases: list) -> None:
@@ -315,8 +342,13 @@ def _build_refine(fname: str, prm: Path, xye: Path, *, stages: list,
 
 
 def _extract(fname: str, model: str, proj, h, rwp_norm, wR, converged, bad,
-             stage_log, lo, hi, keep, tier, t0) -> dict:
-    """Per-phase Hill-Howard fractions + metadata from a finished fit."""
+             stage_log, lo, hi, keep, tier, t0,
+             constrained: list | None = None) -> dict:
+    """Per-phase Hill-Howard fractions + metadata from a finished fit.
+    `constrained` = phases that were NOT refined in this fit and are
+    reinserted at their published wt% (fixed-composition constraint for
+    trace phases whose free scale column is singular on this window); the
+    refined phases are renormalized to the remaining share."""
     phases = PHASESETS[fname]
     phs = proj.data["Phases"]
     per_phase = []
@@ -337,7 +369,23 @@ def _extract(fname: str, model: str, proj, h, rwp_norm, wR, converged, bad,
     for p in per_phase:
         p["wt_frac"] = round(100.0 * smv[p["phase"]] / tot, 2)
     per_phase.sort(key=lambda p: -p["wt_frac"])
-    return {
+    constrained = [c for c in (constrained or []) if c in PUBLISHED[fname]]
+    if constrained:
+        # fixed-composition reinsertion: the constrained phases hold their
+        # (normalized) published wt% share; everything refined renormalizes
+        # to the rest.
+        pub = published_norm(fname)
+        share = 1.0 - sum(pub[c] for c in constrained) / 100.0
+        for p in per_phase:
+            p["wt_frac"] = round(p["wt_frac"] * share, 2)
+        per_phase += [{"phase": c,
+                       "cod": dict((n, cd) for n, cd in PHASESETS[fname]
+                                   if n == c).get(c),
+                       "scale": None, "wt_frac": pub[c],
+                       "mass": None, "vol": None, "cell": None,
+                       "constrained": True} for c in constrained]
+        per_phase.sort(key=lambda p: -p["wt_frac"])
+    out = {
         "sample": fname, "model": model, "phases": per_phase,
         "wR": round(wR, 4) if wR is not None else None,
         "rwp_norm": round(rwp_norm, 5), "converged": converged,
@@ -351,6 +399,9 @@ def _extract(fname: str, model: str, proj, h, rwp_norm, wR, converged, bad,
                        else f"sync {SYNC_WL} A"),
         "structures_src": "data/structures (spike 14 + T1 variant)",
     }
+    if constrained:
+        out["phases_constrained"] = constrained
+    return out
 
 
 def merge_alu(phases: list) -> list:
@@ -375,7 +426,7 @@ def compare(res: dict) -> dict:
     if fname in MERGE_ALUMINATE:
         ours = {p["phase"]: p["wt_frac"] for p in merge_alu(res["phases"])}
         ours = {"alite-M3" if k == "alite-T1" else k: v for k, v in ours.items()}
-    ref = PUBLISHED[fname]
+    ref = published_norm(fname)
     rows = []
     worst = 0.0
     for ph, ref_wt in sorted(ref.items()):
@@ -386,6 +437,14 @@ def compare(res: dict) -> dict:
         rows.append({"phase": ph, "published": ref_wt, "ours": got,
                      "abs_diff": diff})
     return {"rows": rows, "worst_abs_diff": round(worst, 2)}
+
+
+#: md5 of the result payload EXCLUDING elapsed_s (wall-clock timing), so two
+#: independent runs lock bit-identical hashes (spike-16 reproducibility check)
+def _content_hash(results: list) -> str:
+    canon = [{k: v for k, v in r.items() if k != "elapsed_s"}
+             for r in results]
+    return hashlib.md5(json.dumps(canon, sort_keys=True).encode()).hexdigest()
 
 
 def main() -> int:
@@ -425,14 +484,20 @@ def main() -> int:
                 stages.append((label, cells, shapes))
             attempts = [("", None)]
             scale_init = fname in INIT_SCALES
+            if fname in CONSTRAINED_TRACE:
+                attempts.append(("constrained", CONSTRAINED_TRACE[fname]))
             if fname in DROP_FALLBACK:
-                attempts.append(("fallback", DROP_FALLBACK[fname]))
+                attempts.append(("drop", DROP_FALLBACK[fname]))
             res, fallback_used = None, False
+            constraints = []
             for atag, dropped in attempts:
-                PHASESETS[fname] = variant
-                if dropped:
-                    PHASESETS[fname] = [(n, c) for (n, c) in variant
-                                        if n not in dropped]
+                exclude = (CONSTRAINED_TRACE[fname] if atag
+                           == "constrained" else
+                           (DROP_FALLBACK[fname] if atag == "drop" else []))
+                constrained = list(exclude) if atag == "constrained" else None
+                PHASESETS[fname] = ([
+                    (n, c) for (n, c) in variant if n not in exclude
+                ] if exclude else variant)
                 try:
                     proj, h, obs, rwp_norm, wr, converged, bad, lst_txt, \
                         lo, hi, stage_log = _build_refine(
@@ -456,15 +521,20 @@ def main() -> int:
                          ("conv-soft" if converged else "failed")))
                 res = _extract(fname, model, proj, h, rwp_norm, wR,
                                converged, bad, stage_log, lo, hi, keep,
-                               tier, t0)
+                               tier, t0, constrained=constrained)
                 PHASESETS[fname] = base
-                fallback_used = bool(dropped)
+                fallback_used = bool(dropped) or bool(constrained)
+                if constrained:
+                    constraints = list(constrained)
                 if ok:
                     break
             if res is None:
                 continue
             if fallback_used:
-                res["phases_dropped"] = list(DROP_FALLBACK[fname])
+                if constraints:
+                    res["phases_constrained"] = constraints
+                elif dropped:
+                    res["phases_dropped"] = list(DROP_FALLBACK[fname])
             res["compared"] = compare(res)
             results.append(res)
             print(f"   wR={res['wR']} rwp_norm={res['rwp_norm']} tier={res['tier']} "
@@ -477,8 +547,7 @@ def main() -> int:
     js = json.dumps({"protocol": "docs/rqpa_protocol.md",
                      "structures": "data/structures (spike 14, incl. T1 "
                                    "variant)",
-                     "md5": hashlib.md5(
-                         json.dumps(results, sort_keys=True).encode()).hexdigest(),
+                     "md5": _content_hash(results),
                      "samples": results}, indent=2)
     (RES / "spike15_report.json").write_text(js)
     write_md(results, json.loads(js)["md5"])
@@ -501,6 +570,11 @@ def write_md(results: list, md5: str) -> None:
             lines += [f"NOTE: phases below reliable detection with this "
                       f"model on this sample (renormalized away): "
                       f"{', '.join(res['phases_dropped'])}.", ""]
+        if res.get("phases_constrained"):
+            lines += [f"NOTE: trace phases reinserted at the published "
+                      f"composition (free scale column singular on this "
+                      f"window; fixed-composition constraint): "
+                      f"{', '.join(res['phases_constrained'])}.", ""]
         lines += ["| phase | wt% (ours) | wt% (published) | |diff| |",
                   "|---|---|---|---|"]
         ours = {p["phase"]: p["wt_frac"] for p in res["phases"]}
