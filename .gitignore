@@ -19,5 +19,12 @@ data/spike12/work/*
 # spike 15 probe work dir (gpx/lst/xye already ignored; prm are derived)
 data/spike15/work/
 *.lst
+# paper build intermediates (the compiled PDF is tracked)
+paper/*.aux
+paper/*.bbl
+paper/*.blg
+paper/*.log
+paper/*.out
+paper/*.toc
 *.xye
 .vendor/

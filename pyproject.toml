@@ -4,24 +4,39 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "rietveld-agent"
-version = "0.0.0"
-description = "Deterministic, policy-governed GSAS-II-assisted powder X-ray diffraction phase identification"
+version = "0.1.0"
+description = "Reproducible laboratory-scale Rietveld quantitative phase analysis (RQPA), demonstrated on NIST SRM 2686a"
 readme = "README.md"
 license = { text = "Apache-2.0" }
-requires-python = ">=3.12"
+requires-python = ">=3.10"
+authors = [{ name = "qaemu", email = "qaemu@users.noreply.github.com" }]
+keywords = [
+    "x-ray-diffraction", "rietveld", "quantitative-phase-analysis",
+    "cement-clinker", "reproducible-research", "gsas-ii",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering :: Chemistry",
+    "Topic :: Scientific/Engineering :: Physics",
+]
 dependencies = [
-    "pandas>=2.0",
-    "numpy>=1.25",
-    "gemmi>=0.6",
+    "numpy>=1.24",
+    "scipy>=1.10",
 ]
 
 [project.optional-dependencies]
-gsasii = ["GSAS-II>=5.6"]
-dev = ["pytest>=8", "jsonschema>=4.20", "requests>=2.31"]
+# GSAS-II is a pinned local dependency: see data/structures and the
+# ensure_gsasii() bootstrap in benchmarks/eval/sim.py (vendored under
+# .vendor/, not installed from PyPI).
+plots = ["matplotlib>=3.7"]
+eval = ["matplotlib>=3.7"]
 
-[tool.setuptools.packages.find]
-include = ["core*", "cli*", "admin*", "mcp*", "benchmarks*"]
+[project.urls]
+Homepage = "https://github.com/qaemu/rietveld-agent"
+Documentation = "https://github.com/qaemu/rietveld-agent/tree/main/docs"
 
-[tool.pytest.ini_options]
-testpaths = ["core", "tests"]
-pythonpath = ["."]
+[tool.setuptools]
+packages = []
