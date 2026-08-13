@@ -15,8 +15,10 @@ from benchmarks.eval.noise import amorphous_pattern, perturb  # noqa: E402
 from core.calibration import CalibrationRegistry  # noqa: E402
 from core.hypothesis import load_library, rank_candidates  # noqa: E402
 from core.ingest import parse_xrdml, sample_fingerprint  # noqa: E402
-from core.verdict import (MIN_MARGIN, MIN_PEAK_COUNTS, MIN_TOP_SIMILARITY,  # noqa: E402
+from core.verdict import (MIN_MARGIN, MIN_TOP_SIMILARITY,  # noqa: E402
                           decide)
+from core.verification.verifier import (VERIFY_MIN_PEAK_COUNTS,  # noqa: E402
+                                        VERIFY_MIN_PEAK_COUNTS as MIN_PEAK_COUNTS)
 
 FIX = ROOT / "tests" / "fixtures" / "xrdml"
 REGISTRY = ROOT / "data" / "spike3" / "results" / "registry.json"
@@ -94,13 +96,21 @@ class TestFamilyMargin(unittest.TestCase):
         reg = CalibrationRegistry.load(str(REGISTRY))
         r = self._rank("fe_PbSO4.xrdml")
         res = reg.lookup(parse_xrdml(str(FIX / "fe_PbSO4.xrdml")).instrument)
-        v = decide(r, res, peak_max=1e7)
+        v = decide(r, res)
         self.assertEqual(v.status, "supported")
         self.assertIn("best other phase family", v.reasons[-1])
 
 
-class TestStatisticsGate(unittest.TestCase):
-    def test_below_gate_abstains(self):
+class TestVerdictCountingIndependence(unittest.TestCase):
+    """The counting-statistics gate lives in the verification stage
+    (core.verification.VERIFY_MIN_PEAK_COUNTS), not in the verdict stage:
+    identification is position-based (d-space fingerprint).  These tests
+    pin that contract: the verdict does not depend on peak counts and never
+    reasons about counting statistics (see the core/verdict docstring and
+    cli/analyze.py module contract).
+    """
+
+    def _bundle_parts(self):
         reg = CalibrationRegistry.load(str(REGISTRY))
         lib = json.loads(LIBRARY.read_text())
         library = load_library(lib["materials"])
@@ -109,31 +119,19 @@ class TestStatisticsGate(unittest.TestCase):
         q = sample_fingerprint(parse_xrdml(str(FIX / "cu_PbSO4.xrdml")))
         r = rank_candidates(q, library, names=names, families=families)
         res = reg.lookup(parse_xrdml(str(FIX / "cu_PbSO4.xrdml")).instrument)
-        v = decide(r, res, peak_max=MIN_PEAK_COUNTS - 1.0)
-        self.assertEqual(v.status, "abstain")
-        self.assertTrue(any("counting statistics" in reason for reason in v.reasons))
+        return r, res
 
-    def test_above_gate_supports_when_evidence_strong(self):
-        reg = CalibrationRegistry.load(str(REGISTRY))
-        lib = json.loads(LIBRARY.read_text())
-        library = load_library(lib["materials"])
-        names = {m["id"]: m["name"] for m in lib["materials"]}
-        families = {m["id"]: m["phase_family"] for m in lib["materials"]}
-        q = sample_fingerprint(parse_xrdml(str(FIX / "cu_PbSO4.xrdml")))
-        r = rank_candidates(q, library, names=names, families=families)
-        res = reg.lookup(parse_xrdml(str(FIX / "cu_PbSO4.xrdml")).instrument)
-        v = decide(r, res, peak_max=1e7)
+    def test_verdict_supports_strong_evidence_regardless_of_peak_counts(self):
+        r, res = self._bundle_parts()
+        v = decide(r, res)
         self.assertEqual(v.status, "supported")
+        self.assertFalse(any("counting" in reason for reason in v.reasons))
 
-    def test_gate_not_applied_when_peak_max_unknown(self):
-        reg = CalibrationRegistry.load(str(REGISTRY))
-        lib = json.loads(LIBRARY.read_text())
-        library = load_library(lib["materials"])
-        q = sample_fingerprint(parse_xrdml(str(FIX / "cu_PbSO4.xrdml")))
-        r = rank_candidates(q, library)
-        res = reg.lookup(parse_xrdml(str(FIX / "cu_PbSO4.xrdml")).instrument)
-        v = decide(r, res, peak_max=None)
-        self.assertEqual(v.status, "supported")
+    def test_gate_floor_lives_in_verification(self):
+        # the calibrated floor (spike-05 envelope L3) guards the refinement
+        # stage; it must not gate the identification verdict
+        self.assertEqual(VERIFY_MIN_PEAK_COUNTS, 100_000.0)
+        self.assertNotIn("peak_max", decide.__code__.co_varnames)
 
 
 class TestPolicyRecord(unittest.TestCase):

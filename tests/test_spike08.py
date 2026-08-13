@@ -177,9 +177,12 @@ class TestCliMeasuredVerification(unittest.TestCase):
         self.assertEqual(bundle["verdicts"], [])   # abstain: no verdict
         self.assertNotIn("verification", bundle)
 
-    def test_off_grid_measurement_skips_verification(self):
-        # grid that does not match the protocol (4251 pts, tmax 100 deg)
-        # must skip the verification stage, not crash
+    def test_off_grid_measurement_verified_by_resampling(self):
+        # a grid that does not match the protocol (4251 pts, tmax 100 deg)
+        # must not crash: the measured grid is resampled onto the protocol
+        # grid and the verification stage still runs (counting statistics
+        # assessed, never gating the identification) - see the cli/analyze
+        # module contract.
         pat = sim_cif_to_pattern(str(CID_CIF / ANGLESITE[2]), str(WORK),
                                  prm_path=ensure_gsasii(
                                      str(ROOT),
@@ -191,7 +194,11 @@ class TestCliMeasuredVerification(unittest.TestCase):
                 15.0, 100.0, 0.02, [float(v) for v in pat.intensity[:4251]]))
             bundle = cli_analyze(out, verification=True)
             jsonschema.validate(bundle, self.schema)
-        self.assertNotIn("verification", bundle)
+        v = bundle["verification"]
+        self.assertEqual(bundle["status"], "completed")
+        self.assertTrue(v["grid"]["resampled"])
+        self.assertIn("statistics", v)
+        self.assertIn(v["statistics"]["satisfied"], (True, False))
 
 
 class TestEnvelopePolicyConsistency(unittest.TestCase):
