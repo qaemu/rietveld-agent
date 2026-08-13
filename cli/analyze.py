@@ -23,19 +23,25 @@ import os
 import sys
 from pathlib import Path
 
+from core._paths import repo_root
 from core.calibration import CalibrationRegistry, ResolutionStatus
 from core.hypothesis import load_library, rank_candidates
 from core.ingest import parse_xrdml, sample_fingerprint
 from core.report import build_run_bundle
 from core.verdict import decide
 
-ROOT = Path(__file__).resolve().parent.parent
-DEFAULT_REGISTRY = ROOT / "data" / "spike3" / "results" / "registry.json"
-DEFAULT_LIBRARY = ROOT / "data" / "candidates" / "library.json"
-DEFAULT_POLICY = ROOT / "governance" / "policies" / "refinement-budget.v1.json"
-VERIFY_WORK = ROOT / "data" / "spike8" / "work"
-CID_CIF_DIR = ROOT / "data" / "spike6" / "input" / "cod"
-VENDOR = ROOT / ".vendor" / "GSAS-II"
+_here_root = repo_root()
+ROOT = _here_root if (_here_root / "data").is_dir() else None
+if ROOT is not None:
+    DEFAULT_REGISTRY = ROOT / "data" / "spike3" / "results" / "registry.json"
+    DEFAULT_LIBRARY = ROOT / "data" / "candidates" / "library.json"
+    DEFAULT_POLICY = ROOT / "governance" / "policies" / "refinement-budget.v1.json"
+    VERIFY_WORK = ROOT / "data" / "spike8" / "work"
+    CID_CIF_DIR = ROOT / "data" / "spike6" / "input" / "cod"
+    VENDOR = ROOT / ".vendor" / "GSAS-II"
+else:
+    DEFAULT_REGISTRY = DEFAULT_LIBRARY = DEFAULT_POLICY = None
+    VERIFY_WORK = CID_CIF_DIR = VENDOR = None
 #: simulated-protocol grid produced by add_simulated_powder_histogram for the
 #: fixture range; measured patterns on ANY grid are accepted for verification
 #: (resampled onto this protocol grid, recorded in the evidence; see
@@ -194,6 +200,11 @@ def analyze(xrdml_path: str, registry_path: str = str(DEFAULT_REGISTRY),
 def main(argv=None) -> int:
     ap = argparse.ArgumentParser(prog="rietveld-agent",
                                  description="policy-governed XRD phase identification")
+    if ROOT is None:
+        ap.error(
+            "repository data not found: run rietveld-agent from inside a "
+            "clone of github.com/qaemu/rietveld-agent-spikes"
+        )
     sub = ap.add_subparsers(dest="command", required=True)
 
     p = sub.add_parser("analyze", help="identify phases in an XRDML measurement")

@@ -1,0 +1,6 @@
+# Runtime dependencies (pip install -r requirements.txt, or make env)
+numpy>=1.24
+scipy>=1.10
+jsonschema>=4.17
+matplotlib>=3.7
+pytest>=7

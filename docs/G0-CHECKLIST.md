@@ -178,7 +178,7 @@ identical manifests on cache.
    held). Sources + reproductions in `data/spike9/` and
    `benchmarks/spikes/spike_09_multiphase.py`).
 4. `docs/` formalization of release process (review/approval of catalog
-   releases via `admin/` CLI) — draft state remains `draft` until then.
+    releases, schema-validated) — draft state remains `draft` until then.
 5. **Out-of-sample validation (spike 10)**: real RRUFF published patterns
    (quartz/calcite/corundum/rutile, identities fixed by REFINE v3.0 cell
    refinement) abstain on the 1e5 counting gate (archive fast scans,

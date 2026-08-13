@@ -1,57 +1,127 @@
 # rietveld-agent
 
-[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
-[![Python](https://img.shields.io/badge/Python-3.10%2B-informational.svg)](pyproject.toml)
-[![Manuscript](https://img.shields.io/badge/manuscript-PDF-brightgreen.svg)](paper/main.pdf)
-[![Data](https://img.shields.io/badge/data-Zenodo%2010.5281%2Fzenodo.1318501-lightgrey.svg)](https://doi.org/10.5281/zenodo.1318501)
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.0000000.svg)](https://doi.org/10.5281/zenodo.0000000)
+[![License: Apache 2.0](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](LICENSE)
+[![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)](pyproject.toml)
+[![Reference data (Zenodo)](https://img.shields.io/badge/data-Zenodo%2010.5281%2Fzenodo.1318501-lightgrey.svg)](https://doi.org/10.5281/zenodo.1318501)
 
-An open, deterministic toolkit for validating, refining and reporting
-**Rietveld quantitative phase analysis (RQPA)** of laboratory powder
-X-ray diffraction (PXRD) data — demonstrated end-to-end on the four
-**NIST SRM 2686a** reference patterns of García-Maté et al. (2024).
-GSAS-II is the numerical authority; this repository provides the
-COD-pinned structure set, the staged, budget-bounded refinement
-protocol, the evaluation harness, and an honest-uncertainty reporting
-layer. Every number in the paper is reproducible with `make`.
+Deterministic Rietveld quantitative phase analysis (RQPA) of laboratory
+powder X-ray diffraction (PXRD) data, demonstrated end-to-end on the four
+NIST SRM 2686a cement clinker reference patterns of García-Maté et al.
+(2024). GSAS-II performs the refinement; this repository supplies the
+COD-pinned structure set, a staged and budget-bounded refinement
+protocol, the evaluation harness, and hash-locked reporting.
 
-> The reference study and the associated reproducibility benchmark:
-> García-Maté, M., De la Torre, Á. G., León-Reina, L., & Aranda, M. A. G.
-> (2024). *Reproducibility and accuracy of Rietveld quantitative phase
-> analysis of NIST SRM 2686a cement clinker.* Cement and Concrete
-> Research, 180, 107506.
-> doi: [10.1016/j.cemconres.2021.106376](https://doi.org/10.1016/j.cemconres.2021.106376)
+Every reported number rebuilds from the raw patterns with `make report`,
+and the validation harness (spike 16) re-runs the whole pipeline and
+compares canonical content hashes — reproducibility is a machine-checked
+property, not a claim. The deterministic engine is runtime-agnostic:
+OpenCode, Claude Code, and Codex are interchangeable front-ends around it
+([`AGENTS.md`](AGENTS.md)).
 
-## Table of contents
+## Quick start
 
-- [Research artifacts](#research-artifacts)
-- [Papers](#papers)
-- [Repository layout](#repository-layout)
-- [Results](#results)
-- [Installation](#installation)
-- [Reproducing the results](#reproducing-the-results)
-- [Data and structure models](#data-and-structure-models)
-- [Methodology](#methodology)
-- [Design posture](#design-posture)
-- [Roadmap](#roadmap)
-- [License](#license)
+```bash
+git clone https://github.com/qaemu/rietveld-agent-spikes
+cd rietveld-agent-spikes
+make env          # virtualenv with numpy/scipy/matplotlib/pytest
+make check        # syntax checks
+make test         # regression suite
+```
 
-## Research artifacts
+GSAS-II is pinned in `.vendor/GSAS-II` and bootstrapped on first use
+(official installer, Apache-2.0, never bundled as a dependency) — no
+manual GSAS-II installation. Full per-platform, per-runtime instructions
+(macOS / Linux / Windows, OpenCode / Claude Code / Codex):
+[`docs/installation.md`](docs/installation.md).
 
-| artifact | where |
+## Results
+
+Spike 15 implements the protocol; all six refinements converge
+deterministically (same inputs → same outputs, result-JSON md5 recorded):
+
+| sample | model | wR (%) | note |
+|---|---|---|---|
+| clinker Cu | M3 | 15.07 | alite over-absorbed (95.3 wt%) |
+| clinker Cu | **T1** | 20.91 | **alite 63.5 vs 66.0 published** |
+| silicate residue | M3 | 20.18 | alite 98.5 wt% |
+| silicate residue | T1 | 27.11 | alite 84.3 vs 78.7 |
+| aluminate residue | M3 | 13.56 | all 5 phases reported (aphthitalite constraint) |
+| clinker synchrotron | M3 | **9.76** | best wR; alite absorbs |
+
+Spike 16 validates the suite: two independent full runs produce
+bit-identical payloads (canonical md5 `f43d8be2c932420676d612242dd049a5`),
+and four synthetic known-answer patterns recover every injected phase
+within band — **4/4 samples, 24/24 phase rows** — no refinement fails,
+no phase is left indeterminate. The residual distance to the
+publication-grade targets (wR ≤ 6.5% Cu, ≤ 5% sync) is attributed to
+microabsorption and is the subject of the planned Brindley-correction
+spike 17.
+
+## Papers
+
+Four working papers in [`paper/`](paper/) (PDF, rebuilt with `make
+paper`), written following the fifteen-step framework of Drake & Han
+(2025), *How to write a scientific paper in fifteen steps*
+(doi:10.1371/journal.pcbi.1013505):
+
+| paper | contents |
 |---|---|
-| paper series (how it works / why it is valid / how to run it) | [`docs/papers/`](docs/papers/README.md) — P-1 protocol, P-2 validation, P-3 deployment |
-| manuscript (this work) | [`paper/main.pdf`](paper/main.pdf) — TeX source in [`paper/`](paper/) |
-| protocol specification | [`docs/rqpa_protocol.md`](docs/rqpa_protocol.md) |
-| installation (macOS/Linux/Windows × OpenCode/Claude Code/Codex) | [`docs/installation.md`](docs/installation.md) |
-| structure catalogue | [`data/structures/catalog.json`](data/structures/catalog.json) |
-| full numeric results (md5-locked) | [`data/spike15/results/spike15_report.json`](data/spike15/results/spike15_report.json) |
-| validation evidence (md5-locked) | [`data/spike16/results/spike16_report.{json,md}`](data/spike16/results/spike16_report.md) |
-| spike log & locked decisions | [`notes/spike15.md`](notes/spike15.md), [`notes/spike16.md`](notes/spike16.md) |
-| agent orientation | [`AGENTS.md`](AGENTS.md) |
+| [`paper/main.pdf`](paper/main.pdf) | manuscript: protocol, results, reproducibility |
+| [`paper/paper1_protocol.pdf`](paper/paper1_protocol.pdf) | P-1 — the bounded-budget protocol: how the software works |
+| [`paper/paper2_validation.pdf`](paper/paper2_validation.pdf) | P-2 — known-answer validation: why the results are valid |
+| [`paper/paper3_deployment.pdf`](paper/paper3_deployment.pdf) | P-3 — deployment on OpenCode, Claude Code, Codex |
 
-Please cite the reference study above (and this repository, via
-[`CITATION.cff`](CITATION.cff)) if you use these materials:
+## Repository layout
+
+```
+core/                 deterministic scientific engine (ingest, calibration,
+                      catalog, retrieval, hypothesis, verdict, reporting)
+benchmarks/eval/      instrument-aware noise model, evaluation harness
+benchmarks/spikes/    numbered, self-contained experiments (spikes 01-16)
+cli/                  operator CLI (python -m cli analyze ...)
+governance/           schemas and policies for controlled scientific inputs
+skills/contracts/     agent-facing decision criteria and parameter allowlists
+data/structures/      COD-pinned RQPA structure set (md5-recorded, spike 14)
+data/spike11/         raw SRM 2686a patterns (input/)
+data/spike15/         protocol run: results/ (tracked)
+data/spike16/         validation run: results/ (tracked)
+docs/                 protocol specification, installation reference
+paper/                manuscript + paper series (PDF, make paper)
+notes/                spike-by-spike research log
+tests/                regression suite (make test)
+```
+
+## Documentation
+
+- [`docs/rqpa_protocol.md`](docs/rqpa_protocol.md) — the normative protocol
+  (data, structure models, refinement budget, staged ladder,
+  quantification, acceptance criteria)
+- [`docs/installation.md`](docs/installation.md) — installation per
+  platform and agent runtime
+- [`AGENTS.md`](AGENTS.md) — orientation and invariants for agent runtimes
+- [`notes/`](notes/) — research log (spike 15: protocol decisions;
+  spike 16: validation)
+- [`governance/`](governance/) — schemas and policies for controlled
+  scientific inputs
+
+## Reproducing the results
+
+```bash
+make report     # rerun every RQPA refinement (GSAS-II, ~45 min)
+make figures    # regenerate the manuscript figures
+make paper      # rebuild all paper PDFs (tectonic)
+make test       # regression suite (pytest)
+```
+
+Reference patterns are the four SRM 2686a files published with
+García-Maté et al. (Zenodo 10.5281/zenodo.1318501); the ingest parsers
+re-emit them as two-column data with intensities untouched (sha256
+recorded).
+
+## Citation
+
+If you use this repository, cite the reference study and the repository
+itself ([`CITATION.cff`](CITATION.cff)):
 
 ```bibtex
 @article{garcia-mate2024srms,
@@ -65,145 +135,15 @@ Please cite the reference study above (and this repository, via
   year    = {2024},
   doi     = {10.1016/j.cemconres.2021.106376}
 }
+
+@misc{rietveld-agent,
+  author = {qaemu},
+  title  = {{rietveld-agent}: a deterministic Rietveld {QPA} engine for
+            scientific agent runtimes},
+  year   = {2026},
+  url    = {https://github.com/qaemu/rietveld-agent-spikes}
+}
 ```
-
-## Papers
-
-Three working papers — written following the fifteen-step framework of
-Drake & Han (2025), *How to write a scientific paper in fifteen steps*
-(doi:10.1371/journal.pcbi.1013505) — explain the project in
-publication form ([index](docs/papers/README.md)):
-
-| paper | question | abstract |
-|---|---|---|
-| [P-1 protocol](docs/papers/paper1_protocol.md) | how the software works | deterministic, bounded-budget RQPA protocol; COD-pinned structure set; staged GSAS-II ladder; Hill–Howard normalization; content-hash reproducibility |
-| [P-2 validation](docs/papers/paper2_validation.md) | why it is scientifically valid | bit-level reproducibility across runs; known-answer recovery 24/24 phase rows; honest gate scoring (operational 5/6, publication 0/6) |
-| [P-3 deployment](docs/papers/paper3_deployment.md) | how to run it | installation on OpenCode / Claude Code / Codex, macOS / Linux / Windows; governance invariants |
-
-## Repository layout
-
-```
-AGENTS.md             orientation for AI agent runtimes
-benchmarks/eval/      instrument-aware noise model, evaluation harness
-benchmarks/spikes/    numbered, self-contained experiments (spikes 01-16)
-core/                 deterministic scientific engine (ingest, calibration,
-                      catalog, retrieval, hypothesis, verdict, reporting)
-cli/                  operator + expert CLI
-admin/                administrator stubs (calibrations, catalog releases)
-governance/           schemas and policies for controlled scientific inputs
-data/structures/      COD-pinned RQPA structure set (md5-recorded, spike 14)
-data/spike15/         RQPA protocol run: results/ (tracked) + work/ (ignored)
-data/spike16/         validation run: results/ (tracked) + work/ (ignored)
-data/catalog/         pinned COD catalog release (catalog_0.1.0)
-docs/                 protocol specification, paper series, installation
-paper/                TeX manuscript + figure generation (make paper)
-references.bib        bibliography shared by the paper and the docs
-notes/                spike-by-spike research log
-tests/                regression suite
-```
-
-## Results
-
-Spike 15 implements the protocol; all six refinements converge
-deterministically (same inputs → same outputs, result-JSON md5 recorded):
-
-| sample | model | wR (%) | note |
-|---|---|---|---|
-| clinker Cu | M3 | 15.1 | alite over-absorbed (95.3 wt%) |
-| clinker Cu | **T1** | 20.9 | **alite 63.5 vs 66.0 published** |
-| silicate residue | M3 | 20.2 | alite 98.5 wt% |
-| silicate residue | T1 | 27.1 | alite 84.3 vs 78.7 |
-| aluminate residue | — | 13.6 | all 5 phases reported (aphthitalite constraint) |
-| clinker synchrotron | M3 | **9.8** | wR best; alite absorbs |
-
-Spike 16 validates all of it: the suite is reproducible to the bit
-(canonical md5 `f43d8be2…` identical across independent runs), and the
-4 synthetic known-answer tests recover every injected phase within band
-(**4/4 samples, 24/24 phase rows**) — no refinement fails and no phase
-is ever left indeterminate. Details: [`notes/spike16.md`](notes/spike16.md),
-[`data/spike16/results/`](data/spike16/results/).
-
-The remaining distance to the publication-grade targets (wR ≤ 6.5 % Cu,
-≤ 5 % sync) is attributed to microabsorption and is the target of the
-roadmap's Brindley-correction spike. Figure reproduction:
-[`paper/figures/`](paper/figures/).
-
-## Installation
-
-Full per-runtime, per-platform reference:
-[`docs/installation.md`](docs/installation.md).
-
-```bash
-git clone https://github.com/qaemu/rietveld-agent-spikes
-cd rietveld-agent-spikes
-make env          # creates .venv with numpy/scipy/matplotlib
-make check        # syntax + structure checks
-```
-
-GSAS-II is pinned in `.vendor/GSAS-II` and bootstrapped by
-`benchmarks/eval/sim.py:ensure_gsasii` on first `make report` (official
-installer; Apache-2.0, never bundled as a dependency). `tectonic` is
-required only for the manuscript PDF (`brew install tectonic` or your
-distro's package). The engine itself runs identically from **OpenCode,
-Claude Code, or Codex** (see `AGENTS.md`).
-
-## Reproducing the results
-
-```bash
-make report     # rerun every RQPA refinement (GSAS-II, ~45 min)
-make figures    # regenerate the manuscript figures
-make paper      # compile paper/main.pdf (tectonic)
-make check      # syntax + structure checks
-make cite       # show the recommended citation
-```
-
-The reference patterns are the four SRM 2686a files published with
-García-Maté et al. (Zenodo 10.5281/zenodo.1318501); spike-11/12
-parsers re-emit them as .xye with intensities untouched (sha256
-recorded).
-
-## Data and structure models
-
-- **Patterns** — NIST SRM 2686a: Cu Kα₁ clinker, silicate and
-  aluminate residues, and 0.82543 Å synchrotron clinker (ALBA).
-- **Structure set** — the published polymorph inventory, re-sourced
-  from COD (CC0) and validated by an independent parser: alite M3,
-  alite T1, belite β, belite α′H, cubic and orthorhombic aluminate,
-  brownmillerite ferrite, periclase, aphthitalite. Every file is
-  md5-recorded in `data/structures/catalog.json` (see the README in
-  `data/structures/` for provenance and substitutions).
-
-## Methodology
-
-The full specification is [`docs/rqpa_protocol.md`](docs/rqpa_protocol.md):
-staged refinement ladder (scales → alite cell → belite cells → minor
-cells), bounded budget (Chebyschev background, sample shift, per-phase
-scale, major-phase cells), Hill–Howard normalisation
-(W_i = S_i·M_i·V_i / Σ S·M·V), acceptance criteria, and the locked
-empirical decisions (scale priors on the aluminate residue, aphthitalite
-handling, sync T1 exclusion). Spike notes in [`notes/`](notes/) document
-every probe behind those decisions.
-
-## Design posture
-
-- **Hybrid scientific workflow, not an LLM over GSAS-II.** GSAS-II is the
-  numerical authority for Rietveld refinement; the deterministic core plans and
-  executes bounded, policy-approved refinement recipes.
-- **Raw data + sample name in; bounded, evidence-rich result out.** The sample
-  name is weak context only (it may add `context_only` candidates, never remove
-  candidates, never improve scores, never confirm a phase).
-- **Defensible uncertainty over false certainty.** Statuses per phase family:
-  `supported`, `inconclusive`, `not_selected`, `out_of_domain`, `held`, `failed`.
-  No "absent" verdicts without detection-limit studies. No universal accuracy
-  numbers. No claims of phase purity, structure solution, publication
-  readiness, or robust QPA from Rwp alone.
-- **Controlled scientific inputs** (catalog, calibrations, sample-name
-  vocabulary, scientific policies, optional models) are hashed, versioned,
-  reviewed, replayable, and rollback-able. No update may silently alter the
-  meaning of an existing analysis.
-- **Local-first, no telemetry, no cloud refinement, Apache-2.0.**
-- **AI hosts are interchangeable assistants** (Codex, Claude Code, OpenCode)
-  around one deterministic engine, governed by shared versioned contracts.
 
 ## Roadmap
 
@@ -214,13 +154,11 @@ every probe behind those decisions.
 | 14 | published structure set (8 phases + T1), md5-locked | done |
 | 15 | publication-grade protocol runner (bounded budget) | done |
 | 16 | validation harness (reproducibility, synthetic recovery, gates) | done |
-| — | paper series P-1..P-3 (protocol / validation / deployment) | done |
 | 17 | Brindley microabsorption corrections | planned |
 
 ## License
 
 Apache-2.0 for original code ([LICENSE](LICENSE)). GSAS-II is an external
-dependency under its own license (Apache-2.0). The reference catalog is a
-curated, revisioned subset of the Crystallography Open Database (CC0 /
-public domain, attribution preserved in catalog releases). Structure files
-under `data/structures/` are CC0 from COD.
+dependency under its own Apache-2.0 license. Structure files under
+`data/structures/` are CC0 from the Crystallography Open Database
+(attribution preserved in catalog releases).

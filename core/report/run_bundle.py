@@ -16,12 +16,12 @@ from typing import Optional
 
 import jsonschema
 
+from core._paths import repo_root
 from core.calibration import Resolution, ResolutionStatus
 from core.hypothesis import HypothesisRanking
 from core.verdict import Verdict
 
-_SCHEMA_REL = (Path(__file__).resolve().parent.parent.parent
-               / "governance" / "schemas" / "run_bundle.schema.json")
+_SCHEMA_REL = repo_root() / "governance" / "schemas" / "run_bundle.schema.json"
 
 
 def load_bundle_schema() -> dict:

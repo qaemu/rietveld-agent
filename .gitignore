@@ -14,12 +14,11 @@ data/catalog/
 .env.vendor/
 # heavy derived/downloaded artifacts (reproducible via the spike scripts)
 data/cod_index/
-data/spike12/work/*
-!data/spike12/work/cifs/
+# derived work trees of every spike (reports+inputs are tracked; the rest
+# regenerates with `make report` and the spike runners)
+data/*/work/
 # spike 15 probe work dir (gpx/lst/xye already ignored; prm are derived)
-data/spike15/work/
 # spike 16 work dir (gpx/lst/xye/prm all derived; results/ is tracked)
-data/spike16/work/
 *.lst
 # paper build intermediates (the compiled PDF is tracked)
 paper/*.aux

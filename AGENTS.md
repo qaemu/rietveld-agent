@@ -20,17 +20,18 @@ with `make`** and hash-locked (canonical content md5
 |---|---|
 | environment | `make env` |
 | syntax/structure checks | `make check` |
+| regression suite | `make test` |
 | full protocol rerun (6 refinements, GSAS-II ~45 min) | `make report` |
 | validation: reproducibility + known-answer + gates | `python3 benchmarks/spikes/spike_16_validate.py [--skip-rerun\|--skip-synth]` |
-| figures, manuscript | `make figures`, `make paper` |
+| figures, papers | `make figures`, `make paper` |
 
 ## Results live in
 
 - `data/spike15/results/spike15_report.json` — refinements
 - `data/spike16/results/spike16_report.{json,md}` — validation evidence
 - `data/structures/catalog.json` — md5-recorded structure catalogue
-- `docs/papers/` — the scientific paper series (P-1 protocol, P-2
-  validation, P-3 deployment)
+- `paper/` — manuscript and paper series as PDFs (P-1 protocol, P-2
+  validation, P-3 deployment; `make paper`)
 
 ## Invariants — do not violate
 
@@ -57,8 +58,6 @@ with `make`** and hash-locked (canonical content md5
 - `docs/rqpa_protocol.md` — the normative protocol
 - `docs/installation.md` — install on macOS/Linux/Windows via OpenCode /
   Claude Code / Codex
-- `docs/papers/` — paper series P-1..P-3 (how it works, why it is valid,
-  how to deploy)
+- `paper/` — manuscript and paper series (PDF; `make paper`)
 - `notes/` — spike-by-spike research log (spike15: protocol decisions,
   spike16: validation)
-- `paper/` — manuscript (`make paper`)

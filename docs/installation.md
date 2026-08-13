@@ -74,7 +74,8 @@ make check    # syntax + structure checks (no network)
 ```bash
 make report    # rerun every RQPA refinement (GSAS-II auto-bootstraps, ~45 min)
 make figures   # regenerate the manuscript figures
-make paper     # rebuild paper/main.pdf (needs tectonic; optional)
+make paper     # rebuild all paper PDFs (needs tectonic; optional)
+make test      # regression suite (pytest)
 make cite      # show the recommended citation
 ```
 
@@ -95,8 +96,7 @@ python3 benchmarks/spikes/spike_16_validate.py --skip-rerun --sample <name>.xrdm
 | protocol refinements (md5-locked) | `data/spike15/results/spike15_report.json` |
 | validation evidence (md5-locked) | `data/spike16/results/spike16_report.{json,md}` |
 | structure catalogue (md5-recorded) | `data/structures/catalog.json` |
-| manuscript | `paper/main.pdf` |
-| paper series (P-1..P-3) | [`docs/papers/`](papers/README.md) |
+| manuscript + paper series (PDF) | `paper/main.pdf`, `paper/paper{1,2,3}_*.pdf` |
 | research log | [`notes/`](../notes/) |
 
 ## Troubleshooting

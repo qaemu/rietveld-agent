@@ -29,10 +29,11 @@ from typing import Iterable, Optional
 
 import jsonschema
 
+from core._paths import repo_root
 from core.calibration.prm import PrmContent, parse_prm
 from core.ingest import InstrumentParams, PowderPattern
 
-_SCHEMA_REL = Path(__file__).resolve().parent.parent.parent / "governance" / "schemas" / "calibration.schema.json"
+_SCHEMA_REL = repo_root() / "governance" / "schemas" / "calibration.schema.json"
 
 
 class ResolutionStatus(str, Enum):

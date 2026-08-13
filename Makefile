@@ -3,19 +3,23 @@
 # docs/rqpa_protocol.md for details.
 
 PY     := .venv/bin/python
+PIP    := .venv/bin/pip
 TECTONIC ?= tectonic
 
-.PHONY: env paper figures report check cite clean
+.PHONY: env paper figures report check test clean
 
 ## env        -- create the local virtualenv with the runtime dependencies
 env:
 	python3 -m venv .venv
-	$(PY) -m pip install --upgrade pip
-	$(PY) -m pip install numpy scipy matplotlib
+	$(PIP) install --upgrade pip
+	$(PIP) install -r requirements.txt
 
-## paper      -- compile the manuscript (paper/main.tex -> paper/main.pdf)
+## paper      -- compile all paper PDFs (paper/*.tex -> paper/*.pdf)
 paper:
 	cd paper && $(TECTONIC) main.tex
+	cd paper && $(TECTONIC) paper1_protocol.tex
+	cd paper && $(TECTONIC) paper2_validation.tex
+	cd paper && $(TECTONIC) paper3_deployment.tex
 
 ## figures    -- regenerate paper figures from the spike-15 results
 figures: report
@@ -25,16 +29,18 @@ figures: report
 report:
 	$(PY) benchmarks/spikes/spike_15_rqpa_protocol.py
 
-## check      -- syntax-check every benchmark/eval module
+## check      -- syntax-check every python module
 check:
-	$(PY) -m py_compile benchmarks/eval/*.py benchmarks/spikes/spike_1[4-5]_*.py
+	$(PY) -m compileall -q core cli benchmarks tests
 	@echo "check OK"
 
-## cite       -- show the recommended citation (BibTeX)
-cite:
-	@cat CITATION.cff | sed -n '/preferred-citation/,/^[a-z]/p'
+## test       -- run the regression suite (pytest)
+test:
+	$(PY) -m pytest -q
 
 ## clean      -- remove build artifacts
 clean:
 	rm -f paper/main.pdf paper/main.aux paper/main.bbl paper/main.blg \
-	      paper/main.log paper/main.out
+	      paper/main.log paper/main.out paper/main.toc \
+	      paper/paper1_protocol.pdf paper/paper2_validation.pdf \
+	      paper/paper3_deployment.pdf

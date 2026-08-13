@@ -1,0 +1,199 @@
+% rietveld-agent -- paper series P-2 (validation)
+% Constructed following the fifteen-step framework of Drake & Han (2025).
+% Compile: tectonic paper2_validation.tex  (from paper/)
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[margin=2.4cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{amsmath}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage[hidelinks]{hyperref}
+\setlength{\emergencystretch}{2em}
+\usepackage{xcolor}
+
+\title{\textbf{Known-answer validation of an automated Rietveld QPA
+engine: reproducibility, synthetic recovery, and gate scoring}\\
+\large Paper P-2 of the paper series of the
+\texttt{rietveld-agent} repository}
+\author{qaemu\\
+\small \texttt{qaemu@users.noreply.github.com} --- repository:
+\url{https://github.com/qaemu/rietveld-agent-spikes}}
+\date{August 2026 --- working paper, version 0.2.0}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+\noindent \textbf{Thesis.} The scientific validity of an automated
+Rietveld quantitative phase analysis (RQPA) pipeline can be established
+with three independent checks: (A) bit-level reproducibility across
+independent runs, (B) known-answer recovery of injected ground-truth
+fractions on noise-corrupted synthetic patterns, and (C) honest, scored
+acceptance gates on real data. We report all three for the
+\texttt{rietveld-agent} engine (spike 16 of the repository
+\cite{rietveld-agent}): (A) two full independent suite runs produced
+bit-identical scientific payloads (canonical md5
+\texttt{f43d8be2}\allowbreak\texttt{\ldots}); (B) four synthetic known-answer tests recovered
+all 24 injected phase rows within $\pm$1.5~wt\% (majors) /
+$\pm$1.0~wt\% (minors); (C) on the six real refinements the protocol is
+operational 5/6 and publication-scored 0/6, with the residual wR gap
+(9.8--27.1\% vs.\ 6.5/5 targets) attributed to microabsorption rather
+than pipeline failure. The comparison reference for published fractions
+is a normalized one: the published Table-3 aluminate-residue row sums to
+102.6\%, and scoring against the raw values was a normalization artifact,
+now removed. The paper follows the fifteen-step framework of
+\cite{drake2025fifteen}.
+\end{abstract}
+
+\section{Introduction}
+A refinement pipeline that runs unattended must earn trust differently
+from an interactive analyst session. There is no human to notice a
+plausible-but-wrong fit, and no session log to audit. \emph{Gap.}
+Published RQPA validation usually stops at ``converges and looks
+reasonable''. What is missing is a three-pronged, executable proof:
+the results reproduce, the pipeline recovers known truth, and the
+remaining distance to publication quality is measured and attributed.
+\emph{Response.} Spike 16 of the \texttt{rietveld-agent} repository
+\cite{rietveld-agent} implements exactly that proof for the protocol of
+Paper P-1 \cite{rietveld-agent}. Its harness,
+\texttt{benchmarks/spikes/spike\_16\_validate.py}, runs three independent
+checks and always completes; verdicts are data, not exit codes.
+
+\section{Methods}
+\subsection{A. Reproducibility check}
+The full spike-15 suite (six refinements, $\sim$15 min on the development
+hardware) is re-run via subprocess. The report's canonical content hash
+--- computed over all fields except wall-clock timing, which legitimately
+varies --- is compared with the fresh run. Identical hash across
+independent runs is the reproducibility verdict.
+
+\subsection{B. Synthetic known-answer test (KAT)}
+For each sample (M3 model), the published wt\% are \emph{injected} as
+ground truth, normalized to sum to 100 (the raw Table-3 aluminate-residue
+row sums to 102.6 owing to replicate-mean rounding; the normalized
+reference \texttt{published\_norm()} is the shared comparison baseline of
+the repository). Per-phase scales are started from the published-fraction
+prior via Hill--Howard inversion, $S \sim w/(MV)$
+\cite{hill1987normalization}, then only the Chebyschev background is
+refined (three cycles, scales pinned) so the materialized calculated
+pattern equals the published-fraction phase signal plus a smooth
+window-adapted background without fit-residual leakage. Poisson counting
+noise is added at a 200\,000-count peak maximum (seed 16)
+(\texttt{benchmarks/eval/noise.py}). The \emph{unmodified} protocol
+ladder of Paper P-1 then runs on the synthetic pattern from its own
+starts, with its own constraint/fallback logic. Recovery is scored vs.\
+the injected truth: $|\Delta| \le 1.5$~wt\% for published majors
+($\ge 5$~wt\%), $\le 1.0$~wt\% for minors.
+
+\subsection{C. Gate scoring on real data}
+Each of the six real refinements is scored against publication-style
+gates: wR $\le 6.5$\% (Cu) / $\le 5$\% (synchrotron);
+rwp\_norm $< 1.0$ / $0.5$; per-phase wt\% within the same bands; rank
+agreement (Kendall $\tau$). \emph{Operational} = converged, no error
+markers, wR $< 25$. \emph{Publication} = all gates pass. Every instrument,
+band and gate definition is recorded in the protocol and in
+\texttt{data/spike16/results/spike16\_report.md}, together with the
+probe classification used during development (wheel = procedural choice;
+counter = counterexample probe; pin = pinned constant;
+gate = guard on a comparison).
+
+\section{Results}
+\subsection{A. Reproducibility}
+Two independent full-suite runs produced bit-identical payloads:
+committed run canonical hash and fresh run both
+\texttt{f43d8be2c932420676d612242dd049a5};
+cross-run identical = true; rerun rc = 0 (900.5~s); verdict
+\textbf{REPRODUCIBLE}. (One harness bug is worth recording: an earlier
+version crashed in \texttt{write\_report} when a killed subprocess was
+still writing the shared work directory; the writer now renders a
+failed/skipped rerun explicitly --- the verdict is data and the harness
+always completes.)
+
+\subsection{B. Known-answer recovery}
+All four samples pass; $24/24$ phase rows are within band
+(Table~\ref{tab:kat}); synthetic fits land at the noise floor
+(wR 0.38--0.56\%).
+\begin{table}[ht]
+\centering
+\small
+\begin{tabular}{@{}lccc@{}}
+\toprule
+sample & KAT score & wR (\%) & max $|\Delta|$ (wt\%) \\
+\midrule
+clinker Cu & 8/8 & 0.45 & 0.07 (aphthitalite recovered freely) \\
+silicate residue & 4/4 & 0.56 & 0.10 \\
+aluminate residue & 5/5 & 0.38 & 0.27 (ferrite 67.8 vs.\ 68.0) \\
+clinker synchrotron & 7/7 & 0.46 & 0.27 (aluminate 1.80 vs.\ 1.99) \\
+\bottomrule
+\end{tabular}
+\caption{Synthetic known-answer recovery (peak 200\,000 counts,
+seed 16; bands $\pm$1.5/$\pm$1.0~wt\%).}
+\label{tab:kat}
+\end{table}
+The recovery ceiling is $\approx$0.3~wt\% --- the size of the Poisson
+noise floor at this counting statistics. Notable fallouts: aphthitalite
+recovers freely on the synthetic aluminate window (2.33 vs.\ 2.44
+injected, within band), proving that the degeneracy observed on the real
+pattern is real-data specific (peak overlap / microabsorption), not
+intrinsic to the window; and the aluminate ferrite deficit is a
+normalization artifact of the \emph{reference}, not of the pipeline
+(67.8 vs.\ 68.03 normalized injected, $|\Delta| = 0.23$, PASS).
+
+\subsection{C. Gate scoring}
+\begin{table}[ht]
+\centering
+\small
+\begin{tabular}{@{}lccccc@{}}
+\toprule
+sample & model & wR (\%) & wR gate & rank $\tau$ & operational \\
+\midrule
+clinker Cu & M3 & 15.07 & FAIL (6.5) & 0.36 & yes \\
+clinker Cu & T1 & 20.91 & FAIL (6.5) & 0.29 & yes \\
+silicate residue & M3 & 20.18 & FAIL (6.5) & 0.67 & yes \\
+silicate residue & T1 & 27.11 & FAIL (6.5) & 0.67 & no \\
+aluminate residue & M3 & 13.56 & FAIL (6.5) & $-0.20$ & yes \\
+clinker synchrotron & M3 & 9.76 & FAIL (5.0) & 0.62 & yes \\
+\bottomrule
+\end{tabular}
+\caption{Real-data gate scores (rwp\_norm gate PASS everywhere;
+wt gate FAIL; the aluminate residue reports 5/5 phases with aphthitalite
+as fixed-composition constraint).}
+\label{tab:gates}
+\end{table}
+Operational: 5/6; publication: 0/6, as expected. Every analysis
+completes, every phase carries a wt\%, and the protocol runs
+deterministically --- but the fits are not publication-grade. The
+dominant residual is microabsorption: the aluminate-residue fit gained
+on the real data from the cell + breadth ladder (wR 14.9 $\to$ 13.56;
+ferrite 8.4 $\to$ 17.4~wt\%), yet 17.4 vs.\ 68.0 normalized published
+remains the largest single-phase gap and is the target of the
+Brindley-correction spike 17.
+
+\section{Discussion and closing}
+Three results carry the validity argument. \emph{First},
+reproducibility is a machine-checked fact, not a claim. \emph{Second},
+the engine recovers known fractions to the noise floor of the data on
+which it was not trained --- the KAT design reuses the unmodified
+production ladder, so the recovery is a property of the pipeline.
+\emph{Third}, the gates are honest: the publication gap is attributed to
+physics (microabsorption) with a concrete remedy (spike 17), and the
+normalization trap (scoring against a reference that sums to 102.6\%) was
+found by the harness and removed by adopting \texttt{published\_norm()}
+as the shared comparison baseline. Nothing in this paper claims accuracy
+the gates do not certify: validity here means ``reproduces, recovers
+known truth, and reports its remaining distance truthfully''.
+As in Papers P-1 and P-3, the composition follows
+\cite{drake2025fifteen}.
+
+\section*{License}
+Apache-2.0; see \texttt{LICENSE} in the repository root. All data and
+programs needed to reproduce this paper are in the repository
+\cite{rietveld-agent}.
+
+\bibliographystyle{plainnat}
+\bibliography{references}
+
+\end{document}

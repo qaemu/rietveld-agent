@@ -1,0 +1,156 @@
+% rietveld-agent -- paper series P-3 (deployment on agent runtimes)
+% Constructed following the fifteen-step framework of Drake & Han (2025).
+% Compile: tectonic paper3_deployment.tex  (from paper/)
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[margin=2.4cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{amsmath}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage[hidelinks]{hyperref}
+\setlength{\emergencystretch}{2em}
+\usepackage{xcolor}
+
+\title{\textbf{Deploying \texttt{rietveld-agent} on OpenCode, Claude Code,
+and Codex: installation, verification, and governance}\\
+\large Paper P-3 of the paper series of the
+\texttt{rietveld-agent} repository}
+\author{qaemu\\
+\small \texttt{qaemu@users.noreply.github.com} --- repository:
+\url{https://github.com/qaemu/rietveld-agent-spikes}}
+\date{August 2026 --- working paper, version 0.2.0}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+\noindent \textbf{Thesis.} The scientific engine of \texttt{rietveld-agent}
+is runtime-agnostic: the same deterministic pipeline (Paper P-1) and the
+same validation evidence (Paper P-2) are available from any agent-aware
+terminal --- OpenCode, Claude Code, or Codex --- on macOS, Linux, or
+Windows (native or WSL), with a three-command installation, scripted
+dependency bootstrapping (GSAS-II pinned, never bundled), and a checkable
+verification path (\texttt{make check}, \texttt{make env}). This paper
+gives the installation matrix for the three runtimes and the three
+platforms, the first-run verification, and the governance the repository
+imposes on agent-driven scientific work (versioned, hashed scientific
+inputs; no telemetry; no cloud refinement; interchangeable hosts around
+one engine). Composition follows
+\cite{drake2025fifteen}.
+\end{abstract}
+
+\section{Introduction}
+A repository is only as portable as its installation story. Scientific
+repositories have an additional requirement: whoever runs them --- human
+or agent --- must be able to verify that what they got is what was
+measured. \emph{Gap.} Agent runtimes (OpenCode, Claude Code, Codex) are
+terminal-native, but most scientific repositories assume interactive
+GUI sessions, ad-hoc environments, or cloud execution. \emph{Response.}
+The \texttt{rietveld-agent} repository \cite{rietveld-agent} is built for
+non-interactive execution from the start: every result is rebuilt by
+\texttt{make} targets, GSAS-II \cite{toby2013gsas2} is pinned in
+\texttt{.vendor/} and bootstrapped deterministically, and an
+\texttt{AGENTS.md} orientation file points any agent at the contracts it
+must respect. This paper documents installation, verification, and
+governance for the three runtimes.
+
+\section{Installation matrix}
+Requirements in all cases: Python 3.10+ and git. GSAS-II (Apache-2.0) is
+pinned in \texttt{.vendor/GSAS-II} and installed by
+\texttt{benchmarks/eval/}\allowbreak\texttt{sim.py:ensure\_gsasii} on first use; it is never
+bundled as a dependency. \texttt{tectonic} is required only for building
+the paper PDFs (\texttt{make paper}), not for running analyses.
+
+\subsection{OpenCode}
+\begin{tabular}{@{}lp{10.4cm}@{}}
+\toprule
+platform & install \& verify \\
+\midrule
+macOS & \texttt{brew install opencode} or \texttt{npm i -g opencode-ai}; \\
+Linux & \texttt{curl -fsSL https://opencode.ai/install | bash} or
+\texttt{npm i -g opencode-ai}; \\
+Windows & \texttt{npm i -g opencode-ai} (native), or WSL + the Linux
+route below.\\
+\bottomrule
+\end{tabular}\\[2mm]
+Verify with \texttt{opencode --version}, then start the agent in the
+repository root: \texttt{cd rietveld-agent \&\& opencode}.
+
+\subsection{Claude Code}
+\begin{tabular}{@{}lp{10.4cm}@{}}
+\toprule
+platform & install \& verify \\
+\midrule
+macOS / Linux & \texttt{npm install -g @anthropic-ai/claude-code}
+(or the native installer script); \\
+Windows & native installer, or WSL + the Linux route. \\
+\bottomrule
+\end{tabular}\\[2mm]
+Authenticate with \texttt{claude} (browser login) or an
+\texttt{ANTHROPIC\_}\allowbreak\texttt{API\_KEY}; verify with \texttt{claude --version};
+start with \texttt{cd rietveld-agent \&\& claude}.
+
+\subsection{Codex (OpenAI)}
+\begin{tabular}{@{}lp{10.4cm}@{}}
+\toprule
+platform & install \& verify \\
+\midrule
+macOS & \texttt{brew install codex} or \texttt{npm i -g @openai/codex}; \\
+Linux & \texttt{curl -fsSL https://codex.openai.com/install.sh | bash}
+or \texttt{npm i -g @openai/codex}; \\
+Windows & WSL + the Linux route (codex is a terminal-native CLI). \\
+\bottomrule
+\end{tabular}\\[2mm]
+Authenticate with \texttt{codex login} (or \texttt{OPENAI\_API\_KEY});
+verify with \texttt{codex --version}; start with
+\texttt{cd rietveld-agent \&\& codex}.
+
+\section{First run and verification}
+\begin{verbatim}
+make env      # virtualenv with numpy/scipy/matplotlib
+make check    # syntax + structure checks (fast, no network)
+make report   # rerun every RQPA refinement (GSAS-II, ~45 min)
+make paper    # rebuild all paper PDFs (paper/*.tex, tectonic)
+\end{verbatim}
+The full validation evidence is reproduced with
+\texttt{python3 benchmarks/spikes/}\allowbreak\texttt{spike\_16\_validate.py} ($\sim$32 min),
+or in parts with \texttt{--skip-rerun} (known-answer + gates only) and
+\texttt{--skip-synth} (rerun + gates only). Any agent can therefore
+verify the engine from scratch without human intervention, and the
+canonical content hash of the report (Paper P-2) makes the verification
+objective.
+
+\section{Governance for agent-driven scientific work}
+The repository enforces five invariants that make agent operation safe:
+(1) \emph{controlled scientific inputs} --- catalog, calibrations,
+policies, models --- are hashed, versioned and reviewable; no update may
+silently change the meaning of an existing analysis; (2) \emph{local
+first} --- no telemetry, no cloud refinement, Apache-2.0; (3)
+\emph{weak context only} --- the sample name may add candidate phases,
+never remove them or improve scores; (4) \emph{defensible uncertainty} ---
+per-phase statuses (supported, inconclusive, not\_selected,
+out\_of\_domain, held, failed) instead of unearned accuracy claims; and
+(5) \emph{interchangeable hosts} --- the three runtimes above are thin
+front-ends around the same engine, so results do not depend on which
+agent drove them. \texttt{AGENTS.md} is the single orientation point for
+any runtime.
+
+\section{Closing}
+Installation, verification, and governance together make
+\texttt{rietveld-agent} usable by humans and agents alike on all major
+platforms, with objective reproducibility as the anchor
+(\cite{rietveld-agent}; context: Papers P-1 and P-2 of this series;
+writing framework \cite{drake2025fifteen}). The one external
+requirement is Python 3.10+; everything else is pinned or scripted.
+
+\section*{License}
+Apache-2.0 for original code; GSAS-II under its own Apache-2.0 license;
+catalog and structure files CC0 from COD (attribution preserved).
+
+\bibliographystyle{plainnat}
+\bibliography{references}
+
+\end{document}

@@ -4,8 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "rietveld-agent"
-version = "0.1.0"
-description = "Reproducible laboratory-scale Rietveld quantitative phase analysis (RQPA), demonstrated on NIST SRM 2686a"
+version = "0.2.0"
+description = "Deterministic Rietveld quantitative phase analysis (RQPA), demonstrated on NIST SRM 2686a cement clinker"
 readme = "README.md"
 license = { text = "Apache-2.0" }
 requires-python = ">=3.10"
@@ -25,18 +25,21 @@ classifiers = [
 dependencies = [
     "numpy>=1.24",
     "scipy>=1.10",
+    "jsonschema>=4.17",
 ]
 
 [project.optional-dependencies]
-# GSAS-II is a pinned local dependency: see data/structures and the
-# ensure_gsasii() bootstrap in benchmarks/eval/sim.py (vendored under
-# .vendor/, not installed from PyPI).
+# GSAS-II is a pinned local dependency: see the ensure_gsasii() bootstrap
+# in benchmarks/eval/sim.py (vendored under .vendor/, not on PyPI).
 plots = ["matplotlib>=3.7"]
-eval = ["matplotlib>=3.7"]
+dev = ["matplotlib>=3.7", "pytest>=7"]
+
+[project.scripts]
+rietveld-agent = "cli.__main__:main"
 
 [project.urls]
-Homepage = "https://github.com/qaemu/rietveld-agent"
-Documentation = "https://github.com/qaemu/rietveld-agent/tree/main/docs"
+Homepage = "https://github.com/qaemu/rietveld-agent-spikes"
+Documentation = "https://github.com/qaemu/rietveld-agent-spikes/blob/main/docs/index.md"
 
-[tool.setuptools]
-packages = []
+[tool.setuptools.packages.find]
+include = ["core*", "cli*", "benchmarks*"]
