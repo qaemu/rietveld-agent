@@ -25,6 +25,7 @@ layer. Every number in the paper is reproducible with `make`.
 ## Table of contents
 
 - [Research artifacts](#research-artifacts)
+- [Papers](#papers)
 - [Repository layout](#repository-layout)
 - [Results](#results)
 - [Installation](#installation)
@@ -39,11 +40,15 @@ layer. Every number in the paper is reproducible with `make`.
 
 | artifact | where |
 |---|---|
+| paper series (how it works / why it is valid / how to run it) | [`docs/papers/`](docs/papers/README.md) — P-1 protocol, P-2 validation, P-3 deployment |
 | manuscript (this work) | [`paper/main.pdf`](paper/main.pdf) — TeX source in [`paper/`](paper/) |
 | protocol specification | [`docs/rqpa_protocol.md`](docs/rqpa_protocol.md) |
+| installation (macOS/Linux/Windows × OpenCode/Claude Code/Codex) | [`docs/installation.md`](docs/installation.md) |
 | structure catalogue | [`data/structures/catalog.json`](data/structures/catalog.json) |
 | full numeric results (md5-locked) | [`data/spike15/results/spike15_report.json`](data/spike15/results/spike15_report.json) |
-| spike log & locked decisions | [`notes/spike15.md`](notes/spike15.md) |
+| validation evidence (md5-locked) | [`data/spike16/results/spike16_report.{json,md}`](data/spike16/results/spike16_report.md) |
+| spike log & locked decisions | [`notes/spike15.md`](notes/spike15.md), [`notes/spike16.md`](notes/spike16.md) |
+| agent orientation | [`AGENTS.md`](AGENTS.md) |
 
 Please cite the reference study above (and this repository, via
 [`CITATION.cff`](CITATION.cff)) if you use these materials:
@@ -62,11 +67,25 @@ Please cite the reference study above (and this repository, via
 }
 ```
 
+## Papers
+
+Three working papers — written following the fifteen-step framework of
+Drake & Han (2025), *How to write a scientific paper in fifteen steps*
+(doi:10.1371/journal.pcbi.1013505) — explain the project in
+publication form ([index](docs/papers/README.md)):
+
+| paper | question | abstract |
+|---|---|---|
+| [P-1 protocol](docs/papers/paper1_protocol.md) | how the software works | deterministic, bounded-budget RQPA protocol; COD-pinned structure set; staged GSAS-II ladder; Hill–Howard normalization; content-hash reproducibility |
+| [P-2 validation](docs/papers/paper2_validation.md) | why it is scientifically valid | bit-level reproducibility across runs; known-answer recovery 24/24 phase rows; honest gate scoring (operational 5/6, publication 0/6) |
+| [P-3 deployment](docs/papers/paper3_deployment.md) | how to run it | installation on OpenCode / Claude Code / Codex, macOS / Linux / Windows; governance invariants |
+
 ## Repository layout
 
 ```
+AGENTS.md             orientation for AI agent runtimes
 benchmarks/eval/      instrument-aware noise model, evaluation harness
-benchmarks/spikes/    numbered, self-contained experiments (spikes 01-15)
+benchmarks/spikes/    numbered, self-contained experiments (spikes 01-16)
 core/                 deterministic scientific engine (ingest, calibration,
                       catalog, retrieval, hypothesis, verdict, reporting)
 cli/                  operator + expert CLI
@@ -74,8 +93,9 @@ admin/                administrator stubs (calibrations, catalog releases)
 governance/           schemas and policies for controlled scientific inputs
 data/structures/      COD-pinned RQPA structure set (md5-recorded, spike 14)
 data/spike15/         RQPA protocol run: results/ (tracked) + work/ (ignored)
+data/spike16/         validation run: results/ (tracked) + work/ (ignored)
 data/catalog/         pinned COD catalog release (catalog_0.1.0)
-docs/                 protocol specification, phase-0 checklist
+docs/                 protocol specification, paper series, installation
 paper/                TeX manuscript + figure generation (make paper)
 references.bib        bibliography shared by the paper and the docs
 notes/                spike-by-spike research log
@@ -110,16 +130,22 @@ roadmap's Brindley-correction spike. Figure reproduction:
 
 ## Installation
 
+Full per-runtime, per-platform reference:
+[`docs/installation.md`](docs/installation.md).
+
 ```bash
-git clone https://github.com/qaemu/rietveld-agent
-cd rietveld-agent
+git clone https://github.com/qaemu/rietveld-agent-spikes
+cd rietveld-agent-spikes
 make env          # creates .venv with numpy/scipy/matplotlib
+make check        # syntax + structure checks
 ```
 
 GSAS-II is pinned in `.vendor/GSAS-II` and bootstrapped by
-`benchmarks/eval/sim.py:ensure_gsasii` (official installer; Apache-2.0,
-never bundled as a dependency). `tectonic` is required for the paper
-(`brew install tectonic` or your distro's package).
+`benchmarks/eval/sim.py:ensure_gsasii` on first `make report` (official
+installer; Apache-2.0, never bundled as a dependency). `tectonic` is
+required only for the manuscript PDF (`brew install tectonic` or your
+distro's package). The engine itself runs identically from **OpenCode,
+Claude Code, or Codex** (see `AGENTS.md`).
 
 ## Reproducing the results
 
@@ -188,6 +214,7 @@ every probe behind those decisions.
 | 14 | published structure set (8 phases + T1), md5-locked | done |
 | 15 | publication-grade protocol runner (bounded budget) | done |
 | 16 | validation harness (reproducibility, synthetic recovery, gates) | done |
+| — | paper series P-1..P-3 (protocol / validation / deployment) | done |
 | 17 | Brindley microabsorption corrections | planned |
 
 ## License
