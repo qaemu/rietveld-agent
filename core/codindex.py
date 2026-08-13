@@ -100,7 +100,7 @@ class CodEntry:
                 "sg": self.sg, "sg_number": self.sg_number,
                 "year": self.year, "doi": self.doi,
                 "journal": self.journal, "authors": self.authors,
-                "title": self.title,
+                "title": (self.title or "")[:240],   # trim: the meta JSON is
                 "url": f"https://www.crystallography.net/cod/{self.cod_id}.html"}
 
 
@@ -205,9 +205,11 @@ def build_index(entries: List[CodEntry], dmin: float = D_MIN,
              dmin_eff int16 per entry).
     """
     import concurrent.futures as cf
+    from core.codsearch import _pool_ctx
 
     lists = []
-    with cf.ProcessPoolExecutor(max_workers=workers) as ex:
+    with cf.ProcessPoolExecutor(max_workers=workers,
+                                mp_context=_pool_ctx()) as ex:
         for i, (du, dmin_e) in enumerate(
                 ex.map(_entry_lines, entries, chunksize=32)):
             lists.append((du, dmin_e))
@@ -257,7 +259,8 @@ def load_index(path: str, meta_path: str) -> tuple:
 def screen_fingerprint(fp: SampleFingerprint, cod_ids: np.ndarray,
                        d_units: np.ndarray, entry_of: np.ndarray,
                        metas_by_id: dict, top_k: int = 50,
-                       tol: float = PEAK_D_TOL) -> List[dict]:
+                       tol: float = PEAK_D_TOL,
+                       pool_k: int = 60) -> List[dict]:
     """Screen the fingerprint against the whole COD line index.
 
     Score = intensity-weighted SIGNIFICANCE of the coincidence: an entry's
@@ -266,8 +269,12 @@ def screen_fingerprint(fp: SampleFingerprint, cod_ids: np.ndarray,
     organics that trivially coincide with every peak therefore score ~1-3
     sigma, while phases whose *strong* peaks line up score far higher.
 
-    Returns top-k entries with ``screen_score`` = match fraction and
-    ``matched_intensity`` = intensity-weighted match (both capped at 1).
+    Returns a candidate POOL (union of the top-``pool_k`` by significance,
+    by intensity-weighted match ``matched_intensity`` and by ``screen_score``
+    coverage; deduped, sig-ordered) -- a pre-filter, NOT the final ranking.
+    The final ranking is the caller's job (offline intensity rerank, see
+    ``screen_cod``); significance alone overrates sparse-line high-symmetry
+    entries whose few d-dense lines happen to sit inside many weak peaks.
     """
     peaks = [(p.d, p.height) for p in fp.peaks]
     if not peaks:
@@ -302,26 +309,40 @@ def screen_fingerprint(fp: SampleFingerprint, cod_ids: np.ndarray,
     sig = np.zeros(len(cod_ids))
     nz = var > 0
     sig[nz] = (hit_h[nz] - mu[nz]) / np.sqrt(var[nz])
-    # rank by significance; break ties by matched intensity
-    order = np.argsort(-(sig * 1e6 + hit_h / total_h))
-    out = []
-    for i in order[:top_k]:
-        if counts[i] == 0:
-            continue
+    m_frac = hit_h / total_h
+    cov = counts / n
+
+    def _row(i: int, sig_i: float) -> dict:
         mid = metas_by_id.get(int(cod_ids[i]), {})
-        out.append({
+        return {
             "cod_id": int(cod_ids[i]),
             "mineral": mid.get("mineral", ""), "chemname": mid.get("chemname", ""),
-            "formula": mid.get("formula", ""), "sg": mid.get("sg", ""),
+            "formula": mid.get("formula", ""), "sg": mid.get("sg")
+            or str(mid.get("sg_number", "")),
             "year": mid.get("year", ""), "doi": mid.get("doi", ""),
             "journal": mid.get("journal", ""), "title": mid.get("title", ""),
             "url": f"https://www.crystallography.net/cod/{int(cod_ids[i])}.html",
             "matched_peaks": int(counts[i]),
-            "matched_intensity": round(float(hit_h[i] / total_h), 4),
-            "screen_score": round(float(counts[i] / n), 4),
-            "significance": round(float(sig[i]), 2),
-        })
-    return out
+            "matched_intensity": round(float(m_frac[i]), 4),
+            "screen_score": round(float(cov[i]), 4),
+            "significance": round(float(sig_i), 2),
+        }
+
+    # candidate pool: union of the top-k by each criterion (deduped).
+    # Deterministic: each criterion's tie-break is the composite key below.
+    def comp(i):
+        return -(sig[i] * 1e6 + hit_h[i] / total_h)
+
+    picked = {}
+    for criterion_idx in (np.argsort(-sig, kind="stable"),
+                          np.argsort(-m_frac, kind="stable"),
+                          np.argsort(-cov, kind="stable")):
+        for i in criterion_idx[:pool_k]:
+            if counts[i] == 0:
+                continue
+            picked[i] = comp(i)
+    order = sorted(picked, key=lambda i: picked[i])
+    return [_row(i, sig[i]) for i in order[:top_k]]
 
 # --------------------------------------------------------------------------- #
 # fast kinematic intensity stage (no GSAS-II): crude form factors, full site

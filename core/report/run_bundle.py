@@ -53,6 +53,7 @@ def build_run_bundle(
     recipe_key: str = "fingerprint-only-m1",
     artifact_path: str = "",
     verification: Optional[dict] = None,
+    cod_screen: Optional[dict] = None,
 ) -> dict:
     """Assemble (and schema-validate) the immutable run bundle."""
     run_id = "run-" + _sha256s(f"{input_path}:{raw_sha256}:{time.time_ns()}")[:14]
@@ -127,5 +128,7 @@ def build_run_bundle(
     }
     if verification is not None:
         bundle["verification"] = verification
+    if cod_screen is not None:
+        bundle["cod_screen"] = cod_screen
     jsonschema.validate(bundle, load_bundle_schema())
     return bundle

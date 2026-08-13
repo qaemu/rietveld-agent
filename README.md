@@ -155,6 +155,10 @@ itself ([`CITATION.cff`](CITATION.cff)):
 | 15 | publication-grade protocol runner (bounded budget) | done |
 | 16 | validation harness (reproducibility, synthetic recovery, gates) | done |
 | 17 | Brindley microabsorption corrections | planned |
+| 18 | complete-COD screening: `core.codsearch` line index over the full COD
+  CIF tree (`make cod-tree` ~26 GB + `make cod-index`; `--full-cod` in
+  `cli analyze`, `cod_screen` in the run bundle; candidate filter only,
+  not identification) | in progress |
 
 ## License
 

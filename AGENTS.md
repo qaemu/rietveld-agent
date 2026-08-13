@@ -22,6 +22,7 @@ with `make`** and hash-locked (canonical content md5
 | syntax/structure checks | `make check` |
 | regression suite | `make test` |
 | full protocol rerun (6 refinements, GSAS-II ~45 min) | `make report` |
+| complete-COD mirror (~26 GB, resumable) + line index | `make cod-tree`, `make cod-index` |
 | validation: reproducibility + known-answer + gates | `python3 benchmarks/spikes/spike_16_validate.py [--skip-rerun\|--skip-synth]` |
 | figures, papers | `make figures`, `make paper` |
 

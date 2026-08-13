@@ -38,7 +38,19 @@ check:
 test:
 	$(PY) -m pytest -q
 
-## clean      -- remove build artifacts
+## cod-tree   -- mirror the FULL COD CIF tree (rsync, ~26 GB, resumable)
+cod-tree:
+	@test -d data/cod_index/cifs || mkdir -p data/cod_index/cifs
+	rsync -a --partial rsync://www.crystallography.net/cif/ data/cod_index/cifs/
+
+## cod-index  -- rebuild the COMPLETE-COD line index from the local CIF tree
+##              (make cod-tree first; ~1 GB data/cod_index/*.npz, gitignored)
+cod-index:
+	$(PY) -m core.codsearch build-index
+
+## cod-all    -- tree + index in one shot
+cod-all: cod-tree cod-index
+
 clean:
 	rm -f paper/main.pdf paper/main.aux paper/main.bbl paper/main.blg \
 	      paper/main.log paper/main.out paper/main.toc \

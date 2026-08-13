@@ -13,6 +13,52 @@
     "schema": { "const": "run_bundle/v0" },
     "run_id": { "type": "string" },
     "status": { "enum": ["planned", "running", "completed", "held", "failed", "aborted"] },
+    "cod_screen": {
+      "description": "Optional screen of the measured fingerprint against the COMPLETE COD line index (core.codsearch; position-only lattice geometry - a candidate filter, not an identification). Absent when the index is not built (make cod-index) or the flag is off.",
+      "type": "object",
+      "required": ["index_entries", "index_manifest", "index_md5", "d_range_A", "top"],
+      "properties": {
+        "index_entries": { "type": "integer" },
+        "index_manifest": { "type": "string" },
+        "index_md5": { "type": "string" },
+        "d_range_A": { "type": "array", "items": { "type": "number" } },
+        "top": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["cod_id", "formula", "significance",
+                         "matched_intensity", "screen_score", "matched_peaks"],
+            "properties": {
+              "cod_id": { "type": "integer" },
+              "formula": { "type": "string" },
+              "mineral": { "type": "string" },
+              "chemname": { "type": "string" },
+              "sg": { "type": "string" },
+              "year": { "type": "string" },
+              "doi": { "type": "string" },
+              "journal": { "type": "string" },
+              "title": { "type": "string" },
+              "url": { "type": "string" },
+              "matched_intensity": { "type": "number" },
+              "screen_score": { "type": "number" },
+              "matched_peaks": { "type": "integer" },
+              "significance": { "type": "number" },
+              "intensity_rerank": {
+                "description": "Offline kinematic-intensity cross-check against the local CIF (coverage/corr) - null when the CIF is unavailable.",
+                "type": ["object", "null"],
+                "properties": {
+                  "coverage": { "type": "number" },
+                  "corr": { "type": "number" },
+                  "matched": { "type": "integer" },
+                  "n_peaks": { "type": "integer" },
+                  "error": { "type": "string" }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "verification": {
       "description": "Optional bounded-Rietveld verification evidence (spike 07). Absent for fingerprint-only runs.",
       "type": "object",

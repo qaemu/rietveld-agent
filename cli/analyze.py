@@ -148,6 +148,7 @@ def analyze(xrdml_path: str, registry_path: str = str(DEFAULT_REGISTRY),
             library_path: str = str(DEFAULT_LIBRARY),
             output_path: str = "",
             verification: bool = True,
+            full_cod: bool = False,
             policy_path: str = str(DEFAULT_POLICY),
             work_dir: str = str(VERIFY_WORK)) -> dict:
     """Run the M1 analyze pipeline; returns the schema-valid bundle dict."""
@@ -172,12 +173,24 @@ def analyze(xrdml_path: str, registry_path: str = str(DEFAULT_REGISTRY),
 
     # --- hypothesis + verdict
     library = load_library(lib_payload["materials"])
-    ranking = rank_candidates(sample_fingerprint(pattern), library,
+    fingerprint = sample_fingerprint(pattern)
+    ranking = rank_candidates(fingerprint, library,
                               names={m["id"]: m["name"] for m in
                                      lib_payload["materials"]},
                               families={m["id"]: m["phase_family"] for m in
                                         lib_payload["materials"]})
     verdict = decide(ranking, resolution)
+
+    cod_screen = None
+    if full_cod:
+        try:
+            from core.codsearch import screen_cod
+            cod_screen = screen_cod(fingerprint)
+        except FileNotFoundError as exc:
+            print(f"warning: full-COD screen skipped ({exc})",
+                  file=sys.stderr)
+        except Exception as exc:               # noqa: BLE001 -- screen must
+            print(f"warning: full-COD screen failed ({exc})", file=sys.stderr)
 
     evidence = {}
     if verification and verdict.status == "supported" and ranking.ranked:
@@ -193,7 +206,8 @@ def analyze(xrdml_path: str, registry_path: str = str(DEFAULT_REGISTRY),
         resolution=resolution, ranking=ranking, verdict=verdict,
         library_manifest=lib_payload.get("manifest_sha256", "")[:12],
         artifact_path=output_path,
-        verification=evidence or None)
+        verification=evidence or None,
+        cod_screen=cod_screen)
     return bundle
 
 
@@ -215,6 +229,10 @@ def main(argv=None) -> int:
     p.add_argument("--library", default=str(DEFAULT_LIBRARY))
     p.add_argument("--no-verification", action="store_true",
                    help="skip the bounded Rietveld verification stage")
+    p.add_argument("--full-cod", action="store_true",
+                   help="also screen the fingerprint against the COMPLETE "
+                        "COD line index (core.codsearch; requires "
+                        "`make cod-index`)")
     p.add_argument("-v", "--verbose", action="store_true")
 
     args = ap.parse_args(argv)
@@ -223,13 +241,19 @@ def main(argv=None) -> int:
 
     out = args.output or f"{args.xrdml}.bundle.json"
     bundle = analyze(args.xrdml, args.registry, args.library, out,
-                     verification=not args.no_verification)
+                     verification=not args.no_verification,
+                     full_cod=args.full_cod)
     Path(out).parent.mkdir(parents=True, exist_ok=True)
     Path(out).write_text(json.dumps(bundle, indent=2))
 
     print(f"run_id      : {bundle['run_id']}")
     print(f"status      : {bundle['status']}")
     print(f"verdict     : {bundle['verdicts'][0]['status'] if bundle['verdicts'] else 'abstain'}")
+    if bundle.get("cod_screen"):
+        top = bundle["cod_screen"]["top"][0]
+        print(f"full-COD    : {bundle['cod_screen']['index_entries']} entries "
+              f"screened; top COD {top['cod_id']} "
+              f"({(top.get('formula') or '')[:28]}) sig={top['significance']}")
     if bundle.get("verification"):
         v = bundle["verification"]
         print(f"verified    : {v['confirmed_family']} "
