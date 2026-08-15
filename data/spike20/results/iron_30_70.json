@@ -1,0 +1,1218 @@
+{
+  "hypothesis": [
+    {
+      "cod_id": 1011245,
+      "canon": "ferrite",
+      "score": 0.0062,
+      "mineral": "Magnesioferrite"
+    },
+    {
+      "cod_id": 1526209,
+      "canon": null,
+      "score": 0.7449,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1533677,
+      "canon": null,
+      "score": 0.8506,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1533482,
+      "canon": null,
+      "score": 0.0062,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1006116,
+      "canon": null,
+      "score": 0.0064,
+      "mineral": "Trevorite"
+    },
+    {
+      "cod_id": 1010130,
+      "canon": null,
+      "score": 0.0065,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1011241,
+      "canon": "ferrite",
+      "score": 0.0068,
+      "mineral": "Magnesioferrite"
+    },
+    {
+      "cod_id": 1001098,
+      "canon": null,
+      "score": 0.0071,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1001099,
+      "canon": null,
+      "score": 0.0072,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1530219,
+      "canon": null,
+      "score": 0.0073,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1532570,
+      "canon": null,
+      "score": 0.0074,
+      "mineral": ""
+    },
+    {
+      "cod_id": 9012916,
+      "canon": null,
+      "score": 0.0074,
+      "mineral": "Calcium"
+    },
+    {
+      "cod_id": 1522441,
+      "canon": null,
+      "score": 0.0075,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1532571,
+      "canon": null,
+      "score": 0.0076,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1523847,
+      "canon": null,
+      "score": 0.0076,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1527032,
+      "canon": null,
+      "score": 0.0076,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1523134,
+      "canon": null,
+      "score": 0.0077,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1526357,
+      "canon": null,
+      "score": 0.0077,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1527033,
+      "canon": null,
+      "score": 0.0077,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1532573,
+      "canon": null,
+      "score": 0.0078,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1526179,
+      "canon": null,
+      "score": 0.0083,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1526177,
+      "canon": null,
+      "score": 0.0084,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1007078,
+      "canon": null,
+      "score": 0.009,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1529147,
+      "canon": null,
+      "score": 0.0092,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1539778,
+      "canon": null,
+      "score": 0.0093,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1522541,
+      "canon": null,
+      "score": 0.0098,
+      "mineral": ""
+    },
+    {
+      "cod_id": 9011986,
+      "canon": null,
+      "score": 0.0098,
+      "mineral": "Potassium"
+    },
+    {
+      "cod_id": 1524813,
+      "canon": null,
+      "score": 0.0098,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1556340,
+      "canon": null,
+      "score": 0.0098,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1563201,
+      "canon": null,
+      "score": 0.0098,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1510614,
+      "canon": null,
+      "score": 0.0098,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1552465,
+      "canon": null,
+      "score": 0.0098,
+      "mineral": ""
+    },
+    {
+      "cod_id": 2018840,
+      "canon": null,
+      "score": 0.0098,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1011328,
+      "canon": null,
+      "score": 0.0099,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1512620,
+      "canon": null,
+      "score": 0.0099,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1505172,
+      "canon": null,
+      "score": 0.0099,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1505592,
+      "canon": null,
+      "score": 0.0099,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1507609,
+      "canon": null,
+      "score": 0.0099,
+      "mineral": ""
+    },
+    {
+      "cod_id": 9003531,
+      "canon": null,
+      "score": 0.0099,
+      "mineral": "Spinel"
+    },
+    {
+      "cod_id": 1509384,
+      "canon": null,
+      "score": 0.0099,
+      "mineral": ""
+    },
+    {
+      "cod_id": 2009531,
+      "canon": null,
+      "score": 0.0099,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1573536,
+      "canon": null,
+      "score": 0.0099,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1526186,
+      "canon": null,
+      "score": 0.0099,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1514079,
+      "canon": null,
+      "score": 0.0099,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1526183,
+      "canon": null,
+      "score": 0.0099,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1538521,
+      "canon": null,
+      "score": 0.0099,
+      "mineral": ""
+    },
+    {
+      "cod_id": 9016806,
+      "canon": "magnetite",
+      "score": 0.0099,
+      "mineral": "Magnetite"
+    },
+    {
+      "cod_id": 1515804,
+      "canon": null,
+      "score": 0.0099,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1541403,
+      "canon": null,
+      "score": 0.0099,
+      "mineral": ""
+    },
+    {
+      "cod_id": 2300280,
+      "canon": null,
+      "score": 0.0099,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1522789,
+      "canon": null,
+      "score": 0.0099,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1537747,
+      "canon": null,
+      "score": 0.0099,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1010107,
+      "canon": null,
+      "score": 0.0099,
+      "mineral": ""
+    },
+    {
+      "cod_id": 9016805,
+      "canon": "magnetite",
+      "score": 0.0099,
+      "mineral": "Magnetite"
+    },
+    {
+      "cod_id": 1533785,
+      "canon": null,
+      "score": 0.0099,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1522479,
+      "canon": null,
+      "score": 0.0099,
+      "mineral": ""
+    },
+    {
+      "cod_id": 2100023,
+      "canon": null,
+      "score": 0.0099,
+      "mineral": ""
+    },
+    {
+      "cod_id": 9005824,
+      "canon": null,
+      "score": 0.0099,
+      "mineral": "Ahrensite"
+    },
+    {
+      "cod_id": 9006901,
+      "canon": null,
+      "score": 0.0099,
+      "mineral": "Franklinite"
+    },
+    {
+      "cod_id": 1526267,
+      "canon": null,
+      "score": 0.0099,
+      "mineral": ""
+    },
+    {
+      "cod_id": 9002322,
+      "canon": "magnetite",
+      "score": 0.0099,
+      "mineral": "Magnetite"
+    },
+    {
+      "cod_id": 9010941,
+      "canon": "magnetite",
+      "score": 0.0099,
+      "mineral": "Magnetite"
+    },
+    {
+      "cod_id": 9006902,
+      "canon": null,
+      "score": 0.0099,
+      "mineral": "Franklinite"
+    },
+    {
+      "cod_id": 9004944,
+      "canon": null,
+      "score": 0.0099,
+      "mineral": "Magnesiochromite"
+    },
+    {
+      "cod_id": 5910320,
+      "canon": null,
+      "score": 0.0099,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1526270,
+      "canon": null,
+      "score": 0.0099,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1570632,
+      "canon": null,
+      "score": 0.0099,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1528473,
+      "canon": null,
+      "score": 0.0099,
+      "mineral": ""
+    },
+    {
+      "cod_id": 2005566,
+      "canon": null,
+      "score": 0.0099,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1543445,
+      "canon": null,
+      "score": 0.0099,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1569517,
+      "canon": null,
+      "score": 0.0099,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1565718,
+      "canon": null,
+      "score": 0.0099,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1514004,
+      "canon": null,
+      "score": 0.0099,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1547008,
+      "canon": null,
+      "score": 0.0099,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1555120,
+      "canon": null,
+      "score": 0.0099,
+      "mineral": ""
+    },
+    {
+      "cod_id": 9005935,
+      "canon": null,
+      "score": 0.0099,
+      "mineral": "Alabandite"
+    },
+    {
+      "cod_id": 9002323,
+      "canon": "magnetite",
+      "score": 0.0099,
+      "mineral": "Magnetite"
+    },
+    {
+      "cod_id": 1553552,
+      "canon": null,
+      "score": 0.0099,
+      "mineral": ""
+    },
+    {
+      "cod_id": 2010939,
+      "canon": null,
+      "score": 0.0099,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1515808,
+      "canon": null,
+      "score": 0.0099,
+      "mineral": ""
+    },
+    {
+      "cod_id": 2007454,
+      "canon": null,
+      "score": 0.0099,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1505443,
+      "canon": null,
+      "score": 0.0099,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1575885,
+      "canon": null,
+      "score": 0.0099,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1565783,
+      "canon": null,
+      "score": 0.0099,
+      "mineral": ""
+    },
+    {
+      "cod_id": 2007390,
+      "canon": null,
+      "score": 0.0099,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1505758,
+      "canon": null,
+      "score": 0.0099,
+      "mineral": ""
+    },
+    {
+      "cod_id": 2103334,
+      "canon": null,
+      "score": 0.0099,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1506810,
+      "canon": null,
+      "score": 0.0099,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1505657,
+      "canon": null,
+      "score": 0.0099,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1517992,
+      "canon": null,
+      "score": 0.0099,
+      "mineral": ""
+    },
+    {
+      "cod_id": 2101967,
+      "canon": null,
+      "score": 0.0099,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1508200,
+      "canon": null,
+      "score": 0.0099,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1543562,
+      "canon": null,
+      "score": 0.0099,
+      "mineral": ""
+    },
+    {
+      "cod_id": 2015883,
+      "canon": null,
+      "score": 0.0099,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1520013,
+      "canon": null,
+      "score": 0.0099,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1513670,
+      "canon": null,
+      "score": 0.0099,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1555046,
+      "canon": null,
+      "score": 0.0099,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1549092,
+      "canon": null,
+      "score": 0.0099,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1548706,
+      "canon": null,
+      "score": 0.0099,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1547111,
+      "canon": null,
+      "score": 0.0099,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1550001,
+      "canon": null,
+      "score": 0.0099,
+      "mineral": ""
+    },
+    {
+      "cod_id": 9012446,
+      "canon": null,
+      "score": 0.0099,
+      "mineral": "Hercynite"
+    },
+    {
+      "cod_id": 9006924,
+      "canon": null,
+      "score": 0.0099,
+      "mineral": ""
+    },
+    {
+      "cod_id": 2005235,
+      "canon": null,
+      "score": 0.0099,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1507589,
+      "canon": null,
+      "score": 0.0099,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1549762,
+      "canon": null,
+      "score": 0.0099,
+      "mineral": ""
+    },
+    {
+      "cod_id": 2005395,
+      "canon": null,
+      "score": 0.0099,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1503229,
+      "canon": null,
+      "score": 0.0099,
+      "mineral": ""
+    },
+    {
+      "cod_id": 2005232,
+      "canon": null,
+      "score": 0.0099,
+      "mineral": ""
+    },
+    {
+      "cod_id": 2008980,
+      "canon": null,
+      "score": 0.0099,
+      "mineral": ""
+    },
+    {
+      "cod_id": 2004582,
+      "canon": null,
+      "score": 0.0099,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1526211,
+      "canon": null,
+      "score": 0.7555,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1011032,
+      "canon": "magnetite",
+      "score": 0.7567,
+      "mineral": "Magnetite"
+    },
+    {
+      "cod_id": 1526272,
+      "canon": null,
+      "score": 0.7668,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1526942,
+      "canon": null,
+      "score": 0.8293,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1526359,
+      "canon": null,
+      "score": 0.8298,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1526929,
+      "canon": null,
+      "score": 0.83,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1530653,
+      "canon": null,
+      "score": 0.8323,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1521649,
+      "canon": null,
+      "score": 0.8466,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1521648,
+      "canon": null,
+      "score": 0.8469,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1538141,
+      "canon": null,
+      "score": 0.8569,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1526268,
+      "canon": null,
+      "score": 0.8678,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1011030,
+      "canon": null,
+      "score": 0.8713,
+      "mineral": "Nichromite"
+    },
+    {
+      "cod_id": 1526192,
+      "canon": null,
+      "score": 0.8732,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1526271,
+      "canon": null,
+      "score": 0.8778,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1526439,
+      "canon": null,
+      "score": 0.8852,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1526185,
+      "canon": null,
+      "score": 0.8913,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1526188,
+      "canon": null,
+      "score": 0.893,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1011278,
+      "canon": null,
+      "score": 0.9028,
+      "mineral": "Zincochromite"
+    },
+    {
+      "cod_id": 1001155,
+      "canon": null,
+      "score": 0.9081,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1521297,
+      "canon": null,
+      "score": 0.9265,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1000256,
+      "canon": null,
+      "score": 0.9317,
+      "mineral": ""
+    },
+    {
+      "cod_id": 9008892,
+      "canon": null,
+      "score": 0.9496,
+      "mineral": "Sorosite"
+    },
+    {
+      "cod_id": 1000377,
+      "canon": null,
+      "score": 0.96,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1000459,
+      "canon": null,
+      "score": 0.9611,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1001448,
+      "canon": null,
+      "score": 0.9613,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1000128,
+      "canon": null,
+      "score": 0.9616,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1001440,
+      "canon": null,
+      "score": 0.962,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1005031,
+      "canon": null,
+      "score": 0.9623,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1001656,
+      "canon": null,
+      "score": 0.9629,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1000136,
+      "canon": null,
+      "score": 0.9634,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1001748,
+      "canon": null,
+      "score": 0.9642,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1000364,
+      "canon": null,
+      "score": 0.9644,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1000006,
+      "canon": null,
+      "score": 0.9647,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1007156,
+      "canon": null,
+      "score": 0.965,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1000435,
+      "canon": null,
+      "score": 0.9652,
+      "mineral": "Spheniscidite"
+    },
+    {
+      "cod_id": 1001554,
+      "canon": null,
+      "score": 0.9652,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1000284,
+      "canon": null,
+      "score": 0.9654,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1000094,
+      "canon": null,
+      "score": 0.9655,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1001560,
+      "canon": null,
+      "score": 0.9657,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1007086,
+      "canon": null,
+      "score": 0.9657,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1001635,
+      "canon": null,
+      "score": 0.9658,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1000489,
+      "canon": null,
+      "score": 0.966,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1007172,
+      "canon": null,
+      "score": 0.966,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1007019,
+      "canon": null,
+      "score": 0.966,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1004042,
+      "canon": null,
+      "score": 0.966,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1001338,
+      "canon": null,
+      "score": 0.9661,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1538014,
+      "canon": null,
+      "score": 0.9661,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1004151,
+      "canon": null,
+      "score": 0.9661,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1007210,
+      "canon": null,
+      "score": 0.9661,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1001410,
+      "canon": null,
+      "score": 0.9662,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1000440,
+      "canon": null,
+      "score": 0.9662,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1001544,
+      "canon": null,
+      "score": 0.9662,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1000004,
+      "canon": null,
+      "score": 0.9663,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1001614,
+      "canon": null,
+      "score": 0.9663,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1007196,
+      "canon": null,
+      "score": 0.9663,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1007063,
+      "canon": null,
+      "score": 0.9663,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1007154,
+      "canon": null,
+      "score": 0.9663,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1000510,
+      "canon": null,
+      "score": 0.9664,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1007134,
+      "canon": null,
+      "score": 0.9664,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1000346,
+      "canon": null,
+      "score": 0.9664,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1005051,
+      "canon": null,
+      "score": 0.9664,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1007011,
+      "canon": null,
+      "score": 0.9664,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1007227,
+      "canon": null,
+      "score": 0.9664,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1007044,
+      "canon": null,
+      "score": 0.9665,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1007143,
+      "canon": null,
+      "score": 0.9665,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1004033,
+      "canon": null,
+      "score": 0.9665,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1001815,
+      "canon": null,
+      "score": 0.9665,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1007032,
+      "canon": null,
+      "score": 0.9665,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1004112,
+      "canon": null,
+      "score": 0.9665,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1004148,
+      "canon": null,
+      "score": 0.9665,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1001683,
+      "canon": null,
+      "score": 0.9665,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1001326,
+      "canon": null,
+      "score": 0.9665,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1004121,
+      "canon": null,
+      "score": 0.9665,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1001808,
+      "canon": null,
+      "score": 0.9665,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1000072,
+      "canon": null,
+      "score": 0.9665,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1004144,
+      "canon": null,
+      "score": 0.9665,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1007147,
+      "canon": null,
+      "score": 0.9665,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1001754,
+      "canon": null,
+      "score": 0.9665,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1000389,
+      "canon": null,
+      "score": 0.9665,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1004030,
+      "canon": null,
+      "score": 0.9665,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1000390,
+      "canon": null,
+      "score": 0.9665,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1000506,
+      "canon": null,
+      "score": 0.9666,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1004041,
+      "canon": null,
+      "score": 0.9666,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1541597,
+      "canon": null,
+      "score": 0.8705,
+      "mineral": ""
+    },
+    {
+      "cod_id": 5910012,
+      "canon": null,
+      "score": 0.8751,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1541567,
+      "canon": null,
+      "score": 0.8759,
+      "mineral": ""
+    },
+    {
+      "cod_id": 2300282,
+      "canon": null,
+      "score": 0.8763,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1538459,
+      "canon": null,
+      "score": 0.8771,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1533910,
+      "canon": null,
+      "score": 0.8843,
+      "mineral": ""
+    }
+  ],
+  "phases": [
+    {
+      "name": "p9002323",
+      "canon": "magnetite",
+      "wt": 100.0
+    }
+  ],
+  "rwp": 5.07,
+  "gate": false,
+  "gaps": [
+    "hematite: MISSING (truth 31.8)",
+    "magnetite: 100.0 vs 68.2 (\u0394=+31.8)"
+  ],
+  "time_s": 26314.0
+}

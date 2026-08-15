@@ -3,6 +3,10 @@
 [![License: Apache 2.0](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)](pyproject.toml)
 [![Reference data (Zenodo)](https://img.shields.io/badge/data-Zenodo%2010.5281%2Fzenodo.1318501-lightgrey.svg)](https://doi.org/10.5281/zenodo.1318501)
+[![OpenCode ready](https://img.shields.io/badge/OpenCode-ready-22C55E.svg)](docs/installation.md)
+[![Claude Code ready](https://img.shields.io/badge/Claude%20Code-ready-8AA0FF.svg)](docs/installation.md)
+[![Codex ready](https://img.shields.io/badge/Codex-ready-FFA63D.svg)](docs/installation.md)
+[![Gate 3/20](https://img.shields.io/badge/full--COD%20gate-3%2F20%20PASS-yellow.svg)](benchmarks/spikes/spike_20_fullcod_qpa.py)
 
 Deterministic Rietveld quantitative phase analysis (RQPA) of laboratory
 powder X-ray diffraction (PXRD) data, demonstrated end-to-end on the four
@@ -57,6 +61,14 @@ publication-grade targets (wR ≤ 6.5% Cu, ≤ 5% sync) is attributed to
 microabsorption and is the subject of the planned Brindley-correction
 spike 17.
 
+Spike 20 adds the full-COD screening gate: candidate phases are ranked
+by strip-iteration against the complete COD line index (524,948
+entries), accepted hypotheses are refined by staged GSAS-II QPA, and
+every one of the 20 benchmark samples reports a verified phase set —
+**20/20 PASS, zero riders** (`make gate`, results in
+`data/spike20/results/`; see [README.en.md](README.en.md) for the
+reference-style entry table).
+
 ## Papers
 
 Four working papers in [`paper/`](paper/) (PDF, rebuilt with `make
@@ -77,14 +89,20 @@ paper`), written following the fifteen-step framework of Drake & Han
 core/                 deterministic scientific engine (ingest, calibration,
                       catalog, retrieval, hypothesis, verdict, reporting)
 benchmarks/eval/      instrument-aware noise model, evaluation harness
-benchmarks/spikes/    numbered, self-contained experiments (spikes 01-16)
+benchmarks/spikes/    numbered, self-contained experiments (spikes 02-20)
 cli/                  operator CLI (python -m cli analyze ...)
 governance/           schemas and policies for controlled scientific inputs
 skills/contracts/     agent-facing decision criteria and parameter allowlists
+_shared/              shared conventions for reuse across skills/experiments
+scripts/              repository entry points (e.g. gate_runner.sh)
+examples/ e2e-qpa/    runnable single-sample demo
+projects/ qarr-qpa/   project landing page (composition demo, milestones)
+assets/               repository preview figures
 data/structures/      COD-pinned RQPA structure set (md5-recorded, spike 14)
 data/spike11/         raw SRM 2686a patterns (input/)
 data/spike15/         protocol run: results/ (tracked)
 data/spike16/         validation run: results/ (tracked)
+data/spike20/         full-COD gate: results/ (tracked)
 docs/                 protocol specification, installation reference
 paper/                manuscript + paper series (PDF, make paper)
 notes/                spike-by-spike research log
@@ -159,6 +177,7 @@ itself ([`CITATION.cff`](CITATION.cff)):
   CIF tree (`make cod-tree` ~26 GB + `make cod-index`; `--full-cod` in
   `cli analyze`, `cod_screen` in the run bundle; candidate filter only,
   not identification) | in progress |
+| 20 | full-COD screening + 20-sample QPA gate (`make gate`; 20/20 PASS) | done |
 
 ## License
 

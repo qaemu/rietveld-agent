@@ -1,0 +1,295 @@
+{
+  "hypothesis": [
+    {
+      "cod_id": 1537895,
+      "canon": null,
+      "score": 0.6581,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1000043,
+      "canon": "fluorite",
+      "score": 0.6553,
+      "mineral": "Fluorite"
+    },
+    {
+      "cod_id": 1527031,
+      "canon": null,
+      "score": 0.7428,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1522380,
+      "canon": null,
+      "score": 0.6664,
+      "mineral": ""
+    },
+    {
+      "cod_id": 2300113,
+      "canon": null,
+      "score": 0.6795,
+      "mineral": ""
+    },
+    {
+      "cod_id": 2107059,
+      "canon": null,
+      "score": 0.6799,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1522476,
+      "canon": null,
+      "score": 0.6863,
+      "mineral": ""
+    },
+    {
+      "cod_id": 9004181,
+      "canon": "zincite",
+      "score": 0.6868,
+      "mineral": "Zincite"
+    },
+    {
+      "cod_id": 9004179,
+      "canon": "zincite",
+      "score": 0.6872,
+      "mineral": "Zincite"
+    },
+    {
+      "cod_id": 1577381,
+      "canon": null,
+      "score": 0.6872,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1533020,
+      "canon": null,
+      "score": 0.6881,
+      "mineral": ""
+    },
+    {
+      "cod_id": 9013107,
+      "canon": null,
+      "score": 0.6988,
+      "mineral": "Silicon"
+    },
+    {
+      "cod_id": 9013108,
+      "canon": null,
+      "score": 0.6989,
+      "mineral": "Silicon"
+    },
+    {
+      "cod_id": 9011662,
+      "canon": "zincite",
+      "score": 0.7037,
+      "mineral": "Zincite"
+    },
+    {
+      "cod_id": 9008877,
+      "canon": "zincite",
+      "score": 0.7037,
+      "mineral": "Zincite"
+    },
+    {
+      "cod_id": 4507226,
+      "canon": null,
+      "score": 0.7048,
+      "mineral": ""
+    },
+    {
+      "cod_id": 9013102,
+      "canon": null,
+      "score": 0.7048,
+      "mineral": "Silicon"
+    },
+    {
+      "cod_id": 9008565,
+      "canon": null,
+      "score": 0.7048,
+      "mineral": "Silicon"
+    },
+    {
+      "cod_id": 9008566,
+      "canon": null,
+      "score": 0.7048,
+      "mineral": "Silicon"
+    },
+    {
+      "cod_id": 9011998,
+      "canon": null,
+      "score": 0.7048,
+      "mineral": "Silicon"
+    },
+    {
+      "cod_id": 2104737,
+      "canon": null,
+      "score": 0.7048,
+      "mineral": "Silicon"
+    },
+    {
+      "cod_id": 9013103,
+      "canon": null,
+      "score": 0.7049,
+      "mineral": "Silicon"
+    },
+    {
+      "cod_id": 9013104,
+      "canon": null,
+      "score": 0.705,
+      "mineral": "Silicon"
+    },
+    {
+      "cod_id": 9013105,
+      "canon": null,
+      "score": 0.705,
+      "mineral": "Silicon"
+    },
+    {
+      "cod_id": 2300450,
+      "canon": "zincite",
+      "score": 0.7067,
+      "mineral": "zincite"
+    },
+    {
+      "cod_id": 9004178,
+      "canon": "zincite",
+      "score": 0.707,
+      "mineral": "Zincite"
+    },
+    {
+      "cod_id": 2300112,
+      "canon": null,
+      "score": 0.7071,
+      "mineral": ""
+    },
+    {
+      "cod_id": 9004180,
+      "canon": "zincite",
+      "score": 0.7072,
+      "mineral": "Zincite"
+    },
+    {
+      "cod_id": 1524486,
+      "canon": null,
+      "score": 0.7129,
+      "mineral": ""
+    },
+    {
+      "cod_id": 9013059,
+      "canon": null,
+      "score": 0.7285,
+      "mineral": "Magnesium"
+    },
+    {
+      "cod_id": 9013061,
+      "canon": null,
+      "score": 0.7393,
+      "mineral": "Magnesium"
+    },
+    {
+      "cod_id": 9013060,
+      "canon": null,
+      "score": 0.7396,
+      "mineral": "Magnesium"
+    },
+    {
+      "cod_id": 9013106,
+      "canon": null,
+      "score": 0.7467,
+      "mineral": "Silicon"
+    },
+    {
+      "cod_id": 1523058,
+      "canon": null,
+      "score": 0.7539,
+      "mineral": ""
+    },
+    {
+      "cod_id": 9008523,
+      "canon": "zircon",
+      "score": 0.7558,
+      "mineral": "Zirconium"
+    },
+    {
+      "cod_id": 1011258,
+      "canon": "zincite",
+      "score": 0.7847,
+      "mineral": "Zincite"
+    },
+    {
+      "cod_id": 9012914,
+      "canon": null,
+      "score": 0.7906,
+      "mineral": "Hydrogen"
+    },
+    {
+      "cod_id": 9012915,
+      "canon": null,
+      "score": 0.7958,
+      "mineral": "Hydrogen"
+    },
+    {
+      "cod_id": 9013058,
+      "canon": null,
+      "score": 0.7963,
+      "mineral": "Magnesium"
+    },
+    {
+      "cod_id": 1537981,
+      "canon": null,
+      "score": 0.8014,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1538072,
+      "canon": null,
+      "score": 0.8058,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1523071,
+      "canon": null,
+      "score": 0.8068,
+      "mineral": ""
+    },
+    {
+      "cod_id": 4104917,
+      "canon": null,
+      "score": 0.8326,
+      "mineral": ""
+    },
+    {
+      "cod_id": 2102763,
+      "canon": null,
+      "score": 0.8788,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1000346,
+      "canon": null,
+      "score": 0.8832,
+      "mineral": ""
+    }
+  ],
+  "phases": [
+    {
+      "name": "p2300448",
+      "canon": "corundum",
+      "wt": 37.33
+    },
+    {
+      "name": "p1000043",
+      "canon": "fluorite",
+      "wt": 33.77
+    },
+    {
+      "name": "p2300450",
+      "canon": "zincite",
+      "wt": 28.9
+    }
+  ],
+  "rwp": 38.57,
+  "gate": true,
+  "gaps": [],
+  "time_s": 1905.6
+}

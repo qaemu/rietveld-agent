@@ -1,0 +1,295 @@
+{
+  "hypothesis": [
+    {
+      "cod_id": 9013107,
+      "canon": null,
+      "score": 0.4296,
+      "mineral": "Silicon"
+    },
+    {
+      "cod_id": 1539632,
+      "canon": null,
+      "score": 0.3788,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1539633,
+      "canon": null,
+      "score": 0.6094,
+      "mineral": ""
+    },
+    {
+      "cod_id": 9013108,
+      "canon": null,
+      "score": 0.4298,
+      "mineral": "Silicon"
+    },
+    {
+      "cod_id": 1000043,
+      "canon": "fluorite",
+      "score": 0.4318,
+      "mineral": "Fluorite"
+    },
+    {
+      "cod_id": 1523903,
+      "canon": null,
+      "score": 0.455,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1526204,
+      "canon": null,
+      "score": 0.4679,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1517676,
+      "canon": null,
+      "score": 0.4753,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1528903,
+      "canon": null,
+      "score": 0.4811,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1528902,
+      "canon": null,
+      "score": 0.4818,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1528900,
+      "canon": null,
+      "score": 0.4858,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1528901,
+      "canon": null,
+      "score": 0.5111,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1011233,
+      "canon": null,
+      "score": 0.5452,
+      "mineral": "Sphalerite (F"
+    },
+    {
+      "cod_id": 4507226,
+      "canon": null,
+      "score": 0.5509,
+      "mineral": ""
+    },
+    {
+      "cod_id": 9013102,
+      "canon": null,
+      "score": 0.5509,
+      "mineral": "Silicon"
+    },
+    {
+      "cod_id": 9008565,
+      "canon": null,
+      "score": 0.5509,
+      "mineral": "Silicon"
+    },
+    {
+      "cod_id": 9008566,
+      "canon": null,
+      "score": 0.5509,
+      "mineral": "Silicon"
+    },
+    {
+      "cod_id": 9011998,
+      "canon": null,
+      "score": 0.5509,
+      "mineral": "Silicon"
+    },
+    {
+      "cod_id": 2104737,
+      "canon": null,
+      "score": 0.5509,
+      "mineral": "Silicon"
+    },
+    {
+      "cod_id": 9013103,
+      "canon": null,
+      "score": 0.5511,
+      "mineral": "Silicon"
+    },
+    {
+      "cod_id": 9013104,
+      "canon": null,
+      "score": 0.5512,
+      "mineral": "Silicon"
+    },
+    {
+      "cod_id": 9013105,
+      "canon": null,
+      "score": 0.5513,
+      "mineral": "Silicon"
+    },
+    {
+      "cod_id": 1523225,
+      "canon": null,
+      "score": 0.5805,
+      "mineral": ""
+    },
+    {
+      "cod_id": 9013106,
+      "canon": null,
+      "score": 0.5892,
+      "mineral": "Silicon"
+    },
+    {
+      "cod_id": 1533205,
+      "canon": null,
+      "score": 0.5934,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1010387,
+      "canon": null,
+      "score": 0.6057,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1526349,
+      "canon": null,
+      "score": 0.6197,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1534847,
+      "canon": null,
+      "score": 0.6431,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1524037,
+      "canon": null,
+      "score": 0.6721,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1532038,
+      "canon": null,
+      "score": 0.6835,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1527342,
+      "canon": null,
+      "score": 0.7392,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1525302,
+      "canon": null,
+      "score": 0.771,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1508974,
+      "canon": null,
+      "score": 0.7727,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1523125,
+      "canon": null,
+      "score": 0.7729,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1537849,
+      "canon": null,
+      "score": 0.7913,
+      "mineral": ""
+    },
+    {
+      "cod_id": 4104917,
+      "canon": null,
+      "score": 0.7921,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1011301,
+      "canon": null,
+      "score": 0.8315,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1527138,
+      "canon": null,
+      "score": 0.8317,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1509114,
+      "canon": null,
+      "score": 0.8368,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1521794,
+      "canon": null,
+      "score": 0.8374,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1534422,
+      "canon": null,
+      "score": 0.8528,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1537715,
+      "canon": null,
+      "score": 0.8533,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1509451,
+      "canon": null,
+      "score": 0.854,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1522499,
+      "canon": null,
+      "score": 0.8563,
+      "mineral": ""
+    },
+    {
+      "cod_id": 1532039,
+      "canon": null,
+      "score": 0.8646,
+      "mineral": ""
+    }
+  ],
+  "phases": [
+    {
+      "name": "p1000043",
+      "canon": "fluorite",
+      "wt": 94.7
+    },
+    {
+      "name": "p2300450",
+      "canon": "zincite",
+      "wt": 3.71
+    },
+    {
+      "name": "p2300448",
+      "canon": "corundum",
+      "wt": 1.59
+    }
+  ],
+  "rwp": 42.85,
+  "gate": true,
+  "gaps": [],
+  "time_s": 3230.2
+}
