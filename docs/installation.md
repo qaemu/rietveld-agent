@@ -19,7 +19,7 @@ on first use. No other network access is needed after clone.
 
 ```bash
 git clone https://github.com/qaemu/rietveld-agent
-cd rietveld-agent-spikes
+cd rietveld-agent
 ```
 
 ## 2. Choose your runtime

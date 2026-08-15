@@ -217,7 +217,7 @@ def main(argv=None) -> int:
     if ROOT is None:
         ap.error(
             "repository data not found: run rietveld-agent from inside a "
-            "clone of github.com/qaemu/rietveld-agent-spikes"
+            "clone of github.com/qaemu/rietveld-agent"
         )
     sub = ap.add_subparsers(dest="command", required=True)
 
