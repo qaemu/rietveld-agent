@@ -8,18 +8,24 @@ the repository does not use semantic version tags yet (see
 
 ## [Unreleased]
 
+### Changed
+- Spike-18/19/20 unified into one maintained module: the full-COD
+  screening gate now lives in `benchmarks/qpa_gate/qpa_gate.py` with
+  `benchmarks/qpa_gate/aggregate.py` (results under `data/qpa_gate/`);
+  `notes/spike18.md` removed (its codsearch design notes live with
+  `core/codsearch.py`); the repository landing pages (`README.md`,
+  `README.en.md`) no longer expose the spike numbering.
+
 ### Added
-- `benchmarks/spikes/spike_20_fullcod_qpa.py` — full-COD screening and
-  QPA gate harness: 20-sample manifest (qarr 1a-1h + 2/3/4 + bauxite,
+- `benchmarks/qpa_gate/qpa_gate.py` — full-COD screening and QPA gate
+  harness: 20-sample manifest (qarr 1a-1h + 2/3/4 + bauxite,
   iron oxide 30/70-50/50-70/30 + Mexican magnetite, SRM 2686a clinker
   suite), strip-based screening, staged GSAS-II refinement, verifiable
-  gate verdicts.
+  gate verdicts; `benchmarks/qpa_gate/aggregate.py` re-verifies the
+  result jsons against the current gate policy.
 - `core/codsearch.py` — line-index search over the complete COD CIF tree
   (`make cod-tree` / `make cod-index`).
-- `benchmarks/spikes/spike_20_gsas_qpa_new.py` — GSAS-II staged QPA
-  driver used by the spike-20 gate.
 - `tests/test_cod_full.py` — regression tests for the full-COD path.
-- `notes/spike18.md` — research log for the complete-COD screening spike.
 - `data/benchmark/` — benchmark pattern corpus (qarr synthetic QPA set,
   iron oxide mixtures, SRM 2686a inputs).
 - Repository restyled to the Light-skills layout: `_shared/`,

@@ -1,7 +1,7 @@
 # e2e QPA demo
 
 Minimal end-to-end run of a single quantitative phase analysis from a
-raw pattern to the verified gate verdict, using the spike-20 full-COD
+raw pattern to the verified gate verdict, using the full-COD gate
 harness (screening over the complete COD line index + staged GSAS-II
 QPA).
 
@@ -18,7 +18,7 @@ fluorite (truth: 1.15 / 4.04 / 94.81 wt%, normalized). Expected flow:
    (524,948 entries), zincite + fluorite family recovered first;
 2. staged GSAS-II QPA of the accepted hypothesis;
 3. gate verdict printed for the sample and written to
-   `data/spike20/results/qarr_1a.json`.
+   `data/qpa_gate/results/qarr_1a.json`.
 
 ## Expected output shape
 
@@ -28,7 +28,7 @@ qarr_1a: [('corundum', 1.2), ('zincite', 4.0), ('fluorite', 94.6)] rwp=… → P
 ```
 
 Phase names are canonical mineral keys (see `PHASE_CANON` in
-`benchmarks/spikes/spike_20_fullcod_qpa.py` and the contracts under
+`benchmarks/qpa_gate/qpa_gate.py` and the contracts under
 `skills/contracts/`); normalized wt% are reported.
 
 ## Prerequisites

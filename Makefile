@@ -51,7 +51,7 @@ cod-index:
 ## cod-all    -- tree + index in one shot
 cod-all: cod-tree cod-index
 
-## gate       -- full-COD screening + QPA gate (spike 20, 20 samples)
+## gate       -- full-COD screening + QPA gate (20-sample manifest)
 gate:
 	./scripts/gate_runner.sh
 

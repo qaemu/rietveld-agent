@@ -1,4 +1,4 @@
-"""Spike 20: FULL-COD exhaustive QPA — 20 published multi-phase datasets.
+"""Full-COD exhaustive QPA gate — 20 published multi-phase datasets.
 
 End-to-end: raw powder data -> fingerprint -> exhaustive COD geometry
 screen (the complete ~530k-entry COD index, no curated guess list, no
@@ -48,8 +48,8 @@ from spike_12_cod_full import (          # noqa: E402
     load_pattern,
 )
 
-WORK = ROOT / "data" / "spike20" / "work"
-OUT = ROOT / "data" / "spike20" / "results"
+WORK = ROOT / "data" / "qpa_gate" / "work"
+OUT = ROOT / "data" / "qpa_gate" / "results"
 CSV = ROOT / "data" / "cod_index" / "cod_metadata_full.csv"
 IDX_NPZ = ROOT / "data" / "cod_index" / "cod_full_v1.npz"
 IDX_JSON = ROOT / "data" / "cod_index" / "cod_full_v1.meta.json"
@@ -676,7 +676,7 @@ def screen_and_rank(pat, entries, cod_ids, d_units, entry_of, metas_by_id,
 
 
 # ----------------------------------------------------------------------------
-# step 2: staged GSAS-II RQPA (spike-15 protocol: scales -> cells -> shapes,
+# step 2: staged GSAS-II RQPA (protocol: scales -> cells -> shapes,
 # lst-parsed convergence, Hill-Howard extraction)
 # ----------------------------------------------------------------------------
 BKG_COEFFS = 8
@@ -693,7 +693,7 @@ def cell_volume(cell6) -> float:
 
 def _clone_prm(sample: str, work: Path, tag: str, a1: float, a2: float,
                ratio: float, sync: bool = False) -> Path:
-    """Clone the spike-16 protocol PRM for the sample geometry and patch the
+    """Clone the staged-protocol PRM for the sample geometry and patch the
     wavelengths/ratio (GSAS-II keeps the rest of the calibration)."""
     src = (ROOT / "data" / "spike16" / "work" / "INST_SYNC_PROTOCOL.PRM"
            if sync else ROOT / "data" / "spike16" / "work" /

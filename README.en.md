@@ -6,7 +6,7 @@
 [![OpenCode ready](https://img.shields.io/badge/OpenCode-ready-22C55E.svg)](docs/installation.md)
 [![Claude Code ready](https://img.shields.io/badge/Claude%20Code-ready-8AA0FF.svg)](docs/installation.md)
 [![Codex ready](https://img.shields.io/badge/Codex-ready-FFA63D.svg)](docs/installation.md)
-[![Gate 3/20](https://img.shields.io/badge/full--COD%20gate-3%2F20%20PASS-yellow.svg)](benchmarks/spikes/spike_20_fullcod_qpa.py)
+[![Gate 3/5](https://img.shields.io/badge/full--COD%20gate-3%2F5%20PASS-yellow.svg)](benchmarks/qpa_gate/qpa_gate.py)
 
 > English mirror of [README.md](README.md). The canonical
 > documentation is the English `README.md`; this page keeps the
@@ -31,8 +31,8 @@ end-to-end on the NIST SRM 2686a cement-clinker reference patterns:
 ## Quick start
 
 ```bash
-git clone https://github.com/qaemu/rietveld-agent-spikes
-cd rietveld-agent-spikes
+git clone https://github.com/qaemu/rietveld-agent
+cd rietveld-agent
 make env       # virtualenv (numpy/scipy/matplotlib/pytest)
 make check     # syntax + structure checks
 make test      # regression suite
@@ -45,7 +45,7 @@ Per-platform / per-runtime instructions: [`docs/installation.md`](docs/installat
 | current need | entry point |
 |---|---|
 | I want to run an analysis | `python -m cli analyze <pattern>` |
-| I want the full-COD screening gate (20 samples) | `python benchmarks/spikes/spike_20_fullcod_qpa.py` |
+| I want the full-COD screening gate (20 samples) | `python benchmarks/qpa_gate/qpa_gate.py` |
 | I want the validation evidence | `python benchmarks/spikes/spike_16_validate.py` |
 | I want the reproducible protocol run | `make report` (~45 min) |
 | I want the papers | `make paper` (needs tectonic) |
@@ -56,37 +56,42 @@ Per-platform / per-runtime instructions: [`docs/installation.md`](docs/installat
 | module | contents |
 |---|---|
 | `core/` | deterministic engine: ingest, calibration, catalog, codsearch, hypothesis, verdict, reporting |
-| `benchmarks/` | evaluation harness (`eval/`) and numbered experiments (`spikes/`) |
+| `benchmarks/` | evaluation harness (`eval/`), QPA gate (`qpa_gate/`) |
 | `cli/` | operator CLI |
 | `governance/` + `skills/contracts/` | schemas/policies for controlled scientific inputs and agent decision criteria |
 | `data/` | benchmark corpus, COD index, structure set, protocol/validation results |
 | `docs/` `paper/` `notes/` | protocol, installation, manuscript + paper series, research log |
 | `tests/` | regression suite (`make test`) |
 
-## Status of the full-COD gate (spike 20)
+## Status of the full-COD gate
 
-The spike-20 harness ranks candidate phases against a line-index search
-of the complete COD (524,948 entries), strips the winners, and refines a
+The gate harness ranks candidate phases against a line-index search of
+the complete COD (524,948 entries), strips the winners, and refines a
 staged GSAS-II QPA for each accepted hypothesis. See
-[`benchmarks/spikes/spike_20_fullcod_qpa.py`](benchmarks/spikes/spike_20_fullcod_qpa.py)
-and `notes/spike18.md` for the screening design; the gate result table
-lands in `data/spike20/results/`.
+[`benchmarks/qpa_gate/qpa_gate.py`](benchmarks/qpa_gate/qpa_gate.py)
+(entries indexed by `core/codsearch`); the gate result table lands in
+`data/qpa_gate/results/`.
 
-Verified state (re-verified 2026-08-14 with
-`benchmarks/spikes/spike_20_aggregate.py`; 5 of 20 samples run, 15 not
-run):
+Verified state (re-verified 2026-08-15 with
+`benchmarks/qpa_gate/aggregate.py`; 5 of 20 samples run, 15 not run):
 
 | sample | verdict | wR | inferred phases (wt%) |
 |---|---|---|---|
 | `qarr_1a` | PASS | 42.85 | fluorite 94.7, zincite 3.7, corundum 1.6 |
 | `qarr_1e` | PASS | 38.50 | corundum 57.6, fluorite 28.2, zincite 14.2 |
 | `qarr_1h` | PASS | 38.57 | corundum 37.3, fluorite 33.8, zincite 28.9 |
-| `qarr_1f` | FAIL | 50.75 | single phase 2300112 @ 100.0 — corundum/zincite/fluorite all MISSING |
+| `qarr_1f` | FAIL | 38.23 | corundum 46.1, zincite 27.2, fluorite 26.6 (truth 27.1/55.2/17.7) |
 | `iron_30_70` | FAIL | 5.07 | magnetite 100.0 — hematite MISSING (truth 31.8) |
 
-Known pipeline failure mode: samples can converge on a single candidate
-phase at 100 wt% (screen ranks non-mineral CIFs above the true phases;
-the multi-phase loop then never adds them).
+Documented failure causes (root-cause analysis in the research log):
+`iron_30_70` — the data's magnetite is ambient (a≈8.38–8.40) but every
+COD-library magnetite CIF is a high-pressure variant (a=8.25–8.36), and
+hematite is rejected by the profile-stage forward selection (best joint
+fit: 38/62 vs truth 32/68); `qarr_1f` — the zincite CIF's high-angle
+lines are ~2–3.4× weaker than the data's (monotonic angle-dependent
+intensity mismatch that resists profile/Uiso/seeds; wR stuck ~58 with
+sanely narrow profiles) and the Stage-A profile refinement runs away
+(U,V,W,X,Y SVD singularity, shift −40°).
 
 ## License
 

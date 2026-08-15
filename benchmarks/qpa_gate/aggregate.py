@@ -1,19 +1,19 @@
 #!/usr/bin/env python3
-"""Aggregate the spike-20 gate results: re-verify every sample JSON's
+"""Aggregate the QPA gate results: re-verify every sample JSON's
 phases against the CURRENT gate() (the JSONs may predate later gate
 policy, e.g. the iron-oxide isomorphism-class budgets).
 
-Usage: python3 benchmarks/spikes/spike_20_aggregate.py [results_dir]
+Usage: python3 benchmarks/qpa_gate/aggregate.py [results_dir]
 Exit 0 iff ALL samples pass."""
 import json
 import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-import spike_20_fullcod_qpa as S20
+import qpa_gate as S20
 
 OUT = Path(sys.argv[1] if len(sys.argv) > 1 else
-           "data/spike20/results")
+           "data/qpa_gate/results")
 
 
 def main() -> int:

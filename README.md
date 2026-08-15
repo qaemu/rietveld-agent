@@ -6,7 +6,7 @@
 [![OpenCode ready](https://img.shields.io/badge/OpenCode-ready-22C55E.svg)](docs/installation.md)
 [![Claude Code ready](https://img.shields.io/badge/Claude%20Code-ready-8AA0FF.svg)](docs/installation.md)
 [![Codex ready](https://img.shields.io/badge/Codex-ready-FFA63D.svg)](docs/installation.md)
-[![Gate 3/5](https://img.shields.io/badge/full--COD%20gate-3%2F5%20PASS-yellow.svg)](benchmarks/spikes/spike_20_fullcod_qpa.py)
+[![Gate 3/5](https://img.shields.io/badge/full--COD%20gate-3%2F5%20PASS-yellow.svg)](benchmarks/qpa_gate/qpa_gate.py)
 
 Deterministic Rietveld quantitative phase analysis (RQPA) of laboratory
 powder X-ray diffraction (PXRD) data, demonstrated end-to-end on the four
@@ -16,7 +16,7 @@ COD-pinned structure set, a staged and budget-bounded refinement
 protocol, the evaluation harness, and hash-locked reporting.
 
 Every reported number rebuilds from the raw patterns with `make report`,
-and the validation harness (spike 16) re-runs the whole pipeline and
+and the validation harness re-runs the whole pipeline and
 compares canonical content hashes — reproducibility is a machine-checked
 property, not a claim. The deterministic engine is runtime-agnostic:
 OpenCode, Claude Code, and Codex are interchangeable front-ends around it
@@ -25,8 +25,8 @@ OpenCode, Claude Code, and Codex are interchangeable front-ends around it
 ## Quick start
 
 ```bash
-git clone https://github.com/qaemu/rietveld-agent-spikes
-cd rietveld-agent-spikes
+git clone https://github.com/qaemu/rietveld-agent
+cd rietveld-agent
 make env          # virtualenv with numpy/scipy/matplotlib/pytest
 make check        # syntax checks
 make test         # regression suite
@@ -40,7 +40,7 @@ manual GSAS-II installation. Full per-platform, per-runtime instructions
 
 ## Results
 
-Spike 15 implements the protocol; all six refinements converge
+The protocol runner implements the staged refinement; all six refinements converge
 deterministically (same inputs → same outputs, result-JSON md5 recorded):
 
 | sample | model | wR (%) | note |
@@ -52,21 +52,20 @@ deterministically (same inputs → same outputs, result-JSON md5 recorded):
 | aluminate residue | M3 | 13.56 | all 5 phases reported (aphthitalite constraint) |
 | clinker synchrotron | M3 | **9.76** | best wR; alite absorbs |
 
-Spike 16 validates the suite: two independent full runs produce
+The validation harness checks the suite: two independent full runs produce
 bit-identical payloads (canonical md5 `f43d8be2c932420676d612242dd049a5`),
 and four synthetic known-answer patterns recover every injected phase
 within band — **4/4 samples, 24/24 phase rows** — no refinement fails,
 no phase is left indeterminate. The residual distance to the
 publication-grade targets (wR ≤ 6.5% Cu, ≤ 5% sync) is attributed to
-microabsorption and is the subject of the planned Brindley-correction
-spike 17.
+microabsorption (planned Brindley-correction work).
 
-Spike 20 adds the full-COD screening gate: candidate phases are ranked
-by strip-iteration against the complete COD line index (524,948
-entries), accepted hypotheses are refined by staged GSAS-II QPA, and
-every one of the 20 benchmark samples reports a verified phase set —
-**20/20 PASS, zero riders** (`make gate`, results in
-`data/spike20/results/`; see [README.en.md](README.en.md) for the
+The full-COD screening gate ranks candidate phases by strip-iteration
+against the complete COD line index (524,948 entries), refines the
+accepted hypotheses with staged GSAS-II QPA, and reports a verified
+phase set per benchmark sample (`make gate`; state: **3/5 PASS — 2 FAIL
+honestly documented** — `iron_30_70` and `qarr_1f`, with root causes in
+`data/qpa_gate/results/`; see [README.en.md](README.en.md) for the
 reference-style entry table).
 
 ## Papers
@@ -89,7 +88,7 @@ paper`), written following the fifteen-step framework of Drake & Han
 core/                 deterministic scientific engine (ingest, calibration,
                       catalog, retrieval, hypothesis, verdict, reporting)
 benchmarks/eval/      instrument-aware noise model, evaluation harness
-benchmarks/spikes/    numbered, self-contained experiments (spikes 02-20)
+benchmarks/qpa_gate/  full-COD screening + QPA gate (qpa_gate.py, aggregate.py)
 cli/                  operator CLI (python -m cli analyze ...)
 governance/           schemas and policies for controlled scientific inputs
 skills/contracts/     agent-facing decision criteria and parameter allowlists
@@ -98,14 +97,11 @@ scripts/              repository entry points (e.g. gate_runner.sh)
 examples/ e2e-qpa/    runnable single-sample demo
 projects/ qarr-qpa/   project landing page (composition demo, milestones)
 assets/               repository preview figures
-data/structures/      COD-pinned RQPA structure set (md5-recorded, spike 14)
-data/spike11/         raw SRM 2686a patterns (input/)
-data/spike15/         protocol run: results/ (tracked)
-data/spike16/         validation run: results/ (tracked)
-data/spike20/         full-COD gate: results/ (tracked)
+data/structures/      COD-pinned RQPA structure set (md5-recorded)
+data/qpa_gate/        full-COD gate: results/ (tracked)
 docs/                 protocol specification, installation reference
 paper/                manuscript + paper series (PDF, make paper)
-notes/                spike-by-spike research log
+notes/                research log
 tests/                regression suite (make test)
 ```
 
@@ -117,8 +113,7 @@ tests/                regression suite (make test)
 - [`docs/installation.md`](docs/installation.md) — installation per
   platform and agent runtime
 - [`AGENTS.md`](AGENTS.md) — orientation and invariants for agent runtimes
-- [`notes/`](notes/) — research log (spike 15: protocol decisions;
-  spike 16: validation)
+- [`notes/`](notes/) — research log (protocol decisions, validation)
 - [`governance/`](governance/) — schemas and policies for controlled
   scientific inputs
 
@@ -159,25 +154,25 @@ itself ([`CITATION.cff`](CITATION.cff)):
   title  = {{rietveld-agent}: a deterministic Rietveld {QPA} engine for
             scientific agent runtimes},
   year   = {2026},
-  url    = {https://github.com/qaemu/rietveld-agent-spikes}
+  url    = {https://github.com/qaemu/rietveld-agent}
 }
 ```
 
 ## Roadmap
 
-| spike | deliverable | state |
-|---|---|---|
-| 11-12 | PXRD ingest + COD catalog + synthetic simulator | done |
-| 13 | multiphase Rietveld QPA (5-phase baseline) | done |
-| 14 | published structure set (8 phases + T1), md5-locked | done |
-| 15 | publication-grade protocol runner (bounded budget) | done |
-| 16 | validation harness (reproducibility, synthetic recovery, gates) | done |
-| 17 | Brindley microabsorption corrections | planned |
-| 18 | complete-COD screening: `core.codsearch` line index over the full COD
-  CIF tree (`make cod-tree` ~26 GB + `make cod-index`; `--full-cod` in
-  `cli analyze`, `cod_screen` in the run bundle; candidate filter only,
-  not identification) | in progress |
-| 20 | full-COD screening + 20-sample QPA gate (`make gate`; 5 samples run, 3/5 PASS, 2 FAIL documented: iron_30_70, qarr_1f) | in progress |
+| deliverable | state |
+|---|---|
+| PXRD ingest + COD catalog + synthetic simulator | done |
+| multiphase Rietveld QPA (5-phase baseline) | done |
+| published structure set, md5-locked | done |
+| publication-grade protocol runner (bounded budget) | done |
+| validation harness (reproducibility, synthetic recovery, gates) | done |
+| complete-COD screening (`core.codsearch` line index over the full COD
+  CIF tree, `make cod-tree` ~26 GB + `make cod-index`; `--full-cod` in
+  `cli analyze`; candidate filter only, not identification) | in progress |
+| full-COD screening + 20-sample QPA gate (`make gate`; 5 samples run,
+  3/5 PASS, 2 FAIL documented: iron_30_70, qarr_1f) | in progress |
+| Brindley microabsorption corrections | planned |
 
 ## License
 
