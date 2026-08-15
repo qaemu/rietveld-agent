@@ -31,7 +31,7 @@ end-to-end on the NIST SRM 2686a cement-clinker reference patterns:
 ## Quick start
 
 ```bash
-git clone https://github.com/qaemu/rietveld-agent
+git clone https://github.com/qaemu/rietveld-agent-qpa
 cd rietveld-agent
 make env       # virtualenv (numpy/scipy/matplotlib/pytest)
 make check     # syntax + structure checks
@@ -46,7 +46,7 @@ Per-platform / per-runtime instructions: [`docs/installation.md`](docs/installat
 |---|---|
 | I want to run an analysis | `python -m cli analyze <pattern>` |
 | I want the full-COD screening gate (20 samples) | `python benchmarks/qpa_gate/qpa_gate.py` |
-| I want the validation evidence | `python benchmarks/spikes/spike_16_validate.py` |
+| I want the validation evidence | `make test` — full known-answer harness documented in `AGENTS.md` |
 | I want the reproducible protocol run | `make report` (~45 min) |
 | I want the papers | `make paper` (needs tectonic) |
 | I want orientation for an agent runtime | [`AGENTS.md`](AGENTS.md) |
