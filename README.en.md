@@ -31,7 +31,7 @@ end-to-end on the NIST SRM 2686a cement-clinker reference patterns:
 ## Quick start
 
 ```bash
-git clone https://github.com/qaemu/rietveld-agent-qpa
+git clone https://github.com/qaemu/rietveld-agent
 cd rietveld-agent
 make env       # virtualenv (numpy/scipy/matplotlib/pytest)
 make check     # syntax + structure checks

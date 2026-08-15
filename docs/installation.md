@@ -18,7 +18,7 @@ on first use. No other network access is needed after clone.
 ## 1. Clone
 
 ```bash
-git clone https://github.com/qaemu/rietveld-agent-qpa-spikes
+git clone https://github.com/qaemu/rietveld-agent
 cd rietveld-agent-spikes
 ```
 

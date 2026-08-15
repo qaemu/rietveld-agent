@@ -25,7 +25,7 @@ OpenCode, Claude Code, and Codex are interchangeable front-ends around it
 ## Quick start
 
 ```bash
-git clone https://github.com/qaemu/rietveld-agent-qpa
+git clone https://github.com/qaemu/rietveld-agent
 cd rietveld-agent
 make env          # virtualenv with numpy/scipy/matplotlib/pytest
 make check        # syntax checks
@@ -154,7 +154,7 @@ itself ([`CITATION.cff`](CITATION.cff)):
   title  = {{rietveld-agent}: a deterministic Rietveld {QPA} engine for
             scientific agent runtimes},
   year   = {2026},
-  url    = {https://github.com/qaemu/rietveld-agent-qpa}
+  url    = {https://github.com/qaemu/rietveld-agent}
 }
 ```
 
