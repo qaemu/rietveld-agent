@@ -84,17 +84,22 @@ Verified state (re-verified 2026-08-15 with
 | `iron_30_70` | FAIL | 5.07 | magnetite 100.0 — hematite MISSING (truth 31.8) |
 
 Documented failure causes (root-cause analysis in the research log, plus
-the quantified CIF-combination sweep in
+the quantified CIF-combination sweeps in
 [`notes/qpa_gate_sweep.md`](notes/qpa_gate_sweep.md),
-reproducible via `benchmarks/qpa_gate/sweep_cifs.py`):
-`iron_30_70` — the data's magnetite is ambient (a≈8.38–8.40) but every
-COD-library magnetite CIF is a high-pressure variant (a=8.25–8.36), and
-the best achievable joint fit stops at 38/62 vs truth 32/68 (Δ6.2);
+reproducible via `benchmarks/qpa_gate/sweep_cifs.py` and
+`benchmarks/qpa_gate/sweep_intensity.py`):
+`iron_30_70` — the data's magnetite matches only the condensed
+a=8.3582 CIF (2300616; five ambient Fe3O4 COD entry cells all fit
+worse), and the F2-consistent joint-fit split is pinned at 38/62 vs
+truth 32/68 (Δ6.2); further, the pipeline's profile-stage forward
+selection drops hematite entirely (single phase, magnetite 100%);
 `qarr_1f` — the zincite CIF's high-angle lines are ~2–3.4× weaker than
-the data's (monotonic angle-dependent intensity mismatch that resists
-profile/Uiso/seeds/PO; the zincite CIF choice alone swings the refined
-zincite wt% from 14 to 75 vs truth 55.2) and the Stage-A profile
-refinement runs away (U,V,W,X,Y SVD singularity, shift −40°).
+the data's (monotonic angle-dependent intensity mismatch; the zincite
+CIF choice alone swings the refined zincite wt% from 14 to 75 around
+truth 55.2, with equal-wR fits bracketing the truth: 23.6% and 73.5%),
+and free Uiso / March-Dollase PO (applied correctly via GSAS-II
+`Pref.Ori.`) do not fix it — the Stage-A profile refinement also runs
+away (U,V,W,X,Y SVD singularity, shift −40°).
 
 ## License
 
