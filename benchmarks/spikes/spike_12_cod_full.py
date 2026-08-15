@@ -176,8 +176,14 @@ def _parse_ascii(path: Path, k1: float = SYNC_WL):
             continue
         parts = s.split(",") if "," in s else s.split()
         if len(parts) >= 2:
-            tth.append(float(parts[0]))
-            y.append(float(parts[1]))
+            # tolerate a bare header line (e.g. ironox .dat:
+            # "2theta_degree\tintensity_arbitrary-units")
+            try:
+                x0, y0 = float(parts[0]), float(parts[1])
+            except ValueError:
+                continue
+            tth.append(x0)
+            y.append(y0)
     if len(tth) < 10:
         raise ValueError(f"{path.name}: not a 2-column numeric table")
     return np.asarray(tth), np.asarray(y), k1

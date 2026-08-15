@@ -29,3 +29,7 @@ paper/*.out
 paper/*.toc
 *.xye
 .vendor/
+
+# spike-20 gate run artifacts (results/ is tracked; logs/work are derived)
+data/spike20/work/
+data/spike20/gate.log

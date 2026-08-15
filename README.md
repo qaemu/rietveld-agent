@@ -6,7 +6,7 @@
 [![OpenCode ready](https://img.shields.io/badge/OpenCode-ready-22C55E.svg)](docs/installation.md)
 [![Claude Code ready](https://img.shields.io/badge/Claude%20Code-ready-8AA0FF.svg)](docs/installation.md)
 [![Codex ready](https://img.shields.io/badge/Codex-ready-FFA63D.svg)](docs/installation.md)
-[![Gate 3/20](https://img.shields.io/badge/full--COD%20gate-3%2F20%20PASS-yellow.svg)](benchmarks/spikes/spike_20_fullcod_qpa.py)
+[![Gate 3/5](https://img.shields.io/badge/full--COD%20gate-3%2F5%20PASS-yellow.svg)](benchmarks/spikes/spike_20_fullcod_qpa.py)
 
 Deterministic Rietveld quantitative phase analysis (RQPA) of laboratory
 powder X-ray diffraction (PXRD) data, demonstrated end-to-end on the four
@@ -177,7 +177,7 @@ itself ([`CITATION.cff`](CITATION.cff)):
   CIF tree (`make cod-tree` ~26 GB + `make cod-index`; `--full-cod` in
   `cli analyze`, `cod_screen` in the run bundle; candidate filter only,
   not identification) | in progress |
-| 20 | full-COD screening + 20-sample QPA gate (`make gate`; 20/20 PASS) | done |
+| 20 | full-COD screening + 20-sample QPA gate (`make gate`; 5 samples run, 3/5 PASS, 2 FAIL documented: iron_30_70, qarr_1f) | in progress |
 
 ## License
 

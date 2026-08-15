@@ -27,6 +27,13 @@ the repository does not use semantic version tags yet (see
   `CONTRIBUTING.md`, `SECURITY.md`, `README.en.md`.
 
 ### Fixed
+- `benchmarks/spikes/spike_20_fullcod_qpa.py`: `canon_of` gained a
+  formula-element fallback (COD records whose `mineral`/`chemname` are
+  empty, e.g. 2300112 `- O Zn -` → zincite, 2300616 `- Fe3 O4 -` →
+  magnetite); `canon_recall` and the screening call sites pass the
+  formula too, so empty-metadata entries are no longer lost to the
+  gate (`zincite` was previously reported `MISSING` for qarr_1f even
+  though it was the fitted phase at 27.2 wt%).
 - `benchmarks/spikes/spike_20_fullcod_qpa.py` manifest: qarr sample ids
   aligned with `QARR_TRUTH` keys (`qarr_1a`..`qarr_1h`); SRM inputs
   resolve to their real extensions (`.xrdml` / `.dat`).

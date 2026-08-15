@@ -6,7 +6,7 @@ PY     := .venv/bin/python
 PIP    := .venv/bin/pip
 TECTONIC ?= tectonic
 
-.PHONY: env paper figures report check test clean
+.PHONY: env paper figures report check test cod-tree cod-index cod-all gate clean
 
 ## env        -- create the local virtualenv with the runtime dependencies
 env:
@@ -50,6 +50,10 @@ cod-index:
 
 ## cod-all    -- tree + index in one shot
 cod-all: cod-tree cod-index
+
+## gate       -- full-COD screening + QPA gate (spike 20, 20 samples)
+gate:
+	./scripts/gate_runner.sh
 
 clean:
 	rm -f paper/main.pdf paper/main.aux paper/main.bbl paper/main.blg \
