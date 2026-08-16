@@ -65,7 +65,7 @@ def _vendor_gsasii(vendor: str) -> None:
         return
     os.makedirs(vendor, exist_ok=True)
     os.environ.setdefault("GSAS_VENDOR_URL",
-                          "https://github.com/GSAS-II/GSAS-II.git")
+                          "https://github.com/AdvancedPhotonSource/GSAS-II.git")
     url = os.environ["GSAS_VENDOR_URL"]
     print(f"[vendor] GSAS-II missing at {vendor}; cloning {url} ...",
           flush=True)
