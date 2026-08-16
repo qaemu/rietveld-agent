@@ -39,9 +39,9 @@
 | cod-1010942 (release 0.1.0) | TiO2 (rutile) | ANATASE, I41/amd, a=3.73 c=9.37 | published rutile R040049 cell a=4.5955(1) c=2.9598(1) (RRUFF REFINE v3.0) | replaced by cod-1530150 (O2 Ti, P42/mnm, a=4.59 c=2.96; Khitrova et al. 1977, Kristallografiya 22) |
 | cod-9012601 (release 0.1.0) | SiO2 (quartz) | compressed quartz variant, P3121, a=4.812 c=5.327 | real alpha-quartz cell a~4.913 c~5.405; RRUFF quartz R040031 refined a=4.9134 c=5.4042 | pool now prefers cod-9009666 (alpha-quartz, a=4.9158 c=5.4091); 9012601 no longer a library material |
 
-- Library manifest: 11d12a30671362b8... (deterministic rebuild: True)
+- Library manifest: 859aff267a3d1d94... (deterministic rebuild: True)
 - Library materials: 14 (cod-1000017, cod-1000041, cod-1000043, cod-1009000, cod-1010928, cod-1010950, cod-1530150, cod-1544891, cod-9000927, cod-9006758, cod-9009666, cod-9011025, mat-pbso4, mat-pbso4-fe)
-- Wall clock: 11.1s
+- Wall clock: 0.3s
 
 ## Verdict
 - Release schema-valid, entries chemistry-validated, rejected list recorded.

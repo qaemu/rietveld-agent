@@ -1,15 +1,15 @@
 {
   "unit": "unit_06",
   "release": "catalog_0.1.1",
-  "created_at": "2026-08-10T00:45:27-0300",
+  "created_at": "2026-08-15T23:31:33-0300",
   "n_entries": 12,
   "n_rejected": 0,
   "n_newly_fetched": 9,
   "cif_validation_rate": 1.0,
-  "manifest_sha256": "371a979e8f97114a3ecf0bfac904a674133338aeadfd8d00194e10cc36992ec3",
-  "library_manifest_sha256": "11d12a30671362b8a09a7662f17fc580ffd7028e894c66fe030c497efca5ea70",
+  "manifest_sha256": "63a8096df9446b87645491351fd888954b317008baba86baacd8404f08829b16",
+  "library_manifest_sha256": "859aff267a3d1d94023a9ed96f9414bf0f34ac71b78df8119e8950b3efa3a960",
   "library_determinism_check": {
-    "recomputed": "11d12a30671362b8a09a7662f17fc580ffd7028e894c66fe030c497efca5ea70",
+    "recomputed": "859aff267a3d1d94023a9ed96f9414bf0f34ac71b78df8119e8950b3efa3a960",
     "matches": true
   },
   "families": {
@@ -106,5 +106,5 @@
     "mat-pbso4",
     "mat-pbso4-fe"
   ],
-  "wall_clock_s": 11.1
+  "wall_clock_s": 0.3
 }

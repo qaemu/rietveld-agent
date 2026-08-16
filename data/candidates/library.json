@@ -1,18 +1,18 @@
 {
   "schema": "candidate-library/v0",
-  "built_at": "2026-08-10T00:45:27-0300",
+  "built_at": "2026-08-15T23:31:33-0300",
   "release_ref": {
     "version": "0.1.1",
-    "manifest_sha256": "371a979e8f97114a3ecf0bfac904a674133338aeadfd8d00194e10cc36992ec3"
+    "manifest_sha256": "63a8096df9446b87645491351fd888954b317008baba86baacd8404f08829b16"
   },
-  "manifest_sha256": "4b5b1d1bd3c13e2fd13fb29d88ef74d116b9e1b7220d1ce2fabdf8d2c93a02d2",
+  "manifest_sha256": "859aff267a3d1d94023a9ed96f9414bf0f34ac71b78df8119e8950b3efa3a960",
   "materials": [
     {
       "id": "cod-1000017",
       "name": "corundum",
       "phase_family": "Al2O3 (corundum)",
       "source_cif": "1000017.cif",
-      "provenance": "COD 1000017 (catalog_0.1.1, release 371a979e8f97...)",
+      "provenance": "COD 1000017 (catalog_0.1.1, release 63a8096df944...)",
       "catalog_ref": {
         "cod_id": 1000017,
         "release": "0.1.1"
@@ -2419,7 +2419,7 @@
       "name": "halite",
       "phase_family": "NaCl (halite)",
       "source_cif": "1000041.cif",
-      "provenance": "COD 1000041 (catalog_0.1.1, release 371a979e8f97...)",
+      "provenance": "COD 1000041 (catalog_0.1.1, release 63a8096df944...)",
       "catalog_ref": {
         "cod_id": 1000041,
         "release": "0.1.1"
@@ -4700,7 +4700,7 @@
       "name": "fluorite",
       "phase_family": "CaF2 (fluorite)",
       "source_cif": "1000043.cif",
-      "provenance": "COD 1000043 (catalog_0.1.1, release 371a979e8f97...)",
+      "provenance": "COD 1000043 (catalog_0.1.1, release 63a8096df944...)",
       "catalog_ref": {
         "cod_id": 1000043,
         "release": "0.1.1"
@@ -6981,7 +6981,7 @@
       "name": "GaAsO4 (quartz homeotype)",
       "phase_family": "GaAsO4 (quartz homeotype)",
       "source_cif": "1009000.cif",
-      "provenance": "COD 1009000 (catalog_0.1.1, release 371a979e8f97...)",
+      "provenance": "COD 1009000 (catalog_0.1.1, release 63a8096df944...)",
       "catalog_ref": {
         "cod_id": 1009000,
         "release": "0.1.1"
@@ -9352,7 +9352,7 @@
       "name": "calcite",
       "phase_family": "CaCO3 (calcite)",
       "source_cif": "1010928.cif",
-      "provenance": "COD 1010928 (catalog_0.1.1, release 371a979e8f97...)",
+      "provenance": "COD 1010928 (catalog_0.1.1, release 63a8096df944...)",
       "catalog_ref": {
         "cod_id": 1010928,
         "release": "0.1.1"
@@ -11615,7 +11615,7 @@
       "name": "anglesite",
       "phase_family": "PbSO4 (anglesite)",
       "source_cif": "1010950.cif",
-      "provenance": "COD 1010950 (catalog_0.1.1, release 371a979e8f97...)",
+      "provenance": "COD 1010950 (catalog_0.1.1, release 63a8096df944...)",
       "catalog_ref": {
         "cod_id": 1010950,
         "release": "0.1.1"
@@ -14190,7 +14190,7 @@
       "name": "rutile",
       "phase_family": "TiO2 (rutile)",
       "source_cif": "1530150.cif",
-      "provenance": "COD 1530150 (catalog_0.1.1, release 371a979e8f97...)",
+      "provenance": "COD 1530150 (catalog_0.1.1, release 63a8096df944...)",
       "catalog_ref": {
         "cod_id": 1530150,
         "release": "0.1.1"
@@ -16549,7 +16549,7 @@
       "name": "pyrite",
       "phase_family": "FeS2 (pyrite)",
       "source_cif": "1544891.cif",
-      "provenance": "COD 1544891 (catalog_0.1.1, release 371a979e8f97...)",
+      "provenance": "COD 1544891 (catalog_0.1.1, release 63a8096df944...)",
       "catalog_ref": {
         "cod_id": 1544891,
         "release": "0.1.1"
@@ -18956,7 +18956,7 @@
       "name": "magnetite",
       "phase_family": "magnetite-family",
       "source_cif": "9000927.cif",
-      "provenance": "COD 9000927 (catalog_0.1.1, release 371a979e8f97...)",
+      "provenance": "COD 9000927 (catalog_0.1.1, release 63a8096df944...)",
       "catalog_ref": {
         "cod_id": 9000927,
         "release": "0.1.1"
@@ -21297,7 +21297,7 @@
       "name": "periclase",
       "phase_family": "MgO (periclase)",
       "source_cif": "9006758.cif",
-      "provenance": "COD 9006758 (catalog_0.1.1, release 371a979e8f97...)",
+      "provenance": "COD 9006758 (catalog_0.1.1, release 63a8096df944...)",
       "catalog_ref": {
         "cod_id": 9006758,
         "release": "0.1.1"
@@ -23566,7 +23566,7 @@
       "name": "quartz",
       "phase_family": "SiO2 (quartz)",
       "source_cif": "9009666.cif",
-      "provenance": "COD 9009666 (catalog_0.1.1, release 371a979e8f97...)",
+      "provenance": "COD 9009666 (catalog_0.1.1, release 63a8096df944...)",
       "catalog_ref": {
         "cod_id": 9009666,
         "release": "0.1.1"
@@ -25841,7 +25841,7 @@
       "name": "AgBiS2 (schapbachite)",
       "phase_family": "AgBiS2 (schapbachite)",
       "source_cif": "9011025.cif",
-      "provenance": "COD 9011025 (catalog_0.1.1, release 371a979e8f97...)",
+      "provenance": "COD 9011025 (catalog_0.1.1, release 63a8096df944...)",
       "catalog_ref": {
         "cod_id": 9011025,
         "release": "0.1.1"
