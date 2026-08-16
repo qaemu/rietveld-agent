@@ -1,0 +1,218 @@
+[
+ {
+  "combo": [
+   "2300112",
+   "1000059",
+   "1000043"
+  ],
+  "phases": [
+   {
+    "cod": "1000059",
+    "canon": "corundum",
+    "wt": 46.13
+   },
+   {
+    "cod": "2300112",
+    "canon": "zincite",
+    "wt": 27.24
+   },
+   {
+    "cod": "1000043",
+    "canon": "fluorite",
+    "wt": 26.63
+   }
+  ],
+  "wR": 38.23,
+  "converged": true,
+  "time_s": 53.8
+ },
+ {
+  "combo": [
+   "2300450",
+   "1000059",
+   "1000043"
+  ],
+  "phases": [
+   {
+    "cod": "2300450",
+    "canon": "zincite",
+    "wt": 63.79
+   },
+   {
+    "cod": "1000059",
+    "canon": "corundum",
+    "wt": 23.98
+   },
+   {
+    "cod": "1000043",
+    "canon": "fluorite",
+    "wt": 12.24
+   }
+  ],
+  "wR": 100.0,
+  "converged": true,
+  "time_s": 49.7
+ },
+ {
+  "combo": [
+   "9004178",
+   "1000059",
+   "1000043"
+  ],
+  "phases": [
+   {
+    "cod": "9004178",
+    "canon": "zincite",
+    "wt": 63.79
+   },
+   {
+    "cod": "1000059",
+    "canon": "corundum",
+    "wt": 23.98
+   },
+   {
+    "cod": "1000043",
+    "canon": "fluorite",
+    "wt": 12.24
+   }
+  ],
+  "wR": 100.0,
+  "converged": true,
+  "time_s": 50.4
+ },
+ {
+  "combo": [
+   "9004179",
+   "1000059",
+   "1000043"
+  ],
+  "phases": [
+   {
+    "cod": "9004179",
+    "canon": "zincite",
+    "wt": 63.79
+   },
+   {
+    "cod": "1000059",
+    "canon": "corundum",
+    "wt": 23.98
+   },
+   {
+    "cod": "1000043",
+    "canon": "fluorite",
+    "wt": 12.24
+   }
+  ],
+  "wR": 100.0,
+  "converged": true,
+  "time_s": 52.7
+ },
+ {
+  "combo": [
+   "1577381",
+   "1000059",
+   "1000043"
+  ],
+  "phases": [
+   {
+    "cod": "1000059",
+    "canon": "corundum",
+    "wt": 45.8
+   },
+   {
+    "cod": "1577381",
+    "canon": "zincite",
+    "wt": 28.19
+   },
+   {
+    "cod": "1000043",
+    "canon": "fluorite",
+    "wt": 26.01
+   }
+  ],
+  "wR": 41.75,
+  "converged": true,
+  "time_s": 54.1
+ },
+ {
+  "combo": [
+   "2107059",
+   "1000059",
+   "1000043"
+  ],
+  "phases": [
+   {
+    "cod": "1000059",
+    "canon": "corundum",
+    "wt": 44.21
+   },
+   {
+    "cod": "2107059",
+    "canon": "zincite",
+    "wt": 34.24
+   },
+   {
+    "cod": "1000043",
+    "canon": "fluorite",
+    "wt": 21.55
+   }
+  ],
+  "wR": 50.23,
+  "converged": true,
+  "time_s": 73.8
+ },
+ {
+  "combo": [
+   "2300112",
+   "1000017",
+   "1000043"
+  ],
+  "phases": [
+   {
+    "cod": "1000017",
+    "canon": "corundum",
+    "wt": 46.1
+   },
+   {
+    "cod": "2300112",
+    "canon": "zincite",
+    "wt": 27.38
+   },
+   {
+    "cod": "1000043",
+    "canon": "fluorite",
+    "wt": 26.52
+   }
+  ],
+  "wR": 38.31,
+  "converged": true,
+  "time_s": 49.3
+ },
+ {
+  "combo": [
+   "2300112",
+   "1000059",
+   "2300449"
+  ],
+  "phases": [
+   {
+    "cod": "1000059",
+    "canon": "corundum",
+    "wt": 46.14
+   },
+   {
+    "cod": "2300112",
+    "canon": "zincite",
+    "wt": 27.34
+   },
+   {
+    "cod": "2300449",
+    "canon": "fluorite",
+    "wt": 26.52
+   }
+  ],
+  "wR": 38.08,
+  "converged": true,
+  "time_s": 48.7
+ }
+]

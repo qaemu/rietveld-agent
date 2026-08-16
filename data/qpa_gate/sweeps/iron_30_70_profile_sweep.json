@@ -1,0 +1,38 @@
+[
+ {
+  "wR": 6.24,
+  "converged": true,
+  "bad": false,
+  "phases": [
+   {
+    "cod": "9002321",
+    "canon": "magnetite",
+    "wt": 27.68
+   },
+   {
+    "cod": "5910082",
+    "canon": "hematite",
+    "wt": 72.32
+   }
+  ],
+  "profile": "default"
+ },
+ {
+  "wR": 6.24,
+  "converged": true,
+  "bad": false,
+  "phases": [
+   {
+    "cod": "9002321",
+    "canon": "magnetite",
+    "wt": 27.68
+   },
+   {
+    "cod": "5910082",
+    "canon": "hematite",
+    "wt": 72.32
+   }
+  ],
+  "profile": "narrow_w005"
+ }
+]

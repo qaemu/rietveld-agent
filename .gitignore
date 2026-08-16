@@ -36,3 +36,9 @@ data/qpa_gate/gate.log
 # on-demand COD CIF download pool (rebuilt by the pipeline / cod_full.py)
 data/cif_pool/
 data/unit12/work/cifs/
+data/qpa_gate/sweeps/**/*.gpx
+data/qpa_gate/sweeps/**/*.lst
+data/qpa_gate/sweeps/**/*.prm
+data/qpa_gate/sweeps/**/*.xye
+data/qpa_gate/sweeps/**/*.bak0.gpx
+data/qpa_gate/sweeps/**/*.json.tmp

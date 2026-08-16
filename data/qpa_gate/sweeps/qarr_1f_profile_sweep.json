@@ -1,0 +1,48 @@
+[
+ {
+  "wR": 55.72,
+  "converged": true,
+  "bad": false,
+  "phases": [
+   {
+    "cod": "2300112",
+    "canon": "zincite",
+    "wt": 27.63
+   },
+   {
+    "cod": "1000059",
+    "canon": "corundum",
+    "wt": 45.14
+   },
+   {
+    "cod": "1000043",
+    "canon": "fluorite",
+    "wt": 27.23
+   }
+  ],
+  "profile": "default"
+ },
+ {
+  "wR": 55.72,
+  "converged": true,
+  "bad": false,
+  "phases": [
+   {
+    "cod": "2300112",
+    "canon": "zincite",
+    "wt": 27.63
+   },
+   {
+    "cod": "1000059",
+    "canon": "corundum",
+    "wt": 45.14
+   },
+   {
+    "cod": "1000043",
+    "canon": "fluorite",
+    "wt": 27.23
+   }
+  ],
+  "profile": "narrow_w005"
+ }
+]

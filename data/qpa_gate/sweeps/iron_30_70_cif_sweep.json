@@ -1,0 +1,113 @@
+[
+ {
+  "combo": [
+   "2300616",
+   "5910082"
+  ],
+  "phases": [
+   {
+    "cod": "2300616",
+    "canon": "magnetite",
+    "wt": 100.0
+   }
+  ],
+  "wR": 100.0,
+  "converged": true,
+  "time_s": 22.1
+ },
+ {
+  "combo": [
+   "1011032",
+   "5910082"
+  ],
+  "phases": [
+   {
+    "cod": "1011032",
+    "canon": "magnetite",
+    "wt": 97.76
+   },
+   {
+    "cod": "5910082",
+    "canon": "hematite",
+    "wt": 2.24
+   }
+  ],
+  "wR": 7.24,
+  "converged": true,
+  "time_s": 18.6
+ },
+ {
+  "combo": [
+   "2300616",
+   "9000139"
+  ],
+  "phases": [
+   {
+    "cod": "2300616",
+    "canon": "magnetite",
+    "wt": 100.0
+   }
+  ],
+  "wR": 100.0,
+  "converged": true,
+  "time_s": 19.2
+ },
+ {
+  "combo": [
+   "1011032",
+   "9000139"
+  ],
+  "phases": [
+   {
+    "cod": "1011032",
+    "canon": "magnetite",
+    "wt": 100.0
+   },
+   {
+    "cod": "9000139",
+    "canon": "hematite",
+    "wt": 0.0
+   }
+  ],
+  "wR": 7.12,
+  "converged": true,
+  "time_s": 18.1
+ },
+ {
+  "combo": [
+   "9002320",
+   "5910082"
+  ],
+  "phases": [
+   {
+    "cod": "9002320",
+    "canon": "magnetite",
+    "wt": 100.0
+   }
+  ],
+  "wR": 6.63,
+  "converged": true,
+  "time_s": 17.8
+ },
+ {
+  "combo": [
+   "9002321",
+   "5910082"
+  ],
+  "phases": [
+   {
+    "cod": "5910082",
+    "canon": "hematite",
+    "wt": 51.95
+   },
+   {
+    "cod": "9002321",
+    "canon": "magnetite",
+    "wt": 48.05
+   }
+  ],
+  "wR": 4.45,
+  "converged": true,
+  "time_s": 26.0
+ }
+]
