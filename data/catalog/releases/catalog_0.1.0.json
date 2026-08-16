@@ -1,0 +1,375 @@
+{
+  "schema": "catalog_release/v0",
+  "version": "0.1.0",
+  "state": "draft",
+  "built_by": "spike-06 (rietveld-agent)",
+  "built_at": "2026-08-09T20:59:01-0300",
+  "source": {
+    "database": "COD",
+    "snapshot_ref": "COD live archive (archive date 2026-08-09)",
+    "accessed_at": "2026-08-09T20:59:01-0300",
+    "subset_rule": "curated Phase-0/06 mineral + common inorganic target list (12 targets: halite, schapbachite, GaAsO4 homeotype, rutile, periclase, magnetite, anglesite, calcite, corundum, pyrite, fluorite, quartz)"
+  },
+  "licensing": {
+    "notice": "Crystallography Open Database is CC0 / public domain; originating authors are attributed via per-entry citations."
+  },
+  "entries": [
+    {
+      "cod_id": 1000017,
+      "cif_sha256": "845d76ec5cdc1385f21130ce9b42f0f8357493e801e428305cb60ad20a6de33a",
+      "formula": "Al2 O3",
+      "mineral_name": "corundum",
+      "family": "Al2O3 (corundum)",
+      "space_group": "R -3 c :H",
+      "cell": {
+        "a": 4.7606,
+        "b": 4.7606,
+        "c": 12.994,
+        "alpha": 90.0,
+        "beta": 90.0,
+        "gamma": 120.0
+      },
+      "validation": {
+        "status": "pass",
+        "issues": []
+      },
+      "source": {
+        "url": "https://www.crystallography.net/cod/1000017.html",
+        "citation": "'Tsirelson, V G'; ;; ;, 1985"
+      },
+      "flags": []
+    },
+    {
+      "cod_id": 1000041,
+      "cif_sha256": "02d4f4fa315f7b97147256118acc7f9f20190d7246c3ea7209cfb8bd5d6e1fed",
+      "formula": "Cl Na",
+      "mineral_name": "halite",
+      "family": "NaCl (halite)",
+      "space_group": "F m -3 m",
+      "cell": {
+        "a": 5.62,
+        "b": 5.62,
+        "c": 5.62,
+        "alpha": 90.0,
+        "beta": 90.0,
+        "gamma": 90.0
+      },
+      "validation": {
+        "status": "pass",
+        "issues": []
+      },
+      "source": {
+        "url": "https://www.crystallography.net/cod/1000041.html",
+        "citation": "'Abrahams, S C'; ;; Acta Crystallographica (1,1948-23,1967), 1965"
+      },
+      "flags": []
+    },
+    {
+      "cod_id": 1000043,
+      "cif_sha256": "ed4fc6d25246923cf64ea4346cefd9f57073d05f00feba581fc5b378666e89a1",
+      "formula": "Ca F2",
+      "mineral_name": "fluorite",
+      "family": "CaF2 (fluorite)",
+      "space_group": "F m -3 m",
+      "cell": {
+        "a": 5.462,
+        "b": 5.462,
+        "c": 5.462,
+        "alpha": 90.0,
+        "beta": 90.0,
+        "gamma": 90.0
+      },
+      "validation": {
+        "status": "pass",
+        "issues": []
+      },
+      "source": {
+        "url": "https://www.crystallography.net/cod/1000043.html",
+        "citation": "'Cheetham, A K'; ;; Journal of Physics C, 1971"
+      },
+      "flags": []
+    },
+    {
+      "cod_id": 1009000,
+      "cif_sha256": "c3b258d0ff90e0d3a8c42c5834ec3be3f2aa0ff7329ee240dc26b64eacbeab36",
+      "formula": "As Ga O4",
+      "mineral_name": null,
+      "family": "GaAsO4 (quartz homeotype)",
+      "space_group": "P 31 2 1",
+      "cell": {
+        "a": 4.994,
+        "b": 4.994,
+        "c": 11.3871,
+        "alpha": 90.0,
+        "beta": 90.0,
+        "gamma": 120.0
+      },
+      "validation": {
+        "status": "pass",
+        "issues": []
+      },
+      "source": {
+        "url": "https://www.crystallography.net/cod/1009000.html",
+        "citation": "'Philippot, E'; ;; Journal of Solid State Chemistry, 1999"
+      },
+      "flags": [
+        "quartz-homeotype",
+        "ex-SiO2-mislabel"
+      ]
+    },
+    {
+      "cod_id": 1010928,
+      "cif_sha256": "70ab9e2a0d77a5caad505cf1a7016a3830759482dbc0098110bed0bb4a94adc9",
+      "formula": "C Ca O3",
+      "mineral_name": "calcite",
+      "family": "CaCO3 (calcite)",
+      "space_group": "R -3 c RS",
+      "cell": {
+        "a": 6.36,
+        "b": 6.36,
+        "c": 6.36,
+        "alpha": 46.1,
+        "beta": 46.1,
+        "gamma": 46.1
+      },
+      "validation": {
+        "status": "pass",
+        "issues": []
+      },
+      "source": {
+        "url": "https://www.crystallography.net/cod/1010928.html",
+        "citation": "'Elliott, N'; ;; Journal of the American Chemical Society, 1937"
+      },
+      "flags": []
+    },
+    {
+      "cod_id": 1010942,
+      "cif_sha256": "39111d3e253daf62fbf04e2e46358aecccd32c1e73592e2779dacfba53f3489d",
+      "formula": "O2 Ti",
+      "mineral_name": "rutile",
+      "family": "TiO2 (rutile)",
+      "space_group": "I 41/a m d :1",
+      "cell": {
+        "a": 3.73,
+        "b": 3.73,
+        "c": 9.37,
+        "alpha": 90.0,
+        "beta": 90.0,
+        "gamma": 90.0
+      },
+      "validation": {
+        "status": "pass",
+        "issues": []
+      },
+      "source": {
+        "url": "https://www.crystallography.net/cod/1010942.html",
+        "citation": "'Parker, R L'; ;; ;, 1924"
+      },
+      "flags": []
+    },
+    {
+      "cod_id": 1010950,
+      "cif_sha256": "b7a5f38b2518d801f3ac562cd7688f7966e05cb9135324e52885126bf7547e28",
+      "formula": "O4 Pb S",
+      "mineral_name": "anglesite",
+      "family": "PbSO4 (anglesite)",
+      "space_group": "P n m a",
+      "cell": {
+        "a": 8.45,
+        "b": 5.38,
+        "c": 6.93,
+        "alpha": 90.0,
+        "beta": 90.0,
+        "gamma": 90.0
+      },
+      "validation": {
+        "status": "pass",
+        "issues": []
+      },
+      "source": {
+        "url": "https://www.crystallography.net/cod/1010950.html",
+        "citation": "'James, R. W.'; ;; ;, 1925"
+      },
+      "flags": []
+    },
+    {
+      "cod_id": 1544891,
+      "cif_sha256": "e16c8703cb49def18607dee10c126d1740e29bcd7a59a25eb96b25a0c20893f7",
+      "formula": "Fe S2",
+      "mineral_name": "pyrite",
+      "family": "FeS2 (pyrite)",
+      "space_group": "P a -3",
+      "cell": {
+        "a": 5.417,
+        "b": 5.417,
+        "c": 5.417,
+        "alpha": 90.0,
+        "beta": 90.0,
+        "gamma": 90.0
+      },
+      "validation": {
+        "status": "pass",
+        "issues": []
+      },
+      "source": {
+        "url": "https://www.crystallography.net/cod/1544891.html",
+        "citation": "'Fujii, T.'; ;; Mineralogical Journal, 1986"
+      },
+      "flags": []
+    },
+    {
+      "cod_id": 9000927,
+      "cif_sha256": "cc991c9da096b545ea6cc11961a7ed52e33d696f54d74e946acd7475dc767fe7",
+      "formula": "Fe2.75 O4 Ti0.25",
+      "mineral_name": "magnetite",
+      "family": "magnetite-family",
+      "space_group": "F d -3 m :2",
+      "cell": {
+        "a": 8.4237,
+        "b": 8.4237,
+        "c": 8.4237,
+        "alpha": 90.0,
+        "beta": 90.0,
+        "gamma": 90.0
+      },
+      "validation": {
+        "status": "pass",
+        "issues": [
+          "ti-substituted composition"
+        ]
+      },
+      "source": {
+        "url": "https://www.crystallography.net/cod/9000927.html",
+        "citation": "'Wechsler, B. A.'; ;; American Mineralogist, 1984"
+      },
+      "flags": [
+        "ti-substituted"
+      ]
+    },
+    {
+      "cod_id": 9006758,
+      "cif_sha256": "058fc28b959b5ef8bb2043241ad540aad34afa97d53f0ea89ea2c8369115db5f",
+      "formula": "Mg O",
+      "mineral_name": "periclase",
+      "family": "MgO (periclase)",
+      "space_group": "F m -3 m",
+      "cell": {
+        "a": 4.276,
+        "b": 4.276,
+        "c": 4.276,
+        "alpha": 90.0,
+        "beta": 90.0,
+        "gamma": 90.0
+      },
+      "validation": {
+        "status": "pass",
+        "issues": []
+      },
+      "source": {
+        "url": "https://www.crystallography.net/cod/9006758.html",
+        "citation": "'Fiquet, G.'; ;; Physics and Chemistry of Minerals, 1999"
+      },
+      "flags": []
+    },
+    {
+      "cod_id": 9011025,
+      "cif_sha256": "9c2449618c5283db17737b257a98b9b89548b8d718429037b65ee020a8969a59",
+      "formula": "Ag0.5 Bi0.5 S",
+      "mineral_name": null,
+      "family": "AgBiS2 (schapbachite)",
+      "space_group": "F m -3 m",
+      "cell": {
+        "a": 5.648,
+        "b": 5.648,
+        "c": 5.648,
+        "alpha": 90.0,
+        "beta": 90.0,
+        "gamma": 90.0
+      },
+      "validation": {
+        "status": "pass",
+        "issues": []
+      },
+      "source": {
+        "url": "https://www.crystallography.net/cod/9011025.html",
+        "citation": "'Geller, S.'; ;Ternary semiconducting compounds with sodium chloride-like structure:; Acta Crystallographica, 1959"
+      },
+      "flags": [
+        "synthetic",
+        "ex-NaCl-mislabel"
+      ]
+    },
+    {
+      "cod_id": 9012601,
+      "cif_sha256": "64495803c36bd9fc97934e35bdf56e7acf8c9c4c24ef43e0bc46f6e15531be19",
+      "formula": "O2 Si",
+      "mineral_name": "quartz",
+      "family": "SiO2 (quartz)",
+      "space_group": "P 31 2 1",
+      "cell": {
+        "a": 4.812,
+        "b": 4.812,
+        "c": 5.327,
+        "alpha": 90.0,
+        "beta": 90.0,
+        "gamma": 120.0
+      },
+      "validation": {
+        "status": "pass",
+        "issues": []
+      },
+      "source": {
+        "url": "https://www.crystallography.net/cod/9012601.html",
+        "citation": "'Hazen, R. M.'; ;; Solid State Communications, 1989"
+      },
+      "flags": []
+    }
+  ],
+  "clustering": {
+    "method": "Phase-0: curated mineral-name grouping (composition + reduced-cell similarity deferred)",
+    "version": "0.1.0",
+    "families": {
+      "Al2O3 (corundum)": [
+        1000017
+      ],
+      "NaCl (halite)": [
+        1000041
+      ],
+      "CaF2 (fluorite)": [
+        1000043
+      ],
+      "GaAsO4 (quartz homeotype)": [
+        1009000
+      ],
+      "CaCO3 (calcite)": [
+        1010928
+      ],
+      "TiO2 (rutile)": [
+        1010942
+      ],
+      "PbSO4 (anglesite)": [
+        1010950
+      ],
+      "FeS2 (pyrite)": [
+        1544891
+      ],
+      "magnetite-family": [
+        9000927
+      ],
+      "MgO (periclase)": [
+        9006758
+      ],
+      "AgBiS2 (schapbachite)": [
+        9011025
+      ],
+      "SiO2 (quartz)": [
+        9012601
+      ]
+    }
+  },
+  "validation": {
+    "cif_validation_rate": 1.0,
+    "rejected": []
+  },
+  "manifest_sha256": "7e31c47f91ce7f1bb28f58c331547a1be78dcc1c0ad8d005fb0417e07cb5b6e0"
+}
