@@ -1,5 +1,5 @@
 """Fingerprint tests: instrument identity, d-space cross-instrument matching,
-and material discrimination (see data/spike2/results for measured values).
+and material discrimination (see data/unit02/results for measured values).
 """
 import numpy as np
 import pytest
@@ -57,7 +57,7 @@ def test_same_material_across_anodes_matches():
 
 def test_peak_counts_are_not_selective_alone():
     """Honest design check: greedy d-matching over-counts across materials;
-    the profile metric is the discriminator (finding from spike 02)."""
+    the profile metric is the discriminator (finding from unit 02)."""
     n_ss = match_peaks(PBS_CU(), PBS_FE())[0]      # same material
     n_dd = match_peaks(PBS_CU(), SIO2_CU())[0]     # different material
     assert n_ss >= 5

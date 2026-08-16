@@ -1,0 +1,153 @@
+{
+  "schema": "calibration-registry/v0",
+  "updated_at": "2026-08-10T00:50:08-0300",
+  "records": [
+    {
+      "schema": "calibration/v0",
+      "id": "cal-967c5da10ad2",
+      "name": "CNEA-Cu-PANalytical-XPert3",
+      "kind": "XML-FINGERPRINTED",
+      "geometry": "Bragg-Brentano",
+      "wavelength": {
+        "alpha1": 1.5405,
+        "alpha2": 1.5443,
+        "ratio_kalpha2_kalpha1": 1.0024667315806557
+      },
+      "state": "released",
+      "approval": {
+        "reviewed_by": "cnca-lab-admin",
+        "reviewed_at": "2026-08-09T22:55:23-0300",
+        "status": "approved",
+        "evidence_ref": "/Users/lucas/Documents/CNEA/rietveld-agent/data/unit00/results/unit_report.md"
+      },
+      "created_at": "2026-08-09T22:55:23-0300",
+      "content": {
+        "gsasii_instprm": {
+          "path": "/Users/lucas/Documents/CNEA/rietveld-agent/data/unit00/input/INST_XRY.PRM",
+          "sha256": "e59413059bc3b12a51f1c6eebc5d581470320d05a31f11a41dbb32e16d1d16b9",
+          "format": "GSAS-II instrument parameter file"
+        },
+        "notes": "Cu Kalpha Bragg-Brentano"
+      },
+      "fingerprint": {
+        "rules": [
+          {
+            "field": "tube_anode_material",
+            "expected": "CuKa"
+          },
+          {
+            "field": "scan_axis",
+            "expected": "2Theta/Theta"
+          }
+        ],
+        "accept_incomplete": false
+      }
+    },
+    {
+      "schema": "calibration/v0",
+      "id": "cal-9bba7cdaeb39",
+      "name": "CNEA-Fe-PANalytical-XPert3",
+      "kind": "XML-FINGERPRINTED",
+      "geometry": "Bragg-Brentano",
+      "wavelength": {
+        "alpha1": 1.936,
+        "alpha2": 1.9399,
+        "ratio_kalpha2_kalpha1": 1.0020144628099175
+      },
+      "state": "released",
+      "approval": {
+        "reviewed_by": "cnca-lab-admin",
+        "reviewed_at": "2026-08-09T22:55:23-0300",
+        "status": "approved",
+        "evidence_ref": "/Users/lucas/Documents/CNEA/rietveld-agent/data/unit00/results/unit_report.md"
+      },
+      "created_at": "2026-08-09T22:55:23-0300",
+      "content": {
+        "gsasii_instprm": {
+          "path": "/Users/lucas/Documents/CNEA/rietveld-agent/data/unit02/input/INST_FE.PRM",
+          "sha256": "c64443a939bfc65ace92c2c5cdcdaf5b27bc3fc0a651175cd4f14d4cb19dce35",
+          "format": "GSAS-II instrument parameter file"
+        },
+        "notes": "Fe Kalpha Bragg-Brentano"
+      },
+      "fingerprint": {
+        "rules": [
+          {
+            "field": "tube_anode_material",
+            "expected": "FeKa"
+          },
+          {
+            "field": "scan_axis",
+            "expected": "2Theta/Theta"
+          }
+        ],
+        "accept_incomplete": false
+      }
+    },
+    {
+      "schema": "calibration/v0",
+      "id": "cal-c81bcb4bc874",
+      "name": "CNEA-Cu-XRD-default",
+      "kind": "XYE-DEFAULT",
+      "geometry": "Bragg-Brentano",
+      "wavelength": {
+        "alpha1": 1.5405,
+        "alpha2": 1.5443,
+        "ratio_kalpha2_kalpha1": 1.0024667315806557
+      },
+      "state": "released",
+      "approval": {
+        "reviewed_by": "cnca-lab-admin",
+        "reviewed_at": "2026-08-09T22:55:23-0300",
+        "status": "approved",
+        "evidence_ref": "/Users/lucas/Documents/CNEA/rietveld-agent/data/unit00/results/unit_report.md"
+      },
+      "created_at": "2026-08-09T22:55:23-0300",
+      "content": {
+        "gsasii_instprm": {
+          "path": "/Users/lucas/Documents/CNEA/rietveld-agent/data/unit00/input/INST_XRY.PRM",
+          "sha256": "e59413059bc3b12a51f1c6eebc5d581470320d05a31f11a41dbb32e16d1d16b9",
+          "format": "GSAS-II instrument parameter file"
+        },
+        "notes": "default for plain XYE input"
+      }
+    },
+    {
+      "schema": "calibration/v0",
+      "id": "cal-rruff-c2504fcb",
+      "name": "RRUFF Bruker D8 Advance Cu Ka (validation-only)",
+      "kind": "XML-FINGERPRINTED",
+      "geometry": "Bragg-Brentano",
+      "wavelength": {
+        "alpha1": 1.540598,
+        "alpha2": 1.544426,
+        "ratio_kalpha2_kalpha1": 1.002484749
+      },
+      "state": "released",
+      "approval": {
+        "reviewed_by": "unit-10-validation",
+        "reviewed_at": "2026-08-10T00:50:08-0300",
+        "status": "approved",
+        "evidence_ref": "https://rruff.info (RRUFF project)"
+      },
+      "created_at": "2026-08-10T00:50:08-0300",
+      "fingerprint": {
+        "rules": [
+          {
+            "field": "tube_anode_material",
+            "expected": "Cu"
+          }
+        ],
+        "accept_incomplete": false
+      },
+      "content": {
+        "gsasii_instprm": {
+          "path": "data/unit10/work/INST_XRY_RRUFF.PRM",
+          "sha256": "e59413059bc3b12a51f1c6eebc5d581470320d05a31f11a41dbb32e16d1d16b9",
+          "format": "GSAS-II instrument parameter file"
+        },
+        "notes": "Validation-only registration (unit 10): RRUFF published Cu Ka powder XRD. Wavelengths per ICDD tube-emission tables; PRM referenced for engine compatibility (verification runs against the RRUFF grid, statistics-gated). Not an instrument under the CNEA lab."
+      }
+    }
+  ]
+}

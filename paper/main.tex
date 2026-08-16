@@ -36,7 +36,7 @@ Rietveld wR of 9.8\%, the Cu patterns 13.6--27.1\%. An independent
 validation harness confirms bit-level reproducibility across full
 re-runs (canonical content md5 \texttt{f43d8be2\ldots}) and recovers
 all 24 injected phase fractions of synthetic known-answer patterns
-within the $\pm$1.5/$\pm$1.0~wt\% bands (spike 16). Large per-phase
+within the $\pm$1.5/$\pm$1.0~wt\% bands (unit 16). Large per-phase
 deviations concentrate on strongly absorbing phases (alite, ferrite) and
 are attributed to microabsorption, \emph{not} to pipeline failure:
 synthetic ground-truth patterns recover the input fractions with the same
@@ -100,7 +100,7 @@ cross-check.
 
 \section{Refinement protocol}
 The refinement ladder is implemented in
-\texttt{benchmarks/spikes/spike\_15\_rqpa\_protocol.py} and detailed in
+\texttt{benchmarks/protocols/unit\_15\_rqpa\_protocol.py} and detailed in
 \texttt{docs/rqpa\_protocol.md}. It stages the GSAS-II
 Levenberg--Marquardt loop: (1) scales with Chebyschev background and
 sample shift; (2) alite cell; (3) belite cells; (4) minor-phase cells on
@@ -110,7 +110,7 @@ fixed to avoid a spurious supercell solution. Aphthitalite is handled by
 the protocol's adaptive ladder: the full inventory is attempted first;
 only when that diverges does the ladder re-run without the offending
 phase and \emph{reinsert} it as a fixed-composition constraint
-renormalised at its normalized published share (spike 16). No phase is
+renormalised at its normalized published share (unit 16). No phase is
 ever dropped as indeterminate --- every report row carries a wt\%. On
 the synchrotron window the alite T1 variant is
 omitted for the same degeneracy reason. Quantification uses the
@@ -132,9 +132,9 @@ expected for big-crystal alite at Cu K$\alpha_1$. The aluminate residue
 converges at wR $=$ 13.6\% with all five phases reported (aphthitalite
 as the fixed-composition constraint); the ferrite deficit (17.4 vs.\
 68.0~wt\% normalized published) is of the same absorption origin and is
-the target of a planned Brindley-correction extension (spike 17 of the
-repository roadmap). Spike 16 validates the suite independently
-(\texttt{benchmarks/spikes/spike\_16\_validate.py}): two full re-runs
+the target of a planned Brindley-correction extension (unit 17 of the
+repository roadmap). Unit 16 validates the suite independently
+(\texttt{benchmarks/protocols/unit\_16\_validate.py}): two full re-runs
 produce bit-identical payloads (canonical content md5
 \texttt{f43d8be2\ldots}) and four synthetic known-answer patterns
 recover every injected phase within band (24/24 rows).
@@ -179,7 +179,7 @@ M3 and T1 models vs.\ the published values.}
 Two findings matter for the broader RQPA practice. First, the bounded
 budget is \emph{deterministic and convergent} -- every result in
 Table~\ref{tab:results} rebuilds identically via
-\texttt{make report} (result-JSON md5 recorded). The spike-16 harness
+\texttt{make report} (result-JSON md5 recorded). The unit-16 harness
 makes this a machine-checked fact: two independent full suite runs
 compared bit-identical canonical payloads (md5
 \texttt{f43d8be2\ldots}), and the unmodified ladder recovers all
@@ -188,7 +188,7 @@ injected fractions of the synthetic known-answer patterns within band
 Second, the residual per-phase deviations are physical: they
 concentrate on strongly absorbing phases, and the publication-grade
 Rwp targets of \cite{garcia-mate2024srms} (6.5\% Cu, 5\% sync) remain
-the acceptance gate of the repository roadmap (spike 17 Brindley
+the acceptance gate of the repository roadmap (unit 17 Brindley
 corrections). The manuscript and the companion papers
 (\texttt{paper/paper1\_protocol.pdf}, \texttt{paper2\_validation.pdf},
 \texttt{paper3\_deployment.pdf}) are constructed following the

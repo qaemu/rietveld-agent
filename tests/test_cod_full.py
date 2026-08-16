@@ -1,4 +1,4 @@
-"""Spike 12b: complete-COD screening (core.codsearch).
+"""Unit 12b: complete-COD screening (core.codsearch).
 
 The full-COD index (data/cod_index/, gitignored; `make cod-index`) is built
 from the rsync'd full COD CIF tree. These tests pin the contract:

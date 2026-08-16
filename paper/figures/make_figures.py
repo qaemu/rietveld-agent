@@ -1,4 +1,4 @@
-"""Regenerate the manuscript figures from the spike-15 result artifacts.
+"""Regenerate the manuscript figures from the unit-15 result artifacts.
 
    fig1_clinker_t1_fit.png -- observed vs calculated pattern, clinker Cu
    (alite-T1 model), with difference curve and tick marks.
@@ -24,13 +24,13 @@ import numpy as np                # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent.parent
 sys.path.insert(0, str(ROOT))
-sys.path.insert(0, str(ROOT / "benchmarks" / "spikes"))
+sys.path.insert(0, str(ROOT / "benchmarks" / "units"))
 
 from benchmarks.eval.sim import ensure_gsasii  # noqa: E402
 
 FIGDIR = Path(__file__).resolve().parent
-RES = ROOT / "data" / "spike15" / "results" / "spike15_report.json"
-GPX_T1 = ROOT / "data" / "spike15" / "work" / "Clinker_Nist_CuKalpha1_R1_qpa.gpx"
+RES = ROOT / "data" / "unit15" / "results" / "unit15_report.json"
+GPX_T1 = ROOT / "data" / "unit15" / "work" / "Clinker_Nist_CuKalpha1_R1_qpa.gpx"
 
 
 def fit_arrays(gpx: Path, lo: float, hi: float):

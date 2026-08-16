@@ -8,7 +8,7 @@ an unresolved or ambiguous instrument means ``abstain``, never a guess.
 
 Identification is POSITION-BASED: the fingerprint compares d-space peak
 positions, so counting statistics do not gate the identification claim.
-The counting-statistics gate (spike 05, envelope L3: 1e5 peak counts) now
+The counting-statistics gate (unit 05, envelope L3: 1e5 peak counts) now
 guards the VERIFICATION stage instead (core.verification.verifier,
 VERIFY_MIN_PEAK_COUNTS): refinements against weak data are documented as
 statistics-below-gate instead of silently refusing to identify.
@@ -22,7 +22,7 @@ from core.calibration import Resolution, ResolutionStatus
 from core.hypothesis import CandidateMatch, HypothesisRanking
 
 #: M1 fingerprint-only thresholds (pre-registered in
-#: governance/policies/m1_fingerprint.policy.json -- eval-backed by spike 05;
+#: governance/policies/m1_fingerprint.policy.json -- eval-backed by unit 05;
 #: to be promoted into full policy records when refinement-backed evidence lands)
 MIN_TOP_SIMILARITY = 0.35
 MIN_MARGIN = 0.10                # vs the best OTHER phase family

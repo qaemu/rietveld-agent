@@ -20,7 +20,7 @@ analysis protocol for NIST SRM 2686a cement clinker}\\
 \texttt{rietveld-agent} repository}
 \author{qaemu\\
 \small \texttt{qaemu@users.noreply.github.com} --- repository:
-\url{https://github.com/qaemu/rietveld-agent-spikes}}
+\url{https://github.com/qaemu/rietveld-agent-units}}
 \date{August 2026 --- working paper, version 0.2.0}
 
 \begin{document}
@@ -67,7 +67,7 @@ executable protocol that (i) fixes the structure set and its provenance,
 content hash that makes bit-level reproducibility checkable.
 
 \emph{Response.} This paper describes exactly such a protocol, implemented
-as the spike-15 runner of the \texttt{rietveld-agent} repository
+as the unit-15 runner of the \texttt{rietveld-agent} repository
 \cite{rietveld-agent}. Section~\ref{sec:data} fixes the data and structure
 models; Section~\ref{sec:protocol} defines the budget and ladder;
 Section~\ref{sec:exec} documents the execution model and determinism
@@ -79,7 +79,7 @@ Section~\ref{sec:disc} discusses what the budget can and cannot resolve.
 The four SRM 2686a patterns (Table~\ref{tab:data}) are the files
 published with \cite{garcia-mate2024srms} (Zenodo
 10.5281/zenodo.1318501), re-emitted as two-column $2\theta$--counts with
-unchanged intensities by the repository's spike-11/12 ingest parsers
+unchanged intensities by the repository's unit-11/12 ingest parsers
 (sha256 recorded).
 \begin{table}[ht]
 \centering
@@ -115,7 +115,7 @@ cross-check.
 
 \section{Refinement protocol}\label{sec:protocol}
 The ladder is implemented in
-\texttt{benchmarks/spikes/spike\_15\_rqpa\_protocol.py} and specified
+\texttt{benchmarks/protocols/unit\_15\_rqpa\_protocol.py} and specified
 normatively in \texttt{docs/rqpa\_protocol.md}. It stages the GSAS-II
 Levenberg--Marquardt loop in four steps: (1) per-phase scales with
 Chebyschev background and sample shift; (2) alite cell; (3) belite cells;
@@ -124,8 +124,8 @@ bounded: trace cells and all atom parameters stay fixed, so the protocol
 has a finite, documented number of degrees of freedom and cannot wander
 into the spurious-solution regime.
 
-Two empirical decisions, both locked by spike-15 probes
-(\texttt{notes/spike15.md}), complete the protocol. On the aluminate
+Two empirical decisions, both locked by unit-15 probes
+(\texttt{notes/unit15.md}), complete the protocol. On the aluminate
 residue the published-scale prior is the starting point (weak-overlap
 trace data) and cells are kept fixed to avoid a spurious supercell
 solution; the aphthitalite scale column is SVD-degenerate on that window
@@ -151,7 +151,7 @@ The engine is a deterministic script, not an interactive session:
 \texttt{benchmarks/eval/}\allowbreak\texttt{sim.py:ensure\_gsasii}); \texttt{make figures} and
 \texttt{make paper} rebuild the figures and the paper PDFs (this series
 included). The report records a \emph{canonical content hash} over the
-scientific payload (all fields except wall-clock timing); spike 16
+scientific payload (all fields except wall-clock timing); unit 16
 re-runs the full suite and compares hashes (Paper P-2). This is what
 makes ``same inputs $\to$ same outputs'' a checkable property of the
 repository rather than a claim.
@@ -212,7 +212,7 @@ are physical, not procedural: on synthetic patterns generated from the
 same structures at known fractions the same ladder recovers the input
 wt\% within the noise floor (Paper P-2), so the real-pattern bias is
 attributed to microabsorption --- the target of the repository's planned
-Brindley-correction spike 17 --- and is reported honestly rather than
+Brindley-correction unit 17 --- and is reported honestly rather than
 fitted away.
 
 \emph{Closing.} The protocol is the deterministic core of

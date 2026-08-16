@@ -1,6 +1,6 @@
 """Hypothesis stage: rank candidate materials against an observed pattern.
 
-Candidate matching uses the d-space profile cosine (validated in spike 02:
+Candidate matching uses the d-space profile cosine (validated in unit 02:
 0.908 same material across anodes vs <=0.05 for distinct materials) plus a
 peak-line-list cross-check for reporting. Deterministic, numpy only, no
 GSAS-II at runtime.

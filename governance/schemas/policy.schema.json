@@ -25,7 +25,7 @@
         "phase_cap": {
           "type": "integer",
           "minimum": 1,
-          "description": "Maximum modeled crystalline phases. 2 for the Phase-0 spike; 3 is experimental and must be separately benchmarked."
+          "description": "Maximum modeled crystalline phases. 2 for the Phase-0 unit; 3 is experimental and must be separately benchmarked."
         },
         "patterns_per_analysis": { "const": 1 }
       }
@@ -81,7 +81,7 @@
         },
         "m1_fingerprint": {
           "type": "object",
-          "description": "M1 interim fingerprint-only decision constants (spike 05 eval-backed; superseded when refinement-backed evidence lands).",
+          "description": "M1 interim fingerprint-only decision constants (unit 05 eval-backed; superseded when refinement-backed evidence lands).",
           "properties": {
             "min_top_similarity": { "type": "number" },
             "min_margin": { "type": "number" },

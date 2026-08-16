@@ -1,8 +1,8 @@
-"""Shared GSAS-II simulated-pattern helper (Spike 06 and friends).
+"""Shared GSAS-II simulated-pattern helper (Unit 06 and friends).
 
 Deterministic protocol: one phase from CIF, Cu Ka, 15-140 deg 2theta,
 0.02 deg step, scale 50000, 3-cycle background+scale refine, return ycalc.
-Same recipe as the spike02/spike04 halite sims.
+Same recipe as the unit02/unit04 halite sims.
 """
 from __future__ import annotations
 
@@ -48,18 +48,42 @@ def sim_cif_to_pattern(cif_path: str, work_dir: str, *,
         instrument=InstrumentParams(anode=anode, wavelengths=wavelengths,
                                     tmin=tmin, tmax=tmax, step=step,
                                     npts=int(x.size)),
-        metadata={"sim_protocol": "spike06-v1",
+        metadata={"sim_protocol": "unit06-v1",
                   "simulated_from": os.path.basename(cif_path),
                   "scale": scale, "cycles": 3})
 
 
+def _vendor_gsasii(vendor: str) -> None:
+    """Bootstrap the vendored GSAS-II copy (network, one-time) if absent.
+
+    Fresh clones never ship .vendor/ (gitignored); first run downloads the
+    official GSAS-II repository into ``.vendor/GSAS-II`` so every refinement
+    path works out of the box (see docs/installation.md).
+    """
+    marker = os.path.join(vendor, "GSASII", "GSASIIscriptable.py")
+    if os.path.exists(marker):
+        return
+    os.makedirs(vendor, exist_ok=True)
+    os.environ.setdefault("GSAS_VENDOR_URL",
+                          "https://github.com/GSAS-II/GSAS-II.git")
+    url = os.environ["GSAS_VENDOR_URL"]
+    print(f"[vendor] GSAS-II missing at {vendor}; cloning {url} ...",
+          flush=True)
+    import subprocess
+    subprocess.run(["git", "clone", "--depth", "1", url, vendor],
+                   check=True)
+    if not os.path.exists(marker):
+        raise RuntimeError(f"GSAS-II clone did not produce {marker}")
+
+
 def ensure_gsasii(root: str, vendor: str, prm: str) -> str:
     """Put vendored GSAS-II on sys.path; returns the PRM path to use."""
+    _vendor_gsasii(vendor)
     sys.path.insert(0, root)
     sys.path.insert(0, vendor)
     sys.path.insert(0, os.path.join(vendor, "GSASII"))
     sys.path.insert(0, os.path.join(vendor, "bin"))
     os.environ.setdefault("GSASIIDATA", os.path.join(vendor, "GSASII"))
     if not prm or not os.path.exists(prm):
-        return os.path.join(root, "data", "spike", "input", "INST_XRY.PRM")
+        return os.path.join(root, "data", "unit00", "input", "INST_XRY.PRM")
     return prm

@@ -1,0 +1,166 @@
+{
+  "schema": "run_bundle/v0",
+  "run_id": "run-9be9d8d3a468c8",
+  "status": "completed",
+  "inputs": {
+    "raw_data": {
+      "path": "tests/fixtures/xrdml/cu_PbSO4.xrdml",
+      "original_sha256": "9cb9084c7b76dcc64a5e49d1448cf4233cf35a11475ce2b1fb9f231a0e3552c7",
+      "format": "XRDML"
+    },
+    "sample_name": "PbSO4",
+    "sample_name_sha256": "3cd4cdaa138c76a31a3c4524e41e480c19429f720590edc1d32b19b2f940d63a"
+  },
+  "controlled_versions": {
+    "calibration_id": "cal-967c5da10ad2",
+    "calibration_sha256": null,
+    "catalog_version": "340127a8343e",
+    "policy_version": "policy/0.1.0",
+    "gsasii_version": "5.6.3",
+    "vocabulary_version": null
+  },
+  "environment": {
+    "python": "3.13.7",
+    "platform": "macOS-15.6.1-x86_64-i386-64bit-Mach-O",
+    "package_versions": {
+      "numpy": "2.5.2"
+    }
+  },
+  "plan": {
+    "plan_sha256": "809758f29e403ab77b4b86766da107fe68ebc5413d009ba63f12fac137434c0e",
+    "recipe_key": "fingerprint-only-m1",
+    "approval": {
+      "mode": "policy-delegated",
+      "policy_version": "policy/0.1.0",
+      "expert": null,
+      "approved_at": null
+    }
+  },
+  "checkpoints": [
+    {
+      "stage": "ingest",
+      "gpx_path": "",
+      "metrics": {
+        "parsed": true
+      }
+    },
+    {
+      "stage": "calibration",
+      "gpx_path": "",
+      "metrics": {
+        "resolution": "resolved",
+        "calibration_id": "cal-967c5da10ad2"
+      }
+    },
+    {
+      "stage": "hypothesis",
+      "gpx_path": "",
+      "metrics": {
+        "n_candidates": 14,
+        "top_similarity": 1.0,
+        "margin": 0.913788,
+        "raw_margin": 0.108273
+      }
+    },
+    {
+      "stage": "verdict",
+      "gpx_path": "",
+      "metrics": {
+        "verdict": "supported",
+        "reasons": [
+          "calibration resolved (cal-967c5da10ad2); top candidate separated from the best other phase family by margin 0.914"
+        ]
+      }
+    }
+  ],
+  "verdicts": [
+    {
+      "phase_family": "PbSO4 (anglesite)",
+      "cod_ids": [],
+      "status": "supported",
+      "context_only": false,
+      "evidence": {
+        "evidence_level": "fingerprint-only",
+        "top_similarity": 1.0,
+        "margin": 0.913788,
+        "raw_margin": 0.108273,
+        "matched_peaks": 64,
+        "top_peaks": [
+          {
+            "tth": 29.6851,
+            "d": 3.0069,
+            "height": 45702565.67,
+            "fwhm": 0.14
+          },
+          {
+            "tth": 26.7156,
+            "d": 3.334,
+            "height": 37967847.72,
+            "fwhm": 0.12
+          },
+          {
+            "tth": 20.8155,
+            "d": 4.2637,
+            "height": 35927980.489999995,
+            "fwhm": 0.12
+          },
+          {
+            "tth": 43.7503,
+            "d": 2.0673,
+            "height": 34055683.15,
+            "fwhm": 0.1
+          },
+          {
+            "tth": 27.6942,
+            "d": 3.2183,
+            "height": 29345029.669999998,
+            "fwhm": 0.14
+          }
+        ]
+      }
+    }
+  ],
+  "evidence_separation": {
+    "measured": "",
+    "deterministic_checks": "",
+    "ai_interpretation": ""
+  },
+  "artifacts": [
+    {
+      "kind": "report-json",
+      "path": "data/unit08/results/compare/cu_PbSO4.bundle.json"
+    }
+  ],
+  "verification": {
+    "recipe": "refinement-verify-v1",
+    "policy_version": "1.0",
+    "evidence_level": "fingerprint + refinement",
+    "confirmed_family": "PbSO4 (anglesite)",
+    "separation": 0.039193,
+    "candidates": [
+      {
+        "family": "PbSO4 (anglesite)",
+        "cod_id": 1010950,
+        "rwp": 0.891697,
+        "rexp": 0.001176,
+        "gof": 758.524969,
+        "n_points": 6251,
+        "n_params": 5,
+        "converged": true,
+        "cell": null
+      },
+      {
+        "family": "Al2O3 (corundum)",
+        "cod_id": 1000017,
+        "rwp": 0.93089,
+        "rexp": 0.001176,
+        "gof": 791.864775,
+        "n_points": 6251,
+        "n_params": 5,
+        "converged": true,
+        "cell": null
+      }
+    ],
+    "consistent_with_fingerprint": true
+  }
+}

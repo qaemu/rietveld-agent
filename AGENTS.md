@@ -23,13 +23,13 @@ with `make`** and hash-locked (canonical content md5
 | regression suite | `make test` |
 | full protocol rerun (6 refinements, GSAS-II ~45 min) | `make report` |
 | complete-COD mirror (~26 GB, resumable) + line index | `make cod-tree`, `make cod-index` |
-| validation: reproducibility + known-answer + gates | `python3 benchmarks/spikes/spike_16_validate.py [--skip-rerun\|--skip-synth]` |
+| validation: reproducibility + known-answer + gates | `python3 benchmarks/protocols/validate.py [--skip-rerun\|--skip-synth]` |
 | figures, papers | `make figures`, `make paper` |
 
 ## Results live in
 
-- `data/spike15/results/spike15_report.json` — refinements
-- `data/spike16/results/spike16_report.{json,md}` — validation evidence
+- `data/unit15/results/unit15_report.json` — refinements
+- `data/unit16/results/unit16_report.{json,md}` — validation evidence
 - `data/structures/catalog.json` — md5-recorded structure catalogue
 - `paper/` — manuscript and paper series as PDFs (P-1 protocol, P-2
   validation, P-3 deployment; `make paper`)
@@ -60,5 +60,5 @@ with `make`** and hash-locked (canonical content md5
 - `docs/installation.md` — install on macOS/Linux/Windows via OpenCode /
   Claude Code / Codex
 - `paper/` — manuscript and paper series (PDF; `make paper`)
-- `notes/` — spike-by-spike research log (spike15: protocol decisions,
-  spike16: validation)
+- `notes/` — unit-by-unit research log (unit15: protocol decisions,
+  unit16: validation)

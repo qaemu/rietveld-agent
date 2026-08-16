@@ -108,7 +108,7 @@
       "min_margin": 0.10,
       "margin_kind": "family_margin",
       "min_peak_counts": 100000.0,
-      "evidence": "data/spike5/results/spike05_report.json (combined perturbation envelope: Poisson peak counts, sample displacement 0.02-0.10 mm, background drift 0.5-2%; critical material sio2-cu; amorphous false-positive rate 0.0). NOTE: identification is position-based (d-space fingerprint) and counts-independent; min_peak_counts now gates the VERIFICATION stage (core/verification VERIFY_MIN_PEAK_COUNTS, spike-05 envelope L3): refinements against weaker data are reported as statistics-below-gate, never suppressing a supported identification."
+      "evidence": "data/unit05/results/unit05_report.json (combined perturbation envelope: Poisson peak counts, sample displacement 0.02-0.10 mm, background drift 0.5-2%; critical material sio2-cu; amorphous false-positive rate 0.0). NOTE: identification is position-based (d-space fingerprint) and counts-independent; min_peak_counts now gates the VERIFICATION stage (core/verification VERIFY_MIN_PEAK_COUNTS, unit-05 envelope L3): refinements against weaker data are reported as statistics-below-gate, never suppressing a supported identification."
     }
   },
   "name_context": {

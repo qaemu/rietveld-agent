@@ -19,10 +19,10 @@ from core.calibration import (
 from core.ingest import InstrumentParams, parse_xrdml
 
 ROOT_REPO = __file__.rsplit("/", 2)[0]  # repo root (tests/ is one level deep)
-CU_PRM = f"{ROOT_REPO}/data/spike/input/INST_XRY.PRM"
-FE_PRM = f"{ROOT_REPO}/data/spike2/input/INST_FE.PRM"
+CU_PRM = f"{ROOT_REPO}/data/unit00/input/INST_XRY.PRM"
+FE_PRM = f"{ROOT_REPO}/data/unit02/input/INST_FE.PRM"
 FIX = f"{ROOT_REPO}/tests/fixtures/xrdml"
-EVIDENCE = f"{ROOT_REPO}/data/spike/results/spike_report.md"
+EVIDENCE = f"{ROOT_REPO}/data/unit00/results/unit_report.md"
 
 APPROVED = {"reviewed_by": "tester", "reviewed_at": "2026-08-09T00:00:00+00:00",
             "status": "approved", "evidence_ref": EVIDENCE}

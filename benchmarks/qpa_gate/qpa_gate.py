@@ -33,7 +33,7 @@ import numpy as np
 
 ROOT = Path(__file__).resolve().parent.parent.parent
 sys.path.insert(0, str(ROOT))
-sys.path.insert(0, str(ROOT / "benchmarks" / "spikes"))
+sys.path.insert(0, str(ROOT / "benchmarks" / "protocols"))
 
 from core.codindex import (              # noqa: E402
     D_MIN, D_MAX, D_UNIT, HKL_CAP, N_WORKERS,
@@ -43,7 +43,7 @@ from core.codindex import (              # noqa: E402
 from core.ingest import (                # noqa: E402
     InstrumentParams, PowderPattern, parse_xrdml, sample_fingerprint,
 )
-from spike_12_cod_full import (          # noqa: E402
+from cod_full import (          # noqa: E402
     CIF_DIR, download_cif, ensure_cod_csv, ensure_gsasii, ensure_index,
     load_pattern,
 )
@@ -61,7 +61,7 @@ STRUCT = ROOT / "data" / "structures"
 # ----------------------------------------------------------------------------
 QARR = ROOT / "data" / "benchmark" / "qarr" / "lhpm"
 IRON = ROOT / "data" / "benchmark" / "ironox"
-SRM_IN = ROOT / "data" / "spike11" / "input"
+SRM_IN = ROOT / "data" / "unit11" / "input"
 
 CU = InstrumentParams(anode="CU", wavelengths=(1.54056, 1.54439),
                        scan_axis="2Theta/Theta")
@@ -695,8 +695,8 @@ def _clone_prm(sample: str, work: Path, tag: str, a1: float, a2: float,
                ratio: float, sync: bool = False) -> Path:
     """Clone the staged-protocol PRM for the sample geometry and patch the
     wavelengths/ratio (GSAS-II keeps the rest of the calibration)."""
-    src = (ROOT / "data" / "spike16" / "work" / "INST_SYNC_PROTOCOL.PRM"
-           if sync else ROOT / "data" / "spike16" / "work" /
+    src = (ROOT / "data" / "unit16" / "work" / "INST_SYNC_PROTOCOL.PRM"
+           if sync else ROOT / "data" / "unit16" / "work" /
            "INST_CU_PROTOCOL.PRM")
     txt = src.read_text()
     txt = re.sub(
@@ -959,6 +959,65 @@ def gsas_qpa(pat, phases, work: Path, tag: str, lo: float, hi: float,
         if base_wr is None or bad:
             break
     stage_log.append({"stage": "B_done",
+                      "selected": [s["name"] for s in selected],
+                      "base_wR": base_wr})
+    # ---- Stage B2: canonical re-acceptance (joint refit, free scales) ----
+    # The B forward pass scores candidates with the frozen-scale grid, which
+    # can drop a TRUE minor whose lines sit on the base pattern's shoulders
+    # (iron_30_70: hematite, truth 31.8%, vanished from Stage B this way).
+    # Re-test every CANONICAL candidate not selected via a full joint refit
+    # (scales + background free, profile frozen) seeded from its solo fit;
+    # any wR improvement (d_wR > 0) accepts it.  Iterative, max 2 rounds.
+    # Restricted to PHASE_CANON so blanket canonless lookalikes stay out
+    # (weak-context ADD rule, AGENTS.md invariant 3).
+    for rnd2 in range(2):
+        rej = [x for x in ok
+               if x["phase"]["name"] not in [s["name"] for s in selected]
+               and x["phase"].get("canon") in PHASE_CANON]
+        if not rej:
+            break
+        best2, best2d, best2wr, best2sc = None, 0.0, None, None
+        for x in rej:
+            try:
+                p2, h2 = _mkproj(selected + [x["phase"]], f"{tag}_reacc",
+                                 frozen)
+                _scales_on(p2, [s["name"] for s in selected]
+                           + [x["phase"]["name"]])
+                seeds = {}
+                if x.get("proj") is not None and x.get("h") is not None:
+                    try:
+                        seeds[x["phase"]["name"]] = float(
+                            x["proj"].data["Phases"][x["phase"]["name"]][
+                                "Histograms"][x["h"].name]["Scale"][0])
+                    except Exception:
+                        pass
+                _seed_scales(p2, h2, proj, h, seeds)
+                wr2, _, cv2, bd2 = _wR(p2, h2, f"{tag}_reacc")
+            except Exception:
+                wr2, cv2, bd2 = None, False, True
+            d2 = (base_wr - wr2 if (wr2 is not None and cv2 and not bd2)
+                  else 0.0)
+            print(f"    reacc {x['phase']['name']} ({x['phase']['canon']}): "
+                  f"wR={wr2} d={d2:+.3f}", flush=True)
+            if d2 > best2d:
+                best2, best2d, best2wr = x, d2, wr2
+        if best2 is None or best2d <= 0.0:
+            break
+        selected.append(best2["phase"])
+        stage_log.append({"stage": f"B2_accept_r{rnd2 + 1}",
+                          "phase": best2["phase"]["name"],
+                          "canon": best2["phase"]["canon"],
+                          "d_wR": round(best2d, 3)})
+        p_prev, h_prev = proj, h
+        proj, h = _mkproj(selected, f"{tag}_base", frozen)
+        _scales_on(proj, [s["name"] for s in selected])
+        _seed_scales(proj, h, p_prev, h_prev)
+        base_wr, _, conv, bad = _wR(proj, h, f"{tag}_base")
+        print(f"    base {[s['name'] for s in selected]}: wR={base_wr}",
+              flush=True)
+        if base_wr is None or bad:
+            break
+    stage_log.append({"stage": "B2_done",
                       "selected": [s["name"] for s in selected],
                       "base_wR": base_wr})
     # always refit the accepted base set (frozen) so proj/h/base_wr reflect
@@ -1527,10 +1586,21 @@ def main():
     OUT.mkdir(parents=True, exist_ok=True)
     WORK.mkdir(parents=True, exist_ok=True)
 
-    # ---- COD full index (built once; cached to disk) ----
-    if not CSV.exists():
-        raise SystemExit("cod_metadata_full.csv missing — run fetch first")
-    entries = parse_cod_csv(str(CSV))
+    # ---- COD index (built once; cached to disk) ----
+    # Fresh clones ship a candidate-restricted COD metadata subset; the
+    # full-COD export enables whole-database screening (docs/installation.md)
+    if CSV.exists():
+        csv_path = CSV
+        restrict = False
+    else:
+        csv_path = ROOT / "data" / "candidates" / "cod_entries.csv"
+        restrict = csv_path.exists()
+        if not restrict:
+            raise SystemExit("cod_metadata_full.csv missing — run fetch first")
+    entries = parse_cod_csv(str(csv_path))
+    if restrict:
+        print(f"[gate] CANDIDATE-RESTRICTED screening: {len(entries)} "
+              f"entries from {csv_path.name}", flush=True)
     print(f"COD entries: {len(entries)}", flush=True)
     if IDX_NPZ.exists():
         (cod_ids, d_units, entry_of, dmin_eff, metas_by_id) = load_index(

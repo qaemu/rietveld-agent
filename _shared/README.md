@@ -9,7 +9,7 @@ Light0305/Light-skills).
 | path | shared resource |
 |---|---|
 | `skills/contracts/` | agent-facing decision criteria, reporting rules, parameter allowlists (canonical home; linked from here) |
-| `core/codindex.py` | COD line-index units (`DQ`/`D_UNIT` conventions) shared by `codsearch`, the spikes and the CLI |
+| `core/codindex.py` | COD line-index units (`DQ`/`D_UNIT` conventions) shared by `codsearch`, the units and the CLI |
 | `core/codsearch.py` | complete-COD screening primitives used by the QPA gate, `cli analyze --full-cod` and the run bundle |
 
 ## Conventions

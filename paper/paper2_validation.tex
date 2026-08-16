@@ -20,7 +20,7 @@ engine: reproducibility, synthetic recovery, and gate scoring}\\
 \texttt{rietveld-agent} repository}
 \author{qaemu\\
 \small \texttt{qaemu@users.noreply.github.com} --- repository:
-\url{https://github.com/qaemu/rietveld-agent-spikes}}
+\url{https://github.com/qaemu/rietveld-agent-units}}
 \date{August 2026 --- working paper, version 0.2.0}
 
 \begin{document}
@@ -33,7 +33,7 @@ with three independent checks: (A) bit-level reproducibility across
 independent runs, (B) known-answer recovery of injected ground-truth
 fractions on noise-corrupted synthetic patterns, and (C) honest, scored
 acceptance gates on real data. We report all three for the
-\texttt{rietveld-agent} engine (spike 16 of the repository
+\texttt{rietveld-agent} engine (unit 16 of the repository
 \cite{rietveld-agent}): (A) two full independent suite runs produced
 bit-identical scientific payloads (canonical md5
 \texttt{f43d8be2}\allowbreak\texttt{\ldots}); (B) four synthetic known-answer tests recovered
@@ -56,15 +56,15 @@ Published RQPA validation usually stops at ``converges and looks
 reasonable''. What is missing is a three-pronged, executable proof:
 the results reproduce, the pipeline recovers known truth, and the
 remaining distance to publication quality is measured and attributed.
-\emph{Response.} Spike 16 of the \texttt{rietveld-agent} repository
+\emph{Response.} Unit 16 of the \texttt{rietveld-agent} repository
 \cite{rietveld-agent} implements exactly that proof for the protocol of
 Paper P-1 \cite{rietveld-agent}. Its harness,
-\texttt{benchmarks/spikes/spike\_16\_validate.py}, runs three independent
+\texttt{benchmarks/protocols/unit\_16\_validate.py}, runs three independent
 checks and always completes; verdicts are data, not exit codes.
 
 \section{Methods}
 \subsection{A. Reproducibility check}
-The full spike-15 suite (six refinements, $\sim$15 min on the development
+The full unit-15 suite (six refinements, $\sim$15 min on the development
 hardware) is re-run via subprocess. The report's canonical content hash
 --- computed over all fields except wall-clock timing, which legitimately
 varies --- is compared with the fresh run. Identical hash across
@@ -95,7 +95,7 @@ rwp\_norm $< 1.0$ / $0.5$; per-phase wt\% within the same bands; rank
 agreement (Kendall $\tau$). \emph{Operational} = converged, no error
 markers, wR $< 25$. \emph{Publication} = all gates pass. Every instrument,
 band and gate definition is recorded in the protocol and in
-\texttt{data/spike16/results/spike16\_report.md}, together with the
+\texttt{data/unit16/results/unit16\_report.md}, together with the
 probe classification used during development (wheel = procedural choice;
 counter = counterexample probe; pin = pinned constant;
 gate = guard on a comparison).
@@ -170,7 +170,7 @@ dominant residual is microabsorption: the aluminate-residue fit gained
 on the real data from the cell + breadth ladder (wR 14.9 $\to$ 13.56;
 ferrite 8.4 $\to$ 17.4~wt\%), yet 17.4 vs.\ 68.0 normalized published
 remains the largest single-phase gap and is the target of the
-Brindley-correction spike 17.
+Brindley-correction unit 17.
 
 \section{Discussion and closing}
 Three results carry the validity argument. \emph{First},
@@ -179,7 +179,7 @@ the engine recovers known fractions to the noise floor of the data on
 which it was not trained --- the KAT design reuses the unmodified
 production ladder, so the recovery is a property of the pipeline.
 \emph{Third}, the gates are honest: the publication gap is attributed to
-physics (microabsorption) with a concrete remedy (spike 17), and the
+physics (microabsorption) with a concrete remedy (unit 17), and the
 normalization trap (scoring against a reference that sums to 102.6\%) was
 found by the harness and removed by adopting \texttt{published\_norm()}
 as the shared comparison baseline. Nothing in this paper claims accuracy

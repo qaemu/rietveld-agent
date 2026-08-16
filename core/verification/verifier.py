@@ -1,4 +1,4 @@
-"""Bounded Rietveld verification (spike 07).
+"""Bounded Rietveld verification (unit 07).
 
 Deterministic, policy-driven verification stage: the *observed* pattern is a
 GSAS-II simulation of the catalog CIF (same protocol that builds the catalog
@@ -29,7 +29,7 @@ _FIXED_PARAMS = 5
 _NCELL = {"Cubic": 1, "Tetragonal": 2, "Hexagonal": 2, "Trigonal": 2,
           "Orthorhombic": 3, "Monoclinic": 4, "Triclinic": 6}
 #: counting-statistics floor for MEASURED-path verification claims
-#: (spike 05, envelope L3 = laboratory-grade counting statistics). The
+#: (unit 05, envelope L3 = laboratory-grade counting statistics). The
 #: fingerprint identification itself is position-based and counts-
 #: independent (core.verdict); refinements against weak data are
 #: documented as "statistics-below-gate" rather than claiming a
@@ -169,7 +169,7 @@ def refine_candidate(cod_id: int, family: str, cif_path: str,
                      tth, yobs, wy=None, work_dir: str = "",
                      prm_path: str = "", policy: dict = None) -> RefinementResult:
     """Bounded Rietveld refinement of one candidate against the observed
-    pattern (spike-07 sim-observed path, deterministic GSAS-II).
+    pattern (unit-07 sim-observed path, deterministic GSAS-II).
 
     The observed pattern is a GSAS-II simulation of the catalog CIF; the
     candidate is refined against it with ONLY the bounded budget. Repeated
@@ -369,7 +369,7 @@ def verify_measured(tth, yobs, case: str, candidates: list,
     Counting statistics are ASSESSED, never gate the analysis: the fit still
     runs so the report documents what the weak data can and cannot support,
     and ``status`` records whether the statistics meet the calibrated floor
-    (``min_peak_counts``, spike-05 envelope L3) for a refinement claim.
+    (``min_peak_counts``, unit-05 envelope L3) for a refinement claim.
     """
     import numpy as np
     tth = np.asarray(tth, dtype=float)

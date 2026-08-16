@@ -21,13 +21,13 @@ paper:
 	cd paper && $(TECTONIC) paper2_validation.tex
 	cd paper && $(TECTONIC) paper3_deployment.tex
 
-## figures    -- regenerate paper figures from the spike-15 results
+## figures    -- regenerate paper figures from the unit-15 results
 figures: report
 	$(PY) paper/figures/make_figures.py
 
 ## report     -- rerun the full RQPA protocol suite (GSAS-II, ~45 min)
 report:
-	$(PY) benchmarks/spikes/spike_15_rqpa_protocol.py
+	$(PY) benchmarks/protocols/rqpa_protocol.py
 
 ## check      -- syntax-check every python module
 check:

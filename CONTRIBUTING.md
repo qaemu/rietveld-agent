@@ -23,11 +23,11 @@ Please read them before opening an issue or a pull request.
 
 ## Workflow
 
-1. Open an issue describing the problem or the spike you intend to run.
+1. Open an issue describing the problem or the unit you intend to run.
 2. Fork or branch; commit in small, self-contained steps (see
    [CHANGELOG.md](CHANGELOG.md) for the format).
 3. Add or update a regression test under `tests/` and — for engine
-   changes — a numbered spike entry with a log under `notes/`.
+   changes — a numbered unit entry with a log under `notes/`.
 4. Run locally:
    ```bash
    make env
@@ -36,7 +36,7 @@ Please read them before opening an issue or a pull request.
    ```
    For protocol-level changes also run `make report` (GSAS-II, ~45 min)
    and the validation harness
-   (`python3 benchmarks/spikes/spike_16_validate.py`).
+   (`python3 benchmarks/protocols/validate.py`).
 5. Open a pull request; the diff must not touch hash-locked payloads
    unless the change is intentional and documented.
 

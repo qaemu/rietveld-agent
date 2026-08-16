@@ -38,8 +38,8 @@ dev = ["matplotlib>=3.7", "pytest>=7"]
 rietveld-agent = "cli.__main__:main"
 
 [project.urls]
-Homepage = "https://github.com/qaemu/rietveld-agent-spikes"
-Documentation = "https://github.com/qaemu/rietveld-agent-spikes/blob/main/docs/index.md"
+Homepage = "https://github.com/qaemu/rietveld-agent-units"
+Documentation = "https://github.com/qaemu/rietveld-agent-units/blob/main/docs/index.md"
 
 [tool.setuptools.packages.find]
 include = ["core*", "cli*", "benchmarks*"]

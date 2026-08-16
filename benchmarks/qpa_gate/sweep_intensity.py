@@ -4,7 +4,7 @@ import numpy as np
 
 ROOT = Path(__file__).resolve().parent.parent.parent
 sys.path.insert(0, str(ROOT))
-CIF = ROOT / "data/spike12/work/cifs"
+CIF = ROOT / "data/unit12/work/cifs"
 
 from benchmarks.qpa_gate.qpa_gate import _clone_prm
 from benchmarks.eval.sim import ensure_gsasii

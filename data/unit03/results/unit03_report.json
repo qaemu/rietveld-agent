@@ -1,0 +1,199 @@
+{
+  "mode": "simulate",
+  "started_at": "2026-08-09T22:55:23-0300",
+  "prms": {
+    "cu": {
+      "anode": "CuKa",
+      "wavelengths": [
+        1.5405,
+        1.5443
+      ],
+      "instrument_type": "PXC",
+      "sha256": "e59413059bc3b12a51f1c6eebc5d581470320d05a31f11a41dbb32e16d1d16b9",
+      "profile_function": "3",
+      "profile_coefficients": [
+        2.0,
+        -2.0,
+        5.0,
+        0.1,
+        0.0,
+        0.0,
+        0.015,
+        0.015
+      ]
+    },
+    "fe": {
+      "anode": "FeKa",
+      "wavelengths": [
+        1.936,
+        1.9399
+      ],
+      "instrument_type": "PXC",
+      "sha256": "c64443a939bfc65ace92c2c5cdcdaf5b27bc3fc0a651175cd4f14d4cb19dce35",
+      "profile_function": "3",
+      "profile_coefficients": [
+        2.0,
+        -2.0,
+        5.0,
+        0.1,
+        0.0,
+        0.0,
+        0.015,
+        0.015
+      ]
+    }
+  },
+  "registry_path": "/Users/lucas/Documents/CNEA/rietveld-agent/data/unit03/results/registry.json",
+  "records": [
+    {
+      "schema": "calibration/v0",
+      "id": "cal-c81bcb4bc874",
+      "name": "CNEA-Cu-XRD-default",
+      "kind": "XYE-DEFAULT",
+      "geometry": "Bragg-Brentano",
+      "wavelength": {
+        "alpha1": 1.5405,
+        "alpha2": 1.5443,
+        "ratio_kalpha2_kalpha1": 1.0024667315806557
+      },
+      "state": "released",
+      "approval": {
+        "reviewed_by": "cnca-lab-admin",
+        "reviewed_at": "2026-08-09T22:55:23-0300",
+        "status": "approved",
+        "evidence_ref": "/Users/lucas/Documents/CNEA/rietveld-agent/data/unit00/results/unit_report.md"
+      },
+      "created_at": "2026-08-09T22:55:23-0300",
+      "content": {
+        "gsasii_instprm": {
+          "path": "/Users/lucas/Documents/CNEA/rietveld-agent/data/unit00/input/INST_XRY.PRM",
+          "sha256": "e59413059bc3b12a51f1c6eebc5d581470320d05a31f11a41dbb32e16d1d16b9",
+          "format": "GSAS-II instrument parameter file"
+        },
+        "notes": "default for plain XYE input"
+      }
+    },
+    {
+      "schema": "calibration/v0",
+      "id": "cal-967c5da10ad2",
+      "name": "CNEA-Cu-PANalytical-XPert3",
+      "kind": "XML-FINGERPRINTED",
+      "geometry": "Bragg-Brentano",
+      "wavelength": {
+        "alpha1": 1.5405,
+        "alpha2": 1.5443,
+        "ratio_kalpha2_kalpha1": 1.0024667315806557
+      },
+      "state": "released",
+      "approval": {
+        "reviewed_by": "cnca-lab-admin",
+        "reviewed_at": "2026-08-09T22:55:23-0300",
+        "status": "approved",
+        "evidence_ref": "/Users/lucas/Documents/CNEA/rietveld-agent/data/unit00/results/unit_report.md"
+      },
+      "created_at": "2026-08-09T22:55:23-0300",
+      "content": {
+        "gsasii_instprm": {
+          "path": "/Users/lucas/Documents/CNEA/rietveld-agent/data/unit00/input/INST_XRY.PRM",
+          "sha256": "e59413059bc3b12a51f1c6eebc5d581470320d05a31f11a41dbb32e16d1d16b9",
+          "format": "GSAS-II instrument parameter file"
+        },
+        "notes": "Cu Kalpha Bragg-Brentano"
+      },
+      "fingerprint": {
+        "rules": [
+          {
+            "field": "tube_anode_material",
+            "expected": "CuKa"
+          },
+          {
+            "field": "scan_axis",
+            "expected": "2Theta/Theta"
+          }
+        ],
+        "accept_incomplete": false
+      }
+    },
+    {
+      "schema": "calibration/v0",
+      "id": "cal-9bba7cdaeb39",
+      "name": "CNEA-Fe-PANalytical-XPert3",
+      "kind": "XML-FINGERPRINTED",
+      "geometry": "Bragg-Brentano",
+      "wavelength": {
+        "alpha1": 1.936,
+        "alpha2": 1.9399,
+        "ratio_kalpha2_kalpha1": 1.0020144628099175
+      },
+      "state": "released",
+      "approval": {
+        "reviewed_by": "cnca-lab-admin",
+        "reviewed_at": "2026-08-09T22:55:23-0300",
+        "status": "approved",
+        "evidence_ref": "/Users/lucas/Documents/CNEA/rietveld-agent/data/unit00/results/unit_report.md"
+      },
+      "created_at": "2026-08-09T22:55:23-0300",
+      "content": {
+        "gsasii_instprm": {
+          "path": "/Users/lucas/Documents/CNEA/rietveld-agent/data/unit02/input/INST_FE.PRM",
+          "sha256": "c64443a939bfc65ace92c2c5cdcdaf5b27bc3fc0a651175cd4f14d4cb19dce35",
+          "format": "GSAS-II instrument parameter file"
+        },
+        "notes": "Fe Kalpha Bragg-Brentano"
+      },
+      "fingerprint": {
+        "rules": [
+          {
+            "field": "tube_anode_material",
+            "expected": "FeKa"
+          },
+          {
+            "field": "scan_axis",
+            "expected": "2Theta/Theta"
+          }
+        ],
+        "accept_incomplete": false
+      }
+    }
+  ],
+  "resolutions": {
+    "cu_PbSO4.xrdml": {
+      "expect": "Cu",
+      "status": "resolved",
+      "record_id": "cal-967c5da10ad2",
+      "reason": "unique released calibration for Cu ((1.5405, 1.5443))"
+    },
+    "cu_quartz.xrdml": {
+      "expect": "Cu",
+      "status": "resolved",
+      "record_id": "cal-967c5da10ad2",
+      "reason": "unique released calibration for Cu ((1.5405, 1.5443))"
+    },
+    "fe_PbSO4.xrdml": {
+      "expect": "Fe",
+      "status": "resolved",
+      "record_id": "cal-9bba7cdaeb39",
+      "reason": "unique released calibration for Fe ((1.936, 1.9399))"
+    },
+    "unknown_MoKa": {
+      "expect": "unknown",
+      "status": "unknown",
+      "reason": "no released calibration matches anode=MoKa wavelengths=(0.7093, 0.7136)"
+    },
+    "ambiguity_demo": {
+      "expect": "ambiguous",
+      "status": "ambiguous",
+      "matches": [
+        "cal-967c5da10ad2",
+        "cal-ambig-demo"
+      ]
+    }
+  },
+  "summary": {
+    "n_records": 3,
+    "resolved": 3,
+    "unknown": 1,
+    "ambiguous": 1,
+    "governance": "released-only; schema calibration/v0"
+  }
+}

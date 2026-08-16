@@ -5,7 +5,7 @@
     "version": "0.1.1",
     "manifest_sha256": "371a979e8f97114a3ecf0bfac904a674133338aeadfd8d00194e10cc36992ec3"
   },
-  "manifest_sha256": "11d12a30671362b8a09a7662f17fc580ffd7028e894c66fe030c497efca5ea70",
+  "manifest_sha256": "4b5b1d1bd3c13e2fd13fb29d88ef74d116b9e1b7220d1ce2fabdf8d2c93a02d2",
   "materials": [
     {
       "id": "cod-1000017",
@@ -23,7 +23,7 @@
           1.5405,
           1.5443
         ],
-        "protocol": "spike06-v1"
+        "protocol": "unit06-v1"
       },
       "fingerprint": {
         "source": "sim:1000017",
@@ -2430,7 +2430,7 @@
           1.5405,
           1.5443
         ],
-        "protocol": "spike06-v1"
+        "protocol": "unit06-v1"
       },
       "fingerprint": {
         "source": "sim:1000041",
@@ -4711,7 +4711,7 @@
           1.5405,
           1.5443
         ],
-        "protocol": "spike06-v1"
+        "protocol": "unit06-v1"
       },
       "fingerprint": {
         "source": "sim:1000043",
@@ -6992,7 +6992,7 @@
           1.5405,
           1.5443
         ],
-        "protocol": "spike06-v1"
+        "protocol": "unit06-v1"
       },
       "fingerprint": {
         "source": "sim:1009000",
@@ -9363,7 +9363,7 @@
           1.5405,
           1.5443
         ],
-        "protocol": "spike06-v1"
+        "protocol": "unit06-v1"
       },
       "fingerprint": {
         "source": "sim:1010928",
@@ -11626,7 +11626,7 @@
           1.5405,
           1.5443
         ],
-        "protocol": "spike06-v1"
+        "protocol": "unit06-v1"
       },
       "fingerprint": {
         "source": "sim:1010950",
@@ -14201,7 +14201,7 @@
           1.5405,
           1.5443
         ],
-        "protocol": "spike06-v1"
+        "protocol": "unit06-v1"
       },
       "fingerprint": {
         "source": "sim:1530150",
@@ -16560,7 +16560,7 @@
           1.5405,
           1.5443
         ],
-        "protocol": "spike06-v1"
+        "protocol": "unit06-v1"
       },
       "fingerprint": {
         "source": "sim:1544891",
@@ -18967,7 +18967,7 @@
           1.5405,
           1.5443
         ],
-        "protocol": "spike06-v1"
+        "protocol": "unit06-v1"
       },
       "fingerprint": {
         "source": "sim:9000927",
@@ -21308,7 +21308,7 @@
           1.5405,
           1.5443
         ],
-        "protocol": "spike06-v1"
+        "protocol": "unit06-v1"
       },
       "fingerprint": {
         "source": "sim:9006758",
@@ -23577,7 +23577,7 @@
           1.5405,
           1.5443
         ],
-        "protocol": "spike06-v1"
+        "protocol": "unit06-v1"
       },
       "fingerprint": {
         "source": "sim:9009666",
@@ -25852,7 +25852,7 @@
           1.5405,
           1.5443
         ],
-        "protocol": "spike06-v1"
+        "protocol": "unit06-v1"
       },
       "fingerprint": {
         "source": "sim:9011025",
@@ -28170,7 +28170,7 @@
       "name": "PbSO4",
       "phase_family": "PbSO4 (anglesite)",
       "source_cif": "PbSO4-Wyckoff.cif",
-      "provenance": "APS GSAS-II tutorial CIF (spike 02 fixture); catalog reference: COD 1010950 (anglesite, release 0.1.1)",
+      "provenance": "APS GSAS-II tutorial CIF (unit 02 fixture); catalog reference: COD 1010950 (anglesite, release 0.1.1)",
       "catalog_ref": {
         "cod_id": 1010950,
         "release": "0.1.1"
@@ -30743,7 +30743,7 @@
       "name": "PbSO4",
       "phase_family": "PbSO4 (anglesite)",
       "source_cif": "PbSO4-Wyckoff.cif",
-      "provenance": "APS GSAS-II tutorial CIF (spike 02 fixture); catalog reference: COD 1010950 (anglesite, release 0.1.1)",
+      "provenance": "APS GSAS-II tutorial CIF (unit 02 fixture); catalog reference: COD 1010950 (anglesite, release 0.1.1)",
       "catalog_ref": {
         "cod_id": 1010950,
         "release": "0.1.1"

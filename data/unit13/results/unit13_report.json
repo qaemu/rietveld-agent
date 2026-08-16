@@ -1,0 +1,427 @@
+{
+  "goal": "Unit 13: multiphase Rietveld QPA (GSAS-II) on the 4 NIST SRM 2686a clinker patterns, published phase sets, COD CIFs from unit 12",
+  "budget": {
+    "background": "chebyschev-1 x8",
+    "shift": true,
+    "per_phase": [
+      "Scale",
+      "Cell",
+      "Size/Mustrain isotropic (clinker-Cu, silicate only)"
+    ],
+    "max_cycles": 30,
+    "fixed": [
+      "Uiso",
+      "peak shape",
+      "absorption",
+      "preferred orientation"
+    ]
+  },
+  "samples": {
+    "Clinker_Nist_CuKalpha1_R1.xrdml": {
+      "sample": "Clinker_Nist_CuKalpha1_R1.xrdml",
+      "phases": [
+        {
+          "phase": "alite",
+          "cod": 1538413,
+          "scale": 18.746399881018903,
+          "mass": 2054.40903,
+          "vol": 1079.8516,
+          "cell": [
+            7.063558,
+            7.063558,
+            24.991157,
+            90.0,
+            90.0,
+            120.0
+          ],
+          "wt_frac": 66.63,
+          "gsas_wt_frac": 44.58,
+          "published_wt": 66.0
+        },
+        {
+          "phase": "belite",
+          "cod": 2312428,
+          "scale": 52.555360288781216,
+          "mass": 688.968,
+          "vol": 344.054,
+          "cell": [
+            6.818432,
+            5.561987,
+            9.072189,
+            90.0,
+            90.0,
+            90.0
+          ],
+          "wt_frac": 19.96,
+          "gsas_wt_frac": 41.91,
+          "published_wt": 16.2
+        },
+        {
+          "phase": "C3A",
+          "cod": 1000039,
+          "scale": 0.27823386241424153,
+          "mass": 6484.751999999998,
+          "vol": 3547.4568,
+          "cell": [
+            15.251259,
+            15.251259,
+            15.251259,
+            90.0,
+            90.0,
+            90.0
+          ],
+          "wt_frac": 10.26,
+          "published_wt": 1.9
+        },
+        {
+          "phase": "ferrite",
+          "cod": 1200009,
+          "scale": 2.9236355533855187,
+          "mass": 1171.5704,
+          "vol": 433.0351,
+          "cell": [
+            5.51307,
+            14.659731,
+            5.358011,
+            90.0,
+            90.0,
+            90.0
+          ],
+          "wt_frac": 2.38,
+          "published_wt": 11.1
+        },
+        {
+          "phase": "periclase",
+          "cod": 1000053,
+          "scale": 39.990043609900475,
+          "mass": 161.216,
+          "vol": 75.0262,
+          "cell": [
+            4.217655,
+            4.217655,
+            4.217655,
+            90.0,
+            90.0,
+            90.0
+          ],
+          "wt_frac": 0.77,
+          "published_wt": 4.0
+        }
+      ],
+      "rwp": 0.1752,
+      "converged": true,
+      "n_points": 3950,
+      "elapsed_s": 68.4,
+      "tier": "scale+cell+shape",
+      "fit_range_2th": [
+        4.0,
+        70.0
+      ],
+      "shift_2th": 0.028147,
+      "bkg_coeffs": [
+        1214.748502,
+        -902.507948,
+        503.476269,
+        -305.057004,
+        113.291683,
+        -43.579556,
+        -31.48801,
+        44.799364
+      ],
+      "published_wt": {
+        "alite": 66.0,
+        "belite": 16.2,
+        "ferrite": 11.1,
+        "periclase": 4.0,
+        "C3A": 1.9
+      }
+    },
+    "Silicate_enriched_residue_Nist_CuKalpha1_R1.xrdml": {
+      "sample": "Silicate_enriched_residue_Nist_CuKalpha1_R1.xrdml",
+      "phases": [
+        {
+          "phase": "alite",
+          "cod": 1538413,
+          "scale": 4.352725686620513,
+          "mass": 2054.40903,
+          "vol": 1081.6413,
+          "cell": [
+            7.067214,
+            7.067214,
+            25.006686,
+            90.0,
+            90.0,
+            120.0
+          ],
+          "wt_frac": 86.26,
+          "gsas_wt_frac": 62.58,
+          "published_wt": 78.7
+        },
+        {
+          "phase": "belite",
+          "cod": 2312428,
+          "scale": 5.821263659708651,
+          "mass": 688.968,
+          "vol": 359.2269,
+          "cell": [
+            6.727491,
+            5.652814,
+            9.446067,
+            90.0,
+            90.0,
+            90.0
+          ],
+          "wt_frac": 12.85,
+          "gsas_wt_frac": 28.07,
+          "published_wt": 16.3
+        },
+        {
+          "phase": "periclase",
+          "cod": 1000053,
+          "scale": 8.29612362663042,
+          "mass": 161.216,
+          "vol": 75.0974,
+          "cell": [
+            4.218987,
+            4.218987,
+            4.218987,
+            90.0,
+            90.0,
+            90.0
+          ],
+          "wt_frac": 0.9,
+          "gsas_wt_frac": 9.36,
+          "published_wt": 5.0
+        }
+      ],
+      "rwp": 0.26394,
+      "converged": true,
+      "n_points": 3950,
+      "elapsed_s": 97.7,
+      "tier": "scale+cell+shape",
+      "fit_range_2th": [
+        4.0,
+        70.0
+      ],
+      "shift_2th": 0.001726,
+      "bkg_coeffs": [
+        885.87321,
+        -1030.780884,
+        618.006299,
+        -400.391022,
+        178.092526,
+        -73.986192,
+        -14.572624,
+        25.657058
+      ],
+      "published_wt": {
+        "alite": 78.7,
+        "belite": 16.3,
+        "periclase": 5.0
+      }
+    },
+    "aluminate_enriched_residue_clinkerNIST_180718_R1.xrdml": {
+      "sample": "aluminate_enriched_residue_clinkerNIST_180718_R1.xrdml",
+      "phases": [
+        {
+          "phase": "C3A",
+          "cod": 1000039,
+          "scale": 0.9878669007632045,
+          "mass": 6484.751999999998,
+          "vol": 3562.4278,
+          "cell": [
+            15.272684,
+            15.272684,
+            15.272684,
+            90.0,
+            90.0,
+            90.0
+          ],
+          "wt_frac": 82.27,
+          "published_wt": 13.1
+        },
+        {
+          "phase": "ferrite",
+          "cod": 1200009,
+          "scale": 8.149629429010352,
+          "mass": 1171.5704,
+          "vol": 437.1972,
+          "cell": [
+            5.562624,
+            14.649412,
+            5.365096,
+            90.0,
+            90.0,
+            90.0
+          ],
+          "wt_frac": 15.05,
+          "published_wt": 69.8
+        },
+        {
+          "phase": "periclase",
+          "cod": 1000053,
+          "scale": 61.35005966729344,
+          "mass": 161.216,
+          "vol": 75.2563,
+          "cell": [
+            4.221962,
+            4.221962,
+            4.221962,
+            90.0,
+            90.0,
+            90.0
+          ],
+          "wt_frac": 2.68,
+          "published_wt": 17.2
+        }
+      ],
+      "rwp": 0.14773,
+      "converged": true,
+      "n_points": 3950,
+      "elapsed_s": 8.1,
+      "tier": "scale+cell+shape",
+      "fit_range_2th": [
+        4.0,
+        70.0
+      ],
+      "shift_2th": -0.114394,
+      "bkg_coeffs": [
+        2797.164992,
+        -132.758554,
+        82.889545,
+        -127.157705,
+        142.587626,
+        -71.88333,
+        -0.058533,
+        43.586967
+      ],
+      "published_wt": {
+        "ferrite": 69.8,
+        "periclase": 17.2,
+        "C3A": 13.1
+      }
+    },
+    "Clinker_Synchrotron.dat": {
+      "sample": "Clinker_Synchrotron.dat",
+      "phases": [
+        {
+          "phase": "alite",
+          "cod": 1538413,
+          "scale": 41.03839972763265,
+          "mass": 2054.40903,
+          "vol": 1082.0522,
+          "cell": [
+            7.078,
+            7.078,
+            24.94,
+            90.0,
+            90.0,
+            120.0
+          ],
+          "wt_frac": 89.71,
+          "gsas_wt_frac": 70.21,
+          "published_wt": 65.4
+        },
+        {
+          "phase": "belite",
+          "cod": 2312428,
+          "scale": 31.64736718454874,
+          "mass": 688.968,
+          "vol": 345.0454,
+          "cell": [
+            6.765,
+            5.514,
+            9.25,
+            90.0,
+            90.0,
+            90.0
+          ],
+          "wt_frac": 7.4,
+          "gsas_wt_frac": 18.16,
+          "published_wt": 16.8
+        },
+        {
+          "phase": "ferrite",
+          "cod": 1200009,
+          "scale": 4.438928641556702,
+          "mass": 1171.5704,
+          "vol": 438.1229,
+          "cell": [
+            5.584,
+            14.6,
+            5.374,
+            90.0,
+            90.0,
+            90.0
+          ],
+          "wt_frac": 2.24,
+          "gsas_wt_frac": 4.33,
+          "published_wt": 11.6
+        },
+        {
+          "phase": "periclase",
+          "cod": 1000053,
+          "scale": 54.352483333975435,
+          "mass": 161.216,
+          "vol": 74.9913,
+          "cell": [
+            4.217,
+            4.217,
+            4.217,
+            90.0,
+            90.0,
+            90.0
+          ],
+          "wt_frac": 0.65,
+          "gsas_wt_frac": 7.3,
+          "published_wt": 3.65
+        },
+        {
+          "phase": "C3A",
+          "cod": 1000039,
+          "scale": 1e-12,
+          "mass": 6484.751999999998,
+          "vol": 3555.6558,
+          "cell": [
+            15.263,
+            15.263,
+            15.263,
+            90.0,
+            90.0,
+            90.0
+          ],
+          "wt_frac": 0.0,
+          "gsas_wt_frac": 0.0,
+          "published_wt": 1.99
+        }
+      ],
+      "rwp": 0.31215,
+      "converged": true,
+      "n_points": 10413,
+      "elapsed_s": 151.8,
+      "tier": "cells-fixed",
+      "fit_range_2th": [
+        2.5,
+        62.85
+      ],
+      "shift_2th": -0.040905,
+      "bkg_coeffs": [
+        41667.852683,
+        -38980.320304,
+        16060.526418,
+        -4894.060977,
+        126.467483,
+        801.402768,
+        250.566303,
+        -914.985989
+      ],
+      "published_wt": {
+        "alite": 65.4,
+        "belite": 16.8,
+        "ferrite": 11.6,
+        "periclase": 3.65,
+        "C3A": 1.99
+      }
+    }
+  }
+}

@@ -8,7 +8,7 @@ Pipeline: parse XRDML -> instrument fingerprint -> calibration resolution
 (released-only; hard stop on unknown/ambiguous) -> hypothesis ranking
 (d-space similarity vs the candidate library) -> governed verdict -> [bounded
 Rietveld verification of the top family + nearest competing family against
-the MEASURED pattern (spike 08; skipped on abstain/held or when catalog
+the MEASURED pattern (unit 08; skipped on abstain/held or when catalog
 CIFs are unavailable; any measured grid is resampled onto the protocol
 grid, and counting statistics are assessed, never gating the
 identification)] -> schema-validated RunBundle with optional
@@ -33,11 +33,11 @@ from core.verdict import decide
 _here_root = repo_root()
 ROOT = _here_root if (_here_root / "data").is_dir() else None
 if ROOT is not None:
-    DEFAULT_REGISTRY = ROOT / "data" / "spike3" / "results" / "registry.json"
+    DEFAULT_REGISTRY = ROOT / "data" / "unit03" / "results" / "registry.json"
     DEFAULT_LIBRARY = ROOT / "data" / "candidates" / "library.json"
     DEFAULT_POLICY = ROOT / "governance" / "policies" / "refinement-budget.v1.json"
-    VERIFY_WORK = ROOT / "data" / "spike8" / "work"
-    CID_CIF_DIR = ROOT / "data" / "spike6" / "input" / "cod"
+    VERIFY_WORK = ROOT / "data" / "unit08" / "work"
+    CID_CIF_DIR = ROOT / "data" / "unit06" / "input" / "cod"
     VENDOR = ROOT / ".vendor" / "GSAS-II"
 else:
     DEFAULT_REGISTRY = DEFAULT_LIBRARY = DEFAULT_POLICY = None

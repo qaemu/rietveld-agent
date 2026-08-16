@@ -12,13 +12,13 @@ data/catalog/
 *.dmg
 .DS_Store
 .env.vendor/
-# heavy derived/downloaded artifacts (reproducible via the spike scripts)
+# heavy derived/downloaded artifacts (reproducible via the unit scripts)
 data/cod_index/
-# derived work trees of every spike (reports+inputs are tracked; the rest
-# regenerates with `make report` and the spike runners)
+# derived work trees of every unit (reports+inputs are tracked; the rest
+# regenerates with `make report` and the unit runners)
 data/*/work/
-# spike 15 probe work dir (gpx/lst/xye already ignored; prm are derived)
-# spike 16 work dir (gpx/lst/xye/prm all derived; results/ is tracked)
+# unit 15 probe work dir (gpx/lst/xye already ignored; prm are derived)
+# unit 16 work dir (gpx/lst/xye/prm all derived; results/ is tracked)
 *.lst
 # paper build intermediates (the compiled PDF is tracked)
 paper/*.aux
@@ -30,6 +30,9 @@ paper/*.toc
 *.xye
 .vendor/
 
-# spike-20 gate run artifacts (results/ is tracked; logs/work are derived)
-data/spike20/work/
-data/spike20/gate.log
+# gate run artifacts (results/ is tracked; logs/work are derived)
+data/qpa_gate/work/
+data/qpa_gate/gate.log
+# on-demand COD CIF download pool (rebuilt by the pipeline / cod_full.py)
+data/cif_pool/
+data/unit12/work/cifs/

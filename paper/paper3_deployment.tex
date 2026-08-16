@@ -20,7 +20,7 @@ and Codex: installation, verification, and governance}\\
 \texttt{rietveld-agent} repository}
 \author{qaemu\\
 \small \texttt{qaemu@users.noreply.github.com} --- repository:
-\url{https://github.com/qaemu/rietveld-agent-spikes}}
+\url{https://github.com/qaemu/rietveld-agent-units}}
 \date{August 2026 --- working paper, version 0.2.0}
 
 \begin{document}
@@ -116,7 +116,7 @@ make report   # rerun every RQPA refinement (GSAS-II, ~45 min)
 make paper    # rebuild all paper PDFs (paper/*.tex, tectonic)
 \end{verbatim}
 The full validation evidence is reproduced with
-\texttt{python3 benchmarks/spikes/}\allowbreak\texttt{spike\_16\_validate.py} ($\sim$32 min),
+\texttt{python3 benchmarks/protocols/}\allowbreak\texttt{unit\_16\_validate.py} ($\sim$32 min),
 or in parts with \texttt{--skip-rerun} (known-answer + gates only) and
 \texttt{--skip-synth} (rerun + gates only). Any agent can therefore
 verify the engine from scratch without human intervention, and the

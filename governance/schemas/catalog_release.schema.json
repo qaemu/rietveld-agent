@@ -21,7 +21,7 @@
         "database": { "const": "COD" },
         "snapshot_ref": { "type": "string", "description": "COD snapshot/revision reference (e.g. SVN revision or archive date)." },
         "accessed_at": { "type": "string", "format": "date-time" },
-        "subset_rule": { "type": "string", "description": "e.g. mineral + common inorganic, curated list, Phase-0 spike subset." }
+        "subset_rule": { "type": "string", "description": "e.g. mineral + common inorganic, curated list, Phase-0 unit subset." }
       }
     },
     "licensing": {

@@ -13,7 +13,16 @@ from any of the three supported agent runtimes.
 
 GSAS-II (Apache-2.0) is **never installed by hand**: it is pinned in
 `.vendor/GSAS-II` and bootstrapped by `benchmarks/eval/sim.py:ensure_gsasii`
-on first use. No other network access is needed after clone.
+on first use — the first refinement clones the official GSAS-II
+repository into `.vendor/` (one-time network access, then offline).
+
+COD screening: the repository ships a **candidate-restricted** COD
+metadata export (`data/candidates/cod_entries.csv`, ~3.6k entries, CC0)
+so the whole gate pipeline runs out of the box. The full-COD metadata
+export (~528k entries, 368 MB) is optional: drop
+`data/cod_index/cod_metadata_full.csv` in place (see `make cod-tree`,
+`make cod-index`) to upgrade screening from candidate-restricted to
+whole-database.
 
 ## 1. Clone
 
@@ -83,18 +92,18 @@ Validation evidence (reproducibility + known-answer recovery + gate
 scoring, see [Paper P-2](papers/paper2_validation.md)):
 
 ```bash
-python3 benchmarks/spikes/spike_16_validate.py               # everything (~32 min)
-python3 benchmarks/spikes/spike_16_validate.py --skip-rerun  # KAT + gates only
-python3 benchmarks/spikes/spike_16_validate.py --skip-synth  # rerun + gates only
-python3 benchmarks/spikes/spike_16_validate.py --skip-rerun --sample <name>.xrdml  # one sample
+python3 benchmarks/protocols/validate.py               # everything (~32 min)
+python3 benchmarks/protocols/validate.py --skip-rerun  # KAT + gates only
+python3 benchmarks/protocols/validate.py --skip-synth  # rerun + gates only
+python3 benchmarks/protocols/validate.py --skip-rerun --sample <name>.xrdml  # one sample
 ```
 
 ## 5. Where the results land
 
 | artifact | path |
 |---|---|
-| protocol refinements (md5-locked) | `data/spike15/results/spike15_report.json` |
-| validation evidence (md5-locked) | `data/spike16/results/spike16_report.{json,md}` |
+| protocol refinements (md5-locked) | `data/unit15/results/unit15_report.json` |
+| validation evidence (md5-locked) | `data/unit16/results/unit16_report.{json,md}` |
 | structure catalogue (md5-recorded) | `data/structures/catalog.json` |
 | manuscript + paper series (PDF) | `paper/main.pdf`, `paper/paper{1,2,3}_*.pdf` |
 | research log | [`notes/`](../notes/) |

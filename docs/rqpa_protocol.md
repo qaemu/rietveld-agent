@@ -4,7 +4,7 @@ Fixed, deterministic protocol for the Rietveld quantitative phase analysis
 (RQPA) of the four NIST SRM 2686a patterns, reproducing the phase inventory
 of the published reference study (Garcia-Mate et al. 2024, *Cem. Concr.
 Res.* 180, 107506; data: Zenodo 10.5281/zenodo.1318501). Implemented by
-`benchmarks/spikes/spike_15_rqpa_protocol.py`.
+`benchmarks/protocols/rqpa_protocol.py`.
 
 ## 1. Data
 
@@ -15,14 +15,14 @@ Res.* 180, 107506; data: Zenodo 10.5281/zenodo.1318501). Implemented by
 | aluminate residue | aluminate_enriched_residue_clinkerNIST_180718_R1.xrdml | same | 4.0-70.0 |
 | clinker sync | Clinker_Synchrotron.dat | ALBA SXRPD, λ=0.82543(5) Å, capillary | 2.5-62.85 |
 
-Patterns are re-emitted as `.xye` (2θ, counts) by the spike-11/12 parsers;
+Patterns are re-emitted as `.xye` (2θ, counts) by the unit-11/12 parsers;
 intensities untouched (sha256 recorded). Cu instrument: strictly
 monochromatic α1 (ICONS 1.540598 1.544426, ratio 0) as declared by the
 native XRDML; sync: λ=0.82543 Å.
 
 ## 2. Phase models (locked, md5-recorded)
 
-`data/structures/*.cif` (spike 14; catalogue in `data/structures/catalog.json`):
+`data/structures/*.cif` (unit 14; catalogue in `data/structures/catalog.json`):
 
 | phase | COD | SG | notes |
 |---|---|---|---|
@@ -54,14 +54,14 @@ Per-sample phase set (published inventory, Tables 2-3 of the study):
   it demonstrably helps (clinker Cu, silicate residue); never on the
   synchrotron pattern (sharp profile, parameters degenerate);
 * atom coordinates never refined; no absorption correction in the budget
-  (spike 17 checks Brindley corrections separately).
+  (unit 17 checks Brindley corrections separately).
 
 Robustness ladder (GSAS-II prints metric warnings instead of raising, so
 tiers are scored on Rwp + convergence): (1) budget above; (2) C3A cells
 fixed; (3) all cells fixed. First tier with converged Rwp < 0.70 (Cu) or
 Rwp < 0.35 (sync) wins. `max cyc = 30`, single refinement pass.
 
-**Spike-15 update (empirical, this document is now normative):** the
+**Unit-15 update (empirical, this document is now normative):** the
 single-pass budget crashed the GSAS-II Marquardt/SVD loop (belite cell
 metric blew up; trace scales SVD-dropped to zero). The runner now uses a
 *staged ladder* that restarts the LM from the previous converged solution:
@@ -81,7 +81,7 @@ with S the refined scale, M the GSAS-II cell-content mass, V the refined
 cell volume. Cross-checked against GSAS-II's own weight fractions in the
 history (.lst). Reported against the published values (wt%, Tables 2-3).
 
-## 5. Acceptance criteria (spike 16)
+## 5. Acceptance criteria (unit 16)
 
 * every sample converges and reports all phases of its inventory;
 * wt% within ±1.5 wt% (absolute) of the published value per phase
@@ -89,10 +89,10 @@ history (.lst). Reported against the published values (wt%, Tables 2-3).
 * Rwp < 1.0 (Cu patterns) and < 0.5 (sync pattern);
 * phase-order ranking matches the published ranking for every sample;
 * results reproducible: identical inputs -> identical outputs (md5 of the
-  result JSON recorded and re-checked by `spike_16_validate.py`).
+  result JSON recorded and re-checked by `validate.py`).
 
-Validation status (spike 16, see `notes/spike16.md` and
-`data/spike16/results/spike16_report.md`): reproducibility PASS (bit-identical
+Validation status (unit 16, see `notes/unit16.md` and
+`data/unit16/results/unit16_report.md`): reproducibility PASS (bit-identical
 canonical payload across independent full-suite runs); synthetic known-answer
 recovery **24/24 phase rows within band (4/4 samples)** — the earlier alu
 ferrite "miss" (1.98 wt%) was traced to the unnormalized Table-3 reference
@@ -103,24 +103,24 @@ aphthitalite at its normalized published share on the real alu pattern
 (`phases_constrained`). wR/rwp/rank gates still FAIL on real data (wR
 9.76-27.11 vs <= 6.5 / <= 5) — the protocol is operational and
 deterministic, but fits are not yet publication-grade (microabsorption,
-spike 17).
+unit 17).
 
-## 6. Deviations vs spike 13 (what changed and why)
+## 6. Deviations vs unit 13 (what changed and why)
 
-* structure set: spike 13 used alite T1 (1538413) and a generic belite
+* structure set: unit 13 used alite T1 (1538413) and a generic belite
   (2312428) with 5 phases/sample; the protocol now uses the published
-  polymorph set (8 phases, spike 14) including α'H-belite and aphthitalite,
-  whose absence was the largest systematic in spike 13;
+  polymorph set (8 phases, unit 14) including α'H-belite and aphthitalite,
+  whose absence was the largest systematic in unit 13;
 * trace-phase cells fixed (aliasing control with the sharp sync instrument);
 * everything else (ranges, background, normalization, ladder) unchanged so
-  spike 13 remains the baseline for the structure-set comparison.
+  unit 13 remains the baseline for the structure-set comparison.
 
-## 7. Spike-15 run: locked decisions from the empirical probes
+## 7. Unit-15 run: locked decisions from the empirical probes
 
 All decisions below were probed on real GSAS-II runs
-(`data/spike15/work/alu_*.gpx` and the suite log) and are encoded in
-`spike_15_rqpa_protocol.py`; each is deterministic (same inputs ->
-same outputs, md5-recorded in `spike15_report.json`).
+(`data/unit15/work/alu_*.gpx` and the suite log) and are encoded in
+`rqpa_protocol.py`; each is deterministic (same inputs ->
+same outputs, md5-recorded in `unit15_report.json`).
 
 **Dual alite model.** Every Cu alite-bearing sample is refined twice:
 alite M3 (9008366) and alite T1 (1538413). Both converge; T1 matches the
@@ -161,9 +161,9 @@ default 1.0/1e-12 starts the LM ran onto a spurious supercell (volumes
 x10, scales x1e12). With the published-prior starts the cell ladder is
 stable and lifts the fit from wR 14.9 (scales-only) to 13.6 (cells +
 ferrite isotropic breadth), ferrite recovering from 8.4 to 17.4 wt%
-(remainder of the gap is microabsorption, see spike 17).
+(remainder of the gap is microabsorption, see unit 17).
 
-**Spike-15 aggregate results** (`data/spike15/results/spike15_report.*`):
+**Unit-15 aggregate results** (`data/unit15/results/unit15_report.*`):
 
 | sample [model] | wR % | tier | worst |phase|diff| |
 |---|---|---|---|---|
@@ -175,7 +175,7 @@ ferrite isotropic breadth), ferrite recovering from 8.4 to 17.4 wt%
 | clinker sync [M3] | 9.76 | ok | 32.1 (alite) |
 
 All converge (`ok` = converged, no metric errors, wR < 25; the gate is
-the spike-16 target pair Rwp < 1.0 Cu / < 0.5 sync, not yet met by the
+the unit-16 target pair Rwp < 1.0 Cu / < 0.5 sync, not yet met by the
 bounded budget). The large per-phase diffs concentrate on the
 strongly-absorbing alite/ferrite on the M3 model and are attributed to
-microabsorption, which spike 17 addresses with Brindley corrections.
+microabsorption, which unit 17 addresses with Brindley corrections.

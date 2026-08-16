@@ -34,7 +34,7 @@ mitigation and disclosure coordinated with you before public release.
 | component | supported |
 |---|---|
 | `core/` engine, `cli/` operator CLI | supported |
-| `benchmarks/` spikes and harness | maintained; `make check` must pass |
+| `benchmarks/` units and harness | maintained; `make check` must pass |
 | `paper/`, `docs/`, `notes/` | documentation (non-executable content has no security surface) |
 | `.vendor/GSAS-II` | pinned external tool; update only with review |
 

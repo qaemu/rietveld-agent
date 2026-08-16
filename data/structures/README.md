@@ -10,7 +10,7 @@ Res.* 180, 107506, DOI 10.1016/j.cemconres.2021.106376, Table 1).
 | COD id | phase | formula (cell) | space group | cell (A, deg) | rho (g/cm3) | source |
 |---|---|---|---|---|---|---|
 | 9008366 | alite M3 | Ca108 Si36 O180 | C 1 m 1 (#8) | 33.083 7.027 18.499, b=94.12 | 3.182 | Nishi, Takeuchi & Maki 1985, Z. Kristallogr. 172, 297 (AMCSD 0010938) |
-| 1538413 | alite T1 (cross-check) | Ca36 Si12 O60 | P -1 (#2) | 11.67 14.24 13.72, a=105.3 b=94.5 g=90.0 | 3.130 | de la Torre et al. 2002, Powder Diffr. 17, 240; triclinic T1 pseudocell (spike-14 T1 variant, spike-15 cross-check model) |
+| 1538413 | alite T1 (cross-check) | Ca36 Si12 O60 | P -1 (#2) | 11.67 14.24 13.72, a=105.3 b=94.5 g=90.0 | 3.130 | de la Torre et al. 2002, Powder Diffr. 17, 240; triclinic T1 pseudocell (unit-14 T1 variant, unit-15 cross-check model) |
 | 9012794 | belite beta (larnite) | Ca8 Si4 O16 | P 1 21/n 1 (#14) | 5.5075 6.7508 9.3054, b=94.59 | 3.317 | Tsurumi et al. 1994 (larnite, neutron) |
 | 1546027 | belite alpha'H | Ca8 Si4 O16 | P n m a (#62) | 6.8709 5.6010 9.5563 | 3.111 | Mumme et al. 1996 (alpha'H model of Mumme 1995) |
 | 1000039 | aluminate cubic (C3A) | Ca72 Al48 O144 | P a -3 (#205) | 15.263 15.263 15.263 | 3.028 | Mondal & Jeffery 1975, Acta Cryst. B31, 689 |
@@ -46,16 +46,16 @@ publication match:
 * **ferrite** -- Colville & Geller (1972) Ibm2, the standard C4AF model.
 * **aphthitalite** -- Okada & Ossaka (1980) P-3m1. The CIF's operator loop
   is actually a complete International-Tables P-3m1 set (verified op-by-op
-  in spike 15); the unusual bits are the Hall symbol string (`-P 3 2"`)
-  and the non-canonical op ordering, which is why the spike-14 parser
+  in unit 15); the unusual bits are the Hall symbol string (`-P 3 2"`)
+  and the non-canonical op ordering, which is why the unit-14 parser
   validates it with the International Tables set (`FORCE_HARD`). GSAS-II
   imports it correctly (SGData P-3m1, trigonal, 3m1 Laue), but its Scale
   column is numerically degenerate on the aluminate-residue data window
-  (see spike 15 notes); clinker/sync patterns refine it normally.
+  (see unit 15 notes); clinker/sync patterns refine it normally.
 
 ## Validation
 
-`benchmarks/spikes/spike_14_structures.py` re-validates every file:
+`benchmarks/protocols/unit_14_structures.py` re-validates every file:
 
 1. space group number matches the literature polymorph;
 2. cell constants match the published values;
@@ -67,4 +67,4 @@ publication match:
    Ca:Al:O = 3:2:6, ferrite Ca:Al:Fe:O = 2:1:1:5, periclase 1:1,
    aphthitalite K:Na:S:O = 3:1:2:8.
 
-Run: `.venv/bin/python benchmarks/spikes/spike_14_structures.py`
+Run: `.venv/bin/python benchmarks/protocols/unit_14_structures.py`

@@ -1,4 +1,4 @@
-"""Instrument-aware synthetic noise model (Spike 05 threshold evaluation).
+"""Instrument-aware synthetic noise model (Unit 05 threshold evaluation).
 
 Every perturbation maps a clean PowderPattern to a realistic noisy one and is
 deterministic given a seed (so the eval and its regression tests reproduce):

@@ -15,7 +15,7 @@ Screening reuses ``core.codindex``: a lattice-geometry line index
 then re-scored offline against their LOCAL CIFs with kinematic intensities
 (``cif_calc_lines``/``intensity_match``) - no per-request downloads.
 
-Honest limitations (unchanged from spike 12):
+Honest limitations (unchanged from unit 12):
   * the index is POSITION-ONLY (lattice geometry, no intensities): it is a
     candidate FILTER, not an identification;
   * on multi-phase patterns the screen dilutes (every phase competes with

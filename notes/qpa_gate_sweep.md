@@ -119,7 +119,7 @@ Three hypotheses from the first sweep were tested and are all refuted:
 
 ## Conclusion
 
-With the current COD library (data/spike12/work/cifs, COD-pinned) and
+With the current COD library (data/unit12/work/cifs, COD-pinned) and
 fixed profile stages, neither sample can pass the ±3 gate: qarr_1f fails
 because no zincite CIF reproduces the data's angle-dependent intensities
 (the F2 profile of the data's zincite lies strictly between library

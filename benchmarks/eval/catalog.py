@@ -1,4 +1,4 @@
-"""Shared COD catalog helpers (Spike 06): CIF parsing, chemistry validation,
+"""Shared COD catalog helpers (Unit 06): CIF parsing, chemistry validation,
 formula normalization, cell extraction. numpy-free, importable by tests
 without GSAS-II.
 """

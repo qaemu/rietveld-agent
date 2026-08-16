@@ -9,12 +9,12 @@ the repository does not use semantic version tags yet (see
 ## [Unreleased]
 
 ### Changed
-- Spike-18/19/20 unified into one maintained module: the full-COD
+- Unit-18/19/20 unified into one maintained module: the full-COD
   screening gate now lives in `benchmarks/qpa_gate/qpa_gate.py` with
   `benchmarks/qpa_gate/aggregate.py` (results under `data/qpa_gate/`);
-  `notes/spike18.md` removed (its codsearch design notes live with
+  `notes/unit18.md` removed (its codsearch design notes live with
   `core/codsearch.py`); the repository landing pages (`README.md`,
-  `README.en.md`) no longer expose the spike numbering.
+  `README.en.md`) no longer expose the unit numbering.
 
 ### Added
 - `benchmarks/qpa_gate/qpa_gate.py` — full-COD screening and QPA gate
@@ -33,14 +33,14 @@ the repository does not use semantic version tags yet (see
   `CONTRIBUTING.md`, `SECURITY.md`, `README.en.md`.
 
 ### Fixed
-- `benchmarks/spikes/spike_20_fullcod_qpa.py`: `canon_of` gained a
+- `benchmarks/protocols/unit_20_fullcod_qpa.py`: `canon_of` gained a
   formula-element fallback (COD records whose `mineral`/`chemname` are
   empty, e.g. 2300112 `- O Zn -` → zincite, 2300616 `- Fe3 O4 -` →
   magnetite); `canon_recall` and the screening call sites pass the
   formula too, so empty-metadata entries are no longer lost to the
   gate (`zincite` was previously reported `MISSING` for qarr_1f even
   though it was the fitted phase at 27.2 wt%).
-- `benchmarks/spikes/spike_20_fullcod_qpa.py` manifest: qarr sample ids
+- `benchmarks/protocols/unit_20_fullcod_qpa.py` manifest: qarr sample ids
   aligned with `QARR_TRUTH` keys (`qarr_1a`..`qarr_1h`); SRM inputs
   resolve to their real extensions (`.xrdml` / `.dat`).
 - Complete-COD runs now execute with the repository virtualenv
@@ -55,7 +55,7 @@ the repository does not use semantic version tags yet (see
   diagnostic scripts that no longer run against the current engine.
 
 ### Fixed
-- README/README.en spike-20 gate badge claimed "20/20 PASS" while only 3
+- README/README.en unit-20 gate badge claimed "20/20 PASS" while only 3
   of 20 samples were verified; badge now shows the honest verified state
   (3/20 PASS, 2026-08-14) and `README.en.md` documents the per-sample
   verdicts, including the known single-phase-100% convergence failure
@@ -65,7 +65,7 @@ the repository does not use semantic version tags yet (see
 
 ### Added
 - `core/codsearch.py` groundwork (line index schema, sharded build).
-- Spike-20 harness files (see Unreleased — historical entry kept for
+- Unit-20 harness files (see Unreleased — historical entry kept for
   provenance).
 
 ## [0.1.0] - 2025
@@ -74,9 +74,9 @@ the repository does not use semantic version tags yet (see
 - Deterministic RQPA engine: ingest, calibration registry, structure
   catalog, hypothesis ranking, verdict and reporting
   (`core/`, `cli/`).
-- Spike-by-spike research log (spikes 01-16) with reproducible
+- Unit-by-unit research log (units 01-16) with reproducible
   experiments, regression tests (`make test`) and the md5-locked
-  protocol + validation reports (spike 15, spike 16).
+  protocol + validation reports (unit 15, unit 16).
 - Paper series P-1..P-3 and manuscript (`paper/`, `make paper`).
 - Governance schemas and policies for controlled scientific inputs
   (`governance/`), agent-facing contracts (`skills/contracts/`).

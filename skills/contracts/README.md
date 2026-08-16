@@ -16,4 +16,4 @@ Versioning: all changes to these files must bump the `contracts_version`
 below and be reviewed by a scientist before release. Nothing in a published
 analysis may reference a contracts revision other than the pinned one.
 
-Current revision: `contracts/0.1.0` (draft — Phase 0 spike).
+Current revision: `contracts/0.1.0` (draft — Phase 0 unit).

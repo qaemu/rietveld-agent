@@ -60,7 +60,7 @@
       }
     },
     "verification": {
-      "description": "Optional bounded-Rietveld verification evidence (spike 07). Absent for fingerprint-only runs.",
+      "description": "Optional bounded-Rietveld verification evidence (unit 07). Absent for fingerprint-only runs.",
       "type": "object",
       "required": ["recipe", "policy_version", "evidence_level",
                    "confirmed_family", "candidates"],

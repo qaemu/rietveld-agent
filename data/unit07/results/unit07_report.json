@@ -1,0 +1,136 @@
+{
+  "unit": "unit_07",
+  "created_at": "2026-08-09T21:27:39-0300",
+  "policy": {
+    "version": "1.0",
+    "recipe": "refinement-verify-v1",
+    "path": "governance/policies/refinement-budget.v1.json"
+  },
+  "recipe_bounded_keys": {
+    "histogram": [
+      "Background",
+      "Sample Parameters Shift"
+    ],
+    "phase": [
+      "Cell"
+    ],
+    "hap": [
+      "Scale"
+    ]
+  },
+  "prohibited": [
+    "Atoms",
+    "Mustrain",
+    "Size",
+    "HStrain",
+    "PhaseFraction",
+    "Pref.Ori.",
+    "LeBail"
+  ],
+  "release_ref": {
+    "version": "0.1.0",
+    "manifest_sha256": "7e31c47f91ce7f1bb28f58c331547a1be78dcc1c0ad8d005fb0417e07cb5b6e0"
+  },
+  "library_manifest_sha256": "340127a8343ea8f0f079184a971d823ec4bc963258c33ae679d1eda27dbcf7a9",
+  "cases": [
+    {
+      "case": "cu_PbSO4.xrdml",
+      "fixture": "cu_PbSO4.xrdml",
+      "fingerprint": {
+        "top_family": "PbSO4 (anglesite)",
+        "top_similarity": 1.0,
+        "family_margin": 0.913788,
+        "matches_catalog_truth": true
+      },
+      "observed": {
+        "cod_id": 1010950,
+        "family": "PbSO4 (anglesite)",
+        "cif": "1010950.cif"
+      },
+      "candidates": [
+        {
+          "family": "PbSO4 (anglesite)",
+          "cod_id": 1010950,
+          "rwp": 0.0,
+          "rexp": 0.001113,
+          "gof": 0.0,
+          "n_points": 6251,
+          "n_params": 8,
+          "converged": false,
+          "cell": null
+        },
+        {
+          "family": "CaCO3 (calcite)",
+          "cod_id": 1010928,
+          "rwp": 0.928932,
+          "rexp": 0.001113,
+          "gof": 834.747545,
+          "n_points": 6251,
+          "n_params": 8,
+          "converged": false,
+          "cell": null
+        }
+      ],
+      "confirmed": true,
+      "policy_check": {
+        "max_rwp": 0.35,
+        "separation_min": 0.05
+      }
+    },
+    {
+      "case": "cu_quartz.xrdml",
+      "fixture": "cu_quartz.xrdml",
+      "fingerprint": {
+        "top_family": "GaAsO4 (quartz homeotype)",
+        "top_similarity": 1.0,
+        "family_margin": 0.925729,
+        "matches_catalog_truth": true
+      },
+      "observed": {
+        "cod_id": 1009000,
+        "family": "GaAsO4 (quartz homeotype)",
+        "cif": "1009000.cif"
+      },
+      "candidates": [
+        {
+          "family": "GaAsO4 (quartz homeotype)",
+          "cod_id": 1009000,
+          "rwp": 0.0,
+          "rexp": 0.001282,
+          "gof": 0.0,
+          "n_points": 6251,
+          "n_params": 8,
+          "converged": false,
+          "cell": null
+        },
+        {
+          "family": "SiO2 (quartz)",
+          "cod_id": 9012601,
+          "rwp": 0.980803,
+          "rexp": 0.001282,
+          "gof": 765.056908,
+          "n_points": 6251,
+          "n_params": 8,
+          "converged": false,
+          "cell": null
+        }
+      ],
+      "confirmed": true,
+      "policy_check": {
+        "max_rwp": 0.35,
+        "separation_min": 0.05
+      }
+    }
+  ],
+  "summary": {
+    "n_cases": 2,
+    "n_confirmed": 2,
+    "all_confirmed": true
+  },
+  "honesty_notes": [
+    "Noiseless protocol: the observed pattern is the deterministic GSAS-II simulation of the catalog CIF (same protocol as catalog fingerprints). Noise robustness is unit 05's mandate; real-data Rwp values will be larger -- the decision signal is lowest-Rwp family + policy bounds, not absolute Rwp.",
+    "Bounded keys only (background + shift + cell + scale): a wrong phase cannot hide by absorbing mismatch (atoms/microstrain/size/phase-fraction/LeBail prohibited in policy).",
+    "Rexp is approximate: (N-P)/sum(w y^2) with P from the policy budget; GoF = Rwp/Rexp. No phase-purity/QPA claims are made."
+  ],
+  "wall_clock_s": 21.6
+}
