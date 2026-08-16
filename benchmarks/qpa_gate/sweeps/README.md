@@ -87,6 +87,28 @@ profile-independent. The pipeline's Stage-D seeds (frozen winner profile,
 scale carryover) shift the exact split (48/52 vs 28/72), but no setting
 reaches the ±3 wt% gate.
 
+## qarr_1f — March-Dollase preferred-orientation (negative result)
+
+`benchmarks/qpa_gate/exp_po.py` + `data/qpa_gate/sweeps/qarr_1f_po_sweep.json`
+(test of the texture hypothesis: zincite is uniaxial, excess equatorial
+110/103 etc. would be explained by a c-axis MD ratio < 1):
+
+| MD ratio (axis [0,0,1], fixed) | zincite wt | corundum wt | fluorite wt | wR   |
+|-------------------------------|-----------|-------------|-------------|------|
+| 1.0 (baseline / no PO)        | 27.1      | 45.7        | 27.2        | 56.3 |
+| 0.8                           | 23.3      | 48.1        | 28.7        | 59.6 |
+| 0.65                          | 13.8      | 53.9        | 32.2        | 65.8 |
+| 0.5                           | 5.3       | 59.3        | 35.4        | 70.2 |
+| 0.35                          | 1.5       | 61.7        | 36.8        | 71.8 |
+| refine (start 1.0)            | 27.1      | 45.7        | 27.2        | 56.3 |
+
+The MD ratio **refines back to 1.0** and every r < 1 raises wR while
+*lowering* zincite — the opposite of the hypothesis.  The zincite
+high-angle excess is therefore **not** a c-axis March-Dollase texture of
+the nominal structure; it is a residual data-vs-model discrepancy
+(specimen displacement / absorption or an unmodeled contribution) that no
+CIF, profile or PO setting recovers.
+
 ## Conclusion
 
 Condition B of the gate goal applies: neither sample can be brought to
