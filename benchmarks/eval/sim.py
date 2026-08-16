@@ -66,11 +66,16 @@ def _vendor_gsasii(vendor: str) -> None:
     os.makedirs(vendor, exist_ok=True)
     os.environ.setdefault("GSAS_VENDOR_URL",
                           "https://github.com/AdvancedPhotonSource/GSAS-II.git")
+    os.environ.setdefault(
+        "GSAS_VENDOR_REF",
+        "013259a0defab16f8414e1fcfa6b0274f1c61ecf")  # pinned revision
     url = os.environ["GSAS_VENDOR_URL"]
-    print(f"[vendor] GSAS-II missing at {vendor}; cloning {url} ...",
-          flush=True)
+    ref = os.environ["GSAS_VENDOR_REF"]
+    print(f"[vendor] GSAS-II missing at {vendor}; cloning {url} @ {ref} "
+          "(pinned revision, deterministic) ...", flush=True)
     import subprocess
-    subprocess.run(["git", "clone", "--depth", "1", url, vendor],
+    subprocess.run(["git", "clone", url, vendor], check=True)
+    subprocess.run(["git", "-C", vendor, "checkout", "-q", ref],
                    check=True)
     if not os.path.exists(marker):
         raise RuntimeError(f"GSAS-II clone did not produce {marker}")
