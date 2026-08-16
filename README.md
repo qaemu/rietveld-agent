@@ -1,6 +1,5 @@
 # rietveld-agent
 
-![RQPA preview — observed pattern, fit, and residual](assets/main-preview.png)
 
 [![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)](pyproject.toml)
 [![Reference data (Zenodo)](https://img.shields.io/badge/data-Zenodo%2010.5281%2Fzenodo.1318501-lightgrey.svg)](https://doi.org/10.5281/zenodo.1318501)
