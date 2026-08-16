@@ -6,6 +6,7 @@ Same recipe as the unit02/unit04 halite sims.
 """
 from __future__ import annotations
 
+import glob
 import os
 import sys
 
@@ -69,6 +70,8 @@ def _vendor_gsasii(vendor: str) -> None:
     os.environ.setdefault(
         "GSAS_VENDOR_REF",
         "013259a0defab16f8414e1fcfa6b0274f1c61ecf")  # pinned revision
+    os.environ.setdefault(
+        "GSAS_VENDOR_BINARIES", "auto")  # auto | skip (e.g. offline docs build)
     url = os.environ["GSAS_VENDOR_URL"]
     ref = os.environ["GSAS_VENDOR_REF"]
     print(f"[vendor] GSAS-II missing at {vendor}; cloning {url} @ {ref} "
@@ -79,6 +82,27 @@ def _vendor_gsasii(vendor: str) -> None:
                    check=True)
     if not os.path.exists(marker):
         raise RuntimeError(f"GSAS-II clone did not produce {marker}")
+    bindir = os.path.join(vendor, "bin")
+    if os.environ["GSAS_VENDOR_BINARIES"] == "auto" and not glob.glob(
+            os.path.join(bindir, "pyspg.*")):
+        print("[vendor] GSAS-II compiled binaries (pyspg etc.) missing; "
+              "downloading the platform/Python-matched distribution ...",
+              flush=True)
+        sys.path.insert(0, vendor)
+        sys.path.insert(0, os.path.join(vendor, "GSASII"))
+        from GSASII.GSASIIpath import (InstallGitBinary, getGitBinaryLoc,
+                                       SetBinaryPath)
+        turl = getGitBinaryLoc()
+        if not turl:
+            raise RuntimeError(
+                "Could not locate a GSAS-II binary distribution for this "
+                "platform/Python; set GSAS_VENDOR_BINARIES=skip to continue "
+                "without compiled binaries")
+        InstallGitBinary(turl, bindir)
+        if not glob.glob(os.path.join(bindir, "pyspg.*")):
+            raise RuntimeError("GSAS-II binary download did not produce "
+                               "bin/pyspg.*")
+        SetBinaryPath(showConfigMsg=False)
 
 
 def ensure_gsasii(root: str, vendor: str, prm: str) -> str:
