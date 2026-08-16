@@ -28,8 +28,7 @@ qarr_1a: [('corundum', 1.2), ('zincite', 4.0), ('fluorite', 94.6)] rwp=… → P
 ```
 
 Phase names are canonical mineral keys (see `PHASE_CANON` in
-`benchmarks/qpa_gate/qpa_gate.py` and the contracts under
-`skills/contracts/`); normalized wt% are reported.
+`benchmarks/qpa_gate/qpa_gate.py`); normalized wt% are reported.
 
 ## Prerequisites
 

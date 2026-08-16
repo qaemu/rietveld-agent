@@ -1,6 +1,7 @@
 # rietveld-agent
 
-[![License: Apache 2.0](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](LICENSE)
+![RQPA preview — observed pattern, fit, and residual](assets/main-preview.png)
+
 [![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)](pyproject.toml)
 [![Reference data (Zenodo)](https://img.shields.io/badge/data-Zenodo%2010.5281%2Fzenodo.1318501-lightgrey.svg)](https://doi.org/10.5281/zenodo.1318501)
 [![OpenCode ready](https://img.shields.io/badge/OpenCode-ready-22C55E.svg)](docs/installation.md)
@@ -39,6 +40,8 @@ manual GSAS-II installation. Full per-platform, per-runtime instructions
 [`docs/installation.md`](docs/installation.md).
 
 ## Results
+
+![Results summary](assets/results-summary.png)
 
 The protocol runner implements the staged refinement; all six refinements converge
 deterministically (same inputs → same outputs, result-JSON md5 recorded):
@@ -91,11 +94,10 @@ benchmarks/eval/      instrument-aware noise model, evaluation harness
 benchmarks/qpa_gate/  full-COD screening + QPA gate (qpa_gate.py, aggregate.py)
 cli/                  operator CLI (python -m cli analyze ...)
 governance/           schemas and policies for controlled scientific inputs
-skills/contracts/     agent-facing decision criteria and parameter allowlists
-_shared/              shared conventions for reuse across skills/experiments
+_shared/              shared conventions across modules
 scripts/              repository entry points (e.g. gate_runner.sh)
-examples/ e2e-qpa/    runnable single-sample demo
-projects/ qarr-qpa/   project landing page (composition demo, milestones)
+examples/e2e-qpa/     runnable single-sample demo
+projects/qarr-qpa/    project landing page (composition demo, milestones)
 assets/               repository preview figures
 data/structures/      COD-pinned RQPA structure set (md5-recorded)
 data/qpa_gate/        full-COD gate: results/ (tracked)
@@ -134,7 +136,7 @@ recorded).
 ## Citation
 
 If you use this repository, cite the reference study and the repository
-itself ([`CITATION.cff`](CITATION.cff)):
+itself:
 
 ```bibtex
 @article{garcia-mate2024srms,
@@ -176,7 +178,7 @@ itself ([`CITATION.cff`](CITATION.cff)):
 
 ## License
 
-Apache-2.0 for original code ([LICENSE](LICENSE)). GSAS-II is an external
-dependency under its own Apache-2.0 license. Structure files under
-`data/structures/` are CC0 from the Crystallography Open Database
-(attribution preserved in catalog releases).
+Apache-2.0 for original code. GSAS-II is an external dependency under
+its own Apache-2.0 license. Structure files under `data/structures/` are
+CC0 from the Crystallography Open Database (attribution preserved in
+catalog releases).

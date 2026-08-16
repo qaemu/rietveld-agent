@@ -1,12 +1,31 @@
 # Changelog
 
-All notable changes to this repository are documented here, following
-the reference layout of the Light-skills repo (Light0305/Light-skills).
-Format is inspired by [Keep a Changelog](https://keepachangelog.com/);
-the repository does not use semantic version tags yet (see
-`pyproject.toml` for the package version).
+All notable changes to this repository are documented here, in
+[Keep a Changelog](https://keepachangelog.com/) format; the repository
+does not use semantic version tags yet (see `pyproject.toml` for the
+package version).
 
 ## [Unreleased]
+
+### Changed
+- `README.md` / `README.en.md` rewritten project-first: hero + results
+  preview figures from `assets/`, template-scaffolding vocabulary
+  removed, entry-point and gate tables kept.
+- `governance/schemas/policy.schema.json` — description strings that
+  pointed into the removed `skills/contracts/` now point at
+  `docs/rqpa_protocol.md`.
+
+### Removed
+- Template scaffolding from the Light-skills restyle, superseded by the
+  project's own docs: `skills/contracts/` (agent-facing criteria, now
+  covered by `AGENTS.md` + `docs/rqpa_protocol.md`), `docs/G0-CHECKLIST.md`
+  (phase-0 milestone doc, now covered by `docs/index.md`),
+  `notes/qpa_gate_sweep.md` (analysis preserved in
+  `benchmarks/qpa_gate/sweeps/README.md` + `data/qpa_gate/sweeps/`).
+- Boilerplate files that shipped with the restyle or pointed at removed
+  paths: `CONTRIBUTING.md`, `SECURITY.md`, `LICENSE`, `CITATION.cff`
+  (bibliographic metadata remains in `pyproject.toml` and the README
+  citation block).
 
 ### Changed
 - Unit-18/19/20 unified into one maintained module: the full-COD

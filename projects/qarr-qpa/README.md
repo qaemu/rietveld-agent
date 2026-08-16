@@ -1,7 +1,7 @@
 # qarr-qpa — quantitative phase analysis project
 
 Landing page for the quantitative-phase-analysis project archived in
-this repository (reference-style `projects/` entry).
+this repository.
 
 ## Goal
 
@@ -16,7 +16,7 @@ number machine-checkable.
 | Protocol (bounded-budget refinements) | `data/unit15/results/` — [protocol paper](paper/paper1_protocol.pdf) | done |
 | Validation (reproducibility + known-answer + gates) | `data/unit16/results/` — [validation paper](paper/paper2_validation.pdf); hash `f43d8be2c932420676d612242dd049a5` | done |
 | Full-COD screening + 20-sample QPA gate | `benchmarks/qpa_gate/qpa_gate.py`, results in `data/qpa_gate/results/` | in progress — 5/20 run, 3 PASS (verified 2026-08-15) |
-| Brindley microabsorption corrections | planned | planned |
+| Brindley microabsorption corrections | | planned |
 
 ## Composition demo
 
@@ -39,5 +39,5 @@ make env && make check && make test
 
 - `README.md` / `README.en.md` — project overview
 - `docs/rqpa_protocol.md` — normative protocol
-- `governance/`, `skills/contracts/` — controlled-input policies
+- `governance/` — controlled-input policies
 - `notes/` — research log

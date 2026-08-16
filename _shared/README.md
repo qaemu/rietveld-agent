@@ -1,14 +1,11 @@
 # _shared
 
-Reference-style home for resources shared across the repository's
-skills and experiments (mirrors the `_shared/` layout of
-Light0305/Light-skills).
+Resources shared across the repository's modules and experiments.
 
 ## Contents
 
 | path | shared resource |
 |---|---|
-| `skills/contracts/` | agent-facing decision criteria, reporting rules, parameter allowlists (canonical home; linked from here) |
 | `core/codindex.py` | COD line-index units (`DQ`/`D_UNIT` conventions) shared by `codsearch`, the units and the CLI |
 | `core/codsearch.py` | complete-COD screening primitives used by the QPA gate, `cli analyze --full-cod` and the run bundle |
 

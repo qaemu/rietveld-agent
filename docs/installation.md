@@ -35,7 +35,7 @@ cd rietveld-agent
 
 One of the three agent runtimes below. All are terminal-native,
 local-first CLIs; the engine itself is runtime-agnostic (see
-[Paper P-3](papers/paper3_deployment.md)).
+[Paper P-3](../paper/paper3_deployment.pdf)).
 
 ### OpenCode
 
@@ -85,11 +85,10 @@ make report    # rerun every RQPA refinement (GSAS-II auto-bootstraps, ~45 min)
 make figures   # regenerate the manuscript figures
 make paper     # rebuild all paper PDFs (needs tectonic; optional)
 make test      # regression suite (pytest)
-make cite      # show the recommended citation
 ```
 
 Validation evidence (reproducibility + known-answer recovery + gate
-scoring, see [Paper P-2](papers/paper2_validation.md)):
+scoring, see [Paper P-2](../paper/paper2_validation.pdf)):
 
 ```bash
 python3 benchmarks/protocols/validate.py               # everything (~32 min)

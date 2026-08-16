@@ -1,6 +1,5 @@
 # rietveld-agent (English mirror)
 
-[![License: Apache 2.0](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)](pyproject.toml)
 [![Reference data (Zenodo)](https://img.shields.io/badge/data-Zenodo%2010.5281%2Fzenodo.1318501-lightgrey.svg)](https://doi.org/10.5281/zenodo.1318501)
 [![OpenCode ready](https://img.shields.io/badge/OpenCode-ready-22C55E.svg)](docs/installation.md)
@@ -10,8 +9,7 @@
 
 > English mirror of [README.md](README.md). The canonical
 > documentation is the English `README.md`; this page keeps the
-> reference-layout entry points of the Light-skills repository style
-> (badges, quickstart, entry-point table, skill map) for readers who
+> entry-point tables and the per-sample gate verdicts for readers who
 > arrive from either README.
 
 ## What this is
@@ -51,14 +49,14 @@ Per-platform / per-runtime instructions: [`docs/installation.md`](docs/installat
 | I want the papers | `make paper` (needs tectonic) |
 | I want orientation for an agent runtime | [`AGENTS.md`](AGENTS.md) |
 
-## Skill map (repository layout)
+## Repository layout
 
 | module | contents |
 |---|---|
 | `core/` | deterministic engine: ingest, calibration, catalog, codsearch, hypothesis, verdict, reporting |
 | `benchmarks/` | evaluation harness (`eval/`), QPA gate (`qpa_gate/`) |
 | `cli/` | operator CLI |
-| `governance/` + `skills/contracts/` | schemas/policies for controlled scientific inputs and agent decision criteria |
+| `governance/` | schemas/policies for controlled scientific inputs |
 | `data/` | benchmark corpus, COD index, structure set, protocol/validation results |
 | `docs/` `paper/` `notes/` | protocol, installation, manuscript + paper series, research log |
 | `tests/` | regression suite (`make test`) |
@@ -83,9 +81,9 @@ Verified state (re-verified 2026-08-15 with
 | `qarr_1f` | FAIL | 38.23 | corundum 46.1, zincite 27.2, fluorite 26.6 (truth 27.1/55.2/17.7) |
 | `iron_30_70` | FAIL | 5.07 | magnetite 100.0 — hematite MISSING (truth 31.8) |
 
-Documented failure causes (root-cause analysis in the research log, plus
-the quantified CIF-combination sweeps in
-[`notes/qpa_gate_sweep.md`](notes/qpa_gate_sweep.md),
+Documented failure causes (root-cause analysis with quantified
+CIF-combination and profile sweeps in
+[`benchmarks/qpa_gate/sweeps/README.md`](benchmarks/qpa_gate/sweeps/README.md),
 reproducible via `benchmarks/qpa_gate/sweep_cifs.py` and
 `benchmarks/qpa_gate/sweep_intensity.py`):
 `iron_30_70` — the data's magnetite matches only the condensed
@@ -105,4 +103,3 @@ away (U,V,W,X,Y SVD singularity, shift −40°).
 
 Apache-2.0 for original code; GSAS-II external under its own Apache-2.0
 license; structure files CC0 from the Crystallography Open Database.
-See [LICENSE](LICENSE) and [CITATION.cff](CITATION.cff).

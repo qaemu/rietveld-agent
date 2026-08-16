@@ -6,7 +6,6 @@ paper series, and the installation reference.
 | file | contents |
 |---|---|
 | `rqpa_protocol.md` | The normative Rietveld QPA protocol (data, structure models, refinement budget, staged ladder, quantification, acceptance criteria, and the unit-15 empirical decisions in §7). |
-| `G0-CHECKLIST.md` | Phase-0 gate checklist for the deterministic engine (catalog, calibrations, ingest, verdict, governance). |
 | `installation.md` | Installation on macOS / Linux / Windows from OpenCode, Claude Code, or Codex; verification; troubleshooting. |
 
 The paper series lives in [`../paper/`](../paper/) as PDFs (rebuilt with

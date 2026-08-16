@@ -57,7 +57,7 @@
       "properties": {
         "supported": {
           "type": "object",
-          "description": "Constants for the 8 supported-criteria conjunction (see skills/contracts/decision-criteria.md).",
+          "description": "Constants for the 8 supported-criteria conjunction (see the acceptance criteria in docs/rqpa_protocol.md).",
           "properties": {
             "min_delta_gof_improvement": { "type": "number" },
             "max_unexplained_peak_budget": { "type": "number" },
@@ -135,7 +135,7 @@
       "required": ["name", "set", "clear"],
       "properties": {
         "name": { "type": "string" },
-        "set": { "type": "object", "description": "Exact GSASIIscriptable 'set' dict (allowlist-enforced, see skills/contracts/parameter-allowlist.json)." },
+        "set": { "type": "object", "description": "Exact GSASIIscriptable 'set' dict (allowlist-enforced per the refinement budget in docs/rqpa_protocol.md)." },
         "clear": { "type": "object", "description": "Exact GSASIIscriptable 'clear' dict." },
         "report": { "type": "boolean", "description": "Write a GPX checkpoint and diagnostics after this stage." }
       }
