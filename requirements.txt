@@ -4,3 +4,6 @@ scipy>=1.10
 jsonschema>=4.17
 matplotlib>=3.7
 pytest>=7
+# GSAS-II optional importer backends required by the Rietveld engine
+PyCifRW>=4.4  # CIF phase/powder importers
+xmltodict>=0.13  # Bruker/BRML importer support
