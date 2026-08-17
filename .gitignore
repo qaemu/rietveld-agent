@@ -46,3 +46,6 @@ data/qpa_gate/sweeps/**/*.json.tmp
 # gate run logs (transient)
 data/qpa_gate/*.log
 data/qpa_gate/run*.log
+
+# baseline copies of gate result jsons (pre-experiment states)
+data/qpa_gate/baseline/
