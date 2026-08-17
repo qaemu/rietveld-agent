@@ -41,13 +41,21 @@ def main() -> int:
         except Exception:
             torn.append((p, "unreadable file"))
             continue
-        if len(txt) < 100 or "data_" not in txt[:400]:
-            torn.append((p, f"short/headerless ({len(txt)} bytes)"))
+        if len(txt) < 100:
+            torn.append((p, f"short ({len(txt)} bytes)"))
             continue
+        # parse first: complete COD files carry long SVN comment headers,
+        # so a `data_` search must not gate on the file head
+        parse_err = None
         try:
             cif_calc_lines(str(p), dmin=1.0, dmax=22.0)
+            continue                       # parses -> healthy
         except Exception as e:
-            broken.append((p, str(e)[:80]))
+            parse_err = str(e)[:80]
+        if "data_" in txt:
+            broken.append((p, parse_err))
+        else:
+            torn.append((p, "no data_ block; parse-failed"))
     print(f"{len(cifs)} cached CIFs: {len(torn)} torn, {len(broken)} broken")
     for p, why in torn:
         print(f"  TORN    {p.name}: {why}")
