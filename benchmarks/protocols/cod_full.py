@@ -285,7 +285,12 @@ def download_cif(cod_id: int, delay: float = 0.25) -> Path:
     for attempt in (1, 2):
         try:
             with urllib.request.urlopen(req, timeout=30) as r:
-                dst.write_bytes(r.read())
+                body = r.read()
+            # atomic write: concurrent gate runs may fetch the same CIF;
+            # a torn write would pass the st_size>100 cache check later
+            tmp = dst.with_name(f"{cod_id}.{os.getpid()}.tmp")
+            tmp.write_bytes(body)
+            tmp.replace(dst)
             time.sleep(delay)          # be polite to crystallography.net
             return dst
         except Exception as e:

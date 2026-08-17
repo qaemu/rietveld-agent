@@ -24,6 +24,7 @@ QARR-consistent, truth-normalized for the glass sample.
 from __future__ import annotations
 
 import json
+import os
 import re
 import sys
 import time
@@ -818,21 +819,41 @@ def gsas_qpa(pat, phases, work: Path, tag: str, lo: float, hi: float,
 
     stage_log = []
     # ---- Stage A: stand-alone model selection (with profile refine) ----
+    # Profile-refine fallback ladder (RQPA_STAGE_A_FALLBACK=1): a full
+    # U,V,W,X,Y refinement can hit an SVD singularity and run away (seen:
+    # qarr_1f zincite-class phases, shift -40 deg).  When enabled, retry
+    # with a simpler profile set and keep the best converged fit.
+    _a_fallback = os.environ.get("RQPA_STAGE_A_FALLBACK", "0") == "1"
     solo = []
     for p in phases:
-        try:
-            proj, h = _mkproj([p], f"{tag}_solo_{p['name']}", None)
-            _scales_on(proj, [p["name"]])
-            h.set_refinements({"Instrument Parameters": ["U", "V", "W",
-                                                         "X", "Y"]})
-            wr, txt, conv, bad = _wR(proj, h, f"{tag}_solo_{p['name']}")
-            solo.append({"phase": p, "wR": wr, "conv": conv, "bad": bad,
-                         "proj": proj, "h": h})
-            print(f"    solo {p['name']} ({p['canon']}): wR={wr} "
-                  f"conv={conv} bad={bad}", flush=True)
-        except Exception as e:
-            solo.append({"phase": p, "wR": None, "error": str(e)})
-            print(f"    solo {p['name']}: ERROR {e}", flush=True)
+        got = {"phase": p, "wR": None, "error": str(None)}
+        for prof in (["U", "V", "W", "X", "Y"], ["V", "W"], ["W"], []):
+            try:
+                proj, h = _mkproj([p], f"{tag}_solo_{p['name']}", None)
+                _scales_on(proj, [p["name"]])
+                if prof:
+                    h.set_refinements({"Instrument Parameters": prof})
+                wr, txt, conv, bad = _wR(proj, h, f"{tag}_solo_{p['name']}")
+            except Exception as e:
+                wr, conv, bad = None, False, True
+            clean = (wr is not None and conv and not bad)
+            better = (got["wR"] is None) or (
+                clean and (not got.get("clean") or wr < got["wR"])) or (
+                not clean and not got.get("clean")
+                and wr is not None and wr < got["wR"])
+            if better:
+                got = {"phase": p, "wR": wr, "conv": conv, "bad": bad,
+                       "proj": proj, "h": h,
+                       "profile": "+".join(prof) if prof else "scale",
+                       "clean": clean}
+            if clean:
+                break
+            if not _a_fallback:
+                break
+        solo.append(got)
+        print(f"    solo {p['name']} ({p['canon']}): wR={got['wR']} "
+              f"conv={got['conv']} bad={got['bad']} "
+              f"prof={got.get('profile', '-')}", flush=True)
     ok = [x for x in solo if x["wR"] is not None]
     # named-phase preference in the winner tie: a canonical phase within
     # 1.5 wR of the best (canonless) solo wins the base -- otherwise a
@@ -1020,6 +1041,63 @@ def gsas_qpa(pat, phases, work: Path, tag: str, lo: float, hi: float,
     stage_log.append({"stage": "B2_done",
                       "selected": [s["name"] for s in selected],
                       "base_wR": base_wr})
+    # ---- Stage B2P: free-profile canonical re-test (RQPA_PROF_B2=1) ----
+    # B2's joint re-test keeps the winner's FROZEN profile; if that frozen
+    # profile cannot represent the joint fit, a true minor's addition shows
+    # no wR gain and is rejected (iron_30_70 hematite under the condensed
+    # magnetite CIF: free-profile joint fits DO improve, the frozen-profile
+    # ones do not).  When enabled, run one additional round with the
+    # instrument profile refinement freed (seeded from the base), and
+    # re-freeze the accepted joint profile afterwards.
+    if os.environ.get("RQPA_PROF_B2", "0") == "1":
+        rej = [x for x in ok
+               if x["phase"]["name"] not in [s["name"] for s in selected]
+               and x["phase"].get("canon") in PHASE_CANON]
+        best2, best2d, best2pr, best2h = None, 0.0, None, None
+        for x in rej:
+            try:
+                p2, h2 = _mkproj(selected + [x["phase"]], f"{tag}_reaccP",
+                                 frozen)
+                _scales_on(p2, [s["name"] for s in selected]
+                           + [x["phase"]["name"]])
+                seeds = {}
+                if x.get("proj") is not None and x.get("h") is not None:
+                    try:
+                        seeds[x["phase"]["name"]] = float(
+                            x["proj"].data["Phases"][x["phase"]["name"]][
+                                "Histograms"][x["h"].name]["Scale"][0])
+                    except Exception:
+                        pass
+                _seed_scales(p2, h2, proj, h, seeds)
+                h2.set_refinements({"Instrument Parameters":
+                                    ["U", "V", "W", "X", "Y"]})
+                wr2, _, cv2, bd2 = _wR(p2, h2, f"{tag}_reaccP")
+            except Exception:
+                wr2, cv2, bd2 = None, False, True
+            d2 = (base_wr - wr2 if (wr2 is not None and cv2 and not bd2)
+                  else 0.0)
+            print(f"    reaccP {x['phase']['name']} ({x['phase']['canon']}): "
+                  f"wR={wr2} d={d2:+.3f}", flush=True)
+            if d2 > best2d:
+                best2, best2d, best2pr, best2h = x, d2, p2, h2
+        if best2 is not None and best2d > 0.0:
+            selected.append(best2["phase"])
+            stage_log.append({"stage": "B2P_accept",
+                              "phase": best2["phase"]["name"],
+                              "canon": best2["phase"]["canon"],
+                              "d_wR": round(best2d, 3)})
+            frozen = deepcopy(best2h.data['Instrument Parameters'][0])
+            for k, v in frozen.items():
+                if isinstance(v, list) and len(v) > 2 and isinstance(
+                        v[2], (bool, np.bool_)):
+                    v[2] = False
+            p_prev, h_prev = proj, h
+            proj, h = _mkproj(selected, f"{tag}_base", frozen)
+            _scales_on(proj, [s["name"] for s in selected])
+            _seed_scales(proj, h, p_prev, h_prev)
+            base_wr, _, conv, bad = _wR(proj, h, f"{tag}_base")
+            print(f"    base {[s['name'] for s in selected]}: "
+                  f"wR={base_wr}", flush=True)
     # always refit the accepted base set (frozen) so proj/h/base_wr reflect
     # the PURE selected-set model for the Stage C residual screening (the
     # forward-trial fits are contaminated by their candidate phases)

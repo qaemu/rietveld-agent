@@ -42,3 +42,7 @@ data/qpa_gate/sweeps/**/*.prm
 data/qpa_gate/sweeps/**/*.xye
 data/qpa_gate/sweeps/**/*.bak0.gpx
 data/qpa_gate/sweeps/**/*.json.tmp
+
+# gate run logs (transient)
+data/qpa_gate/*.log
+data/qpa_gate/run*.log
